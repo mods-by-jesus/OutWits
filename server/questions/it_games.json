@@ -238,5 +238,125 @@
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
+  },
+  {
+    "id": 21,
+    "text": "Какой персонаж является маскотом компании Sega?",
+    "options": [
+      "Марио",
+      "Пикачу",
+      "Крэш Бандикут",
+      "Соник"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 22,
+    "text": "В какой игре можно найти город Лос-Сантос?",
+    "options": [
+      "Cyberpunk 2077",
+      "Grand Theft Auto V",
+      "Watch Dogs",
+      "Saints Row"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 23,
+    "text": "Какой протокол используется для отправки электронной почты?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "SMTP",
+      "SSH"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 24,
+    "text": "Что означает аббревиатура RAM в компьютерах?",
+    "options": [
+      "Read Access Memory",
+      "Random Access Memory",
+      "Rapid Action Memory",
+      "Run Array Module"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 25,
+    "text": "Какая игра от студии Mojang стала самой продаваемой в истории?",
+    "options": [
+      "Roblox",
+      "Minecraft",
+      "Terraria",
+      "Stardew Valley"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 26,
+    "text": "Кто является основателем социальной сети Facebook?",
+    "options": [
+      "Илон Маск",
+      "Джефф Безос",
+      "Билл Гейтс",
+      "Марк Цукерберг"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 27,
+    "text": "Какой формат файлов обычно используется для коротких анимированных картинок в интернете?",
+    "options": [
+      "JPEG",
+      "PNG",
+      "GIF",
+      "TIFF"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 28,
+    "text": "В какой игре выжившие должны чинить генераторы, чтобы спастись от маньяка?",
+    "options": [
+      "Friday the 13th",
+      "Left 4 Dead",
+      "Dead by Daylight",
+      "Phasmophobia"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 29,
+    "text": "Какая компания разработала популярные процессоры серии Ryzen?",
+    "options": [
+      "Intel",
+      "AMD",
+      "Nvidia",
+      "ARM"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 30,
+    "text": "Какой тег в HTML используется для создания гиперссылок?",
+    "options": [
+      "<link>",
+      "<a>",
+      "<href>",
+      "<url>"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
   }
 ]
