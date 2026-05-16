@@ -1,0 +1,12 @@
+[
+  { "text": "Какой открытый игровой движок использует язык сценариев GDScript, синтаксически очень похожий на Python?", "options": ["Unity", "Unreal Engine", "Godot", "Defold"], "correct_answer": 2, "category": "Игры и Технологии" },
+  { "text": "Какая популярная ритм-игра построена на кликах по появляющимся на экране кругам, слайдерам и спиннерам в такт музыке?", "options": ["Beat Saber", "osu!", "Geometry Dash", "Muse Dash"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "Название какой игры 1980 года, использующей ASCII-графику для отображения подземелий, дало имя целому жанру?", "options": ["NetHack", "Rogue", "Moria", "Angband"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "В какой серии тактических стратегий механика «Overwatch» (Боеготовность) является ключевой?", "options": ["Civilization", "XCOM", "Fire Emblem", "Heroes of Might and Magic"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "Какой сетевой порт по умолчанию используется для защищенного подключения по протоколу SSH?", "options": ["21", "22", "80", "443"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "Что в сфере сетевых технологий означает аббревиатура VPN?", "options": ["Virtual Public Node", "Visual Private Network", "Virtual Private Network", "Variable Protocol Node"], "correct_answer": 2, "category": "Игры и Технологии" },
+  { "text": "Как называется самая продаваемая игра в мире (по состоянию на 2024 год)?", "options": ["Grand Theft Auto V", "Minecraft", "Tetris", "Wii Sports"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "Как зовут главного героя серии игр The Legend of Zelda?", "options": ["Зельда", "Линк", "Марио", "Гэнон"], "correct_answer": 1, "category": "Игры и Технологии" },
+  { "text": "Какой жанр игр характеризуется наличием «пермасмерти» и процедурной генерации уровней?", "options": ["Шутер", "Стратегия", "Рогалик (Roguelike)", "Симулятор"], "correct_answer": 2, "category": "Игры и Технологии" },
+  { "text": "Какой язык программирования используется для написания скриптов в браузере?", "options": ["Python", "Java", "C++", "JavaScript"], "correct_answer": 3, "category": "Игры и Технологии" }
+]

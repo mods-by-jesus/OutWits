@@ -2,7 +2,7 @@ import express from 'express';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
-import { readFileSync } from 'fs';
+import { readFileSync, readdirSync } from 'fs';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
@@ -17,9 +17,14 @@ const MAX_PLAYERS = 5;
 const QUESTIONS_PER_GAME = 10;
 
 // ─── Load questions ───────────────────────────────────
-const allQuestions = JSON.parse(
-  readFileSync(join(__dirname, 'questions.json'), 'utf-8')
-);
+const questionsDir = join(__dirname, 'questions');
+const questionFiles = readdirSync(questionsDir).filter(f => f.endsWith('.json'));
+
+let allQuestions = [];
+for (const file of questionFiles) {
+  const content = JSON.parse(readFileSync(join(questionsDir, file), 'utf-8'));
+  allQuestions = allQuestions.concat(content);
+}
 
 // Извлекаем все уникальные категории
 const availableCategories = [...new Set(allQuestions.map(q => q.category).filter(Boolean))];
