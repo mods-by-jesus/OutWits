@@ -110,7 +110,7 @@ export function Game() {
             .map(p => (
               <div
                 key={p.id}
-                className={`bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
+                className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
                   p.id === playerId
                     ? 'border-white/30'
                     : 'border-neutral-700/50'
@@ -120,6 +120,11 @@ export function Game() {
                   {p.nickname}
                 </div>
                 <div className="text-xl font-black">{p.score}</div>
+                {p.streak >= 3 && (
+                  <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
+                    🔥 x1.5
+                  </div>
+                )}
               </div>
             ))}
         </div>

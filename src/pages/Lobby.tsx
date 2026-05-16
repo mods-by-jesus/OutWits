@@ -8,7 +8,9 @@ export function Lobby() {
     loading,
     availableCategories,
     selectedCategories,
+    settings,
     toggleCategory,
+    toggleSetting,
     startGame,
     leaveLobby,
     copyCode,
@@ -104,6 +106,40 @@ export function Lobby() {
             </div>
           </div>
         )}
+
+        <div className="space-y-4 mb-8">
+          <p className="text-neutral-500 font-bold uppercase tracking-widest text-sm text-center">
+            Спец. Режимы
+          </p>
+          <div className="flex flex-col gap-3 bg-neutral-900/50 p-4 rounded-xl border border-neutral-700/50">
+            <label className="flex items-center justify-between cursor-pointer opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Speed Bonus ⚡</span>
+                <span className="text-xs text-neutral-500">Доп. очки за быстрый ответ</span>
+              </div>
+              <input
+                type="checkbox"
+                className="toggle toggle-primary"
+                checked={settings?.speedBonus || false}
+                onChange={() => toggleSetting('speedBonus')}
+                disabled={!currentPlayer?.is_host}
+              />
+            </label>
+            <label className="flex items-center justify-between cursor-pointer opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Hot Streak 🔥</span>
+                <span className="text-xs text-neutral-500">x1.5 очков за 3+ ответа подряд</span>
+              </div>
+              <input
+                type="checkbox"
+                className="toggle toggle-primary"
+                checked={settings?.hotStreak || false}
+                onChange={() => toggleSetting('hotStreak')}
+                disabled={!currentPlayer?.is_host}
+              />
+            </label>
+          </div>
+        </div>
 
         {currentPlayer?.is_host ? (
           <button

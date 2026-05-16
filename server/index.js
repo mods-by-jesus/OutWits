@@ -114,6 +114,7 @@ io.on('connection', (socket) => {
       nickname: nickname.trim().substring(0, 12),
       is_host: true,
       score: 0,
+      streak: 0,
       socketId: socket.id,
     };
 
@@ -122,10 +123,12 @@ io.on('connection', (socket) => {
       status: 'waiting',
       players: [player],
       selectedCategories: [...availableCategories],
+      settings: { speedBonus: false, hotStreak: false },
       questions: [],
       currentQuestionIndex: -1,
       answers: new Map(), // questionIndex -> Map(playerId -> answer)
       roundTimer: null,
+      roundStartTime: null,
       createdAt: Date.now(),
     };
 
@@ -136,10 +139,10 @@ io.on('connection', (socket) => {
     console.log(`[LOBBY] Created: ${code} by ${player.nickname}`);
 
     callback({
-      lobby: { code, status: lobby.status, selectedCategories: lobby.selectedCategories },
-      player: { id: playerId, nickname: player.nickname, is_host: true, score: 0 },
+      lobby: { code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
+      player: { id: playerId, nickname: player.nickname, is_host: true, score: 0, streak: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
       })),
       availableCategories,
     });
@@ -173,6 +176,7 @@ io.on('connection', (socket) => {
       nickname: nickname.trim().substring(0, 12),
       is_host: false,
       score: 0,
+      streak: 0,
       socketId: socket.id,
     };
 
@@ -185,15 +189,15 @@ io.on('connection', (socket) => {
     // Оповестить всех в лобби о новом игроке
     io.to(upperCode).emit('players_updated', {
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
       })),
     });
 
     callback({
-      lobby: { code: upperCode, status: lobby.status, selectedCategories: lobby.selectedCategories },
-      player: { id: playerId, nickname: player.nickname, is_host: false, score: 0 },
+      lobby: { code: upperCode, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
+      player: { id: playerId, nickname: player.nickname, is_host: false, score: 0, streak: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
       })),
       availableCategories,
     });
@@ -256,6 +260,23 @@ io.on('connection', (socket) => {
     io.to(info.lobbyCode).emit('categories_updated', { categories });
   });
 
+  // ─── UPDATE SETTINGS ────────────────────────────
+  socket.on('update_settings', ({ settings }) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return;
+
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'waiting') return;
+
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player?.is_host) return;
+
+    lobby.settings = { ...lobby.settings, ...settings };
+    
+    // Рассылаем всем
+    io.to(info.lobbyCode).emit('settings_updated', { settings: lobby.settings });
+  });
+
   // ─── SUBMIT ANSWER ────────────────────────────────
   socket.on('submit_answer', ({ answerIndex }, callback) => {
     const info = playerSockets.get(socket.id);
@@ -288,10 +309,29 @@ io.on('connection', (socket) => {
       isCorrect,
     });
 
-    // Начислить очки (10 базовых, без таймер-бонуса на сервере — клиент покажет)
-    if (isCorrect) {
-      const player = lobby.players.find(p => p.id === info.playerId);
-      if (player) player.score += 10;
+    // Начислить очки
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (player) {
+      if (isCorrect) {
+        let points = 10;
+        
+        // Speed Bonus
+        if (lobby.settings?.speedBonus && lobby.roundStartTime) {
+          const elapsed = (Date.now() - lobby.roundStartTime) / 1000;
+          const remaining = Math.max(0, ROUND_DURATION - elapsed);
+          points += Math.floor(remaining);
+        }
+
+        // Hot Streak
+        player.streak = (player.streak || 0) + 1;
+        if (lobby.settings?.hotStreak && player.streak >= 3) {
+          points = Math.floor(points * 1.5);
+        }
+
+        player.score += points;
+      } else {
+        player.streak = 0;
+      }
     }
 
     console.log(`[ANSWER] ${info.playerId} answered ${answerIndex} (${isCorrect ? '✓' : '✗'}) in ${info.lobbyCode}`);
@@ -339,6 +379,7 @@ function sendQuestion(lobby) {
   }
 
   // Отправить вопрос всем
+  lobby.roundStartTime = Date.now();
   io.to(lobby.code).emit('new_question', {
     questionIndex: qi,
     totalQuestions: lobby.questions.length,
@@ -371,7 +412,7 @@ function endRound(lobby) {
     correctAnswer: question.correct_answer,
     answers: Array.from(roundAnswers.values()),
     players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
+      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
     })),
   });
 
@@ -395,7 +436,7 @@ function finishGame(lobby) {
   lobby.status = 'finished';
 
   const finalPlayers = lobby.players
-    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score }))
+    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0 }))
     .sort((a, b) => b.score - a.score);
 
   io.to(lobby.code).emit('game_finished', { players: finalPlayers });
@@ -446,7 +487,7 @@ function removePlayer(socket) {
   // Оповестить оставшихся
   io.to(info.lobbyCode).emit('players_updated', {
     players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
+      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
     })),
   });
 

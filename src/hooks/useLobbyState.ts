@@ -11,7 +11,7 @@ interface Player {
 }
 
 interface LocationState {
-  lobby?: { code: string; status: string; selectedCategories?: string[] };
+  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean } };
   player?: Player;
   players?: Player[];
   availableCategories?: string[];
@@ -36,6 +36,10 @@ export function useLobbyState() {
   );
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
     navState?.lobby?.selectedCategories ?? navState?.availableCategories ?? []
+  );
+  
+  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean }>(
+    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false }
   );
 
   const [loading, setLoading] = useState(!navState?.lobby);
@@ -75,14 +79,20 @@ export function useLobbyState() {
       setSelectedCategories(categories);
     };
 
+    const onSettingsUpdated = ({ settings: newSettings }: { settings: { speedBonus: boolean; hotStreak: boolean } }) => {
+      setSettings(newSettings);
+    };
+
     socket.on('players_updated', onPlayersUpdated);
     socket.on('game_started', onGameStarted);
     socket.on('categories_updated', onCategoriesUpdated);
+    socket.on('settings_updated', onSettingsUpdated);
 
     return () => {
       socket.off('players_updated', onPlayersUpdated);
       socket.off('game_started', onGameStarted);
       socket.off('categories_updated', onCategoriesUpdated);
+      socket.off('settings_updated', onSettingsUpdated);
     };
   }, [code, playerId, navigate]);
 
@@ -122,6 +132,16 @@ export function useLobbyState() {
     });
   }, [currentPlayer]);
 
+  const toggleSetting = useCallback((key: 'speedBonus' | 'hotStreak') => {
+    if (!currentPlayer?.is_host) return;
+
+    setSettings(prev => {
+      const newSettings = { ...prev, [key]: !prev[key] };
+      socket.emit('update_settings', { settings: newSettings });
+      return newSettings;
+    });
+  }, [currentPlayer]);
+
   return {
     code,
     players,
@@ -129,7 +149,9 @@ export function useLobbyState() {
     loading,
     availableCategories,
     selectedCategories,
+    settings,
     toggleCategory,
+    toggleSetting,
     startGame,
     leaveLobby,
     copyCode,
