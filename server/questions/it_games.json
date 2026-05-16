@@ -1,12 +1,222 @@
 [
-  { "text": "Какой открытый игровой движок использует язык сценариев GDScript, синтаксически очень похожий на Python?", "options": ["Unity", "Unreal Engine", "Godot", "Defold"], "correct_answer": 2, "category": "Игры и Технологии" },
-  { "text": "Какая популярная ритм-игра построена на кликах по появляющимся на экране кругам, слайдерам и спиннерам в такт музыке?", "options": ["Beat Saber", "osu!", "Geometry Dash", "Muse Dash"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "Название какой игры 1980 года, использующей ASCII-графику для отображения подземелий, дало имя целому жанру?", "options": ["NetHack", "Rogue", "Moria", "Angband"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "В какой серии тактических стратегий механика «Overwatch» (Боеготовность) является ключевой?", "options": ["Civilization", "XCOM", "Fire Emblem", "Heroes of Might and Magic"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "Какой сетевой порт по умолчанию используется для защищенного подключения по протоколу SSH?", "options": ["21", "22", "80", "443"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "Что в сфере сетевых технологий означает аббревиатура VPN?", "options": ["Virtual Public Node", "Visual Private Network", "Virtual Private Network", "Variable Protocol Node"], "correct_answer": 2, "category": "Игры и Технологии" },
-  { "text": "Как называется самая продаваемая игра в мире (по состоянию на 2024 год)?", "options": ["Grand Theft Auto V", "Minecraft", "Tetris", "Wii Sports"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "Как зовут главного героя серии игр The Legend of Zelda?", "options": ["Зельда", "Линк", "Марио", "Гэнон"], "correct_answer": 1, "category": "Игры и Технологии" },
-  { "text": "Какой жанр игр характеризуется наличием «пермасмерти» и процедурной генерации уровней?", "options": ["Шутер", "Стратегия", "Рогалик (Roguelike)", "Симулятор"], "correct_answer": 2, "category": "Игры и Технологии" },
-  { "text": "Какой язык программирования используется для написания скриптов в браузере?", "options": ["Python", "Java", "C++", "JavaScript"], "correct_answer": 3, "category": "Игры и Технологии" }
+  {
+    "text": "Какой открытый игровой движок использует язык сценариев GDScript, синтаксически очень похожий на Python?",
+    "options": [
+      "Unity",
+      "Unreal Engine",
+      "Godot",
+      "Defold"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какая популярная ритм-игра построена на кликах по появляющимся на экране кругам, слайдерам и спиннерам в такт музыке?",
+    "options": [
+      "Beat Saber",
+      "osu!",
+      "Geometry Dash",
+      "Muse Dash"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Название какой игры 1980 года, использующей ASCII-графику для отображения подземелий, дало имя целому жанру?",
+    "options": [
+      "NetHack",
+      "Rogue",
+      "Moria",
+      "Angband"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "В какой серии тактических стратегий механика «Overwatch» (Боеготовность) является ключевой?",
+    "options": [
+      "Civilization",
+      "XCOM",
+      "Fire Emblem",
+      "Heroes of Might and Magic"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какой сетевой порт по умолчанию используется для защищенного подключения по протоколу SSH?",
+    "options": [
+      "21",
+      "22",
+      "80",
+      "443"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Что в сфере сетевых технологий означает аббревиатура VPN?",
+    "options": [
+      "Virtual Public Node",
+      "Visual Private Network",
+      "Virtual Private Network",
+      "Variable Protocol Node"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Как называется самая продаваемая игра в мире (по состоянию на 2024 год)?",
+    "options": [
+      "Grand Theft Auto V",
+      "Minecraft",
+      "Tetris",
+      "Wii Sports"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Как зовут главного героя серии игр The Legend of Zelda?",
+    "options": [
+      "Зельда",
+      "Линк",
+      "Марио",
+      "Гэнон"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какой жанр игр характеризуется наличием «пермасмерти» и процедурной генерации уровней?",
+    "options": [
+      "Шутер",
+      "Стратегия",
+      "Рогалик (Roguelike)",
+      "Симулятор"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какой язык программирования используется для написания скриптов в браузере?",
+    "options": [
+      "Python",
+      "Java",
+      "C++",
+      "JavaScript"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какая компания разработала операционную систему Windows?",
+    "options": [
+      "Apple",
+      "IBM",
+      "Google",
+      "Microsoft"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Как называется язык стилей для веб-страниц?",
+    "options": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "XML"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какая игра популяризировала жанр «Королевская битва» в 2017 году?",
+    "options": [
+      "Fortnite",
+      "Apex Legends",
+      "PUBG",
+      "Call of Duty: Warzone"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Что означает буква «P» в аббревиатуре HTTP?",
+    "options": [
+      "Page",
+      "Protocol",
+      "Path",
+      "Process"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какая культовая игра от Valve так и не получила третью часть?",
+    "options": [
+      "Portal",
+      "Left 4 Dead",
+      "Half-Life",
+      "Team Fortress"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "В какой игре нужно строить конвейеры и фабрики на чужой планете, защищаясь от кусак?",
+    "options": [
+      "Satisfactory",
+      "Factorio",
+      "Dyson Sphere Program",
+      "RimWorld"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Как зовут создателя языка программирования Python?",
+    "options": [
+      "Джеймс Гослинг",
+      "Гвидо ван Россум",
+      "Линус Торвальдс",
+      "Бьёрн Страуструп"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "В какой игре главный герой — ведьмак по имени Геральт?",
+    "options": [
+      "The Elder Scrolls",
+      "Dragon Age",
+      "The Witcher",
+      "Gothic"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Как называется тип базы данных, использующей язык запросов SQL?",
+    "options": [
+      "Документоориентированная",
+      "Ключ-значение",
+      "Реляционная",
+      "Графовая"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "text": "Какая компания выпустила первую консоль PlayStation?",
+    "options": [
+      "Nintendo",
+      "Sega",
+      "Microsoft",
+      "Sony"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  }
 ]
