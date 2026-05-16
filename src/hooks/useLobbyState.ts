@@ -66,8 +66,8 @@ export function useLobbyState() {
       if (me) setCurrentPlayer(me);
     };
 
-    const onNewQuestion = () => {
-      // Игра началась — переходим
+    const onGameStarted = () => {
+      // Сервер дал сигнал к началу — переходим на экран игры (вопрос придёт через 3 сек)
       navigate(`/game/${code}`);
     };
 
@@ -76,12 +76,12 @@ export function useLobbyState() {
     };
 
     socket.on('players_updated', onPlayersUpdated);
-    socket.on('new_question', onNewQuestion);
+    socket.on('game_started', onGameStarted);
     socket.on('categories_updated', onCategoriesUpdated);
 
     return () => {
       socket.off('players_updated', onPlayersUpdated);
-      socket.off('new_question', onNewQuestion);
+      socket.off('game_started', onGameStarted);
       socket.off('categories_updated', onCategoriesUpdated);
     };
   }, [code, playerId, navigate]);

@@ -221,8 +221,16 @@ io.on('connection', (socket) => {
 
     console.log(`[GAME] Started in ${info.lobbyCode} with ${lobby.players.length} players`);
 
-    // Отправить первый вопрос
-    sendQuestion(lobby);
+    // Сообщаем клиентам, что нужно переключиться на экран игры
+    io.to(lobby.code).emit('game_started');
+
+    // Ждём 3 секунды, чтобы все успели загрузить интерфейс, затем шлём первый вопрос
+    setTimeout(() => {
+      if (lobbies.has(lobby.code)) {
+        sendQuestion(lobby);
+      }
+    }, 3000);
+    
     callback?.({ ok: true });
   });
 

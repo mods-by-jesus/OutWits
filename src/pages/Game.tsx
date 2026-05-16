@@ -21,8 +21,9 @@ export function Game() {
 
   if (loading || !question) {
     return (
-      <div className="flex items-center justify-center min-h-screen w-full bg-neutral-900 text-white">
-        <div className="text-xl font-bold text-neutral-500 animate-pulse">Загрузка...</div>
+      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-neutral-900 text-white space-y-4">
+        <div className="text-3xl font-black animate-pulse tracking-widest">ИГРА НАЧИНАЕТСЯ</div>
+        <div className="text-neutral-500 font-bold uppercase text-sm tracking-widest">Готовьтесь к первому вопросу...</div>
       </div>
     );
   }
