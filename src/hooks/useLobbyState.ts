@@ -11,9 +11,10 @@ interface Player {
 }
 
 interface LocationState {
-  lobby?: { code: string; status: string };
+  lobby?: { code: string; status: string; selectedCategories?: string[] };
   player?: Player;
   players?: Player[];
+  availableCategories?: string[];
 }
 
 export function useLobbyState() {
@@ -29,6 +30,14 @@ export function useLobbyState() {
   const [currentPlayer, setCurrentPlayer] = useState<Player | null>(
     navState?.player ?? null
   );
+  
+  const [availableCategories] = useState<string[]>(
+    navState?.availableCategories ?? []
+  );
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(
+    navState?.lobby?.selectedCategories ?? navState?.availableCategories ?? []
+  );
+
   const [loading, setLoading] = useState(!navState?.lobby);
 
   const playerId = sessionStorage.getItem('playerId');
@@ -62,12 +71,18 @@ export function useLobbyState() {
       navigate(`/game/${code}`);
     };
 
+    const onCategoriesUpdated = ({ categories }: { categories: string[] }) => {
+      setSelectedCategories(categories);
+    };
+
     socket.on('players_updated', onPlayersUpdated);
     socket.on('new_question', onNewQuestion);
+    socket.on('categories_updated', onCategoriesUpdated);
 
     return () => {
       socket.off('players_updated', onPlayersUpdated);
       socket.off('new_question', onNewQuestion);
+      socket.off('categories_updated', onCategoriesUpdated);
     };
   }, [code, playerId, navigate]);
 
@@ -94,11 +109,27 @@ export function useLobbyState() {
     }
   }, [code]);
 
+  const toggleCategory = useCallback((category: string) => {
+    if (!currentPlayer?.is_host) return;
+
+    setSelectedCategories((prev) => {
+      const newCategories = prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category];
+      
+      socket.emit('update_categories', { categories: newCategories });
+      return newCategories;
+    });
+  }, [currentPlayer]);
+
   return {
     code,
     players,
     currentPlayer,
     loading,
+    availableCategories,
+    selectedCategories,
+    toggleCategory,
     startGame,
     leaveLobby,
     copyCode,

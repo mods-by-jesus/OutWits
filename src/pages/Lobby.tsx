@@ -6,6 +6,9 @@ export function Lobby() {
     players,
     currentPlayer,
     loading,
+    availableCategories,
+    selectedCategories,
+    toggleCategory,
     startGame,
     leaveLobby,
     copyCode,
@@ -72,6 +75,35 @@ export function Lobby() {
             ))}
           </div>
         </div>
+
+        {availableCategories && availableCategories.length > 0 && (
+          <div className="space-y-4 mb-8">
+            <p className="text-neutral-500 font-bold uppercase tracking-widest text-sm text-center">
+              Категории
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {availableCategories.map((cat) => {
+                const isSelected = selectedCategories.includes(cat);
+                return (
+                  <button
+                    key={cat}
+                    onClick={() => toggleCategory(cat)}
+                    disabled={!currentPlayer?.is_host}
+                    className={`px-4 py-2 rounded-full text-sm font-bold transition-colors border-2 ${
+                      isSelected
+                        ? 'bg-white text-black border-white'
+                        : 'bg-neutral-800 text-neutral-500 border-neutral-700'
+                    } ${!currentPlayer?.is_host && 'cursor-default opacity-80'} ${
+                      currentPlayer?.is_host && !isSelected && 'hover:border-neutral-500'
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {currentPlayer?.is_host ? (
           <button

@@ -21,6 +21,10 @@ const allQuestions = JSON.parse(
   readFileSync(join(__dirname, 'questions.json'), 'utf-8')
 );
 
+// Извлекаем все уникальные категории
+const availableCategories = [...new Set(allQuestions.map(q => q.category).filter(Boolean))];
+
+
 // ─── In-memory storage ───────────────────────────────
 const lobbies = new Map(); // code -> lobby
 const playerSockets = new Map(); // socketId -> { lobbyCode, playerId }
@@ -47,8 +51,17 @@ function shuffleArray(arr) {
   return shuffled;
 }
 
-function selectQuestions() {
-  const shuffled = shuffleArray(allQuestions);
+function selectQuestions(allowedCategories) {
+  let filtered = allQuestions;
+  if (allowedCategories && allowedCategories.length > 0) {
+    filtered = allQuestions.filter(q => allowedCategories.includes(q.category));
+  }
+  
+  if (filtered.length === 0) {
+    filtered = allQuestions; // Фолбэк, если выбрали категории без вопросов
+  }
+  
+  const shuffled = shuffleArray(filtered);
   return shuffled.slice(0, Math.min(QUESTIONS_PER_GAME, shuffled.length));
 }
 
@@ -103,6 +116,7 @@ io.on('connection', (socket) => {
       code,
       status: 'waiting',
       players: [player],
+      selectedCategories: [...availableCategories],
       questions: [],
       currentQuestionIndex: -1,
       answers: new Map(), // questionIndex -> Map(playerId -> answer)
@@ -117,11 +131,12 @@ io.on('connection', (socket) => {
     console.log(`[LOBBY] Created: ${code} by ${player.nickname}`);
 
     callback({
-      lobby: { code, status: lobby.status },
+      lobby: { code, status: lobby.status, selectedCategories: lobby.selectedCategories },
       player: { id: playerId, nickname: player.nickname, is_host: true, score: 0 },
       players: lobby.players.map(p => ({
         id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
       })),
+      availableCategories,
     });
   });
 
@@ -170,11 +185,12 @@ io.on('connection', (socket) => {
     });
 
     callback({
-      lobby: { code: upperCode, status: lobby.status },
+      lobby: { code: upperCode, status: lobby.status, selectedCategories: lobby.selectedCategories },
       player: { id: playerId, nickname: player.nickname, is_host: false, score: 0 },
       players: lobby.players.map(p => ({
         id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score,
       })),
+      availableCategories,
     });
   });
 
@@ -193,8 +209,12 @@ io.on('connection', (socket) => {
       return callback?.({ error: 'Нужно минимум 2 игрока' });
     }
 
+    if (lobby.selectedCategories.length === 0) {
+      return callback?.({ error: 'Выберите хотя бы одну категорию' });
+    }
+
     // Подготовить вопросы
-    lobby.questions = selectQuestions();
+    lobby.questions = selectQuestions(lobby.selectedCategories);
     lobby.currentQuestionIndex = 0;
     lobby.status = 'playing';
     lobby.answers = new Map();
@@ -204,6 +224,23 @@ io.on('connection', (socket) => {
     // Отправить первый вопрос
     sendQuestion(lobby);
     callback?.({ ok: true });
+  });
+
+  // ─── UPDATE CATEGORIES ────────────────────────────
+  socket.on('update_categories', ({ categories }) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return;
+
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'waiting') return;
+
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player?.is_host) return;
+
+    lobby.selectedCategories = categories;
+    
+    // Рассылаем всем
+    io.to(info.lobbyCode).emit('categories_updated', { categories });
   });
 
   // ─── SUBMIT ANSWER ────────────────────────────────
