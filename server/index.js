@@ -341,8 +341,12 @@ io.on('connection', (socket) => {
 
         // Hot Streak
         player.streak = (player.streak || 0) + 1;
-        if (lobby.settings?.hotStreak && player.streak >= 3) {
-          points = Math.floor(points * 1.5);
+        if (lobby.settings?.hotStreak) {
+          if (player.streak >= 10) {
+            points = Math.floor(points * 2);
+          } else if (player.streak >= 3) {
+            points = Math.floor(points * 1.5);
+          }
         }
 
         player.score += points;

@@ -187,11 +187,15 @@ export function Game() {
                   {p.nickname}
                 </div>
                 <div className="text-xl font-black">{p.score}</div>
-                {p.streak >= 3 && (
+                {p.streak >= 10 ? (
+                  <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
+                    🔥 x2
+                  </div>
+                ) : p.streak >= 3 ? (
                   <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
                     🔥 x1.5
                   </div>
-                )}
+                ) : null}
               </div>
             ))}
         </div>
