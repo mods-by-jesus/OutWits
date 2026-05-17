@@ -598,5 +598,605 @@
     "correct_answer": 0,
     "category": "Игры и Технологии",
     "id": 50
+  },
+  {
+    "text": "Как называется самая популярная в мире криптовалюта?",
+    "options": [
+      "Ethereum",
+      "Ripple",
+      "Bitcoin",
+      "Dogecoin"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 51
+  },
+  {
+    "text": "Как расшифровывается ПК?",
+    "options": [
+      "Панель компьютера",
+      "Портативный калькулятор",
+      "Персональный компьютер",
+      "Пользовательский код"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 52
+  },
+  {
+    "text": "Какой язык разметки используется для создания веб-страниц?",
+    "options": [
+      "Python",
+      "Java",
+      "HTML",
+      "C++"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 53
+  },
+  {
+    "text": "Как называется злодей в серии игр Super Mario?",
+    "options": [
+      "Эггман",
+      "Боузер",
+      "Ганон",
+      "Сефирот"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 54
+  },
+  {
+    "text": "Какой элемент компьютера называют 'мозгом'?",
+    "options": [
+      "Видеокарта",
+      "Оперативная память",
+      "Процессор",
+      "Жесткий диск"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 55
+  },
+  {
+    "text": "Какая игра от Rockstar Games вышла в 2013 году и до сих пор популярна?",
+    "options": [
+      "Red Dead Redemption 2",
+      "GTA V",
+      "Bully",
+      "Max Payne 3"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 56
+  },
+  {
+    "text": "Какой цвет у логотипа социальной сети Facebook?",
+    "options": [
+      "Красный",
+      "Зеленый",
+      "Синий",
+      "Желтый"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 57
+  },
+  {
+    "text": "В какой игре мы играем за Стива?",
+    "options": [
+      "Roblox",
+      "Terraria",
+      "Minecraft",
+      "Fortnite"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 58
+  },
+  {
+    "text": "Что такое Wi-Fi?",
+    "options": [
+      "Беспроводная сеть",
+      "Видеокарта",
+      "Браузер",
+      "Антивирус"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "id": 59
+  },
+  {
+    "text": "В какой игре нужно выживать против аниматроников?",
+    "options": [
+      "Slender",
+      "Amnesia",
+      "Outlast",
+      "Five Nights at Freddy's"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 60
+  },
+  {
+    "text": "Какая из этих программ используется для работы с таблицами?",
+    "options": [
+      "Word",
+      "Excel",
+      "PowerPoint",
+      "Photoshop"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 61
+  },
+  {
+    "text": "Какой персонаж является талисманом компании SEGA?",
+    "options": [
+      "Марио",
+      "Крэш Бандикут",
+      "Соник",
+      "Pac-Man"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 62
+  },
+  {
+    "text": "Как называется популярная платформа для стриминга игр?",
+    "options": [
+      "YouTube",
+      "Vimeo",
+      "Twitch",
+      "Discord"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 63
+  },
+  {
+    "text": "В какой игре главный герой — Гордон Фримен?",
+    "options": [
+      "Portal",
+      "Half-Life",
+      "Doom",
+      "Crysis"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 64
+  },
+  {
+    "text": "Что такое 'спам'?",
+    "options": [
+      "Вирус",
+      "Нежелательная рекламная рассылка",
+      "Полезная программа",
+      "Браузер"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 65
+  },
+  {
+    "text": "Как называется программа для просмотра веб-страниц?",
+    "options": [
+      "Текстовый редактор",
+      "Антивирус",
+      "Браузер",
+      "Драйвер"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 66
+  },
+  {
+    "text": "Какая студия создала игру Genshin Impact?",
+    "options": [
+      "Tencent",
+      "NetEase",
+      "HoYoverse (miHoYo)",
+      "Square Enix"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 67
+  },
+  {
+    "text": "В какой игре игроки ищут 'предателя' среди экипажа космического корабля?",
+    "options": [
+      "Fall Guys",
+      "Among Us",
+      "Rust",
+      "DayZ"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 68
+  },
+  {
+    "text": "Какой язык используется для стилизации веб-страниц?",
+    "options": [
+      "HTML",
+      "CSS",
+      "SQL",
+      "PHP"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 69
+  },
+  {
+    "text": "В какой игре есть режим 'Ultimate Team'?",
+    "options": [
+      "NBA 2K",
+      "Madden NFL",
+      "EA Sports FC (FIFA)",
+      "NHL"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 70
+  },
+  {
+    "text": "Какой символ используется в адресах электронной почты?",
+    "options": [
+      "#",
+      "$",
+      "&",
+      "@"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 71
+  },
+  {
+    "text": "Как называется самая известная серия игр про карманных монстров?",
+    "options": [
+      "Digimon",
+      "Pokemon",
+      "Monster Hunter",
+      "Yo-kai Watch"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 72
+  },
+  {
+    "text": "В каком году была основана компания Google?",
+    "options": [
+      "1995",
+      "1998",
+      "2001",
+      "2004"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 73
+  },
+  {
+    "text": "Как называется устройство для перевода текста в цифровой формат?",
+    "options": [
+      "Принтер",
+      "Плоттер",
+      "Сканер",
+      "Модем"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 74
+  },
+  {
+    "text": "Главного героя серии 'The Legend of Zelda' зовут...",
+    "options": [
+      "Зельда",
+      "Линк",
+      "Ганон",
+      "Марио"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 75
+  },
+  {
+    "text": "Что из этого является браузером?",
+    "options": [
+      "Windows",
+      "Linux",
+      "Firefox",
+      "Office"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 76
+  },
+  {
+    "text": "В какой игре есть фракции Альянс и Орда?",
+    "options": [
+      "The Elder Scrolls",
+      "Guild Wars",
+      "World of Warcraft",
+      "Lineage II"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 77
+  },
+  {
+    "text": "Какой поисковик является самым популярным в России?",
+    "options": [
+      "Google",
+      "Bing",
+      "Yahoo",
+      "Яндекс"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 78
+  },
+  {
+    "text": "В какой игре действие происходит в постапокалиптической пустоши?",
+    "options": [
+      "Skyrim",
+      "Fallout",
+      "Mass Effect",
+      "BioShock"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 79
+  },
+  {
+    "text": "Что означает клавиша 'Esc' на клавиатуре?",
+    "options": [
+      "Enter",
+      "Escape (Выход)",
+      "Erase (Стереть)",
+      "Edit (Правка)"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 80
+  },
+  {
+    "text": "Как называется серия автосимуляторов эксклюзивно для PlayStation?",
+    "options": [
+      "Forza Motorsport",
+      "Need for Speed",
+      "Gran Turismo",
+      "Dirt"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 81
+  },
+  {
+    "text": "Что такое 'SSD'?",
+    "options": [
+      "Видеокарта",
+      "Твердотельный накопитель",
+      "Процессор",
+      "Монитор"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 82
+  },
+  {
+    "text": "Какой язык программирования был создан в Microsoft?",
+    "options": [
+      "Java",
+      "C#",
+      "Python",
+      "Ruby"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 83
+  },
+  {
+    "text": "Как называется главная злодейка в серии Portal?",
+    "options": [
+      "Кортана",
+      "SHODAN",
+      "GLaDOS",
+      "Аликс"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 84
+  },
+  {
+    "text": "Для чего используется программа Adobe Photoshop?",
+    "options": [
+      "Для монтажа видео",
+      "Для создания таблиц",
+      "Для обработки изображений",
+      "Для программирования"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 85
+  },
+  {
+    "text": "В какой игре от Naughty Dog главные герои — Джоэл и Элли?",
+    "options": [
+      "Uncharted",
+      "The Last of Us",
+      "Crash Bandicoot",
+      "God of War"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 86
+  },
+  {
+    "text": "Какая компания разработала операционную систему Windows?",
+    "options": [
+      "Apple",
+      "IBM",
+      "Microsoft",
+      "Intel"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 87
+  },
+  {
+    "text": "В какой игре можно построить собственный парк развлечений?",
+    "options": [
+      "SimCity",
+      "RollerCoaster Tycoon",
+      "The Sims",
+      "Cities: Skylines"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 88
+  },
+  {
+    "text": "Как называется вредоносная программа, блокирующая ПК и требующая деньги?",
+    "options": [
+      "Червь",
+      "Троян",
+      "Винлокер (Ransomware)",
+      "Шпион"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 89
+  },
+  {
+    "text": "Какая из этих игр принадлежит к жанру 'Файтинг'?",
+    "options": [
+      "Mortal Kombat",
+      "Call of Duty",
+      "Need for Speed",
+      "Resident Evil"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "id": 90
+  },
+  {
+    "text": "Что из этого является языком запросов к базам данных?",
+    "options": [
+      "C++",
+      "PHP",
+      "SQL",
+      "JavaScript"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 91
+  },
+  {
+    "text": "Какая игра стала игрой года (GOTY) на The Game Awards в 2022 году?",
+    "options": [
+      "God of War: Ragnarok",
+      "Elden Ring",
+      "Stray",
+      "Horizon Forbidden West"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 92
+  },
+  {
+    "text": "Какой популярный мессенджер был создан Павлом Дуровым?",
+    "options": [
+      "WhatsApp",
+      "Viber",
+      "Telegram",
+      "Skype"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 93
+  },
+  {
+    "text": "Как называется игра, где нужно складывать падающие тетрамино?",
+    "options": [
+      "Tetris",
+      "Pac-Man",
+      "Pong",
+      "Space Invaders"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "id": 94
+  },
+  {
+    "text": "Что такое 'баг' в программировании?",
+    "options": [
+      "Вирус",
+      "Ошибка в коде",
+      "Фича",
+      "Хакерская атака"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 95
+  },
+  {
+    "text": "В какой игре главный герой — Данте, охотник на демонов?",
+    "options": [
+      "Bayonetta",
+      "Devil May Cry",
+      "Dark Souls",
+      "Bloodborne"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 96
+  },
+  {
+    "text": "Как называется облачный сервис от Apple?",
+    "options": [
+      "Google Drive",
+      "OneDrive",
+      "iCloud",
+      "Dropbox"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 97
+  },
+  {
+    "text": "В какой игре можно ловить виртуальных существ с помощью смартфона на улице?",
+    "options": [
+      "Ingress",
+      "Pokemon GO",
+      "Geocaching",
+      "Monster Hunter Now"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 98
+  },
+  {
+    "text": "Какая компания создала консоль Xbox?",
+    "options": [
+      "Sony",
+      "Nintendo",
+      "SEGA",
+      "Microsoft"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 99
+  },
+  {
+    "text": "Какое расширение файлов обычно имеют исполняемые программы в Windows?",
+    "options": [
+      ".txt",
+      ".jpg",
+      ".exe",
+      ".mp3"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 100
   }
 ]
