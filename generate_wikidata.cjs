@@ -429,12 +429,18 @@ const generators = [
       SELECT DISTINCT ?gameLabel ?devLabel WHERE {
         ?game wdt:P31 wd:Q7889.
         ?game wdt:P178 ?dev.
-        ?sitelink schema:about ?game ; schema:isPartOf <https://ru.wikipedia.org/> .
+        ?game wikibase:sitelinks ?sitelinks.
+        FILTER(?sitelinks > 30)
         SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
-      } LIMIT 300
+      } ORDER BY DESC(?sitelinks) LIMIT 300
     `,
     process: (bindings) => {
-      const filteredBindings = bindings.filter(b => /[a-zA-Zа-яА-Я]/.test(b.gameLabel?.value) && /[a-zA-Zа-яА-Я]/.test(b.devLabel?.value) && !b.gameLabel.value.includes('Q'));
+      const filteredBindings = bindings.filter(b => 
+        /[a-zA-Zа-яА-Я]/.test(b.gameLabel?.value) && 
+        /[a-zA-Zа-яА-Я]/.test(b.devLabel?.value) && 
+        !/^Q\d+$/.test(b.gameLabel.value) &&
+        !/^Q\d+$/.test(b.devLabel.value)
+      );
       const allAnswers = [...new Set(filteredBindings.map(b => b.devLabel.value))];
       return filteredBindings.map(b => {
         const game = b.gameLabel.value;

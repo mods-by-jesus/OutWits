@@ -1,3158 +1,1790 @@
 [
   {
     "id": 1,
-    "text": "Игра «Bionic Commando» была выпущена разработчиками из:",
+    "text": "Игра «Тетрис» была выпущена разработчиками из:",
     "options": [
-      "Silicon Knights",
-      "Capcom",
-      "Codemasters",
-      "Playground Games"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 2,
-    "text": "Какая компания или студия разработала игру «1943: The Battle of Midway»?",
-    "options": [
-      "Mindware Studios",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Q116371"
+      "TaleWorlds",
+      "Insomniac Games",
+      "Алексей Пажитнов",
+      "Crytek"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 3,
-    "text": "Какая компания или студия разработала игру «Mega Man X2»?",
+    "id": 2,
+    "text": "Кто является создателем видеоигры «Тетрис»?",
     "options": [
-      "Q8093",
-      "Q116371",
-      "Capcom",
-      "Mindware Studios"
+      "Алексей Пажитнов",
+      "Похилько, Владимир Иванович",
+      "2K Czech",
+      "Blizzard North"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 3,
+    "text": "Кто является создателем видеоигры «Roblox»?",
+    "options": [
+      "Rockstar San Diego",
+      "Arkane Studios",
+      "Roblox Corporation",
+      "Maxis"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 4,
-    "text": "Игра «Street Fighter II: Hyper Fighting» была выпущена разработчиками из:",
+    "text": "Игра «World of Warcraft» была выпущена разработчиками из:",
     "options": [
-      "Q92678",
-      "Capcom",
-      "Mindware Studios",
-      "Q116371"
+      "Blizzard Entertainment",
+      "Sonic Team",
+      "Eidos Montreal",
+      "Avalanche Software"
     ],
-    "correct_answer": 1,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 5,
-    "text": "Кто является создателем видеоигры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "text": "Какая компания или студия разработала игру «Super Mario Bros.»?",
     "options": [
-      "Capcom",
-      "Дмитрий Пучков",
-      "Q2283",
-      "Tripwire Interactive"
+      "Gaijin Entertainment",
+      "Алексей Пажитнов",
+      "Ubisoft Quebec",
+      "Nintendo Entertainment Analysis and Development"
     ],
-    "correct_answer": 0,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 6,
-    "text": "Кто является создателем видеоигры «Resident Evil 4»?",
+    "text": "Игра «Pac-Man» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Codemasters",
-      "Дмитрий Пучков",
-      "Mindware Studios"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 7,
-    "text": "Какая компания или студия разработала игру «Devil May Cry 2»?",
-    "options": [
-      "Q2283",
-      "Capcom",
-      "Codemasters",
-      "Tripwire Interactive"
+      "Nintendo Entertainment Analysis and Development",
+      "Namco",
+      "Superscape",
+      "Rockstar San Diego"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 8,
-    "text": "Игра «Resident Evil 5» была выпущена разработчиками из:",
+    "id": 7,
+    "text": "Кто является создателем видеоигры «Clash of Clans»?",
     "options": [
-      "Массачусетский технологический институт",
-      "Проект GNU",
-      "Silicon Knights",
-      "Capcom"
+      "Ubisoft Quebec",
+      "Studio MDHR",
+      "Ubisoft Singapore",
+      "Supercell"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 8,
+    "text": "Какая компания или студия разработала игру «The Elder Scrolls V: Skyrim»?",
+    "options": [
+      "Eidos Montreal",
+      "SkyBox Labs",
+      "FromSoftware",
+      "Bethesda Game Studios"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 9,
-    "text": "Какая компания или студия разработала игру «The Legend of Zelda: The Minish Cap»?",
+    "text": "Игра «Among Us» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "милевой камень",
-      "Konami",
-      "Q8093"
+      "Infinity Ward",
+      "Innersloth",
+      "Алексей Пажитнов",
+      "Похилько, Владимир Иванович"
     ],
-    "correct_answer": 0,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 10,
-    "text": "Игра «Resident Evil Survivor» была выпущена разработчиками из:",
+    "text": "Игра «Half-Life 2» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Take-Two Interactive",
-      "Q94893",
-      "Codemasters"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 11,
-    "text": "Игра «Resident Evil» была выпущена разработчиками из:",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Q8093",
-      "Take-Two Interactive",
-      "Capcom"
+      "Ubisoft Barcelona",
+      "Rockstar New England",
+      "TaleWorlds",
+      "Valve Corporation"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 12,
-    "text": "Кто является создателем видеоигры «Mega Man IV»?",
+    "id": 11,
+    "text": "Кто является создателем видеоигры «Call of Duty 4: Modern Warfare»?",
     "options": [
-      "Playground Games",
-      "Проект GNU",
-      "Capcom",
-      "Mindware Studios"
+      "Square",
+      "Treyarch",
+      "Ubisoft Toronto",
+      "Blizzard North"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 12,
+    "text": "Игра «Call of Duty 4: Modern Warfare» была выпущена разработчиками из:",
+    "options": [
+      "Infinity Ward",
+      "Вадим Герасимов",
+      "Crytek",
+      "miHoYo"
+    ],
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 13,
-    "text": "Кто является создателем видеоигры «Mega Man 7»?",
+    "text": "Какая компания или студия разработала игру «Call of Duty 4: Modern Warfare»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Silicon Knights",
-      "Capcom",
-      "Алан Тьюринг"
+      "Ubisoft Red Storm",
+      "Linden Lab",
+      "Game Science",
+      "Aspyr Media"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 14,
-    "text": "Какая компания или студия разработала игру «X-Men: Children of the Atom»?",
+    "text": "Какая компания или студия разработала игру «Genshin Impact»?",
     "options": [
-      "Проект GNU",
-      "Массачусетский технологический институт",
-      "Capcom",
-      "Tripwire Interactive"
+      "miHoYo",
+      "Скотт Коутон",
+      "Namco",
+      "Матеус Валадарес"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 15,
-    "text": "Кто является создателем видеоигры «Phoenix Wright: Ace Attorney – Trials and Tribulations»?",
+    "text": "Какая компания или студия разработала игру «The Last of Us»?",
     "options": [
-      "Take-Two Interactive",
-      "Q122741",
-      "Q2283",
-      "Capcom"
+      "Konami",
+      "miHoYo",
+      "Nintendo Entertainment Analysis and Development",
+      "Naughty Dog"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 16,
-    "text": "Кто является создателем видеоигры «Phoenix Wright: Ace Attorney: Justice for All»?",
+    "text": "Игра «Assassin’s Creed» была выпущена разработчиками из:",
     "options": [
-      "милевой камень",
-      "Silicon Knights",
-      "Capcom",
-      "Q92678"
+      "Тоби Фокс",
+      "Rockstar Vancouver",
+      "Taito Corporation",
+      "Ubisoft Montreal"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 17,
+    "text": "Какая компания или студия разработала игру «Pong»?",
+    "options": [
+      "Iron Galaxy Studios",
+      "Eidos Montreal",
+      "Atari, Inc",
+      "Red Barrels"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 17,
-    "text": "Какая компания или студия разработала игру «Marvel vs. Capcom 3: Fate of Two Worlds»?",
+    "id": 18,
+    "text": "Какая компания или студия разработала игру «The Sims»?",
     "options": [
-      "Q2283",
-      "Capcom",
-      "Q92678",
-      "Mindware Studios"
+      "Maxis",
+      "Sonic Team",
+      "Crytek",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 19,
+    "text": "Какая компания или студия разработала игру «Cyberpunk 2077»?",
+    "options": [
+      "Taito Corporation",
+      "Game Science",
+      "Алексей Пажитнов",
+      "CD Projekt RED"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 20,
+    "text": "Игра «Grand Theft Auto» была выпущена разработчиками из:",
+    "options": [
+      "Avalanche Software",
+      "Rockstar Lincoln",
+      "Sonic Team",
+      "TaleWorlds"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 18,
-    "text": "Кто является создателем видеоигры «Breath of Fire IV»?",
-    "options": [
-      "Mindware Studios",
-      "Konami",
-      "Q94893",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 19,
-    "text": "Какая компания или студия разработала игру «Devil May Cry 4»?",
-    "options": [
-      "Q2283",
-      "милевой камень",
-      "Capcom",
-      "Silicon Knights"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 20,
-    "text": "Игра «Devil May Cry 3: Dante’s Awakening» была выпущена разработчиками из:",
-    "options": [
-      "Silicon Knights",
-      "милевой камень",
-      "Tripwire Interactive",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 21,
-    "text": "Игра «Devil May Cry» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Second Life»?",
     "options": [
-      "Codemasters",
-      "Q94893",
-      "Take-Two Interactive",
-      "Capcom"
+      "Ubisoft Shanghai",
+      "Linden Lab",
+      "EA Vancouver",
+      "Ubisoft Montpellier"
     ],
-    "correct_answer": 3,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 22,
-    "text": "Кто является создателем видеоигры «Resident Evil 6»?",
+    "text": "Кто является создателем видеоигры «Undertale»?",
     "options": [
-      "Capcom",
-      "Q122741",
-      "Q2283",
-      "милевой камень"
+      "Тоби Фокс",
+      "Respawn Entertainment",
+      "Sledgehammer Games",
+      "Firaxis Games"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 23,
-    "text": "Какая компания или студия разработала игру «Ghosts'n Goblins»?",
+    "text": "Игра «The Sims 2» была выпущена разработчиками из:",
     "options": [
-      "Q8093",
-      "Массачусетский технологический институт",
-      "Sony Interactive Entertainment",
-      "Capcom"
+      "Maxis",
+      "Скотт Коутон",
+      "Capcom",
+      "Матеус Валадарес"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 24,
-    "text": "Какая компания или студия разработала игру «Duck Tales»?",
+    "text": "Игра «Mafia: The City of Lost Heaven» была выпущена разработчиками из:",
     "options": [
-      "Проект GNU",
-      "Алан Тьюринг",
-      "Take-Two Interactive",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 25,
-    "text": "Кто является создателем видеоигры «Resident Evil Gaiden»?",
-    "options": [
-      "Q116371",
-      "Capcom",
-      "Silicon Knights",
-      "Q92678"
+      "Blizzard North",
+      "2K Czech",
+      "Taito Corporation",
+      "Atari, Inc"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 26,
-    "text": "Кто является создателем видеоигры «Resident Evil Code: Veronica»?",
+    "id": 25,
+    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 2»?",
     "options": [
-      "Capcom",
-      "Q94893",
-      "Konami",
-      "Q92678"
+      "Infinity Ward",
+      "Rovio Entertainment",
+      "Ubisoft Toronto",
+      "Rockstar Lincoln"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 26,
+    "text": "Кто является создателем видеоигры «Far Cry 3»?",
+    "options": [
+      "Ubisoft Red Storm",
+      "EA Vancouver",
+      "Rockstar Vancouver",
+      "Скотт Коутон"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 27,
-    "text": "Кто является создателем видеоигры «Resident Evil: The Umbrella Chronicles»?",
+    "text": "Игра «Ведьмак 3: Дикая Охота» была выпущена разработчиками из:",
     "options": [
-      "Массачусетский технологический институт",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Sony Interactive Entertainment"
+      "CD Projekt RED",
+      "Respawn Entertainment",
+      "Iron Galaxy Studios",
+      "Capcom"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 28,
-    "text": "Игра «Commando» была выпущена разработчиками из:",
+    "text": "Игра «Clash Royale» была выпущена разработчиками из:",
     "options": [
+      "Sonic Team",
       "Capcom",
-      "Массачусетский технологический институт",
-      "Алан Тьюринг",
-      "Playground Games"
+      "Konami",
+      "Supercell"
     ],
-    "correct_answer": 0,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 29,
-    "text": "Кто является создателем видеоигры «Okamiden: Chiisaki Taiyo»?",
+    "text": "Игра «Warcraft III: Reign of Chaos» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Playground Games",
-      "Silicon Knights",
-      "Проект GNU"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 30,
-    "text": "Какая компания или студия разработала игру «Resident Evil Zero»?",
-    "options": [
-      "Mindware Studios",
-      "Проект GNU",
-      "Capcom",
-      "Sony Interactive Entertainment"
+      "Ubisoft Reflections",
+      "Blizzard North",
+      "Blizzard Entertainment",
+      "Sledgehammer Games"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 31,
-    "text": "Кто является создателем видеоигры «Street Fighter II»?",
+    "id": 30,
+    "text": "Какая компания или студия разработала игру «Space Invaders»?",
     "options": [
-      "Codemasters",
+      "Gearbox Software",
+      "Taito Corporation",
+      "Стив Расселл",
+      "Rockstar Leeds"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 31,
+    "text": "Какая компания или студия разработала игру «Resident Evil 4»?",
+    "options": [
+      "Supercell",
       "Capcom",
-      "Mindware Studios",
-      "Проект GNU"
+      "Naughty Dog",
+      "Bungie"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 32,
-    "text": "Игра «Resident Evil: Revelations» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Spore»?",
     "options": [
-      "Capcom",
-      "Take-Two Interactive",
-      "Tripwire Interactive",
-      "Q116371"
+      "Maxis",
+      "Ikegami",
+      "Gearbox Software",
+      "Roblox Corporation"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 33,
-    "text": "Кто является создателем видеоигры «Final Fight»?",
+    "text": "Игра «Portal 2» была выпущена разработчиками из:",
     "options": [
-      "Silicon Knights",
-      "Tripwire Interactive",
-      "Capcom",
-      "Проект GNU"
+      "Riot Games",
+      "Valve Corporation",
+      "EA Black Box",
+      "Ubisoft Montpellier"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 34,
-    "text": "Игра «Dead Rising» была выпущена разработчиками из:",
+    "text": "Игра «Call of Duty: World at War» была выпущена разработчиками из:",
     "options": [
-      "Mindware Studios",
-      "Silicon Knights",
-      "Capcom",
-      "Sony Interactive Entertainment"
+      "Blizzard Entertainment",
+      "Treyarch",
+      "Santa Monica Studio",
+      "Nintendo Entertainment Analysis and Development"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 35,
-    "text": "Кто является создателем видеоигры «Mega Man X»?",
+    "text": "Игра «Donkey Kong» была выпущена разработчиками из:",
     "options": [
-      "Q116371",
-      "Take-Two Interactive",
-      "Capcom",
-      "Q92678"
+      "Firaxis Games",
+      "Square",
+      "Тоби Фокс",
+      "Ikegami"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 36,
-    "text": "Игра «Monster Hunter» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Call of Duty: World at War»?",
     "options": [
-      "Take-Two Interactive",
-      "Mindware Studios",
-      "Capcom",
-      "Silicon Knights"
+      "Edge of Reality",
+      "Team Silent",
+      "Arkane Studios",
+      "Maxis"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 37,
-    "text": "Игра «Resident Evil: The Mercenaries 3D» была выпущена разработчиками из:",
+    "text": "Игра «Call of Duty: Modern Warfare 3» была выпущена разработчиками из:",
     "options": [
-      "Mindware Studios",
-      "Capcom",
-      "Codemasters",
-      "Playground Games"
+      "Insomniac Games",
+      "Firaxis Games",
+      "Naughty Dog",
+      "Treyarch"
     ],
-    "correct_answer": 1,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 38,
-    "text": "Игра «Resident Evil: The Darkside Chronicles» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Valorant»?",
     "options": [
-      "Mindware Studios",
-      "Capcom",
-      "Codemasters",
-      "Q2283"
+      "Nixxes Software",
+      "Eidos Montreal",
+      "Riot Games",
+      "Ensemble Studios"
     ],
-    "correct_answer": 1,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 39,
-    "text": "Кто является создателем видеоигры «Mega Man X4»?",
+    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 3»?",
     "options": [
-      "Алан Тьюринг",
-      "Capcom",
-      "Konami",
-      "Take-Two Interactive"
+      "Ubisoft Reflections",
+      "Raven Software",
+      "Ubisoft Barcelona",
+      "EA Black Box"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 40,
-    "text": "Какая компания или студия разработала игру «Alien vs. Predator»?",
+    "text": "Кто является создателем видеоигры «Red Dead Redemption»?",
     "options": [
-      "Capcom",
-      "Mindware Studios",
-      "Playground Games",
-      "Take-Two Interactive"
+      "Rockstar San Diego",
+      "Linden Lab",
+      "Bethesda Game Studios",
+      "Iron Galaxy Studios"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 41,
-    "text": "Игра «Dino Crisis» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Metal Gear Solid»?",
     "options": [
-      "Capcom",
-      "Konami",
-      "Q8093",
-      "Codemasters"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 42,
-    "text": "Кто является создателем видеоигры «Apollo Justice: Ace Attorney»?",
-    "options": [
-      "Codemasters",
-      "Capcom",
-      "Q8093",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 43,
-    "text": "Кто является создателем видеоигры «Breath of Fire III»?",
-    "options": [
-      "Capcom",
-      "Q116371",
-      "Mindware Studios",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 44,
-    "text": "Кто является создателем видеоигры «Lost Planet: Extreme Condition»?",
-    "options": [
-      "Q2283",
-      "Массачусетский технологический институт",
-      "Q94893",
-      "Capcom"
+      "Тоби Фокс",
+      "Вадим Герасимов",
+      "Ubisoft Montpellier",
+      "Konami"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 45,
-    "text": "Какая компания или студия разработала игру «Legendary Wings»?",
+    "id": 42,
+    "text": "Игра «Halo: Combat Evolved» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Codemasters",
-      "Алан Тьюринг",
-      "Дмитрий Пучков"
+      "Gearbox Software",
+      "Linden Lab",
+      "Bungie",
+      "Feral Interactive"
     ],
-    "correct_answer": 0,
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 43,
+    "text": "Какая компания или студия разработала игру «Halo: Combat Evolved»?",
+    "options": [
+      "Avalanche Software",
+      "Стив Расселл",
+      "Sonic Team",
+      "Gearbox Software"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 44,
+    "text": "Какая компания или студия разработала игру «Euro Truck Simulator 2»?",
+    "options": [
+      "GSC Game World",
+      "SCS Software",
+      "Roblox Corporation",
+      "Ubisoft Shanghai"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 45,
+    "text": "Какая компания или студия разработала игру «Need for Speed: Most Wanted»?",
+    "options": [
+      "Ubisoft Singapore",
+      "Bungie",
+      "Firaxis Games",
+      "EA Black Box"
+    ],
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 46,
-    "text": "Какая компания или студия разработала игру «Resident Evil Outbreak»?",
+    "text": "Кто является создателем видеоигры «Far Cry»?",
     "options": [
-      "Capcom",
-      "Konami",
-      "Q94893",
-      "Mindware Studios"
+      "Crytek",
+      "miHoYo",
+      "Atari, Inc",
+      "Тоби Фокс"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 47,
-    "text": "Какая компания или студия разработала игру «Mega Man III»?",
+    "text": "Кто является создателем видеоигры «Overwatch»?",
     "options": [
-      "Алан Тьюринг",
-      "Capcom",
-      "Konami",
-      "Codemasters"
+      "Gearbox Software",
+      "Blizzard Entertainment",
+      "Superscape",
+      "Guerrilla Games"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 48,
-    "text": "Какая компания или студия разработала игру «Dino Crisis 2»?",
+    "text": "Игра «Super Mario Bros. 3» была выпущена разработчиками из:",
     "options": [
-      "милевой камень",
-      "Проект GNU",
-      "Capcom",
-      "Codemasters"
+      "Gaijin Entertainment",
+      "Wargaming.net",
+      "Nintendo Entertainment Analysis and Development",
+      "CD Projekt RED"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 49,
-    "text": "Какая компания или студия разработала игру «Street Fighter»?",
+    "text": "Кто является создателем видеоигры «The Last of Us Part II»?",
     "options": [
-      "Массачусетский технологический институт",
-      "Mindware Studios",
-      "Silicon Knights",
-      "Capcom"
+      "Naughty Dog",
+      "Insomniac Games",
+      "Gaijin Entertainment",
+      "Bethesda Game Studios"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 50,
-    "text": "Какая компания или студия разработала игру «Final Fight 2»?",
+    "text": "Игра «Brawl Stars» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Q92678",
-      "Алан Тьюринг",
-      "Проект GNU"
+      "Supercell",
+      "Red Barrels",
+      "Team Silent",
+      "FromSoftware"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 51,
-    "text": "Кто является создателем видеоигры «Mega Man 8»?",
+    "text": "Кто является создателем видеоигры «Grand Theft Auto: Vice City Stories»?",
     "options": [
-      "Q2283",
-      "Sony Interactive Entertainment",
-      "Дмитрий Пучков",
+      "Nintendo Research & Development 1",
+      "Ubisoft Singapore",
+      "Rockstar Leeds",
       "Capcom"
     ],
-    "correct_answer": 3,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 52,
-    "text": "Кто является создателем видеоигры «Chaos Legion»?",
+    "text": "Какая компания или студия разработала игру «War Thunder»?",
     "options": [
-      "Массачусетский технологический институт",
-      "Take-Two Interactive",
-      "Capcom",
-      "Konami"
+      "Вадим Герасимов",
+      "Insomniac Games",
+      "Gaijin Entertainment",
+      "Guerrilla Games"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 53,
-    "text": "Какая компания или студия разработала игру «Resident Evil Outbreak: File #2»?",
+    "text": "Игра «Elden Ring» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "милевой камень",
-      "Sony Interactive Entertainment",
-      "Codemasters"
+      "CD Projekt RED",
+      "FromSoftware",
+      "Team Silent",
+      "Crytek"
     ],
-    "correct_answer": 0,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 54,
-    "text": "Какая компания или студия разработала игру «Mega Man 4»?",
+    "text": "Какая компания или студия разработала игру «Fallout 3»?",
     "options": [
-      "Q122741",
-      "Массачусетский технологический институт",
-      "Playground Games",
-      "Capcom"
+      "Raven Software",
+      "Riot Games",
+      "2K Czech",
+      "Bethesda Game Studios"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 55,
-    "text": "Игра «Haunting Ground» была выпущена разработчиками из:",
+    "text": "Игра «Agar.io» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Q94893",
-      "Q122741",
-      "Проект GNU"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 56,
-    "text": "Кто является создателем видеоигры «Sweet Home»?",
-    "options": [
-      "Проект GNU",
-      "Q116371",
-      "Capcom",
-      "Take-Two Interactive"
+      "Aspyr Media",
+      "Insomniac Games",
+      "Матеус Валадарес",
+      "Arkane Studios"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 57,
-    "text": "Кто является создателем видеоигры «Resident Evil: Dead Aim»?",
+    "id": 56,
+    "text": "Какая компания или студия разработала игру «Diablo III»?",
     "options": [
-      "Capcom",
-      "Playground Games",
-      "Дмитрий Пучков",
-      "Silicon Knights"
+      "Blizzard Entertainment",
+      "Guerrilla Games",
+      "Linden Lab",
+      "Вадим Герасимов"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 58,
-    "text": "Кто является создателем видеоигры «Marvel vs. Capcom: Clash of Super Heroes»?",
+    "id": 57,
+    "text": "Игра «Assassin’s Creed IV: Black Flag» была выпущена разработчиками из:",
     "options": [
-      "Playground Games",
-      "Проект GNU",
-      "Дмитрий Пучков",
-      "Capcom"
+      "Blizzard Entertainment",
+      "Ubisoft Shanghai",
+      "Gaijin Entertainment",
+      "Ubisoft Romania"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 59,
-    "text": "Какая компания или студия разработала игру «Lost Planet 2»?",
+    "id": 58,
+    "text": "Кто является создателем видеоигры «Call of Duty: Black Ops»?",
     "options": [
-      "Capcom",
-      "Q94893",
-      "Playground Games",
-      "Take-Two Interactive"
+      "Maxis",
+      "Похилько, Владимир Иванович",
+      "Treyarch",
+      "MicroProse"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 59,
+    "text": "Какая компания или студия разработала игру «World of Tanks»?",
+    "options": [
+      "Wargaming.net",
+      "Blizzard Entertainment",
+      "Feral Interactive",
+      "Don’t Nod"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 60,
-    "text": "Кто является создателем видеоигры «Street Fighter Alpha 2»?",
+    "text": "Какая компания или студия разработала игру «The Elder Scrolls IV: Oblivion»?",
     "options": [
-      "Q116371",
-      "Silicon Knights",
-      "Codemasters",
-      "Capcom"
+      "Матеус Валадарес",
+      "Red Barrels",
+      "4J Studios",
+      "Nixxes Software"
     ],
-    "correct_answer": 3,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 61,
-    "text": "Какая компания или студия разработала игру «Dino Crisis 3»?",
+    "text": "Кто является создателем видеоигры «Far Cry 4»?",
     "options": [
-      "Capcom",
-      "Codemasters",
-      "милевой камень",
-      "Sony Interactive Entertainment"
+      "Rockstar New England",
+      "Guerrilla Games",
+      "Ubisoft Toronto",
+      "Тоби Фокс"
     ],
-    "correct_answer": 0,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 62,
-    "text": "Кто является создателем видеоигры «Mega Man X5»?",
+    "text": "Какая компания или студия разработала игру «God of War»?",
     "options": [
-      "Tripwire Interactive",
-      "Алан Тьюринг",
-      "Capcom",
-      "Q94893"
+      "Square",
+      "Avalanche Software",
+      "Santa Monica Studio",
+      "Feral Interactive"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 63,
-    "text": "Кто является создателем видеоигры «Street Fighter III»?",
+    "text": "Кто является создателем видеоигры «Call of Duty 2»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Capcom",
-      "Q92678",
-      "Q8093"
+      "Rovio Entertainment",
+      "MicroProse",
+      "Roblox Corporation",
+      "Infinity Ward"
     ],
-    "correct_answer": 1,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 64,
-    "text": "Какая компания или студия разработала игру «Mega Man Star Force»?",
+    "text": "Игра «Call of Duty 2» была выпущена разработчиками из:",
     "options": [
-      "Tripwire Interactive",
-      "Массачусетский технологический институт",
-      "Take-Two Interactive",
+      "Atari, Inc",
+      "Ubisoft Quebec",
+      "Aspyr Media",
       "Capcom"
     ],
-    "correct_answer": 3,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 65,
-    "text": "Кто является создателем видеоигры «Mega Man 5»?",
+    "text": "Игра «Assassin’s Creed II» была выпущена разработчиками из:",
     "options": [
-      "Konami",
-      "Q8093",
-      "Q2283",
-      "Capcom"
+      "Ubisoft Montreal",
+      "Blizzard Entertainment",
+      "Sledgehammer Games",
+      "Square"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 66,
-    "text": "Кто является создателем видеоигры «Mega Man 6»?",
+    "text": "Кто является создателем видеоигры «Assassin’s Creed IV: Black Flag»?",
     "options": [
-      "милевой камень",
-      "Capcom",
-      "Mindware Studios",
-      "Q2283"
+      "Innersloth",
+      "Ubisoft Montreal",
+      "Sony Interactive Entertainment",
+      "Arkane Studios"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 67,
-    "text": "Игра «Darkwing Duck» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Far Cry 4»?",
     "options": [
-      "Q8093",
-      "Capcom",
-      "Playground Games",
-      "Алан Тьюринг"
+      "Avalanche Software",
+      "Playdead",
+      "Ubisoft Shanghai",
+      "Ubisoft Kyiv"
     ],
-    "correct_answer": 1,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 68,
-    "text": "Игра «Breath of Fire II» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Assassin’s Creed IV: Black Flag»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Capcom",
-      "Алан Тьюринг",
-      "Tripwire Interactive"
+      "EA Digital Illusions CE",
+      "Rockstar New England",
+      "Ubisoft Annecy",
+      "Ubisoft Barcelona"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 69,
+    "text": "Игра «The Elder Scrolls IV: Oblivion» была выпущена разработчиками из:",
+    "options": [
+      "Bethesda Game Studios",
+      "Nintendo Entertainment Analysis and Development",
+      "Eidos Montreal",
+      "Namco"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 70,
+    "text": "Кто является создателем видеоигры «Fallout 4»?",
+    "options": [
+      "Raven Software",
+      "Bethesda Game Studios",
+      "SCS Software",
+      "4J Studios"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 69,
-    "text": "Кто является создателем видеоигры «Marvel Super Heroes vs. Street Fighter»?",
-    "options": [
-      "Playground Games",
-      "Q2283",
-      "Capcom",
-      "Q92678"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 70,
-    "text": "Кто является создателем видеоигры «Mega Man X8»?",
-    "options": [
-      "Codemasters",
-      "Проект GNU",
-      "Capcom",
-      "Q94893"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 71,
-    "text": "Кто является создателем видеоигры «Phoenix Wright: Ace Attorney – Dual Destinies»?",
+    "text": "Кто является создателем видеоигры «Wii Sports»?",
     "options": [
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Capcom",
-      "Playground Games"
+      "Red Barrels",
+      "Rovio Entertainment",
+      "Creative Assembly",
+      "Nintendo Entertainment Analysis and Development"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 72,
-    "text": "Игра «Breath of Fire» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Far Cry 5»?",
     "options": [
-      "Q116371",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Q2283"
+      "Стив Расселл",
+      "Red Barrels",
+      "Ubisoft Toronto",
+      "miHoYo"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 73,
-    "text": "Какая компания или студия разработала игру «Marvel Super Heroes»?",
+    "text": "Какая компания или студия разработала игру «Far Cry 5»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "милевой камень",
-      "Массачусетский технологический институт",
-      "Capcom"
+      "Taito Corporation",
+      "Ubisoft Quebec",
+      "Atari, Inc",
+      "Ubisoft Kyiv"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 74,
-    "text": "Игра «Super Street Fighter II Turbo» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Need for Speed: Carbon»?",
     "options": [
-      "Q2283",
-      "Silicon Knights",
-      "Capcom",
-      "Sony Interactive Entertainment"
+      "Bethesda Game Studios",
+      "Ubisoft Barcelona",
+      "Creative Assembly",
+      "EA Vancouver"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 75,
-    "text": "Какая компания или студия разработала игру «Chip ’n Dale Rescue Rangers 2»?",
+    "text": "Игра «Call of Duty: Ghosts» была выпущена разработчиками из:",
     "options": [
+      "Infinity Ward",
+      "Don’t Nod",
       "Capcom",
-      "Q122741",
-      "Дмитрий Пучков",
-      "Q94893"
+      "Rockstar Vancouver"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 76,
-    "text": "Игра «Mighty Final Fight» была выпущена разработчиками из:",
+    "text": "Игра «Diablo II» была выпущена разработчиками из:",
     "options": [
-      "Q94893",
-      "Q8093",
-      "Sony Interactive Entertainment",
-      "Capcom"
+      "Digital Eclipse",
+      "Riot Games",
+      "Blizzard North",
+      "Creative Assembly"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 77,
+    "text": "Игра «Apex Legends» была выпущена разработчиками из:",
+    "options": [
+      "Iron Galaxy Studios",
+      "Стив Расселл",
+      "Rockstar Lincoln",
+      "Atari, Inc"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 78,
+    "text": "Кто является создателем видеоигры «Apex Legends»?",
+    "options": [
+      "MicroProse",
+      "Playdead",
+      "Rockstar New England",
+      "Respawn Entertainment"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 77,
-    "text": "Какая компания или студия разработала игру «Gun.Smoke»?",
+    "id": 79,
+    "text": "Игра «Call of Duty 3» была выпущена разработчиками из:",
     "options": [
-      "Codemasters",
-      "Capcom",
-      "Q8093",
-      "Q122741"
+      "Rockstar Lincoln",
+      "Treyarch",
+      "Похилько, Владимир Иванович",
+      "EA Digital Illusions CE"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 78,
-    "text": "Игра «Chip ’n Dale Rescue Rangers» была выпущена разработчиками из:",
-    "options": [
-      "Q116371",
-      "Konami",
-      "Capcom",
-      "Mindware Studios"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 79,
-    "text": "Игра «Final Fight 3» была выпущена разработчиками из:",
-    "options": [
-      "Tripwire Interactive",
-      "Q92678",
-      "Q2283",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 80,
-    "text": "Игра «X-Men vs. Street Fighter» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Age of Mythology»?",
     "options": [
-      "Tripwire Interactive",
-      "Q116371",
-      "Capcom",
-      "Q92678"
+      "Ensemble Studios",
+      "Wargaming.net",
+      "Похилько, Владимир Иванович",
+      "Team Silent"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 81,
-    "text": "Игра «Demon’s Crest» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Silent Hill 2»?",
     "options": [
-      "Capcom",
-      "Q2283",
-      "Mindware Studios",
-      "Take-Two Interactive"
+      "Вадим Герасимов",
+      "Team Silent",
+      "Rovio Entertainment",
+      "Edge of Reality"
     ],
-    "correct_answer": 0,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 82,
-    "text": "Кто является создателем видеоигры «Gyakuten Kenji 2»?",
+    "text": "Игра «Civilization» была выпущена разработчиками из:",
     "options": [
-      "Алан Тьюринг",
-      "Tripwire Interactive",
-      "Take-Two Interactive",
-      "Capcom"
+      "MicroProse",
+      "Crytek",
+      "Ubisoft Kyiv",
+      "FromSoftware"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 83,
-    "text": "Игра «Mega Man 2» была выпущена разработчиками из:",
+    "text": "Игра «Battlefield 3» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Q122741",
-      "Playground Games",
-      "Q8093"
+      "Crytek",
+      "SCS Software",
+      "Sledgehammer Games",
+      "EA Digital Illusions CE"
     ],
-    "correct_answer": 0,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 84,
-    "text": "Какая компания или студия разработала игру «Mega Man 3»?",
+    "text": "Игра «Assassin’s Creed: Brotherhood» была выпущена разработчиками из:",
     "options": [
-      "Sony Interactive Entertainment",
-      "Codemasters",
-      "Capcom",
-      "Алан Тьюринг"
+      "Blizzard Entertainment",
+      "Ubisoft Montreal",
+      "Riot Games",
+      "Ubisoft Montpellier"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 85,
-    "text": "Игра «Final Fight Revenge» была выпущена разработчиками из:",
+    "text": "Игра «Resident Evil» была выпущена разработчиками из:",
     "options": [
-      "Проект GNU",
-      "Q116371",
-      "Tripwire Interactive",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 86,
-    "text": "Кто является создателем видеоигры «Eco Fighters»?",
-    "options": [
-      "Q116371",
-      "Playground Games",
+      "Studio MDHR",
+      "EA Digital Illusions CE",
       "Capcom",
-      "Codemasters"
+      "Sledgehammer Games"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 87,
-    "text": "Игра «Ultimate Marvel vs. Capcom 3» была выпущена разработчиками из:",
+    "id": 86,
+    "text": "Какая компания или студия разработала игру «Horizon Zero Dawn»?",
     "options": [
-      "Проект GNU",
-      "Playground Games",
-      "Q8093",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 88,
-    "text": "Кто является создателем видеоигры «The Punisher»?",
-    "options": [
-      "Capcom",
-      "Mindware Studios",
       "Sony Interactive Entertainment",
-      "Playground Games"
+      "Nintendo Entertainment Analysis and Development",
+      "Скотт Коутон",
+      "Edge of Reality"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 89,
-    "text": "Кто является создателем видеоигры «DuckTales 2»?",
+    "id": 87,
+    "text": "Кто является создателем видеоигры «The Legend of Zelda: Ocarina of Time»?",
     "options": [
-      "Konami",
-      "Codemasters",
-      "Q94893",
-      "Capcom"
+      "Nintendo Entertainment Analysis and Development",
+      "SkyBox Labs",
+      "Вадим Герасимов",
+      "Don’t Nod"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 88,
+    "text": "Какая компания или студия разработала игру «Mass Effect»?",
+    "options": [
+      "Ubisoft Quebec",
+      "Лукас Поуп",
+      "Ubisoft Kyiv",
+      "BioWare"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 90,
-    "text": "Игра «Street Fighter Alpha 3» была выпущена разработчиками из:",
+    "id": 89,
+    "text": "Какая компания или студия разработала игру «Rome: Total War»?",
     "options": [
-      "Tripwire Interactive",
-      "Capcom",
-      "Playground Games",
-      "Q92678"
+      "SCS Software",
+      "EA Vancouver",
+      "Creative Assembly",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 90,
+    "text": "Какая компания или студия разработала игру «Final Fantasy X»?",
+    "options": [
+      "Innersloth",
+      "Square",
+      "Raven Software",
+      "Naughty Dog"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 91,
-    "text": "Кто является создателем видеоигры «Clock Tower 3»?",
+    "text": "Кто является создателем видеоигры «Final Fantasy VIII»?",
     "options": [
-      "Codemasters",
-      "Tripwire Interactive",
-      "Capcom",
-      "Playground Games"
+      "miHoYo",
+      "Rockstar New England",
+      "Square",
+      "Superscape"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 92,
-    "text": "Кто является создателем видеоигры «Mega Man X6»?",
+    "text": "Игра «Rome: Total War» была выпущена разработчиками из:",
     "options": [
-      "Mindware Studios",
-      "Алан Тьюринг",
-      "Capcom",
-      "милевой камень"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 93,
-    "text": "Какая компания или студия разработала игру «Dino Stalker»?",
-    "options": [
-      "милевой камень",
-      "Q116371",
-      "Q92678",
-      "Capcom"
+      "4J Studios",
+      "Avalanche Software",
+      "Ubisoft Toronto",
+      "Feral Interactive"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 94,
-    "text": "Игра «Mega Man X7» была выпущена разработчиками из:",
+    "id": 93,
+    "text": "Кто является создателем видеоигры «Angry Birds»?",
     "options": [
-      "Mindware Studios",
-      "Konami",
-      "Capcom",
-      "Проект GNU"
+      "Тоби Фокс",
+      "Rovio Entertainment",
+      "Ubisoft Toronto",
+      "FromSoftware"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 94,
+    "text": "Игра «Ведьмак» была выпущена разработчиками из:",
+    "options": [
+      "4J Studios",
+      "CD Projekt RED",
+      "EA Digital Illusions CE",
+      "Вадим Герасимов"
+    ],
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 95,
-    "text": "Кто является создателем видеоигры «Mega Man X3»?",
+    "text": "Игра «S.T.A.L.K.E.R.: Тень Чернобыля» была выпущена разработчиками из:",
     "options": [
-      "Q8093",
-      "Playground Games",
-      "Capcom",
-      "Q116371"
+      "EA Digital Illusions CE",
+      "Скотт Коутон",
+      "Creative Assembly",
+      "GSC Game World"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 96,
-    "text": "Кто является создателем видеоигры «Паук»?",
+    "text": "Кто является создателем видеоигры «Bully»?",
     "options": [
-      "Q122741",
-      "Массачусетский технологический институт",
-      "Q2283",
-      "Q92678"
+      "Red Barrels",
+      "2K Czech",
+      "Rockstar New England",
+      "Game Science"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 97,
-    "text": "Какая компания или студия разработала игру «ИнкБол»?",
+    "text": "Какая компания или студия разработала игру «Bully»?",
     "options": [
-      "Q2283",
-      "Tripwire Interactive",
-      "Silicon Knights",
-      "Take-Two Interactive"
+      "Insomniac Games",
+      "Ubisoft Toronto",
+      "Rockstar Vancouver",
+      "Стив Расселл"
     ],
-    "correct_answer": 0,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 98,
-    "text": "Какая компания или студия разработала игру «Червы (Windows)»?",
+    "text": "Игра «Mass Effect» была выпущена разработчиками из:",
     "options": [
-      "Массачусетский технологический институт",
-      "Q2283",
-      "Codemasters",
-      "Q8093"
+      "Матеус Валадарес",
+      "Edge of Reality",
+      "Nixxes Software",
+      "Ubisoft Quebec"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 99,
-    "text": "Какая компания или студия разработала игру «Super Street Fighter II»?",
+    "text": "Кто является создателем видеоигры «Sonic the Hedgehog»?",
     "options": [
-      "Capcom",
-      "Q92678",
-      "Q8093",
-      "милевой камень"
+      "Ubisoft Montpellier",
+      "Konami",
+      "Iron Galaxy Studios",
+      "Aspyr Media"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 100,
+    "text": "Какая компания или студия разработала игру «Crysis»?",
+    "options": [
+      "Crytek",
+      "Treyarch",
+      "BioWare",
+      "Лукас Поуп"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 100,
-    "text": "Кто является создателем видеоигры «JoJo’s Bizarre Adventure»?",
+    "id": 101,
+    "text": "Кто является создателем видеоигры «Hearthstone: Heroes of Warcraft»?",
     "options": [
-      "Алан Тьюринг",
-      "Дмитрий Пучков",
-      "Q116371",
-      "Capcom"
+      "Blizzard Entertainment",
+      "Taito Corporation",
+      "Edge of Reality",
+      "Rocksteady Studios"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 101,
-    "text": "Кто является создателем видеоигры «Disney’s Aladdin (Capcom)»?",
+    "id": 102,
+    "text": "Игра «Super Mario Bros. 2» была выпущена разработчиками из:",
     "options": [
-      "Дмитрий Пучков",
-      "Q122741",
-      "Capcom",
-      "Q92678"
+      "Rockstar Lincoln",
+      "Linden Lab",
+      "Nintendo Entertainment Analysis and Development",
+      "Taito Corporation"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 102,
-    "text": "Игра «Dragon’s Dogma» была выпущена разработчиками из:",
-    "options": [
-      "Q116371",
-      "Playground Games",
-      "Q2283",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 103,
-    "text": "Какая компания или студия разработала игру «Marvel Super Heroes in War of the Gems»?",
+    "text": "Какая компания или студия разработала игру «Mass Effect 2»?",
     "options": [
-      "Capcom",
-      "Q2283",
-      "Tripwire Interactive",
-      "Дмитрий Пучков"
+      "BioWare",
+      "Ubisoft Montreal",
+      "Rockstar San Diego",
+      "Creative Assembly"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 104,
-    "text": "Какая компания или студия разработала игру «El Dorado Gate»?",
+    "text": "Кто является создателем видеоигры «Hogwarts Legacy»?",
     "options": [
-      "Mindware Studios",
-      "Capcom",
-      "Проект GNU",
-      "Playground Games"
+      "Rockstar New England",
+      "Crytek",
+      "Avalanche Software",
+      "Taito Corporation"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 105,
+    "text": "Какая компания или студия разработала игру «Assassin’s Creed: Revelations»?",
+    "options": [
+      "Sonic Team",
+      "Ubisoft Montreal",
+      "TaleWorlds",
+      "Ubisoft Annecy"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 105,
-    "text": "Какая компания или студия разработала игру «Resident Evil Survivor 2 Code: Veronica»?",
-    "options": [
-      "Capcom",
-      "Tripwire Interactive",
-      "Q92678",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 106,
-    "text": "Кто является создателем видеоигры «Mega Man»?",
+    "text": "Кто является создателем видеоигры «Civilization V»?",
     "options": [
-      "милевой камень",
-      "Массачусетский технологический институт",
-      "Capcom",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 107,
-    "text": "Кто является создателем видеоигры «Mega Man & Bass»?",
-    "options": [
-      "Capcom",
-      "Mindware Studios",
-      "Tripwire Interactive",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 108,
-    "text": "Какая компания или студия разработала игру «Mega Man in Dr. Wily’s Revenge»?",
-    "options": [
-      "Konami",
-      "Q92678",
-      "Codemasters",
-      "Capcom"
+      "Rocksteady Studios",
+      "Ubisoft Barcelona",
+      "Portkey Games",
+      "Firaxis Games"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 109,
-    "text": "Кто является создателем видеоигры «The Nightmare Before Christmas: Oogie's Revenge»?",
+    "id": 107,
+    "text": "Игра «Spacewar!» была выпущена разработчиками из:",
     "options": [
-      "Konami",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Take-Two Interactive"
+      "EA Digital Illusions CE",
+      "Studio MDHR",
+      "Innersloth",
+      "Стив Расселл"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 108,
+    "text": "Какая компания или студия разработала игру «Tomb Raider»?",
+    "options": [
+      "Eidos Montreal",
+      "MicroProse",
+      "Square Enix",
+      "Nintendo Entertainment Analysis and Development"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 109,
+    "text": "Игра «Tomb Raider» была выпущена разработчиками из:",
+    "options": [
+      "Nixxes Software",
+      "Rocksteady Studios",
+      "2K Czech",
+      "Portkey Games"
+    ],
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 110,
-    "text": "Игра «Spawn: In the Demon’s Hand» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Five Nights at Freddy’s»?",
     "options": [
-      "Playground Games",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Mindware Studios"
+      "Nixxes Software",
+      "Riot Games",
+      "Red Barrels",
+      "Скотт Коутон"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 111,
-    "text": "Игра «Street Fighter III: 2nd Impact» была выпущена разработчиками из:",
+    "text": "Игра «Grand Theft Auto Advance» была выпущена разработчиками из:",
     "options": [
-      "Konami",
-      "Sony Interactive Entertainment",
-      "Capcom",
-      "Mindware Studios"
+      "Sonic Team",
+      "Superscape",
+      "Digital Eclipse",
+      "Ubisoft Reflections"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 112,
-    "text": "Кто является создателем видеоигры «Disney’s The Little Mermaid»?",
+    "text": "Какая компания или студия разработала игру «Cuphead»?",
     "options": [
-      "Mindware Studios",
-      "Capcom",
-      "милевой камень",
-      "Проект GNU"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 113,
-    "text": "Какая компания или студия разработала игру «Maximo»?",
-    "options": [
-      "Playground Games",
-      "Capcom",
-      "Q2283",
-      "Silicon Knights"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 114,
-    "text": "Игра «Mega Man Battle & Chase» была выпущена разработчиками из:",
-    "options": [
-      "Capcom",
-      "Tripwire Interactive",
-      "Массачусетский технологический институт",
-      "Q8093"
+      "Studio MDHR",
+      "2K Czech",
+      "Rocksteady Studios",
+      "Taito Corporation"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 115,
-    "text": "Какая компания или студия разработала игру «Mega Man Soccer»?",
+    "id": 113,
+    "text": "Игра «Black Myth: Wukong» была выпущена разработчиками из:",
     "options": [
-      "Q116371",
-      "Mindware Studios",
-      "Konami",
-      "Capcom"
+      "Game Science",
+      "Rovio Entertainment",
+      "Ubisoft Toronto",
+      "4J Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 114,
+    "text": "Какая компания или студия разработала игру «Battlefield 4»?",
+    "options": [
+      "Innersloth",
+      "Superscape",
+      "Santa Monica Studio",
+      "EA Digital Illusions CE"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 116,
-    "text": "Какая компания или студия разработала игру «Street Fighter III: 3rd Strike»?",
+    "id": 115,
+    "text": "Игра «Far Cry 2» была выпущена разработчиками из:",
     "options": [
-      "Capcom",
-      "Q2283",
-      "Mindware Studios",
-      "милевой камень"
+      "Ubisoft Montreal",
+      "Naughty Dog",
+      "TaleWorlds",
+      "Ubisoft Toronto"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 117,
-    "text": "Игра «GioGio's Bizarre Adventure» была выпущена разработчиками из:",
+    "id": 116,
+    "text": "Игра «Sid Meier’s Civilization VI» была выпущена разработчиками из:",
     "options": [
-      "Playground Games",
-      "Tripwire Interactive",
-      "Capcom",
-      "Take-Two Interactive"
+      "Ubisoft Romania",
+      "CD Projekt RED",
+      "Ubisoft Montreal",
+      "Firaxis Games"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 117,
+    "text": "Кто является создателем видеоигры «Grand Theft Auto: Chinatown Wars»?",
+    "options": [
+      "Portkey Games",
+      "Sonic Team",
+      "Rockstar New England",
+      "Rockstar Leeds"
+    ],
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 118,
-    "text": "Игра «Marvel vs. Capcom Origins» была выпущена разработчиками из:",
+    "text": "Игра «Dark Souls» была выпущена разработчиками из:",
     "options": [
-      "Массачусетский технологический институт",
-      "Sony Interactive Entertainment",
-      "Capcom",
-      "Konami"
+      "Aspyr Media",
+      "FromSoftware",
+      "Maxis",
+      "EA Digital Illusions CE"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 119,
-    "text": "Какая компания или студия разработала игру «Monster Hunter Freedom»?",
+    "text": "Кто является создателем видеоигры «Life Is Strange»?",
     "options": [
-      "Capcom",
-      "Mindware Studios",
-      "Q2283",
-      "Silicon Knights"
+      "Don’t Nod",
+      "Avalanche Software",
+      "Gearbox Software",
+      "Wargaming.net"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 120,
-    "text": "Игра «Killzone 2» была выпущена разработчиками из:",
+    "text": "Игра «Resident Evil 5» была выпущена разработчиками из:",
     "options": [
-      "Sony Interactive Entertainment",
-      "Проект GNU",
-      "Q116371",
-      "Q94893"
+      "FromSoftware",
+      "Матеус Валадарес",
+      "Rockstar Leeds",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 121,
+    "text": "Кто является создателем видеоигры «Super Mario Galaxy»?",
+    "options": [
+      "Nintendo Entertainment Analysis and Development",
+      "Rockstar Lincoln",
+      "Riot Games",
+      "Sonic Team"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 121,
-    "text": "Кто является создателем видеоигры «F1 2010»?",
-    "options": [
-      "Проект GNU",
-      "Codemasters",
-      "Capcom",
-      "Q2283"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 122,
-    "text": "Какая компания или студия разработала игру «GRID 2»?",
+    "text": "Кто является создателем видеоигры «Final Fantasy XII»?",
     "options": [
-      "Silicon Knights",
-      "Codemasters",
-      "Проект GNU",
-      "Q8093"
+      "Bungie",
+      "Square Enix",
+      "Playdead",
+      "SkyBox Labs"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 123,
-    "text": "Игра «Race Driver: Grid» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Need for Speed: Underground 2»?",
     "options": [
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Codemasters",
-      "Q94893"
+      "SCS Software",
+      "EA Black Box",
+      "Game Science",
+      "EA Vancouver"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 124,
-    "text": "Игра «Mainichi Issho» была выпущена разработчиками из:",
+    "text": "Игра «Halo 3» была выпущена разработчиками из:",
     "options": [
-      "Konami",
-      "Q92678",
-      "Sony Interactive Entertainment",
-      "Алан Тьюринг"
+      "Ubisoft Montreal",
+      "Innersloth",
+      "Creative Assembly",
+      "Bungie"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 125,
-    "text": "Кто является создателем видеоигры «Killzone 3»?",
+    "text": "Кто является создателем видеоигры «Battlefield 1»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Silicon Knights",
-      "Массачусетский технологический институт",
-      "Q116371"
+      "CD Projekt RED",
+      "Ubisoft Toronto",
+      "BioWare",
+      "EA Digital Illusions CE"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 126,
+    "text": "Игра «Final Fantasy» была выпущена разработчиками из:",
+    "options": [
+      "Square",
+      "Team Silent",
+      "Bethesda Game Studios",
+      "TaleWorlds"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 126,
-    "text": "Игра «ToCA Race Driver 3» была выпущена разработчиками из:",
-    "options": [
-      "Playground Games",
-      "Q92678",
-      "Codemasters",
-      "Массачусетский технологический институт"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 127,
-    "text": "Игра «Killzone: Liberation» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Limbo»?",
     "options": [
-      "Q2283",
-      "Дмитрий Пучков",
-      "Sony Interactive Entertainment",
-      "Tripwire Interactive"
+      "Ikegami",
+      "Playdead",
+      "Game Science",
+      "Bethesda Game Studios"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 128,
-    "text": "Какая компания или студия разработала игру «Killzone»?",
+    "text": "Какая компания или студия разработала игру «Outlast»?",
     "options": [
-      "Capcom",
-      "Q92678",
-      "Sony Interactive Entertainment",
-      "Silicon Knights"
+      "Blizzard North",
+      "Алексей Пажитнов",
+      "Red Barrels",
+      "Ubisoft Red Storm"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 129,
-    "text": "Какая компания или студия разработала игру «Operation Flashpoint: Dragon Rising»?",
+    "text": "Кто является создателем видеоигры «Silent Hill»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Проект GNU",
-      "Tripwire Interactive",
-      "Codemasters"
+      "Konami",
+      "Eidos Montreal",
+      "Treyarch",
+      "Nintendo Research & Development 1"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 130,
+    "text": "Игра «Warcraft: Orcs & Humans» была выпущена разработчиками из:",
+    "options": [
+      "Infinity Ward",
+      "BioWare",
+      "Rockstar Leeds",
+      "Blizzard Entertainment"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 130,
-    "text": "Игра «Klonoa 2: Lunatea’s Veil» была выпущена разработчиками из:",
-    "options": [
-      "Q2283",
-      "Проект GNU",
-      "Sony Interactive Entertainment",
-      "Q94893"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
     "id": 131,
-    "text": "Какая компания или студия разработала игру «The Legend of Dragoon»?",
+    "text": "Какая компания или студия разработала игру «Assassin’s Creed III»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Проект GNU",
-      "Konami",
-      "Silicon Knights"
+      "Ubisoft Romania",
+      "Naughty Dog",
+      "Ubisoft Shanghai",
+      "Nintendo Research & Development 1"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 132,
-    "text": "Какая компания или студия разработала игру «Operation Flashpoint: Red River»?",
+    "text": "Игра «The Legend of Zelda: A Link to the Past» была выпущена разработчиками из:",
     "options": [
-      "Konami",
-      "Codemasters",
-      "Q8093",
-      "Tripwire Interactive"
+      "Sonic Team",
+      "Nintendo Entertainment Analysis and Development",
+      "Eidos Montreal",
+      "Ubisoft Kyiv"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 133,
-    "text": "Игра «Patapon 2: Don Chaka» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «The Legend of Zelda: Majora’s Mask»?",
     "options": [
-      "Проект GNU",
-      "Q122741",
-      "Q92678",
-      "Sony Interactive Entertainment"
+      "Atari, Inc",
+      "Guerrilla Games",
+      "MicroProse",
+      "Nintendo Entertainment Analysis and Development"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 134,
-    "text": "Игра «Colin McRae Rally 2005» была выпущена разработчиками из:",
+    "text": "Кто является создателем видеоигры «Star Wars: Knights of the Old Republic»?",
     "options": [
-      "Playground Games",
-      "Sony Interactive Entertainment",
-      "Codemasters",
-      "Проект GNU"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 135,
-    "text": "Игра «Patapon 3» была выпущена разработчиками из:",
-    "options": [
-      "Codemasters",
-      "Дмитрий Пучков",
-      "Sony Interactive Entertainment",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 136,
-    "text": "Какая компания или студия разработала игру «Motor Toon Grand Prix»?",
-    "options": [
-      "Silicon Knights",
-      "Sony Interactive Entertainment",
-      "Q92678",
-      "Проект GNU"
+      "Rovio Entertainment",
+      "BioWare",
+      "Linden Lab",
+      "Ubisoft Barcelona"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 137,
-    "text": "Игра «Micro Machines 2: Turbo Tournament» была выпущена разработчиками из:",
+    "id": 135,
+    "text": "Какая компания или студия разработала игру «Far Cry 6»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Алан Тьюринг",
-      "Проект GNU",
-      "Codemasters"
+      "Rovio Entertainment",
+      "Ubisoft Toronto",
+      "EA Vancouver",
+      "Iron Galaxy Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 136,
+    "text": "Кто является создателем видеоигры «God of War II»?",
+    "options": [
+      "Bungie",
+      "GSC Game World",
+      "CD Projekt RED",
+      "Santa Monica Studio"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 138,
-    "text": "Игра «Rally Cross» была выпущена разработчиками из:",
+    "id": 137,
+    "text": "Кто является создателем видеоигры «Halo 2»?",
     "options": [
-      "Playground Games",
-      "Q122741",
-      "Sony Interactive Entertainment",
-      "Массачусетский технологический институт"
+      "Rocksteady Studios",
+      "Rockstar Vancouver",
+      "Bungie",
+      "Infinity Ward"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 139,
-    "text": "Игра «Облачно, возможны осадки в виде фрикаделек» была выпущена разработчиками из:",
+    "id": 138,
+    "text": "Кто является создателем видеоигры «Final Fantasy IX»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Q94893",
-      "Q92678",
-      "Tripwire Interactive"
+      "Eidos Montreal",
+      "Square",
+      "Wargaming.net",
+      "Ubisoft Annecy"
     ],
-    "correct_answer": 0,
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 139,
+    "text": "Кто является создателем видеоигры «Assassin’s Creed III»?",
+    "options": [
+      "Bethesda Game Studios",
+      "Ubisoft Montreal",
+      "Ikegami",
+      "Creative Assembly"
+    ],
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 140,
-    "text": "Кто является создателем видеоигры «Weekly Toro Station»?",
+    "text": "Кто является создателем видеоигры «Watch Dogs»?",
     "options": [
-      "Sony Interactive Entertainment",
-      "Codemasters",
-      "Q8093",
-      "Capcom"
+      "Eidos Montreal",
+      "Ubisoft Montreal",
+      "Edge of Reality",
+      "Wargaming.net"
     ],
-    "correct_answer": 0,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 141,
-    "text": "Кто является создателем видеоигры «Killzone: Shadow Fall»?",
+    "text": "Кто является создателем видеоигры «Spider-Man»?",
     "options": [
-      "Mindware Studios",
-      "Sony Interactive Entertainment",
-      "Codemasters",
-      "Konami"
+      "EA Vancouver",
+      "Insomniac Games",
+      "Nintendo Research & Development 1",
+      "Eidos Montreal"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 142,
-    "text": "Игра «Iron Man» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «Hay Day»?",
     "options": [
-      "Дмитрий Пучков",
-      "Q116371",
-      "Sony Interactive Entertainment",
-      "Playground Games"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 143,
-    "text": "Какая компания или студия разработала игру «Motor Toon Grand Prix 2»?",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Silicon Knights",
-      "Дмитрий Пучков",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 144,
-    "text": "Игра «Horizon Forbidden West» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Q94893",
-      "Проект GNU",
-      "Sony Interactive Entertainment"
+      "Стив Расселл",
+      "Blizzard North",
+      "TaleWorlds",
+      "Supercell"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 145,
-    "text": "Какая компания или студия разработала игру «Horizon Zero Dawn»?",
+    "id": 143,
+    "text": "Какая компания или студия разработала игру «Mount & Blade»?",
     "options": [
-      "Silicon Knights",
       "Capcom",
-      "Sony Interactive Entertainment",
-      "Playground Games"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 146,
-    "text": "Игра «Donkey Kong» была выпущена разработчиками из:",
-    "options": [
-      "Q8093",
-      "Konami",
-      "Tripwire Interactive",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 147,
-    "text": "Игра «New Super Mario Bros.» была выпущена разработчиками из:",
-    "options": [
-      "Tripwire Interactive",
-      "Q8093",
-      "Q94893",
-      "Capcom"
+      "TaleWorlds",
+      "Crytek",
+      "Rockstar Lincoln"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 148,
-    "text": "Игра «The Legend of Zelda: Ocarina of Time» была выпущена разработчиками из:",
+    "id": 144,
+    "text": "Кто является создателем видеоигры «Batman: Arkham Asylum»?",
     "options": [
-      "Алан Тьюринг",
-      "Capcom",
-      "Q2283",
-      "Q8093"
+      "Atari, Inc",
+      "Ubisoft Annecy",
+      "Rocksteady Studios",
+      "MicroProse"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 145,
+    "text": "Игра «Assassin’s Creed III» была выпущена разработчиками из:",
+    "options": [
+      "Nintendo Entertainment Analysis and Development",
+      "Ubisoft Reflections",
+      "Santa Monica Studio",
+      "Ubisoft Annecy"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 146,
+    "text": "Игра «Papers, Please» была выпущена разработчиками из:",
+    "options": [
+      "Superscape",
+      "Rockstar San Diego",
+      "Sledgehammer Games",
+      "Лукас Поуп"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 147,
+    "text": "Какая компания или студия разработала игру «Resident Evil Village»?",
+    "options": [
+      "Gaijin Entertainment",
+      "Studio MDHR",
+      "4J Studios",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 148,
+    "text": "Кто является создателем видеоигры «Super Mario Bros.: The Lost Levels»?",
+    "options": [
+      "MicroProse",
+      "Ubisoft Montpellier",
+      "Maxis",
+      "Nintendo Entertainment Analysis and Development"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 149,
-    "text": "Игра «Donkey Kong 3» была выпущена разработчиками из:",
+    "text": "Какая компания или студия разработала игру «The Legend of Zelda: Twilight Princess»?",
     "options": [
-      "Mindware Studios",
-      "Playground Games",
-      "Q122741",
-      "Q8093"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 150,
-    "text": "Какая компания или студия разработала игру «Mario Bros.»?",
-    "options": [
-      "Q8093",
-      "милевой камень",
-      "Q92678",
-      "Дмитрий Пучков"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 151,
-    "text": "Игра «EyeWire» была выпущена разработчиками из:",
-    "options": [
-      "Q92678",
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Q122741"
+      "Ubisoft Kyiv",
+      "Edge of Reality",
+      "Nintendo Entertainment Analysis and Development",
+      "Linden Lab"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 152,
-    "text": "Какая компания или студия разработала игру «Wii Chess»?",
-    "options": [
-      "Q8093",
-      "Q116371",
-      "Take-Two Interactive",
-      "Q122741"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 153,
-    "text": "Какая компания или студия разработала игру «Tennis»?",
-    "options": [
-      "Q8093",
-      "Q122741",
-      "Codemasters",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 154,
-    "text": "Игра «Donkey Kong Jr.» была выпущена разработчиками из:",
-    "options": [
-      "Q2283",
-      "Capcom",
-      "Q8093",
-      "Q122741"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 155,
-    "text": "Какая компания или студия разработала игру «EarthBound Beginnings»?",
-    "options": [
-      "Q8093",
-      "Take-Two Interactive",
-      "Q116371",
-      "Проект GNU"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 156,
-    "text": "Игра «Pro Evolution Soccer 2015» была выпущена разработчиками из:",
-    "options": [
-      "Q116371",
-      "Codemasters",
-      "Проект GNU",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 157,
-    "text": "Игра «Pro Evolution Soccer 2017» была выпущена разработчиками из:",
-    "options": [
-      "Konami",
-      "Codemasters",
-      "Дмитрий Пучков",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 158,
-    "text": "Игра «Pro Evolution Soccer 2016» была выпущена разработчиками из:",
-    "options": [
-      "Silicon Knights",
-      "Take-Two Interactive",
-      "Q8093",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 159,
-    "text": "Кто является создателем видеоигры «The Legend of Zelda: A Link to the Past and Four Swords»?",
-    "options": [
-      "милевой камень",
-      "Playground Games",
-      "Q94893",
-      "Q8093"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 160,
-    "text": "Какая компания или студия разработала игру «DSiWare»?",
-    "options": [
-      "Алан Тьюринг",
-      "Q8093",
-      "Sony Interactive Entertainment",
-      "Дмитрий Пучков"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 161,
-    "text": "Кто является создателем видеоигры «GNU Go»?",
-    "options": [
-      "Проект GNU",
-      "Take-Two Interactive",
-      "Q2283",
-      "Q94893"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 162,
-    "text": "Игра «Super Mario All-Stars» была выпущена разработчиками из:",
-    "options": [
-      "Q8093",
-      "Q116371",
-      "Mindware Studios",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 163,
-    "text": "Какая компания или студия разработала игру «Star Fox 2»?",
-    "options": [
-      "Take-Two Interactive",
-      "Sony Interactive Entertainment",
-      "Q8093",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 164,
-    "text": "Какая компания или студия разработала игру «eFootball Pro Evolution Soccer 2020»?",
-    "options": [
-      "Проект GNU",
-      "Capcom",
-      "Konami",
-      "Silicon Knights"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 165,
-    "text": "Какая компания или студия разработала игру «Pro Evolution Soccer 2019»?",
-    "options": [
-      "Q92678",
-      "Konami",
-      "Q94893",
-      "Playground Games"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 166,
-    "text": "Какая компания или студия разработала игру «Metal Gear Survive»?",
-    "options": [
-      "Дмитрий Пучков",
-      "Mindware Studios",
-      "Алан Тьюринг",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 167,
-    "text": "Какая компания или студия разработала игру «Tale Spin (NES)»?",
-    "options": [
-      "Q8093",
-      "Capcom",
-      "Sony Interactive Entertainment",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 168,
-    "text": "Кто является создателем видеоигры «The Great Ace Attorney: Adventures»?",
-    "options": [
-      "Konami",
-      "Take-Two Interactive",
-      "Capcom",
-      "Q122741"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 169,
-    "text": "Какая компания или студия разработала игру «Санитары подземелий»?",
-    "options": [
-      "Q2283",
-      "милевой камень",
-      "Take-Two Interactive",
-      "Дмитрий Пучков"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 170,
-    "text": "Игра «Санитары подземелий 2: Охота за Чёрным квадратом» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Q8093",
-      "Capcom"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 171,
-    "text": "Игра «Mega Man V» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Capcom",
-      "Mindware Studios"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 172,
-    "text": "Какая компания или студия разработала игру «Deep Down»?",
-    "options": [
-      "Konami",
-      "Capcom",
-      "Алан Тьюринг",
-      "Q8093"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 173,
-    "text": "Игра «Silent Hill: The Short Message» была выпущена разработчиками из:",
-    "options": [
-      "Q94893",
-      "Playground Games",
-      "Tripwire Interactive",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 174,
-    "text": "Какая компания или студия разработала игру «eFootball»?",
-    "options": [
-      "Q92678",
-      "Playground Games",
-      "Mindware Studios",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 175,
-    "text": "Какая компания или студия разработала игру «Superbike 2001»?",
-    "options": [
-      "Capcom",
-      "Массачусетский технологический институт",
-      "милевой камень",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 176,
-    "text": "Какая компания или студия разработала игру «Обитель зла: Откровения 2»?",
-    "options": [
-      "Дмитрий Пучков",
-      "Take-Two Interactive",
-      "Q94893",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 177,
-    "text": "Игра «Street Fighter V» была выпущена разработчиками из:",
-    "options": [
-      "Проект GNU",
-      "Дмитрий Пучков",
-      "Capcom",
-      "Массачусетский технологический институт"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 178,
-    "text": "Игра «Monster Hunter Generations» была выпущена разработчиками из:",
-    "options": [
-      "Tripwire Interactive",
-      "Capcom",
-      "Konami",
-      "Mindware Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 179,
-    "text": "Кто является создателем видеоигры «Phoenix Wright: Ace Attorney – Spirit of Justice»?",
-    "options": [
-      "Q92678",
-      "Проект GNU",
-      "Capcom",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 180,
-    "text": "Кто является создателем видеоигры «Umbrella Corps»?",
-    "options": [
-      "милевой камень",
-      "Playground Games",
-      "Take-Two Interactive",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 181,
-    "text": "Какая компания или студия разработала игру «Monster Hunter: World»?",
-    "options": [
-      "Mindware Studios",
-      "Проект GNU",
-      "Capcom",
-      "Q92678"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 182,
-    "text": "Какая компания или студия разработала игру «Mega Man 11»?",
-    "options": [
-      "Q8093",
-      "Capcom",
-      "Q122741",
-      "Q2283"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 183,
-    "text": "Кто является создателем видеоигры «Marvel vs. Capcom: Infinite»?",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Capcom",
-      "милевой камень",
-      "Q94893"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 184,
-    "text": "Кто является создателем видеоигры «Resident Evil 2»?",
-    "options": [
-      "Q122741",
-      "Q94893",
-      "Capcom",
-      "Q8093"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 185,
-    "text": "Кто является создателем видеоигры «Devil May Cry 5»?",
-    "options": [
-      "Codemasters",
-      "Take-Two Interactive",
-      "Capcom",
-      "милевой камень"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 186,
-    "text": "Игра «Resident Evil: Resistance» была выпущена разработчиками из:",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Q94893",
-      "Konami",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 187,
-    "text": "Кто является создателем видеоигры «Resident Evil 3»?",
-    "options": [
-      "Capcom",
-      "Алан Тьюринг",
-      "Проект GNU",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 188,
-    "text": "Игра «Resident Evil Village» была выпущена разработчиками из:",
-    "options": [
-      "Q122741",
-      "милевой камень",
-      "Capcom",
-      "Playground Games"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 189,
-    "text": "Игра «Devil May Cry 4: Special Edition» была выпущена разработчиками из:",
-    "options": [
-      "Алан Тьюринг",
-      "Q2283",
-      "Q8093",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 190,
-    "text": "Игра «Monster Hunter Rise» была выпущена разработчиками из:",
-    "options": [
-      "Capcom",
-      "Q94893",
-      "Q8093",
-      "Konami"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 191,
-    "text": "Игра «Phoenix Wright: Ace Attorney Trilogy» была выпущена разработчиками из:",
-    "options": [
-      "Playground Games",
-      "Capcom",
-      "Q8093",
-      "Codemasters"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 192,
-    "text": "Какая компания или студия разработала игру «Monster Hunter Wilds»?",
-    "options": [
-      "Массачусетский технологический институт",
-      "Konami",
-      "Алан Тьюринг",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 193,
-    "text": "Какая компания или студия разработала игру «Marvel vs. Capcom Fighting Collection: Arcade Classics»?",
-    "options": [
-      "Q8093",
-      "Q94893",
-      "Массачусетский технологический институт",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 194,
-    "text": "Игра «Street Fighter 6» была выпущена разработчиками из:",
-    "options": [
-      "Алан Тьюринг",
-      "Capcom",
-      "Q94893",
-      "Q122741"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 195,
-    "text": "Игра «Dragon’s Dogma II» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Q94893",
-      "Capcom",
-      "Q92678"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 196,
-    "text": "Игра «Resident Evil Re:Verse» была выпущена разработчиками из:",
-    "options": [
-      "Mindware Studios",
-      "Q116371",
-      "Capcom",
-      "милевой камень"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 197,
-    "text": "Кто является создателем видеоигры «Turochamp»?",
-    "options": [
-      "Capcom",
-      "Алан Тьюринг",
-      "Mindware Studios",
-      "Q122741"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 198,
-    "text": "Игра «Splatoon 2» была выпущена разработчиками из:",
-    "options": [
-      "Codemasters",
-      "Capcom",
-      "Массачусетский технологический институт",
-      "Q8093"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 199,
-    "text": "Какая компания или студия разработала игру «Mario Strikers: Battle League Football»?",
-    "options": [
-      "Q94893",
-      "Q8093",
-      "Q122741",
-      "Q116371"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 200,
-    "text": "Игра «Yie Ar Kung-Fu» была выпущена разработчиками из:",
-    "options": [
-      "Проект GNU",
-      "Konami",
-      "Codemasters",
-      "Capcom"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 201,
-    "text": "Игра «Sonic the Hedgehog» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Konami",
-      "Sony Interactive Entertainment",
-      "Q94893"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 202,
-    "text": "Какая компания или студия разработала игру «Metal Gear Solid 3: Snake Eater»?",
-    "options": [
-      "Playground Games",
-      "Konami",
-      "Take-Two Interactive",
-      "Mindware Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 203,
-    "text": "Кто является создателем видеоигры «Silent Hill: The Arcade»?",
-    "options": [
-      "Q8093",
-      "Take-Two Interactive",
-      "Konami",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 204,
-    "text": "Какая компания или студия разработала игру «Super Castlevania IV»?",
-    "options": [
-      "Konami",
-      "Playground Games",
-      "Tripwire Interactive",
-      "Массачусетский технологический институт"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 205,
-    "text": "Игра «Frogger» была выпущена разработчиками из:",
-    "options": [
-      "Konami",
-      "Массачусетский технологический институт",
-      "Дмитрий Пучков",
-      "Silicon Knights"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 206,
-    "text": "Игра «ISS Pro Evolution» была выпущена разработчиками из:",
-    "options": [
-      "Codemasters",
-      "Konami",
-      "Q8093",
-      "Q2283"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 207,
-    "text": "Какая компания или студия разработала игру «Hyper Sports»?",
-    "options": [
-      "Konami",
-      "Q116371",
-      "Алан Тьюринг",
-      "Mindware Studios"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 208,
-    "text": "Игра «Castlevania: Lament of Innocence» была выпущена разработчиками из:",
-    "options": [
-      "Алан Тьюринг",
-      "Q116371",
-      "Sony Interactive Entertainment",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 209,
-    "text": "Игра «Yume Penguin Monogatari» была выпущена разработчиками из:",
-    "options": [
-      "Q116371",
-      "Konami",
-      "Q2283",
-      "Silicon Knights"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 210,
-    "text": "Игра «Pro Evolution Soccer 2010» была выпущена разработчиками из:",
-    "options": [
-      "Capcom",
-      "Playground Games",
-      "Konami",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 211,
-    "text": "Какая компания или студия разработала игру «Castlevania Chronicles»?",
-    "options": [
-      "Capcom",
-      "Проект GNU",
-      "Алан Тьюринг",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 212,
-    "text": "Игра «Konami Krazy Racers» была выпущена разработчиками из:",
-    "options": [
-      "Konami",
-      "Silicon Knights",
-      "Q92678",
-      "Capcom"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 213,
-    "text": "Какая компания или студия разработала игру «Teenage Mutant Ninja Turtles III: The Manhattan Project»?",
-    "options": [
-      "Дмитрий Пучков",
-      "Q122741",
-      "Konami",
-      "Q8093"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 214,
-    "text": "Какая компания или студия разработала игру «Scramble»?",
-    "options": [
-      "Массачусетский технологический институт",
-      "Konami",
-      "Tripwire Interactive",
-      "Q116371"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 215,
-    "text": "Игра «Pro Evolution Soccer 6» была выпущена разработчиками из:",
-    "options": [
-      "Алан Тьюринг",
-      "Дмитрий Пучков",
-      "Konami",
-      "Codemasters"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 216,
-    "text": "Игра «Silent Hill» была выпущена разработчиками из:",
-    "options": [
-      "Q122741",
-      "Konami",
-      "Q116371",
-      "Q2283"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 217,
-    "text": "Какая компания или студия разработала игру «Silent Hill 3»?",
-    "options": [
-      "Q116371",
-      "Silicon Knights",
-      "Konami",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 218,
-    "text": "Игра «Forza Horizon» была выпущена разработчиками из:",
-    "options": [
-      "Q122741",
-      "Проект GNU",
-      "Tripwire Interactive",
-      "Playground Games"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 219,
-    "text": "Какая компания или студия разработала игру «Red Orchestra 2: Heroes of Stalingrad»?",
-    "options": [
-      "Q8093",
-      "Sony Interactive Entertainment",
-      "Tripwire Interactive",
-      "Q122741"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 220,
-    "text": "Кто является создателем видеоигры «Dreamkiller»?",
-    "options": [
-      "Take-Two Interactive",
-      "Q122741",
-      "Q8093",
-      "Mindware Studios"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 221,
-    "text": "Кто является создателем видеоигры «Killing Floor»?",
-    "options": [
-      "Silicon Knights",
-      "Mindware Studios",
-      "Tripwire Interactive",
-      "Q2283"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 222,
-    "text": "Какая компания или студия разработала игру «Contra»?",
-    "options": [
-      "Проект GNU",
-      "Дмитрий Пучков",
-      "Konami",
-      "Q116371"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 223,
-    "text": "Какая компания или студия разработала игру «The Adventures of Batman and Robin»?",
-    "options": [
-      "Playground Games",
-      "Silicon Knights",
-      "Codemasters",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 224,
-    "text": "Какая компания или студия разработала игру «Metal Gear Solid 2: Sons of Liberty»?",
-    "options": [
-      "Silicon Knights",
-      "Дмитрий Пучков",
-      "Playground Games",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 225,
-    "text": "Какая компания или студия разработала игру «Red Orchestra: Ostfront 41–45»?",
-    "options": [
-      "Q8093",
-      "милевой камень",
-      "Tripwire Interactive",
-      "Проект GNU"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 226,
-    "text": "Какая компания или студия разработала игру «Bonanza Bros.»?",
-    "options": [
-      "Take-Two Interactive",
-      "Konami",
-      "Q122741",
-      "Codemasters"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 227,
-    "text": "Кто является создателем видеоигры «Grand Theft Auto»?",
-    "options": [
-      "Массачусетский технологический институт",
-      "Q94893",
-      "Алан Тьюринг",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 228,
-    "text": "Кто является создателем видеоигры «Zaxxon»?",
-    "options": [
-      "Tripwire Interactive",
-      "Codemasters",
-      "Q116371",
-      "Q122741"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 229,
-    "text": "Игра «Grand Theft Auto IV» была выпущена разработчиками из:",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Mindware Studios",
-      "Q94893",
-      "Silicon Knights"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 230,
-    "text": "Игра «Yakuza 2» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Konami",
-      "Q122741",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 231,
-    "text": "Какая компания или студия разработала игру «Flicky»?",
-    "options": [
-      "милевой камень",
-      "Sony Interactive Entertainment",
-      "Take-Two Interactive",
-      "Q122741"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 232,
-    "text": "Какая компания или студия разработала игру «Too Human»?",
-    "options": [
-      "Проект GNU",
-      "Silicon Knights",
-      "Массачусетский технологический институт",
-      "Capcom"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 233,
-    "text": "Какая компания или студия разработала игру «Golden Axe III»?",
-    "options": [
-      "Q122741",
-      "Mindware Studios",
-      "Take-Two Interactive",
-      "Q92678"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 234,
-    "text": "Кто является создателем видеоигры «Phantasy Star IV: The End of the Millennium»?",
-    "options": [
-      "Konami",
-      "Q122741",
-      "милевой камень",
-      "Проект GNU"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 235,
-    "text": "Какая компания или студия разработала игру «Castle of Illusion Starring Micky Mouse»?",
-    "options": [
-      "Q122741",
-      "Playground Games",
-      "Дмитрий Пучков",
-      "Konami"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 236,
-    "text": "Какая компания или студия разработала игру «Phantasy Star II»?",
-    "options": [
-      "Playground Games",
-      "Q122741",
-      "Sony Interactive Entertainment",
-      "Дмитрий Пучков"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 237,
-    "text": "Игра «Golden Axe II» была выпущена разработчиками из:",
-    "options": [
-      "Q122741",
-      "Q94893",
-      "Codemasters",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 238,
-    "text": "Какая компания или студия разработала игру «Manhunt»?",
-    "options": [
-      "Capcom",
-      "Q94893",
-      "милевой камень",
-      "Q116371"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 239,
-    "text": "Игра «Body Harvest» была выпущена разработчиками из:",
-    "options": [
-      "Q122741",
-      "Q92678",
-      "Q94893",
-      "Codemasters"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 240,
-    "text": "Какая компания или студия разработала игру «Pro Evolution Soccer 2008»?",
-    "options": [
-      "Q94893",
-      "Konami",
-      "Q116371",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 241,
-    "text": "Кто является создателем видеоигры «Boktai: The Sun is in Your Hand»?",
-    "options": [
-      "Konami",
-      "Silicon Knights",
-      "Q122741",
-      "Codemasters"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 242,
-    "text": "Какая компания или студия разработала игру «Pro Evolution Soccer 4»?",
-    "options": [
-      "Mindware Studios",
-      "Konami",
-      "Q92678",
-      "Codemasters"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 243,
-    "text": "Игра «Monster in My Pocket» была выпущена разработчиками из:",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Дмитрий Пучков",
-      "Q92678",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 244,
-    "text": "Какая компания или студия разработала игру «Super Contra»?",
-    "options": [
-      "Konami",
-      "Take-Two Interactive",
-      "Codemasters",
-      "Mindware Studios"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 245,
-    "text": "Какая компания или студия разработала игру «Teenage Mutant Ninja Turtles: The Hyperstone Heist»?",
-    "options": [
-      "Q116371",
-      "Playground Games",
-      "милевой камень",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 246,
-    "text": "Игра «Knightmare» была выпущена разработчиками из:",
-    "options": [
-      "Q94893",
-      "Konami",
-      "Q122741",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 247,
-    "text": "Кто является создателем видеоигры «Dance Dance Revolution SuperNOVA»?",
-    "options": [
-      "Konami",
-      "Capcom",
-      "Проект GNU",
-      "милевой камень"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 248,
-    "text": "Какая компания или студия разработала игру «Alex Kidd BMX Trial»?",
-    "options": [
-      "Playground Games",
-      "Q122741",
-      "Codemasters",
-      "милевой камень"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 249,
-    "text": "Кто является создателем видеоигры «Golden Axe»?",
-    "options": [
-      "Дмитрий Пучков",
-      "Tripwire Interactive",
-      "Q122741",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 250,
-    "text": "Какая компания или студия разработала игру «Sonic Generations»?",
-    "options": [
-      "Проект GNU",
-      "Q122741",
-      "Silicon Knights",
-      "Mindware Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 251,
-    "text": "Игра «Cyber Police ESWAT» была выпущена разработчиками из:",
-    "options": [
-      "Q92678",
-      "Q2283",
-      "Playground Games",
-      "Q122741"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 252,
-    "text": "Какая компания или студия разработала игру «Road Fighter»?",
-    "options": [
-      "Массачусетский технологический институт",
-      "Tripwire Interactive",
-      "Konami",
-      "Проект GNU"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 253,
-    "text": "Игра «Pro Evolution Soccer 2013» была выпущена разработчиками из:",
-    "options": [
-      "Дмитрий Пучков",
-      "Массачусетский технологический институт",
-      "Алан Тьюринг",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 254,
-    "text": "Кто является создателем видеоигры «Pro Evolution Soccer 2»?",
-    "options": [
-      "Capcom",
-      "Mindware Studios",
-      "Q8093",
-      "Konami"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 255,
-    "text": "Какая компания или студия разработала игру «Pro Evolution Soccer 3»?",
-    "options": [
-      "Konami",
-      "Capcom",
-      "Silicon Knights",
-      "Tripwire Interactive"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 256,
-    "text": "Кто является создателем видеоигры «Columns»?",
-    "options": [
-      "Q116371",
-      "Sony Interactive Entertainment",
-      "Q122741",
-      "Массачусетский технологический институт"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 257,
-    "text": "Какая компания или студия разработала игру «Shadow the Hedgehog»?",
-    "options": [
-      "Q8093",
-      "Q122741",
-      "Codemasters",
-      "Capcom"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 258,
-    "text": "Кто является создателем видеоигры «Star Fox 64 3D»?",
-    "options": [
-      "Проект GNU",
-      "Q116371",
-      "Q2283",
-      "Take-Two Interactive"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 259,
-    "text": "Какая компания или студия разработала игру «Lemmings Revolution»?",
-    "options": [
-      "Q8093",
-      "Take-Two Interactive",
-      "Mindware Studios",
-      "Q94893"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 260,
-    "text": "Кто является создателем видеоигры «Passage»?",
-    "options": [
-      "Дмитрий Пучков",
-      "Take-Two Interactive",
-      "Алан Тьюринг",
-      "Q92678"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 261,
-    "text": "Какая компания или студия разработала игру «Eternal Darkness: Sanity’s Requiem»?",
-    "options": [
-      "Проект GNU",
-      "Q92678",
-      "Silicon Knights",
-      "Q8093"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 262,
-    "text": "Кто является создателем видеоигры «Star Fox Command»?",
-    "options": [
-      "Проект GNU",
-      "Tripwire Interactive",
-      "Q8093",
-      "Q116371"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 263,
-    "text": "Кто является создателем видеоигры «Altered Beast»?",
-    "options": [
-      "Mindware Studios",
-      "Q122741",
-      "Capcom",
-      "Проект GNU"
-    ],
-    "correct_answer": 1,
     "category": "Игры и Технологии"
   }
 ]
