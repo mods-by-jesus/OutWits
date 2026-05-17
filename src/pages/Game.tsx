@@ -49,37 +49,83 @@ export function Game() {
     };
   }, []);
 
+  // Звуковые эффекты
+  const playSound = (type: 'correct' | 'incorrect' | 'tick') => {
+    try {
+      if (!audioCtxRef.current) {
+        audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+      }
+      if (audioCtxRef.current.state === 'suspended') {
+        audioCtxRef.current.resume();
+      }
+      const ctx = audioCtxRef.current;
+      const now = ctx.currentTime;
+
+      if (type === 'correct') {
+        // Приятный восходящий аккорд (C-E-G)
+        [523, 659, 784].forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.08);
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.08, now + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.08);
+          osc.stop(now + 0.5);
+        });
+      } else if (type === 'incorrect') {
+        // Мягкий нисходящий тон (два тона вниз)
+        [400, 300].forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.12);
+          gain.gain.setValueAtTime(0.06, now + i * 0.12);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.12);
+          osc.stop(now + 0.4);
+        });
+      } else {
+        // Тик обратного отсчёта
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        const freq = timeLeft === 1 ? 1200 : 800;
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(now + 0.1);
+      }
+    } catch (e) {
+      console.log('Audio error:', e);
+    }
+  };
+
+  // Звук при получении результатов раунда
+  const prevShowResults = useRef(false);
+  useEffect(() => {
+    if (showResults && !prevShowResults.current) {
+      // Результаты только что появились
+      const myAnswer = roundAnswers.find(a => a.playerId === playerId);
+      if (myAnswer) {
+        playSound(myAnswer.isCorrect ? 'correct' : 'incorrect');
+      }
+    }
+    prevShowResults.current = showResults;
+  }, [showResults, roundAnswers, playerId]);
+
+  // Звук обратного отсчёта (последние 5 секунд)
   useEffect(() => {
     if (timeLeft <= 5 && timeLeft > 0 && !showResults) {
-      try {
-        if (!audioCtxRef.current) {
-          audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
-        }
-        
-        // Возобновляем контекст
-        if (audioCtxRef.current.state === 'suspended') {
-          audioCtxRef.current.resume();
-        }
-
-        const oscillator = audioCtxRef.current.createOscillator();
-        const gainNode = audioCtxRef.current.createGain();
-
-        oscillator.type = 'sine';
-        // Если осталась 1 секунда, звук будет более высоким
-        const freq = timeLeft === 1 ? 1200 : 800;
-        oscillator.frequency.setValueAtTime(freq, audioCtxRef.current.currentTime);
-        
-        gainNode.gain.setValueAtTime(0.1, audioCtxRef.current.currentTime);
-        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtxRef.current.currentTime + 0.1);
-
-        oscillator.connect(gainNode);
-        gainNode.connect(audioCtxRef.current.destination);
-
-        oscillator.start();
-        oscillator.stop(audioCtxRef.current.currentTime + 0.1);
-      } catch (e) {
-        console.log('Audio error (autoplay might be blocked):', e);
-      }
+      playSound('tick');
     }
   }, [timeLeft, showResults]);
 
