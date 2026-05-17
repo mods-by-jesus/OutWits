@@ -234,8 +234,8 @@ export function Game() {
                     : 'border-neutral-700/50'
                 }`}
               >
-                <div className="text-xs text-neutral-500 font-bold uppercase mb-1 truncate">
-                  {p.nickname}
+                <div className={`text-xs font-bold uppercase mb-1 truncate ${p.online === false ? 'text-red-500' : 'text-neutral-500'}`}>
+                  {p.nickname} {p.online === false && '(Офлайн)'}
                 </div>
                 <div className="text-xl font-black">{p.score}</div>
                 {p.streak >= 10 ? (

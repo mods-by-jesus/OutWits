@@ -56,9 +56,14 @@ export function Lobby() {
             {players.map((player) => (
               <div
                 key={player.id}
-                className="bg-neutral-900/50 p-4 rounded-xl flex justify-between items-center border border-neutral-700/50"
+                className={`bg-neutral-900/50 p-4 rounded-xl flex justify-between items-center border border-neutral-700/50 ${player.online === false ? 'opacity-50' : ''}`}
               >
-                <span className="text-lg font-bold">{player.nickname}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-bold">{player.nickname}</span>
+                  {player.online === false && (
+                    <span className="text-xs font-bold text-red-500 uppercase tracking-wider">(Офлайн)</span>
+                  )}
+                </div>
                 {player.is_host && (
                   <span className="bg-white text-black text-[10px] font-black px-2 py-1 rounded uppercase">
                     Host

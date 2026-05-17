@@ -11,6 +11,7 @@ export interface Player {
   score: number;
   streak: number;
   correctCount?: number;
+  online?: boolean;
 }
 
 interface Question {
