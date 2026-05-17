@@ -18,16 +18,36 @@ const QUESTIONS_PER_GAME = 10;
 
 // ─── Load questions ───────────────────────────────────
 const questionsDir = join(__dirname, 'questions');
-const questionFiles = readdirSync(questionsDir).filter(f => f.endsWith('.json'));
-
 let allQuestions = [];
-for (const file of questionFiles) {
-  const content = JSON.parse(readFileSync(join(questionsDir, file), 'utf-8'));
-  allQuestions = allQuestions.concat(content);
+let availableCategories = [];
+
+function loadQuestions() {
+  try {
+    const questionFiles = readdirSync(questionsDir).filter(f => f.endsWith('.json'));
+    let tempQuestions = [];
+    for (const file of questionFiles) {
+      const content = JSON.parse(readFileSync(join(questionsDir, file), 'utf-8'));
+      tempQuestions = tempQuestions.concat(content);
+    }
+    allQuestions = tempQuestions;
+    availableCategories = [...new Set(allQuestions.map(q => q.category).filter(Boolean))];
+    console.log(`[Server] Вопросы загружены: ${allQuestions.length} шт. Категорий: ${availableCategories.length}`);
+  } catch (e) {
+    console.error('[Server] Ошибка при загрузке вопросов:', e.message);
+  }
 }
 
-// Извлекаем все уникальные категории
-const availableCategories = [...new Set(allQuestions.map(q => q.category).filter(Boolean))];
+// Initial load
+loadQuestions();
+
+// Live-reload questions when files change
+import fs from 'fs';
+fs.watch(questionsDir, (eventType, filename) => {
+  if (filename && filename.endsWith('.json')) {
+    console.log(`[Server] Файл ${filename} изменился, перезагружаю базу вопросов...`);
+    loadQuestions();
+  }
+});
 
 
 // ─── In-memory storage ───────────────────────────────
