@@ -7,7 +7,7 @@ const MAX_NICKNAME_LENGTH = 12;
 const CODE_LENGTH = 5;
 
 export function Home() {
-  const [nickname, setNickname] = useState('');
+  const [nickname, setNickname] = useState(() => localStorage.getItem('nickname') || '');
   const [code, setCode] = useState('');
   const [creating, setCreating] = useState(false);
   const [joining, setJoining] = useState(false);
@@ -28,6 +28,7 @@ export function Home() {
       return false;
     }
     setError('');
+    localStorage.setItem('nickname', nickname.trim());
     return true;
   };
 
