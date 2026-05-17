@@ -22,6 +22,33 @@ export function Game() {
 
   const audioCtxRef = useRef<AudioContext | null>(null);
 
+  // Разблокировка аудиоконтекста по первому клику/тапу на экран (для Safari/Chrome)
+  useEffect(() => {
+    const unlock = () => {
+      try {
+        if (!audioCtxRef.current) {
+          audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+        }
+        if (audioCtxRef.current.state === 'suspended') {
+          audioCtxRef.current.resume();
+        }
+      } catch (e) {
+        console.log('Unlock audio error:', e);
+      }
+      // Удаляем слушатели после первой же активности
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+    };
+
+    document.addEventListener('click', unlock);
+    document.addEventListener('touchstart', unlock);
+
+    return () => {
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+    };
+  }, []);
+
   useEffect(() => {
     if (timeLeft <= 5 && timeLeft > 0 && !showResults) {
       try {
@@ -29,7 +56,7 @@ export function Game() {
           audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
         }
         
-        // Возобновляем контекст, если он был приостановлен браузером
+        // Возобновляем контекст
         if (audioCtxRef.current.state === 'suspended') {
           audioCtxRef.current.resume();
         }
