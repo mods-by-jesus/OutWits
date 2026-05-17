@@ -24,6 +24,11 @@ function shuffle(array) {
   return newArr;
 }
 
+function getRandomTemplate(templates, data) {
+  const template = templates[Math.floor(Math.random() * templates.length)];
+  return template(data);
+}
+
 function fetchWikidata(sparqlQuery) {
   return new Promise((resolve, reject) => {
     const url = 'https://query.wikidata.org/sparql?query=' + encodeURIComponent(sparqlQuery);
@@ -70,18 +75,21 @@ const generators = [
         const country = b.countryLabel.value;
         const capital = b.capitalLabel.value;
         
-        // Pick 3 random wrong answers
-        const pool = allAnswers.filter(a => a !== capital);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== capital)).slice(0, 3);
         const options = shuffle([capital, ...wrong]);
-        const correct_answer = options.indexOf(capital);
+        
+        const templates = [
+          (c) => `Какой город является столицей государства ${c}?`,
+          (c) => `Назовите столицу страны ${c}.`,
+          (c) => `Главным городом и столицей государства ${c} является:`,
+          (c) => `В каком городе находится правительство страны ${c}?`
+        ];
         
         return {
           category: 'География',
-          text: `Какой город является столицей государства ${country}?`,
+          text: getRandomTemplate(templates, country),
           options,
-          correct_answer
+          correct_answer: options.indexOf(capital)
         };
       });
     }
@@ -104,23 +112,23 @@ const generators = [
         const country = b.countryLabel.value;
         const continent = b.continentLabel.value;
         
-        const pool = allAnswers.filter(a => a !== continent);
-        const wrong = shuffle(pool).slice(0, 3);
-        
-        // Pad with fake continents if we don't have enough
+        const wrong = shuffle(allAnswers.filter(a => a !== continent)).slice(0, 3);
         while(wrong.length < 3) wrong.push(shuffle(['Евразия', 'Африка', 'Северная Америка', 'Южная Америка', 'Австралия', 'Антарктида'])[0]);
         
         const options = shuffle([...new Set([continent, ...wrong])]);
-        while (options.length < 4) {
-          options.push(shuffle(['Евразия', 'Африка', 'Северная Америка', 'Южная Америка', 'Австралия', 'Антарктида']).find(x => !options.includes(x)));
-        }
-        const correct_answer = options.indexOf(continent);
+        while (options.length < 4) options.push(shuffle(['Евразия', 'Африка', 'Северная Америка', 'Южная Америка', 'Австралия', 'Антарктида']).find(x => !options.includes(x)));
+        
+        const templates = [
+          (c) => `На каком материке (или части света) расположена страна ${c}?`,
+          (c) => `Частью какого континента является ${c}?`,
+          (c) => `Если вы отправитесь в государство ${c}, на какой континент вы попадете?`
+        ];
         
         return {
           category: 'География',
-          text: `На каком материке (или части света) расположена страна ${country}?`,
+          text: getRandomTemplate(templates, country),
           options,
-          correct_answer
+          correct_answer: options.indexOf(continent)
         };
       });
     }
@@ -145,17 +153,20 @@ const generators = [
         const element = b.elementLabel.value;
         const symbol = b.symbol.value;
         
-        const pool = allAnswers.filter(a => a !== element);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== element)).slice(0, 3);
         const options = shuffle([element, ...wrong]);
-        const correct_answer = options.indexOf(element);
+        
+        const templates = [
+          (s) => `Какой химический элемент обозначается символом ${s}?`,
+          (s) => `В таблице Менделеева под символом ${s} скрывается:`,
+          (s) => `Назовите элемент, имеющий химический символ ${s}.`
+        ];
         
         return {
           category: 'Наука',
-          text: `Какой химический элемент обозначается символом ${symbol}?`,
+          text: getRandomTemplate(templates, symbol),
           options,
-          correct_answer
+          correct_answer: options.indexOf(element)
         };
       });
     }
@@ -178,17 +189,20 @@ const generators = [
         const element = b.elementLabel.value;
         const symbol = b.symbol.value;
         
-        const pool = allAnswers.filter(a => a !== symbol);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== symbol)).slice(0, 3);
         const options = shuffle([symbol, ...wrong]);
-        const correct_answer = options.indexOf(symbol);
+        
+        const templates = [
+          (e) => `Какой символ у химического элемента ${e}?`,
+          (e) => `Как в периодической таблице обозначается ${e}?`,
+          (e) => `Химический знак для элемента ${e} — это:`
+        ];
         
         return {
           category: 'Наука',
-          text: `Какой символ у химического элемента ${element}?`,
+          text: getRandomTemplate(templates, element),
           options,
-          correct_answer
+          correct_answer: options.indexOf(symbol)
         };
       });
     }
@@ -200,9 +214,10 @@ const generators = [
     categoryName: 'Искусство и Культура',
     name: 'Режиссеры кассовых фильмов',
     query: `
-      SELECT DISTINCT ?filmLabel ?directorLabel WHERE {
+      SELECT DISTINCT ?filmLabel ?directorLabel ?image WHERE {
         ?film wdt:P31 wd:Q11424.
         ?film wdt:P57 ?director.
+        OPTIONAL { ?director wdt:P18 ?image. }
         ?film wdt:P2130 ?boxOffice.
         FILTER(?boxOffice > 200000000)
         SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
@@ -215,17 +230,21 @@ const generators = [
         const film = b.filmLabel.value;
         const director = b.directorLabel.value;
         
-        const pool = allAnswers.filter(a => a !== director);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== director)).slice(0, 3);
         const options = shuffle([director, ...wrong]);
-        const correct_answer = options.indexOf(director);
+        
+        const templates = [
+          (f) => `Кто является режиссером фильма «${f}»?`,
+          (f) => `Кто снял знаменитую картину «${f}»?`,
+          (f) => `Режиссерское кресло фильма «${f}» занимал:`
+        ];
         
         return {
           category: 'Искусство и Культура',
-          text: `Кто является режиссером фильма «${film}»?`,
+          text: getRandomTemplate(templates, film),
           options,
-          correct_answer
+          correct_answer: options.indexOf(director),
+          image: b.image?.value ? b.image.value.replace('http://', 'https://') : undefined
         };
       });
     }
@@ -235,9 +254,10 @@ const generators = [
     categoryName: 'Искусство и Культура',
     name: 'Известные писатели',
     query: `
-      SELECT DISTINCT ?bookLabel ?authorLabel WHERE {
+      SELECT DISTINCT ?bookLabel ?authorLabel ?image WHERE {
         ?book wdt:P31 wd:Q7725634.
         ?book wdt:P50 ?author.
+        OPTIONAL { ?author wdt:P18 ?image. }
         ?sitelink schema:about ?book ; schema:isPartOf <https://ru.wikipedia.org/> .
         SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
       } LIMIT 300
@@ -249,17 +269,21 @@ const generators = [
         const book = b.bookLabel.value;
         const author = b.authorLabel.value;
         
-        const pool = allAnswers.filter(a => a !== author);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== author)).slice(0, 3);
         const options = shuffle([author, ...wrong]);
-        const correct_answer = options.indexOf(author);
+        
+        const templates = [
+          (b) => `Кто написал произведение «${b}»?`,
+          (b) => `Автором известной книги «${b}» является:`,
+          (b) => `Перу какого писателя принадлежит «${b}»?`
+        ];
         
         return {
           category: 'Искусство и Культура',
-          text: `Кто написал произведение «${book}»?`,
+          text: getRandomTemplate(templates, book),
           options,
-          correct_answer
+          correct_answer: options.indexOf(author),
+          image: b.image?.value ? b.image.value.replace('http://', 'https://') : undefined
         };
       });
     }
@@ -285,17 +309,179 @@ const generators = [
         const game = b.gameLabel.value;
         const dev = b.devLabel.value;
         
-        const pool = allAnswers.filter(a => a !== dev);
-        const wrong = shuffle(pool).slice(0, 3);
-        
+        const wrong = shuffle(allAnswers.filter(a => a !== dev)).slice(0, 3);
         const options = shuffle([dev, ...wrong]);
-        const correct_answer = options.indexOf(dev);
+        
+        const templates = [
+          (g) => `Какая компания или студия разработала игру «${g}»?`,
+          (g) => `Кто является создателем видеоигры «${g}»?`,
+          (g) => `Игра «${g}» была выпущена разработчиками из:`
+        ];
         
         return {
           category: 'Игры и Технологии',
-          text: `Какая компания/студия разработала игру «${game}»?`,
+          text: getRandomTemplate(templates, game),
           options,
-          correct_answer
+          correct_answer: options.indexOf(dev)
+        };
+      });
+    }
+  },
+
+  // ---------------- HISTORY ----------------
+  {
+    categoryFile: CATEGORIES.HISTORY,
+    categoryName: 'История',
+    name: 'Исторические события',
+    query: `
+      SELECT DISTINCT ?eventLabel ?year WHERE {
+        ?event wdt:P31 wd:Q1190554.
+        ?event wdt:P585 ?date.
+        BIND(YEAR(?date) AS ?year)
+        ?sitelink schema:about ?event ; schema:isPartOf <https://ru.wikipedia.org/> .
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.eventLabel?.value));
+      const allAnswers = [...new Set(filteredBindings.map(b => b.year.value))];
+      return filteredBindings.map(b => {
+        const event = b.eventLabel.value;
+        const year = b.year.value;
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== year && Math.abs(parseInt(a) - parseInt(year)) < 300)).slice(0, 3);
+        while(wrong.length < 3) wrong.push((parseInt(year) + Math.floor(Math.random() * 100) - 50).toString());
+        
+        const options = shuffle([year, ...wrong]);
+        
+        const templates = [
+          (e) => `В каком году произошло событие: ${e}?`,
+          (e) => `Укажите год, когда случилось следующее: ${e}.`,
+          (e) => `Событие «${e}» датируется каким годом?`
+        ];
+        
+        return {
+          category: 'История',
+          text: getRandomTemplate(templates, event),
+          options,
+          correct_answer: options.indexOf(year)
+        };
+      });
+    }
+  },
+  {
+    categoryFile: CATEGORIES.HISTORY,
+    categoryName: 'История',
+    name: 'Изобретатели',
+    query: `
+      SELECT DISTINCT ?itemLabel ?discovererLabel WHERE {
+        ?item wdt:P61 ?discoverer.
+        ?sitelink schema:about ?item ; schema:isPartOf <https://ru.wikipedia.org/> .
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.itemLabel?.value) && /[а-яА-Я]/.test(b.discovererLabel?.value));
+      const allAnswers = [...new Set(filteredBindings.map(b => b.discovererLabel.value))];
+      return filteredBindings.map(b => {
+        const item = b.itemLabel.value;
+        const discoverer = b.discovererLabel.value;
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== discoverer)).slice(0, 3);
+        const options = shuffle([discoverer, ...wrong]);
+        
+        const templates = [
+          (i) => `Кто считается изобретателем или открывателем следующего: ${i}?`,
+          (i) => `Кому приписывают создание объекта «${i}»?`,
+          (i) => `Открытие «${i}» принадлежит ученому/изобретателю по имени:`
+        ];
+        
+        return {
+          category: 'История',
+          text: getRandomTemplate(templates, item),
+          options,
+          correct_answer: options.indexOf(discoverer)
+        };
+      });
+    }
+  },
+
+  // ---------------- SPORT ----------------
+  {
+    categoryFile: CATEGORIES.SPORT,
+    categoryName: 'Спорт',
+    name: 'Футбольные клубы',
+    query: `
+      SELECT DISTINCT ?teamLabel ?countryLabel WHERE {
+        ?team wdt:P31 wd:Q476028.
+        ?team wdt:P17 ?country.
+        ?sitelink schema:about ?team ; schema:isPartOf <https://ru.wikipedia.org/> .
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[a-zA-Zа-яА-Я]/.test(b.teamLabel?.value) && /[а-яА-Я]/.test(b.countryLabel?.value) && !b.countryLabel.value.includes('Q'));
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const team = b.teamLabel.value;
+        const country = b.countryLabel.value;
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        const templates = [
+          (t) => `В какой стране базируется футбольный клуб «${t}»?`,
+          (t) => `Клуб «${t}» представляет национальную лигу какого государства?`,
+          (t) => `Откуда родом команда «${t}»?`
+        ];
+        
+        return {
+          category: 'Спорт',
+          text: getRandomTemplate(templates, team),
+          options,
+          correct_answer: options.indexOf(country)
+        };
+      });
+    }
+  },
+
+  // ---------------- FAMOUS PEOPLE ----------------
+  {
+    categoryFile: CATEGORIES.FAMOUS,
+    categoryName: 'Известные личности',
+    name: 'Гражданство известных людей',
+    query: `
+      SELECT DISTINCT ?personLabel ?countryLabel ?image WHERE {
+        ?person wdt:P31 wd:Q5.
+        ?person wdt:P27 ?country.
+        OPTIONAL { ?person wdt:P18 ?image. }
+        ?person wikibase:sitelinks ?sitelinks.
+        FILTER(?sitelinks > 150)
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 400
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.personLabel?.value) && /[а-яА-Я]/.test(b.countryLabel?.value));
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const person = b.personLabel.value;
+        const country = b.countryLabel.value;
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        const templates = [
+          (p) => `Гражданином какой страны являлся (или является) ${p}?`,
+          (p) => `В какой стране родился или жил известный человек по имени ${p}?`,
+          (p) => `Укажите страну, к которой относится ${p}:`
+        ];
+        
+        return {
+          category: 'Известные личности',
+          text: getRandomTemplate(templates, person),
+          options,
+          correct_answer: options.indexOf(country),
+          image: b.image?.value ? b.image.value.replace('http://', 'https://') : undefined
         };
       });
     }
@@ -319,7 +505,6 @@ async function main() {
       const filtered = [];
       const seen = new Set();
       for (const q of rawQuestions) {
-        // Basic sanity check: ensure we have 4 options and they are unique strings
         if (q.options.length !== 4) continue;
         const uniqueOptions = new Set(q.options);
         if (uniqueOptions.size !== 4) continue;
@@ -344,36 +529,31 @@ async function main() {
     }
   }
 
-  // Запись в файлы
-  console.log('\n--- Очистка старых файлов и запись новых ---');
+  console.log('\\n--- Очистка старых файлов и запись новых ---');
   
   for (const [filename, questions] of Object.entries(resultsByFile)) {
     const filePath = path.join(QUESTIONS_DIR, filename);
     
     // Assign incremental IDs
-    const finalQuestions = questions.map((q, idx) => ({
-      id: idx + 1,
-      text: q.text,
-      options: q.options,
-      correct_answer: q.correct_answer,
-      category: q.category
-    }));
+    const finalQuestions = questions.map((q, idx) => {
+      const qObj = {
+        id: idx + 1,
+        text: q.text,
+        options: q.options,
+        correct_answer: q.correct_answer,
+        category: q.category
+      };
+      if (q.image) {
+        qObj.image = q.image;
+      }
+      return qObj;
+    });
 
     fs.writeFileSync(filePath, JSON.stringify(finalQuestions, null, 2), 'utf-8');
-    console.log(`[+] Файл ${filename} успешно очищен и перезаписан: ${finalQuestions.length} вопросов`);
+    console.log(`[+] Файл ${filename} успешно перезаписан: ${finalQuestions.length} вопросов`);
   }
   
-  // Очистка нетронутых файлов (History, Sport, Famous) чтобы не было путаницы
-  // Мы их пока оставим пустыми или добавим базовые заглушки
-  for (const file of Object.values(CATEGORIES)) {
-    if (!resultsByFile[file]) {
-      const filePath = path.join(QUESTIONS_DIR, file);
-      fs.writeFileSync(filePath, JSON.stringify([], null, 2), 'utf-8');
-      console.log(`[!] Файл ${file} очищен (нет генераторов)`);
-    }
-  }
-
-  console.log('\nГенерация завершена успешно!');
+  console.log('\\nГенерация завершена успешно!');
 }
 
 main();

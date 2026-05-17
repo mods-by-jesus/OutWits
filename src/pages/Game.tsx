@@ -163,6 +163,11 @@ export function Game() {
 
         {/* Question */}
         <div className="text-center mb-12">
+          {question.image && (
+            <div className="mb-6 flex justify-center">
+              <img src={question.image} alt="Question visual" className="max-h-64 rounded-xl object-contain border-2 border-neutral-700 bg-black/20 p-2" />
+            </div>
+          )}
           <h2 className="text-4xl font-bold leading-tight">{question.text}</h2>
         </div>
 

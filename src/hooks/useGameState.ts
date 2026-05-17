@@ -16,6 +16,7 @@ export interface Player {
 interface Question {
   text: string;
   options: string[];
+  image?: string;
 }
 
 interface AnswerInfo {

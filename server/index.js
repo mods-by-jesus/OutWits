@@ -540,6 +540,7 @@ function sendQuestion(lobby) {
     question: {
       text: question.text,
       options: question.options,
+      image: question.image,
     },
     duration: rd,
   });
