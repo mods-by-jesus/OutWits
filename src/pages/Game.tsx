@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useGameState } from '../hooks/useGameState';
 
 export function Game() {
@@ -18,6 +19,42 @@ export function Game() {
     playerId,
     submitAnswer,
   } = useGameState();
+
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  useEffect(() => {
+    if (timeLeft <= 5 && timeLeft > 0 && !showResults) {
+      try {
+        if (!audioCtxRef.current) {
+          audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+        }
+        
+        // Возобновляем контекст, если он был приостановлен браузером
+        if (audioCtxRef.current.state === 'suspended') {
+          audioCtxRef.current.resume();
+        }
+
+        const oscillator = audioCtxRef.current.createOscillator();
+        const gainNode = audioCtxRef.current.createGain();
+
+        oscillator.type = 'sine';
+        // Если осталась 1 секунда, звук будет более высоким
+        const freq = timeLeft === 1 ? 1200 : 800;
+        oscillator.frequency.setValueAtTime(freq, audioCtxRef.current.currentTime);
+        
+        gainNode.gain.setValueAtTime(0.1, audioCtxRef.current.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(0.001, audioCtxRef.current.currentTime + 0.1);
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtxRef.current.destination);
+
+        oscillator.start();
+        oscillator.stop(audioCtxRef.current.currentTime + 0.1);
+      } catch (e) {
+        console.log('Audio error (autoplay might be blocked):', e);
+      }
+    }
+  }, [timeLeft, showResults]);
 
   if (loading || !question) {
     return (
