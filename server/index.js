@@ -56,7 +56,7 @@ function shuffleArray(arr) {
   return shuffled;
 }
 
-function selectQuestions(allowedCategories) {
+function selectQuestions(allowedCategories, limit = 10) {
   let filtered = allQuestions;
   if (allowedCategories && allowedCategories.length > 0) {
     filtered = allQuestions.filter(q => allowedCategories.includes(q.category));
@@ -67,7 +67,7 @@ function selectQuestions(allowedCategories) {
   }
   
   const shuffled = shuffleArray(filtered);
-  return shuffled.slice(0, Math.min(QUESTIONS_PER_GAME, shuffled.length));
+  return shuffled.slice(0, Math.min(limit, shuffled.length));
 }
 
 // ─── Express app ──────────────────────────────────────
@@ -123,7 +123,7 @@ io.on('connection', (socket) => {
       status: 'waiting',
       players: [player],
       selectedCategories: [...availableCategories],
-      settings: { speedBonus: false, hotStreak: false },
+      settings: { speedBonus: false, hotStreak: false, questionsCount: 10 },
       questions: [],
       currentQuestionIndex: -1,
       answers: new Map(), // questionIndex -> Map(playerId -> answer)
@@ -223,7 +223,8 @@ io.on('connection', (socket) => {
     }
 
     // Подготовить вопросы
-    lobby.questions = selectQuestions(lobby.selectedCategories);
+    const limit = lobby.settings?.questionsCount || 10;
+    lobby.questions = selectQuestions(lobby.selectedCategories, limit);
     lobby.currentQuestionIndex = 0;
     lobby.status = 'playing';
     lobby.answers = new Map();
@@ -350,6 +351,44 @@ io.on('connection', (socket) => {
     }
   });
 
+  // ─── RETURN TO LOBBY ──────────────────────────────
+  socket.on('return_to_lobby', (_, callback) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return callback?.({ error: 'Не в лобби' });
+
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'finished') return callback?.({ error: 'Игра ещё не закончена' });
+
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player?.is_host) return callback?.({ error: 'Только хост может вернуть всех в лобби' });
+
+    // Отменяем удаление лобби
+    if (lobby.cleanupTimer) {
+      clearTimeout(lobby.cleanupTimer);
+      lobby.cleanupTimer = null;
+    }
+
+    // Сброс состояния
+    lobby.status = 'waiting';
+    lobby.questions = [];
+    lobby.currentQuestionIndex = -1;
+    lobby.answers = new Map();
+    if (lobby.roundTimer) {
+      clearTimeout(lobby.roundTimer);
+      lobby.roundTimer = null;
+    }
+    lobby.roundStartTime = null;
+
+    lobby.players.forEach(p => {
+      p.score = 0;
+      p.streak = 0;
+    });
+
+    console.log(`[LOBBY] ${info.lobbyCode} returned to waiting state by ${player.nickname}`);
+    io.to(lobby.code).emit('returned_to_lobby');
+    callback?.({ ok: true });
+  });
+
   // ─── LEAVE LOBBY ──────────────────────────────────
   socket.on('leave_lobby', () => {
     removePlayer(socket);
@@ -444,7 +483,7 @@ function finishGame(lobby) {
   console.log(`[FINISH] Game ended in ${lobby.code}`);
 
   // Удалить лобби через 60 сек (дать время увидеть результаты)
-  setTimeout(() => {
+  lobby.cleanupTimer = setTimeout(() => {
     lobbies.delete(lobby.code);
     console.log(`[CLEANUP] Lobby ${lobby.code} removed`);
   }, 60000);

@@ -11,7 +11,7 @@ interface Player {
 }
 
 interface LocationState {
-  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean } };
+  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number } };
   player?: Player;
   players?: Player[];
   availableCategories?: string[];
@@ -38,8 +38,8 @@ export function useLobbyState() {
     navState?.lobby?.selectedCategories ?? navState?.availableCategories ?? []
   );
   
-  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean }>(
-    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false }
+  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean; questionsCount?: number }>(
+    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false, questionsCount: 10 }
   );
 
   const [loading, setLoading] = useState(!navState?.lobby);
@@ -79,7 +79,7 @@ export function useLobbyState() {
       setSelectedCategories(categories);
     };
 
-    const onSettingsUpdated = ({ settings: newSettings }: { settings: { speedBonus: boolean; hotStreak: boolean } }) => {
+    const onSettingsUpdated = ({ settings: newSettings }: { settings: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number } }) => {
       setSettings(newSettings);
     };
 
@@ -142,6 +142,16 @@ export function useLobbyState() {
     });
   }, [currentPlayer]);
 
+  const updateSettingValue = useCallback((key: 'questionsCount', value: number) => {
+    if (!currentPlayer?.is_host) return;
+
+    setSettings(prev => {
+      const newSettings = { ...prev, [key]: value };
+      socket.emit('update_settings', { settings: newSettings });
+      return newSettings;
+    });
+  }, [currentPlayer]);
+
   return {
     code,
     players,
@@ -152,6 +162,7 @@ export function useLobbyState() {
     settings,
     toggleCategory,
     toggleSetting,
+    updateSettingValue,
     startGame,
     leaveLobby,
     copyCode,

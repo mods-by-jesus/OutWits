@@ -11,6 +11,7 @@ export function Lobby() {
     settings,
     toggleCategory,
     toggleSetting,
+    updateSettingValue,
     startGame,
     leaveLobby,
     copyCode,
@@ -137,6 +138,24 @@ export function Lobby() {
                 onChange={() => toggleSetting('hotStreak')}
                 disabled={!currentPlayer?.is_host}
               />
+            </label>
+            <hr className="border-neutral-800" />
+            <label className="flex items-center justify-between opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Количество раундов</span>
+                <span className="text-xs text-neutral-500">Вопросов в одной игре</span>
+              </div>
+              <select
+                className="bg-neutral-800 text-white font-bold py-1 px-3 rounded-lg border border-neutral-700 outline-none cursor-pointer disabled:opacity-50"
+                value={settings?.questionsCount || 10}
+                onChange={(e) => updateSettingValue('questionsCount', parseInt(e.target.value))}
+                disabled={!currentPlayer?.is_host}
+              >
+                <option value={5}>5</option>
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20}>20</option>
+              </select>
             </label>
           </div>
         </div>

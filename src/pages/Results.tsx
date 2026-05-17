@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { socket } from '../lib/socket';
 
 interface Player {
   id: string;
@@ -43,6 +44,23 @@ export function Results() {
     sessionStorage.removeItem('gameResults');
     navigate('/');
   };
+
+  const handleReturnToLobby = () => {
+    socket.emit('return_to_lobby');
+  };
+
+  useEffect(() => {
+    socket.on('returned_to_lobby', () => {
+      navigate(`/lobby/${code}`);
+    });
+    return () => {
+      socket.off('returned_to_lobby');
+    };
+  }, [code, navigate]);
+
+  const currentPlayerId = sessionStorage.getItem('playerId');
+  const currentPlayer = players.find(p => p.id === currentPlayerId);
+  const isHost = currentPlayer?.is_host;
 
   if (loading) {
     return (
@@ -94,12 +112,26 @@ export function Results() {
           ))}
         </div>
 
-        <button
-          onClick={handleGoHome}
-          className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors"
-        >
-          На главную
-        </button>
+        <div className="flex flex-col gap-4">
+          {isHost ? (
+            <button
+              onClick={handleReturnToLobby}
+              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+            >
+              Вернуться в лобби
+            </button>
+          ) : (
+            <div className="text-center p-4 bg-neutral-900 rounded-xl border border-neutral-800">
+              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста...</p>
+            </div>
+          )}
+          <button
+            onClick={handleGoHome}
+            className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors"
+          >
+            На главную
+          </button>
+        </div>
       </div>
     </div>
   );
