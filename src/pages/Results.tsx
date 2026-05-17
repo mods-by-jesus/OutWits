@@ -1,7 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { socket } from '../lib/socket';
-import { useTimer } from '../hooks/useTimer';
 
 interface Player {
   id: string;
@@ -11,12 +10,16 @@ interface Player {
   correctCount?: number;
 }
 
+const AUTO_RETURN_SECONDS = 10;
+
 export function Results() {
   const { code } = useParams<{ code: string }>();
   const navigate = useNavigate();
   const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(true);
-  const { timeLeft, reset } = useTimer({ duration: 10, onExpire: () => {} });
+  const [countdown, setCountdown] = useState(AUTO_RETURN_SECONDS);
+  const intervalRef = useRef<number | null>(null);
+  const returnedRef = useRef(false);
 
   useEffect(() => {
     if (!code) {
@@ -24,12 +27,10 @@ export function Results() {
       return;
     }
 
-    // Результаты берём из sessionStorage (сохранены при game_finished)
     const stored = sessionStorage.getItem('gameResults');
     if (stored) {
       try {
-        const parsed = JSON.parse(stored);
-        setPlayers(parsed);
+        setPlayers(JSON.parse(stored));
       } catch {
         navigate('/');
         return;
@@ -40,21 +41,38 @@ export function Results() {
     }
 
     setLoading(false);
-    reset(10);
-  }, [code, navigate, reset]);
 
-  const handleGoHome = () => {
+    // Запускаем обратный отсчёт
+    setCountdown(AUTO_RETURN_SECONDS);
+    intervalRef.current = window.setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          if (intervalRef.current) clearInterval(intervalRef.current);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [code, navigate]);
+
+  const handleGoHome = useCallback(() => {
     sessionStorage.removeItem('playerId');
     sessionStorage.removeItem('gameResults');
     navigate('/');
-  };
+  }, [navigate]);
 
-  const handleReturnToLobby = () => {
+  const handleReturnToLobby = useCallback(() => {
+    if (returnedRef.current) return;
+    returnedRef.current = true;
     socket.emit('return_to_lobby');
-  };
+  }, []);
 
   useEffect(() => {
-    socket.on('returned_to_lobby', (data) => {
+    const onReturnedToLobby = (data: any) => {
       const playerId = sessionStorage.getItem('playerId');
       navigate(`/lobby/${code}`, {
         state: {
@@ -62,9 +80,10 @@ export function Results() {
           player: data?.players?.find((p: any) => p.id === playerId)
         }
       });
-    });
+    };
+    socket.on('returned_to_lobby', onReturnedToLobby);
     return () => {
-      socket.off('returned_to_lobby');
+      socket.off('returned_to_lobby', onReturnedToLobby);
     };
   }, [code, navigate]);
 
@@ -72,11 +91,12 @@ export function Results() {
   const currentPlayer = players.find(p => p.id === currentPlayerId);
   const isHost = currentPlayer?.is_host;
 
+  // Автовозврат в лобби когда таймер дошёл до 0
   useEffect(() => {
-    if (timeLeft === 0 && isHost) {
+    if (countdown === 0 && isHost && !returnedRef.current) {
       handleReturnToLobby();
     }
-  }, [timeLeft, isHost]);
+  }, [countdown, isHost, handleReturnToLobby]);
 
   if (loading) {
     return (
@@ -141,11 +161,11 @@ export function Results() {
               onClick={handleReturnToLobby}
               className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2"
             >
-              Вернуться в лобби <span className="opacity-50">({timeLeft}s)</span>
+              Вернуться в лобби <span className="opacity-50">({countdown}s)</span>
             </button>
           ) : (
             <div className="text-center p-4 bg-neutral-900 rounded-xl border border-neutral-800">
-              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста... ({timeLeft}s)</p>
+              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста... ({countdown}s)</p>
             </div>
           )}
           <button
