@@ -154,9 +154,9 @@ io.on('connection', (socket) => {
 
     callback({
       lobby: { code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
-      player: { id: playerId, nickname: player.nickname, is_host: true, score: 0, streak: 0 },
+      player: { id: playerId, nickname: player.nickname, is_host: true, score: 0, streak: 0, correctCount: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
       })),
       availableCategories,
     });
@@ -191,6 +191,7 @@ io.on('connection', (socket) => {
       is_host: false,
       score: 0,
       streak: 0,
+      correctCount: 0,
       socketId: socket.id,
     };
 
@@ -203,15 +204,15 @@ io.on('connection', (socket) => {
     // Оповестить всех в лобби о новом игроке
     io.to(upperCode).emit('players_updated', {
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
       })),
     });
 
     callback({
       lobby: { code: upperCode, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
-      player: { id: playerId, nickname: player.nickname, is_host: false, score: 0, streak: 0 },
+      player: { id: playerId, nickname: player.nickname, is_host: false, score: 0, streak: 0, correctCount: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
       })),
       availableCategories,
     });
@@ -331,6 +332,7 @@ io.on('connection', (socket) => {
     if (player) {
       if (isCorrect) {
         let points = 10;
+        player.correctCount = (player.correctCount || 0) + 1;
         
         // Speed Bonus
         if (lobby.settings?.speedBonus && lobby.roundStartTime) {
@@ -402,13 +404,14 @@ io.on('connection', (socket) => {
     lobby.players.forEach(p => {
       p.score = 0;
       p.streak = 0;
+      p.correctCount = 0;
     });
 
     console.log(`[LOBBY] ${info.lobbyCode} returned to waiting state by ${player.nickname}`);
     io.to(lobby.code).emit('returned_to_lobby', {
       lobby: { code: lobby.code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
       })),
       availableCategories,
     });
@@ -497,12 +500,25 @@ function endRound(lobby) {
   const question = lobby.questions[qi];
   const roundAnswers = lobby.answers.get(qi) || new Map();
 
+  // Добавляем неправильные ответы тем, кто не ответил
+  lobby.players.forEach(p => {
+    if (!roundAnswers.has(p.id)) {
+      roundAnswers.set(p.id, {
+        playerId: p.id,
+        answerIndex: -1,
+        isCorrect: false,
+        time: ROUND_DURATION,
+      });
+      p.streak = 0; // Сбрасываем стрик для тех кто промолчал
+    }
+  });
+
   // Отправить результаты раунда
   io.to(lobby.code).emit('round_results', {
     correctAnswer: question.correct_answer,
     answers: Array.from(roundAnswers.values()),
     players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
     })),
   });
 
@@ -526,7 +542,7 @@ function finishGame(lobby) {
   lobby.status = 'finished';
 
   const finalPlayers = lobby.players
-    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0 }))
+    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0 }))
     .sort((a, b) => b.score - a.score);
 
   io.to(lobby.code).emit('game_finished', { players: finalPlayers });
@@ -570,7 +586,7 @@ function removePlayerById(lobbyCode, playerId) {
   // Оповестить оставшихся
   io.to(lobbyCode).emit('players_updated', {
     players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
     })),
   });
 

@@ -8,6 +8,8 @@ interface Player {
   nickname: string;
   is_host: boolean;
   score: number;
+  streak: number;
+  correctCount?: number;
 }
 
 interface LocationState {

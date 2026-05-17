@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { socket } from '../lib/socket';
+import { useTimer } from '../hooks/useTimer';
 
 interface Player {
   id: string;
   nickname: string;
   is_host: boolean;
   score: number;
+  correctCount?: number;
 }
 
 export function Results() {
@@ -14,6 +16,7 @@ export function Results() {
   const navigate = useNavigate();
   const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(true);
+  const { timeLeft, reset } = useTimer({ duration: 10, onExpire: () => {} });
 
   useEffect(() => {
     if (!code) {
@@ -37,7 +40,8 @@ export function Results() {
     }
 
     setLoading(false);
-  }, [code, navigate]);
+    reset(10);
+  }, [code, navigate, reset]);
 
   const handleGoHome = () => {
     sessionStorage.removeItem('playerId');
@@ -67,6 +71,12 @@ export function Results() {
   const currentPlayerId = sessionStorage.getItem('playerId');
   const currentPlayer = players.find(p => p.id === currentPlayerId);
   const isHost = currentPlayer?.is_host;
+
+  useEffect(() => {
+    if (timeLeft === 0 && isHost) {
+      handleReturnToLobby();
+    }
+  }, [timeLeft, isHost]);
 
   if (loading) {
     return (
@@ -109,7 +119,14 @@ export function Results() {
             >
               <div className="flex items-center gap-4">
                 <span className="text-2xl w-10 text-center">{getMedal(index)}</span>
-                <span className="text-lg font-bold">{player.nickname}</span>
+                <span className="text-lg font-bold flex items-center gap-2">
+                  {player.nickname}
+                  {player.correctCount !== undefined && player.correctCount > 0 && (
+                    <span className="bg-green-600/20 text-green-400 text-[10px] px-2 py-0.5 rounded-full border border-green-500/30 whitespace-nowrap">
+                      ✅ {player.correctCount}
+                    </span>
+                  )}
+                </span>
               </div>
               <span className={`text-2xl font-black ${index === 0 ? 'text-yellow-400' : 'text-white'}`}>
                 {player.score}
@@ -122,13 +139,13 @@ export function Results() {
           {isHost ? (
             <button
               onClick={handleReturnToLobby}
-              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)]"
+              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2"
             >
-              Вернуться в лобби
+              Вернуться в лобби <span className="opacity-50">({timeLeft}s)</span>
             </button>
           ) : (
             <div className="text-center p-4 bg-neutral-900 rounded-xl border border-neutral-800">
-              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста...</p>
+              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста... ({timeLeft}s)</p>
             </div>
           )}
           <button

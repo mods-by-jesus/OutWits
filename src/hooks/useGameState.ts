@@ -4,12 +4,13 @@ import { socket } from '../lib/socket';
 import { useTimer } from './useTimer';
 import { showToast } from '../lib/toast';
 
-interface Player {
+export interface Player {
   id: string;
   nickname: string;
   is_host: boolean;
   score: number;
   streak: number;
+  correctCount?: number;
 }
 
 interface Question {

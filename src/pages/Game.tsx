@@ -196,6 +196,11 @@ export function Game() {
                     🔥 x1.5
                   </div>
                 ) : null}
+                {p.correctCount !== undefined && p.correctCount > 0 && (
+                  <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
+                    ✅ {p.correctCount}
+                  </div>
+                )}
               </div>
             ))}
         </div>
