@@ -356,7 +356,8 @@ io.on('connection', (socket) => {
         // Speed Bonus
         if (lobby.settings?.speedBonus && lobby.roundStartTime) {
           const elapsed = (Date.now() - lobby.roundStartTime) / 1000;
-          const rd = lobby.settings?.roundDuration || 20;
+          const baseRd = lobby.settings?.roundDuration || 20;
+          const rd = getDynamicDuration(question, baseRd);
           const remaining = Math.max(0, rd - elapsed);
           points += Math.floor(remaining);
         }
@@ -501,6 +502,17 @@ function getActivePlayerCount(lobby) {
   return Math.max(count, 1); // минимум 1 чтобы избежать деления на 0
 }
 
+function getDynamicDuration(question, baseDuration) {
+  if (!question) return baseDuration;
+  const totalLength = question.text.length + question.options.join('').length;
+  if (totalLength > 250) {
+    return baseDuration + 20; // +20 секунд для очень длинных
+  } else if (totalLength > 150) {
+    return baseDuration + 10; // +10 секунд для длинных
+  }
+  return baseDuration;
+}
+
 // ─── Game Logic ───────────────────────────────────────
 
 function sendQuestion(lobby) {
@@ -519,7 +531,9 @@ function sendQuestion(lobby) {
 
   // Отправить вопрос всем
   lobby.roundStartTime = Date.now();
-  const rd = lobby.settings?.roundDuration || 20;
+  const baseRd = lobby.settings?.roundDuration || 20;
+  const rd = getDynamicDuration(question, baseRd);
+
   io.to(lobby.code).emit('new_question', {
     questionIndex: qi,
     totalQuestions: lobby.questions.length,
@@ -562,7 +576,8 @@ function endRound(lobby) {
     // Добавляем неправильные ответы тем, кто не ответил
     lobby.players.forEach(p => {
       if (!roundAnswers.has(p.id)) {
-        const rd = lobby.settings?.roundDuration || 20;
+        const baseRd = lobby.settings?.roundDuration || 20;
+        const rd = getDynamicDuration(question, baseRd);
         roundAnswers.set(p.id, {
           playerId: p.id,
           answerIndex: -1,
