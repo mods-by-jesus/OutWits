@@ -473,6 +473,8 @@ io.on('connection', (socket) => {
       // Если он вернется, он сможет переподключиться.
       // Таймер раунда сам переключит вопрос, если игрок не успеет ответить.
     }
+  });
+
   // ─── FORCE END ROUND (client fallback) ─────────────
   socket.on('force_end_round', (_, callback) => {
     const info = playerSockets.get(socket.id);
