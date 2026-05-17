@@ -13,7 +13,7 @@ interface Player {
 }
 
 interface LocationState {
-  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number } };
+  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number; roundDuration?: number } };
   player?: Player;
   players?: Player[];
   availableCategories?: string[];
@@ -40,8 +40,8 @@ export function useLobbyState() {
     navState?.lobby?.selectedCategories ?? navState?.availableCategories ?? []
   );
   
-  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean; questionsCount?: number }>(
-    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false, questionsCount: 10 }
+  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean; questionsCount?: number; roundDuration?: number }>(
+    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false, questionsCount: 10, roundDuration: 20 }
   );
 
   const [loading, setLoading] = useState(!navState?.lobby);
@@ -144,7 +144,7 @@ export function useLobbyState() {
     });
   }, [currentPlayer]);
 
-  const updateSettingValue = useCallback((key: 'questionsCount', value: number) => {
+  const updateSettingValue = useCallback((key: 'questionsCount' | 'roundDuration', value: number) => {
     if (!currentPlayer?.is_host) return;
 
     setSettings(prev => {

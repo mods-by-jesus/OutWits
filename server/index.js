@@ -11,7 +11,6 @@ const __dirname = dirname(__filename);
 
 // ─── Config ───────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
-const ROUND_DURATION = 20; // секунды
 const RESULTS_DELAY = 5000; // мс — пауза перед следующим вопросом
 const MAX_PLAYERS = 5;
 const QUESTIONS_PER_GAME = 10;
@@ -156,7 +155,7 @@ io.on('connection', (socket) => {
       status: 'waiting',
       players: [player],
       selectedCategories: [...availableCategories],
-      settings: { speedBonus: false, hotStreak: false, questionsCount: 10 },
+      settings: { speedBonus: false, hotStreak: false, questionsCount: 10, roundDuration: 20 },
       usedQuestions: new Set(),
       questions: [],
       currentQuestionIndex: -1,
@@ -357,7 +356,8 @@ io.on('connection', (socket) => {
         // Speed Bonus
         if (lobby.settings?.speedBonus && lobby.roundStartTime) {
           const elapsed = (Date.now() - lobby.roundStartTime) / 1000;
-          const remaining = Math.max(0, ROUND_DURATION - elapsed);
+          const rd = lobby.settings?.roundDuration || 20;
+          const remaining = Math.max(0, rd - elapsed);
           points += Math.floor(remaining);
         }
 
@@ -519,6 +519,7 @@ function sendQuestion(lobby) {
 
   // Отправить вопрос всем
   lobby.roundStartTime = Date.now();
+  const rd = lobby.settings?.roundDuration || 20;
   io.to(lobby.code).emit('new_question', {
     questionIndex: qi,
     totalQuestions: lobby.questions.length,
@@ -526,13 +527,13 @@ function sendQuestion(lobby) {
       text: question.text,
       options: question.options,
     },
-    duration: ROUND_DURATION,
+    duration: rd,
   });
 
-  // Таймер раунда — принудительно завершить через ROUND_DURATION + 2 сек (буфер)
+  // Таймер раунда — принудительно завершить через roundDuration + 2 сек (буфер)
   lobby.roundTimer = setTimeout(() => {
     endRound(lobby);
-  }, (ROUND_DURATION + 2) * 1000);
+  }, (rd + 2) * 1000);
 }
 
 function endRound(lobby) {
@@ -561,11 +562,12 @@ function endRound(lobby) {
     // Добавляем неправильные ответы тем, кто не ответил
     lobby.players.forEach(p => {
       if (!roundAnswers.has(p.id)) {
+        const rd = lobby.settings?.roundDuration || 20;
         roundAnswers.set(p.id, {
           playerId: p.id,
           answerIndex: -1,
           isCorrect: false,
-          time: ROUND_DURATION,
+          time: rd,
         });
         p.streak = 0;
       }
