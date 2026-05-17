@@ -1,1526 +1,3218 @@
 [
   {
     "id": 1,
-    "text": "Какой открытый игровой движок использует язык сценариев GDScript, синтаксически очень похожий на Python?",
+    "text": "Какая компания/студия разработала игру «Bionic Commando»?",
     "options": [
-      "Unity",
-      "Unreal Engine",
-      "Godot",
-      "Defold"
+      "Q95",
+      "Konami",
+      "Wargaming Seattle",
+      "Capcom"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 2,
-    "text": "Какая популярная ритм-игра построена на кликах по появляющимся на экране кругам, слайдерам и спиннерам в такт музыке?",
+    "text": "Какая компания/студия разработала игру «1943: The Battle of Midway»?",
     "options": [
-      "Beat Saber",
-      "osu!",
-      "Geometry Dash",
-      "Muse Dash"
+      "Capcom",
+      "Дмитрий Пучков",
+      "Q8093",
+      "Q2283"
     ],
-    "correct_answer": 1,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 3,
-    "text": "Название какой игры 1980 года, использующей ASCII-графику для отображения подземелий, дало имя целому жанру?",
+    "text": "Какая компания/студия разработала игру «Mega Man X2»?",
     "options": [
-      "NetHack",
-      "Rogue",
-      "Moria",
-      "Angband"
+      "Проект GNU",
+      "Sega Sports Japan",
+      "Wargaming Seattle",
+      "Capcom"
     ],
-    "correct_answer": 1,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 4,
-    "text": "В какой серии тактических стратегий механика «Overwatch» (Боеготовность) является ключевой?",
+    "text": "Какая компания/студия разработала игру «Street Fighter II: Hyper Fighting»?",
     "options": [
-      "Civilization",
-      "XCOM",
-      "Fire Emblem",
-      "Heroes of Might and Magic"
+      "Q8093",
+      "Capcom",
+      "Wargaming Seattle",
+      "Q2283"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 5,
-    "text": "Какой сетевой порт по умолчанию используется для защищенного подключения по протоколу SSH?",
+    "text": "Какая компания/студия разработала игру «Devil May Cry 2»?",
     "options": [
-      "21",
-      "22",
-      "80",
-      "443"
+      "Wargaming Seattle",
+      "Konami",
+      "Halo Studios",
+      "Capcom"
     ],
-    "correct_answer": 1,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 6,
-    "text": "Что в сфере сетевых технологий означает аббревиатура VPN?",
+    "text": "Какая компания/студия разработала игру «Resident Evil 5»?",
     "options": [
-      "Virtual Public Node",
-      "Visual Private Network",
-      "Virtual Private Network",
-      "Variable Protocol Node"
+      "Проект GNU",
+      "Capcom",
+      "Q2283",
+      "Wargaming Seattle"
     ],
-    "correct_answer": 2,
+    "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 7,
-    "text": "Как называется самая продаваемая игра в мире (по состоянию на 2024 год)?",
+    "text": "Какая компания/студия разработала игру «The Legend of Zelda: The Minish Cap»?",
     "options": [
-      "Grand Theft Auto V",
-      "Minecraft",
-      "Tetris",
-      "Wii Sports"
+      "Capcom",
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Sony Interactive Entertainment"
     ],
-    "correct_answer": 1,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 8,
-    "text": "Как зовут главного героя серии игр The Legend of Zelda?",
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom 2: New Age of Heroes»?",
     "options": [
-      "Зельда",
-      "Линк",
-      "Марио",
-      "Гэнон"
+      "Capcom",
+      "Q2283",
+      "Q95",
+      "Sony Interactive Entertainment"
     ],
-    "correct_answer": 1,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 9,
-    "text": "Какой жанр игр характеризуется наличием «пермасмерти» и процедурной генерации уровней?",
+    "text": "Какая компания/студия разработала игру «Resident Evil 4»?",
     "options": [
-      "Шутер",
-      "Стратегия",
-      "Рогалик (Roguelike)",
-      "Симулятор"
+      "Capcom",
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 10,
-    "text": "Какой язык программирования используется для написания скриптов в браузере?",
+    "text": "Какая компания/студия разработала игру «Resident Evil Survivor»?",
     "options": [
-      "Python",
-      "Java",
-      "C++",
-      "JavaScript"
+      "Capcom",
+      "Q95",
+      "Sega Sports Japan",
+      "Q8093"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 11,
-    "text": "Какая компания разработала операционную систему Windows?",
+    "text": "Какая компания/студия разработала игру «Resident Evil»?",
     "options": [
-      "Apple",
-      "IBM",
-      "Google",
-      "Microsoft"
+      "Capcom",
+      "Konami",
+      "Sega Sports Japan",
+      "Q95"
     ],
-    "correct_answer": 3,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 12,
-    "text": "Как называется язык стилей для веб-страниц?",
+    "text": "Какая компания/студия разработала игру «Mega Man IV»?",
     "options": [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "XML"
+      "Дмитрий Пучков",
+      "Codemasters",
+      "Capcom",
+      "Sony Interactive Entertainment"
     ],
-    "correct_answer": 1,
+    "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
     "id": 13,
-    "text": "Какая игра популяризировала жанр «Королевская битва» в 2017 году?",
+    "text": "Какая компания/студия разработала игру «Mega Man 7»?",
     "options": [
-      "Fortnite",
-      "Apex Legends",
-      "PUBG",
-      "Call of Duty: Warzone"
+      "Capcom",
+      "Halo Studios",
+      "Q2283",
+      "Q8093"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 14,
-    "text": "Что означает буква «P» в аббревиатуре HTTP?",
+    "text": "Какая компания/студия разработала игру «X-Men: Children of the Atom»?",
     "options": [
-      "Page",
-      "Protocol",
-      "Path",
-      "Process"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 15,
-    "text": "Какая культовая игра от Valve так и не получила третью часть?",
-    "options": [
-      "Portal",
-      "Left 4 Dead",
-      "Half-Life",
-      "Team Fortress"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 16,
-    "text": "В какой игре нужно строить конвейеры и фабрики на чужой планете, защищаясь от кусак?",
-    "options": [
-      "Satisfactory",
-      "Factorio",
-      "Dyson Sphere Program",
-      "RimWorld"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 17,
-    "text": "Как зовут создателя языка программирования Python?",
-    "options": [
-      "Джеймс Гослинг",
-      "Гвидо ван Россум",
-      "Линус Торвальдс",
-      "Бьёрн Страуструп"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 18,
-    "text": "В какой игре главный герой — ведьмак по имени Геральт?",
-    "options": [
-      "The Elder Scrolls",
-      "Dragon Age",
-      "The Witcher",
-      "Gothic"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 19,
-    "text": "Как называется тип базы данных, использующей язык запросов SQL?",
-    "options": [
-      "Документоориентированная",
-      "Ключ-значение",
-      "Реляционная",
-      "Графовая"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 20,
-    "text": "Какая компания выпустила первую консоль PlayStation?",
-    "options": [
-      "Nintendo",
-      "Sega",
-      "Microsoft",
-      "Sony"
+      "Sony Interactive Entertainment",
+      "Q95",
+      "Codemasters",
+      "Capcom"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 21,
-    "text": "Какой персонаж является маскотом компании Sega?",
+    "id": 15,
+    "text": "Какая компания/студия разработала игру «Phoenix Wright: Ace Attorney – Trials and Tribulations»?",
     "options": [
-      "Марио",
-      "Пикачу",
-      "Крэш Бандикут",
-      "Соник"
+      "Codemasters",
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 16,
+    "text": "Какая компания/студия разработала игру «Phoenix Wright: Ace Attorney: Justice for All»?",
+    "options": [
+      "Halo Studios",
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 17,
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom 3: Fate of Two Worlds»?",
+    "options": [
+      "Konami",
+      "Codemasters",
+      "Q8093",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 18,
+    "text": "Какая компания/студия разработала игру «Breath of Fire IV»?",
+    "options": [
+      "Capcom",
+      "Q2283",
+      "Wargaming Seattle",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 19,
+    "text": "Какая компания/студия разработала игру «Devil May Cry 4»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Codemasters",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 20,
+    "text": "Какая компания/студия разработала игру «Devil May Cry 3: Dante’s Awakening»?",
+    "options": [
+      "Capcom",
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 21,
+    "text": "Какая компания/студия разработала игру «Devil May Cry»?",
+    "options": [
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Проект GNU",
+      "Capcom"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 22,
-    "text": "В какой игре можно найти город Лос-Сантос?",
+    "text": "Какая компания/студия разработала игру «Resident Evil 6»?",
     "options": [
-      "Cyberpunk 2077",
-      "Grand Theft Auto V",
-      "Watch Dogs",
-      "Saints Row"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 23,
-    "text": "Какой протокол используется для отправки электронной почты?",
-    "options": [
-      "HTTP",
-      "FTP",
-      "SMTP",
-      "SSH"
+      "Codemasters",
+      "Halo Studios",
+      "Capcom",
+      "Проект GNU"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 24,
-    "text": "Что означает аббревиатура RAM в компьютерах?",
+    "id": 23,
+    "text": "Какая компания/студия разработала игру «Ghosts'n Goblins»?",
     "options": [
-      "Read Access Memory",
-      "Random Access Memory",
-      "Rapid Action Memory",
-      "Run Array Module"
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Halo Studios",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 24,
+    "text": "Какая компания/студия разработала игру «Duck Tales»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Sega Sports Japan",
+      "Q8093"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 25,
-    "text": "Какая игра от студии Mojang стала самой продаваемой в истории?",
+    "text": "Какая компания/студия разработала игру «Resident Evil Gaiden»?",
     "options": [
-      "Roblox",
-      "Minecraft",
-      "Terraria",
-      "Stardew Valley"
+      "Capcom",
+      "Проект GNU",
+      "Wargaming Seattle",
+      "Q8093"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 26,
+    "text": "Какая компания/студия разработала игру «Resident Evil Code: Veronica»?",
+    "options": [
+      "Q8093",
+      "Capcom",
+      "Q2283",
+      "Wargaming Seattle"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 27,
-    "text": "Какой формат файлов обычно используется для коротких анимированных картинок в интернете?",
+    "text": "Какая компания/студия разработала игру «Resident Evil: The Umbrella Chronicles»?",
     "options": [
-      "JPEG",
-      "PNG",
-      "GIF",
-      "TIFF"
+      "Capcom",
+      "Q95",
+      "Wargaming Seattle",
+      "Konami"
     ],
-    "correct_answer": 2,
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
     "id": 28,
-    "text": "В какой игре выжившие должны чинить генераторы, чтобы спастись от маньяка?",
+    "text": "Какая компания/студия разработала игру «Commando»?",
     "options": [
-      "Friday the 13th",
-      "Left 4 Dead",
-      "Dead by Daylight",
-      "Phasmophobia"
+      "Sega Sports Japan",
+      "Дмитрий Пучков",
+      "Halo Studios",
+      "Capcom"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
     "id": 29,
-    "text": "Какая компания разработала популярные процессоры серии Ryzen?",
+    "text": "Какая компания/студия разработала игру «Okamiden: Chiisaki Taiyo»?",
     "options": [
-      "Intel",
-      "AMD",
-      "Nvidia",
-      "ARM"
+      "Проект GNU",
+      "Capcom",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
     "id": 30,
-    "text": "Какой тег в HTML используется для создания гиперссылок?",
+    "text": "Какая компания/студия разработала игру «Resident Evil Zero»?",
     "options": [
-      "<link>",
-      "<a>",
-      "<href>",
-      "<url>"
+      "Wargaming Seattle",
+      "Capcom",
+      "Konami",
+      "Q8093"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "text": "Какая игра популяризировала жанр «Королевская битва» в 2017 году?",
+    "id": 31,
+    "text": "Какая компания/студия разработала игру «Street Fighter II»?",
     "options": [
-      "Fortnite",
-      "PUBG",
-      "Apex Legends",
-      "Call of Duty: Warzone"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 32
-  },
-  {
-    "text": "В каком году компания Apple представила первый iPhone?",
-    "options": [
-      "2005",
-      "2007",
-      "2009",
-      "2011"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 33
-  },
-  {
-    "text": "Какой популярный язык программирования назван в честь сорта кофе?",
-    "options": [
-      "Python",
-      "C++",
-      "Ruby",
-      "Java"
+      "Дмитрий Пучков",
+      "Q95",
+      "Wargaming Seattle",
+      "Capcom"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 34
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какая студия разработала игру «Ведьмак 3: Дикая Охота»?",
+    "id": 32,
+    "text": "Какая компания/студия разработала игру «Resident Evil: Revelations»?",
     "options": [
-      "Bethesda",
-      "Ubisoft",
-      "CD Projekt RED",
-      "BioWare"
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 33,
+    "text": "Какая компания/студия разработала игру «Final Fight»?",
+    "options": [
+      "Q2283",
+      "Codemasters",
+      "Capcom",
+      "Проект GNU"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 35
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как расшифровывается аббревиатура URL?",
+    "id": 34,
+    "text": "Какая компания/студия разработала игру «Dead Rising»?",
     "options": [
-      "Universal Record Locator",
-      "Uniform Resource Locator",
-      "Unified Region Link",
-      "Universal Routing Language"
+      "Konami",
+      "Проект GNU",
+      "Codemasters",
+      "Capcom"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 36
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какая игровая консоль стала самой продаваемой в истории (на 2024 год)?",
+    "id": 35,
+    "text": "Какая компания/студия разработала игру «Mega Man X»?",
     "options": [
-      "Nintendo Switch",
-      "PlayStation 2",
-      "Xbox 360",
-      "PlayStation 4"
+      "Sega Sports Japan",
+      "Дмитрий Пучков",
+      "Q2283",
+      "Capcom"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 37
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой популярной игре от инди-разработчиков нужно строить мега-фабрики на чужой планете?",
+    "id": 36,
+    "text": "Какая компания/студия разработала игру «Monster Hunter»?",
     "options": [
-      "Factorio",
-      "RimWorld",
-      "Terraria",
-      "Stardew Valley"
+      "Halo Studios",
+      "Wargaming Seattle",
+      "Capcom",
+      "Q95"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 37,
+    "text": "Какая компания/студия разработала игру «Resident Evil: The Mercenaries 3D»?",
+    "options": [
+      "Capcom",
+      "Wargaming Seattle",
+      "Q95",
+      "Konami"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии",
-    "id": 38
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какой язык программирования чаще всего используется для создания смарт-контрактов Ethereum?",
+    "id": 38,
+    "text": "Какая компания/студия разработала игру «Resident Evil: The Darkside Chronicles»?",
     "options": [
-      "Python",
-      "Rust",
-      "Solidity",
-      "Go"
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Capcom",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 39
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какая крупная корпорация купила игру Minecraft в 2014 году?",
+    "id": 39,
+    "text": "Какая компания/студия разработала игру «Mega Man X4»?",
     "options": [
-      "Google",
-      "Sony",
-      "Microsoft",
-      "Tencent"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 40
-  },
-  {
-    "text": "В какой серии командных шутеров от Valve игроки делятся на террористов и спецназ?",
-    "options": [
-      "Team Fortress",
-      "Counter-Strike",
-      "Half-Life",
-      "Left 4 Dead"
+      "Q95",
+      "Capcom",
+      "Q2283",
+      "Q8093"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 41
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Что из этого НЕ является языком программирования?",
+    "id": 40,
+    "text": "Какая компания/студия разработала игру «Alien vs. Predator»?",
     "options": [
-      "Python",
-      "JavaScript",
-      "C#",
-      "HTML"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 42
-  },
-  {
-    "text": "В какой знаменитой серии игр главный герой — ассасин по имени Эцио Аудиторе?",
-    "options": [
-      "Hitman",
-      "Assassin's Creed",
-      "Dishonored",
-      "Thief"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 43
-  },
-  {
-    "text": "Как называется популярный игровой движок, разработанный компанией Epic Games?",
-    "options": [
-      "Unity",
-      "CryEngine",
-      "Source",
-      "Unreal Engine"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 44
-  },
-  {
-    "text": "В какой MOBA-игре есть карта под названием Summoner's Rift?",
-    "options": [
-      "Dota 2",
-      "Heroes of the Storm",
-      "Smite",
-      "League of Legends"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 46
-  },
-  {
-    "text": "Как называется виртуальная валюта на популярной платформе Roblox?",
-    "options": [
-      "V-Bucks",
-      "Minecoins",
-      "Robux",
-      "Tix"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 47
-  },
-  {
-    "text": "Какой технологический гигант является владельцем видеохостинга YouTube?",
-    "options": [
-      "Facebook",
-      "Microsoft",
-      "Amazon",
-      "Google"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 48
-  },
-  {
-    "text": "Какая компания выпускает видеокарты популярной линейки GeForce?",
-    "options": [
-      "AMD",
-      "Intel",
-      "NVIDIA",
-      "Qualcomm"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 49
-  },
-  {
-    "text": "Как назывался первый в мире электронный цифровой вычислительный компьютер (1945 год)?",
-    "options": [
-      "ENIAC",
-      "IBM PC",
-      "Colossus",
-      "Altair"
+      "Capcom",
+      "Codemasters",
+      "Sony Interactive Entertainment",
+      "Q8093"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии",
-    "id": 50
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется самая популярная в мире криптовалюта?",
+    "id": 41,
+    "text": "Какая компания/студия разработала игру «Dino Crisis»?",
     "options": [
-      "Ethereum",
-      "Ripple",
-      "Bitcoin",
-      "Dogecoin"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 51
-  },
-  {
-    "text": "Как расшифровывается ПК?",
-    "options": [
-      "Панель компьютера",
-      "Портативный калькулятор",
-      "Персональный компьютер",
-      "Пользовательский код"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 52
-  },
-  {
-    "text": "Какой язык разметки используется для создания веб-страниц?",
-    "options": [
-      "Python",
-      "Java",
-      "HTML",
-      "C++"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 53
-  },
-  {
-    "text": "Как называется злодей в серии игр Super Mario?",
-    "options": [
-      "Эггман",
-      "Боузер",
-      "Ганон",
-      "Сефирот"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 54
-  },
-  {
-    "text": "Какой элемент компьютера называют 'мозгом'?",
-    "options": [
-      "Видеокарта",
-      "Оперативная память",
-      "Процессор",
-      "Жесткий диск"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 55
-  },
-  {
-    "text": "Какая игра от Rockstar Games вышла в 2013 году и до сих пор популярна?",
-    "options": [
-      "Red Dead Redemption 2",
-      "GTA V",
-      "Bully",
-      "Max Payne 3"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 56
-  },
-  {
-    "text": "Какой цвет у логотипа социальной сети Facebook?",
-    "options": [
-      "Красный",
-      "Зеленый",
-      "Синий",
-      "Желтый"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 57
-  },
-  {
-    "text": "В какой игре мы играем за Стива?",
-    "options": [
-      "Roblox",
-      "Terraria",
-      "Minecraft",
-      "Fortnite"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 58
-  },
-  {
-    "text": "Что такое Wi-Fi?",
-    "options": [
-      "Беспроводная сеть",
-      "Видеокарта",
-      "Браузер",
-      "Антивирус"
+      "Capcom",
+      "Halo Studios",
+      "Q2283",
+      "Sega Sports Japan"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии",
-    "id": 59
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой игре нужно выживать против аниматроников?",
+    "id": 42,
+    "text": "Какая компания/студия разработала игру «Dino Crisis 2»?",
     "options": [
-      "Slender",
-      "Amnesia",
-      "Outlast",
-      "Five Nights at Freddy's"
+      "Q8093",
+      "Halo Studios",
+      "Q2283",
+      "Capcom"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 60
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какая из этих программ используется для работы с таблицами?",
+    "id": 43,
+    "text": "Какая компания/студия разработала игру «Street Fighter»?",
     "options": [
-      "Word",
-      "Excel",
-      "PowerPoint",
-      "Photoshop"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 61
-  },
-  {
-    "text": "Какой персонаж является талисманом компании SEGA?",
-    "options": [
-      "Марио",
-      "Крэш Бандикут",
-      "Соник",
-      "Pac-Man"
+      "Sony Interactive Entertainment",
+      "Wargaming Seattle",
+      "Capcom",
+      "Дмитрий Пучков"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 62
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется популярная платформа для стриминга игр?",
+    "id": 44,
+    "text": "Какая компания/студия разработала игру «Final Fight 2»?",
     "options": [
-      "YouTube",
-      "Vimeo",
-      "Twitch",
-      "Discord"
+      "Capcom",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Q2283"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 63
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой игре главный герой — Гордон Фримен?",
+    "id": 45,
+    "text": "Какая компания/студия разработала игру «Super Street Fighter II Turbo»?",
     "options": [
-      "Portal",
-      "Half-Life",
-      "Doom",
-      "Crysis"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 64
-  },
-  {
-    "text": "Что такое 'спам'?",
-    "options": [
-      "Вирус",
-      "Нежелательная рекламная рассылка",
-      "Полезная программа",
-      "Браузер"
+      "Q2283",
+      "Capcom",
+      "Konami",
+      "Wargaming Seattle"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 65
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется программа для просмотра веб-страниц?",
+    "id": 46,
+    "text": "Какая компания/студия разработала игру «Chip ’n Dale Rescue Rangers 2»?",
     "options": [
-      "Текстовый редактор",
-      "Антивирус",
-      "Браузер",
-      "Драйвер"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 66
-  },
-  {
-    "text": "Какая студия создала игру Genshin Impact?",
-    "options": [
-      "Tencent",
-      "NetEase",
-      "HoYoverse (miHoYo)",
-      "Square Enix"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 67
-  },
-  {
-    "text": "В какой игре игроки ищут 'предателя' среди экипажа космического корабля?",
-    "options": [
-      "Fall Guys",
-      "Among Us",
-      "Rust",
-      "DayZ"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 68
-  },
-  {
-    "text": "Какой язык используется для стилизации веб-страниц?",
-    "options": [
-      "HTML",
-      "CSS",
-      "SQL",
-      "PHP"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 69
-  },
-  {
-    "text": "В какой игре есть режим 'Ultimate Team'?",
-    "options": [
-      "NBA 2K",
-      "Madden NFL",
-      "EA Sports FC (FIFA)",
-      "NHL"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 70
-  },
-  {
-    "text": "Какой символ используется в адресах электронной почты?",
-    "options": [
-      "#",
-      "$",
-      "&",
-      "@"
+      "Wargaming Seattle",
+      "Q8093",
+      "Дмитрий Пучков",
+      "Capcom"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 71
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется самая известная серия игр про карманных монстров?",
+    "id": 47,
+    "text": "Какая компания/студия разработала игру «Mighty Final Fight»?",
     "options": [
-      "Digimon",
-      "Pokemon",
-      "Monster Hunter",
-      "Yo-kai Watch"
+      "Wargaming Seattle",
+      "Capcom",
+      "Codemasters",
+      "Q2283"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 72
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В каком году была основана компания Google?",
+    "id": 48,
+    "text": "Какая компания/студия разработала игру «Gun.Smoke»?",
     "options": [
-      "1995",
-      "1998",
-      "2001",
-      "2004"
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Capcom",
+      "Q95"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 49,
+    "text": "Какая компания/студия разработала игру «Chip ’n Dale Rescue Rangers»?",
+    "options": [
+      "Sega Sports Japan",
+      "Capcom",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 73
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется устройство для перевода текста в цифровой формат?",
+    "id": 50,
+    "text": "Какая компания/студия разработала игру «Mega Man 4»?",
     "options": [
-      "Принтер",
-      "Плоттер",
-      "Сканер",
-      "Модем"
+      "Capcom",
+      "Q95",
+      "Дмитрий Пучков",
+      "Q8093"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 51,
+    "text": "Какая компания/студия разработала игру «Haunting Ground»?",
+    "options": [
+      "Capcom",
+      "Проект GNU",
+      "Q95",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 52,
+    "text": "Какая компания/студия разработала игру «Sweet Home»?",
+    "options": [
+      "Codemasters",
+      "Дмитрий Пучков",
+      "Capcom",
+      "Konami"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 74
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Главного героя серии 'The Legend of Zelda' зовут...",
+    "id": 53,
+    "text": "Какая компания/студия разработала игру «Resident Evil: Dead Aim»?",
     "options": [
-      "Зельда",
-      "Линк",
-      "Ганон",
-      "Марио"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 75
-  },
-  {
-    "text": "Что из этого является браузером?",
-    "options": [
-      "Windows",
-      "Linux",
-      "Firefox",
-      "Office"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 76
-  },
-  {
-    "text": "В какой игре есть фракции Альянс и Орда?",
-    "options": [
-      "The Elder Scrolls",
-      "Guild Wars",
-      "World of Warcraft",
-      "Lineage II"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 77
-  },
-  {
-    "text": "Какой поисковик является самым популярным в России?",
-    "options": [
-      "Google",
-      "Bing",
-      "Yahoo",
-      "Яндекс"
+      "Wargaming Seattle",
+      "Sega Sports Japan",
+      "Halo Studios",
+      "Capcom"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 78
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой игре действие происходит в постапокалиптической пустоши?",
+    "id": 54,
+    "text": "Какая компания/студия разработала игру «Gyakuten Kenji 2»?",
     "options": [
-      "Skyrim",
-      "Fallout",
-      "Mass Effect",
-      "BioShock"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 79
-  },
-  {
-    "text": "Что означает клавиша 'Esc' на клавиатуре?",
-    "options": [
-      "Enter",
-      "Escape (Выход)",
-      "Erase (Стереть)",
-      "Edit (Правка)"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 80
-  },
-  {
-    "text": "Как называется серия автосимуляторов эксклюзивно для PlayStation?",
-    "options": [
-      "Forza Motorsport",
-      "Need for Speed",
-      "Gran Turismo",
-      "Dirt"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 81
-  },
-  {
-    "text": "Что такое 'SSD'?",
-    "options": [
-      "Видеокарта",
-      "Твердотельный накопитель",
-      "Процессор",
-      "Монитор"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 82
-  },
-  {
-    "text": "Какой язык программирования был создан в Microsoft?",
-    "options": [
-      "Java",
-      "C#",
-      "Python",
-      "Ruby"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 83
-  },
-  {
-    "text": "Как называется главная злодейка в серии Portal?",
-    "options": [
-      "Кортана",
-      "SHODAN",
-      "GLaDOS",
-      "Аликс"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 84
-  },
-  {
-    "text": "Для чего используется программа Adobe Photoshop?",
-    "options": [
-      "Для монтажа видео",
-      "Для создания таблиц",
-      "Для обработки изображений",
-      "Для программирования"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 85
-  },
-  {
-    "text": "В какой игре от Naughty Dog главные герои — Джоэл и Элли?",
-    "options": [
-      "Uncharted",
-      "The Last of Us",
-      "Crash Bandicoot",
-      "God of War"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 86
-  },
-  {
-    "text": "Какая компания разработала операционную систему Windows?",
-    "options": [
-      "Apple",
-      "IBM",
-      "Microsoft",
-      "Intel"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 87
-  },
-  {
-    "text": "В какой игре можно построить собственный парк развлечений?",
-    "options": [
-      "SimCity",
-      "RollerCoaster Tycoon",
-      "The Sims",
-      "Cities: Skylines"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 88
-  },
-  {
-    "text": "Как называется вредоносная программа, блокирующая ПК и требующая деньги?",
-    "options": [
-      "Червь",
-      "Троян",
-      "Винлокер (Ransomware)",
-      "Шпион"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 89
-  },
-  {
-    "text": "Какая из этих игр принадлежит к жанру 'Файтинг'?",
-    "options": [
-      "Mortal Kombat",
-      "Call of Duty",
-      "Need for Speed",
-      "Resident Evil"
+      "Capcom",
+      "Wargaming Seattle",
+      "Q95",
+      "Q8093"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии",
-    "id": 90
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Что из этого является языком запросов к базам данных?",
+    "id": 55,
+    "text": "Какая компания/студия разработала игру «Mega Man 2»?",
     "options": [
-      "C++",
-      "PHP",
-      "SQL",
-      "JavaScript"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 91
-  },
-  {
-    "text": "Какая игра стала игрой года (GOTY) на The Game Awards в 2022 году?",
-    "options": [
-      "God of War: Ragnarok",
-      "Elden Ring",
-      "Stray",
-      "Horizon Forbidden West"
+      "Wargaming Seattle",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 92
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какой популярный мессенджер был создан Павлом Дуровым?",
+    "id": 56,
+    "text": "Какая компания/студия разработала игру «Mega Man 3»?",
     "options": [
-      "WhatsApp",
-      "Viber",
-      "Telegram",
-      "Skype"
+      "Codemasters",
+      "Q2283",
+      "Capcom",
+      "Q8093"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 93
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется игра, где нужно складывать падающие тетрамино?",
+    "id": 57,
+    "text": "Какая компания/студия разработала игру «Final Fight Revenge»?",
     "options": [
-      "Tetris",
-      "Pac-Man",
-      "Pong",
-      "Space Invaders"
+      "Capcom",
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Q8093"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии",
-    "id": 94
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Что такое 'баг' в программировании?",
+    "id": 58,
+    "text": "Какая компания/студия разработала игру «Eco Fighters»?",
     "options": [
-      "Вирус",
-      "Ошибка в коде",
-      "Фича",
-      "Хакерская атака"
+      "Capcom",
+      "Sony Interactive Entertainment",
+      "Wargaming Seattle",
+      "Дмитрий Пучков"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 95
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой игре главный герой — Данте, охотник на демонов?",
+    "id": 59,
+    "text": "Какая компания/студия разработала игру «Ultimate Marvel vs. Capcom 3»?",
     "options": [
-      "Bayonetta",
-      "Devil May Cry",
-      "Dark Souls",
-      "Bloodborne"
+      "Capcom",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Проект GNU"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 96
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Как называется облачный сервис от Apple?",
+    "id": 60,
+    "text": "Какая компания/студия разработала игру «Apollo Justice: Ace Attorney»?",
     "options": [
-      "Google Drive",
-      "OneDrive",
-      "iCloud",
-      "Dropbox"
+      "Q95",
+      "Q2283",
+      "Capcom",
+      "Sega Sports Japan"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 97
+    "category": "Игры и Технологии"
   },
   {
-    "text": "В какой игре можно ловить виртуальных существ с помощью смартфона на улице?",
+    "id": 61,
+    "text": "Какая компания/студия разработала игру «Breath of Fire III»?",
     "options": [
-      "Ingress",
-      "Pokemon GO",
-      "Geocaching",
-      "Monster Hunter Now"
+      "Capcom",
+      "Konami",
+      "Codemasters",
+      "Wargaming Seattle"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии",
-    "id": 98
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какая компания создала консоль Xbox?",
+    "id": 62,
+    "text": "Какая компания/студия разработала игру «Lost Planet: Extreme Condition»?",
     "options": [
-      "Sony",
-      "Nintendo",
-      "SEGA",
-      "Microsoft"
+      "Проект GNU",
+      "Q2283",
+      "Capcom",
+      "Halo Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 63,
+    "text": "Какая компания/студия разработала игру «Legendary Wings»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Halo Studios",
+      "Capcom",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 64,
+    "text": "Какая компания/студия разработала игру «Resident Evil Outbreak»?",
+    "options": [
+      "Codemasters",
+      "Q2283",
+      "Capcom",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 65,
+    "text": "Какая компания/студия разработала игру «Mega Man III»?",
+    "options": [
+      "Halo Studios",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Capcom"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии",
-    "id": 99
+    "category": "Игры и Технологии"
   },
   {
-    "text": "Какое расширение файлов обычно имеют исполняемые программы в Windows?",
+    "id": 66,
+    "text": "Какая компания/студия разработала игру «Mega Man 8»?",
     "options": [
-      ".txt",
-      ".jpg",
-      ".exe",
-      ".mp3"
+      "Wargaming Seattle",
+      "Q2283",
+      "Capcom",
+      "Codemasters"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии",
-    "id": 100
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "Какая компания создала консоль Switch?",
+    "id": 67,
+    "text": "Какая компания/студия разработала игру «Chaos Legion»?",
     "options": [
-      "Sony",
-      "Microsoft",
-      "Nintendo",
-      "Sega"
+      "Konami",
+      "Sega Sports Japan",
+      "Capcom",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 2,
-    "id": 136
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "Как называется язык программирования, логотипом которого является чашка кофе?",
+    "id": 68,
+    "text": "Какая компания/студия разработала игру «Resident Evil Outbreak: File #2»?",
     "options": [
-      "Python",
-      "C++",
-      "Java",
-      "Ruby"
+      "Halo Studios",
+      "Codemasters",
+      "Дмитрий Пучков",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 69,
+    "text": "Какая компания/студия разработала игру «Mega Man 5»?",
+    "options": [
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Halo Studios"
     ],
     "correct_answer": 2,
-    "id": 137
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "В какой игре нужно строить блоки и выживать от мобов?",
+    "id": 70,
+    "text": "Какая компания/студия разработала игру «Mega Man 6»?",
     "options": [
-      "Roblox",
-      "Terraria",
-      "Minecraft",
-      "Fortnite"
-    ],
-    "correct_answer": 2,
-    "id": 138
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой элемент компьютера считается его 'мозгом'?",
-    "options": [
-      "Жесткий диск",
-      "Оперативная память",
-      "Процессор",
-      "Видеокарта"
-    ],
-    "correct_answer": 2,
-    "id": 139
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что означает аббревиатура HTML?",
-    "options": [
-      "HyperText Markup Language",
-      "High Tech Modern Language",
-      "Hyperlink Text Manipulation Language",
-      "Home Tool Markup Language"
+      "Capcom",
+      "Konami",
+      "Wargaming Seattle",
+      "Дмитрий Пучков"
     ],
     "correct_answer": 0,
-    "id": 140
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "Какая компания создала PlayStation?",
+    "id": 71,
+    "text": "Какая компания/студия разработала игру «Darkwing Duck»?",
     "options": [
-      "Nintendo",
-      "Microsoft",
-      "Sony",
-      "Sega"
-    ],
-    "correct_answer": 2,
-    "id": 288
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что означает аббревиатура GPU?",
-    "options": [
-      "General Processing Unit",
-      "Graphics Processing Unit",
-      "Global Power Unit",
-      "Game Play Utility"
-    ],
-    "correct_answer": 1,
-    "id": 289
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "В какой игре персонаж собирает кольца?",
-    "options": [
-      "Марио",
-      "Соник",
-      "Крэш Бандикут",
-      "Мегамен"
-    ],
-    "correct_answer": 1,
-    "id": 290
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Кто основал компанию Apple?",
-    "options": [
-      "Билл Гейтс",
-      "Стив Джобс",
-      "Марк Цукерберг",
-      "Джефф Безос"
-    ],
-    "correct_answer": 1,
-    "id": 291
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какая операционная система с открытым исходным кодом?",
-    "options": [
-      "Windows",
-      "macOS",
-      "Linux",
-      "iOS"
-    ],
-    "correct_answer": 2,
-    "id": 292
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Сколько бит в одном байте?",
-    "options": [
-      "4",
-      "6",
-      "8",
-      "16"
-    ],
-    "correct_answer": 2,
-    "id": 293
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какая игра стала первой Battle Royale-хитом?",
-    "options": [
-      "Fortnite",
-      "PUBG",
-      "Apex Legends",
-      "H1Z1"
-    ],
-    "correct_answer": 1,
-    "id": 294
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что такое RAM?",
-    "options": [
-      "Постоянная память",
-      "Оперативная память",
-      "Видеопамять",
-      "Кэш-память"
-    ],
-    "correct_answer": 1,
-    "id": 295
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "В какой игре есть режим 'Королевская битва' с постройками?",
-    "options": [
-      "PUBG",
-      "Apex Legends",
-      "Fortnite",
-      "Warzone"
-    ],
-    "correct_answer": 2,
-    "id": 296
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой язык программирования назван в честь змеи?",
-    "options": [
-      "Java",
-      "Ruby",
-      "Python",
-      "Go"
-    ],
-    "correct_answer": 2,
-    "id": 297
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что такое VPN?",
-    "options": [
-      "Virtual Private Network",
-      "Visual Programming Node",
-      "Video Processing Network",
-      "Virtual Public Node"
+      "Capcom",
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Дмитрий Пучков"
     ],
     "correct_answer": 0,
-    "id": 298
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "В каком году вышел первый iPhone?",
+    "id": 72,
+    "text": "Какая компания/студия разработала игру «Breath of Fire II»?",
     "options": [
-      "2005",
-      "2006",
-      "2007",
-      "2008"
-    ],
-    "correct_answer": 2,
-    "id": 299
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какая социальная сеть принадлежит компании Meta?",
-    "options": [
-      "Twitter",
-      "TikTok",
-      "Instagram",
-      "Snapchat"
-    ],
-    "correct_answer": 2,
-    "id": 300
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой игровой движок используется в Fortnite?",
-    "options": [
-      "Unity",
-      "Unreal Engine",
-      "CryEngine",
-      "Source"
+      "Sega Sports Japan",
+      "Capcom",
+      "Codemasters",
+      "Halo Studios"
     ],
     "correct_answer": 1,
-    "id": 301
+    "category": "Игры и Технологии"
   },
   {
-    "category": "Игры и Технологии",
-    "text": "Что такое SSD?",
+    "id": 73,
+    "text": "Какая компания/студия разработала игру «Marvel Super Heroes vs. Street Fighter»?",
     "options": [
-      "Super Speed Drive",
-      "Solid State Drive",
-      "System Storage Device",
-      "Smart Sync Disk"
-    ],
-    "correct_answer": 1,
-    "id": 302
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой браузер разработан компанией Google?",
-    "options": [
-      "Firefox",
-      "Safari",
-      "Chrome",
-      "Edge"
-    ],
-    "correct_answer": 2,
-    "id": 303
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "В какой серии игр главного героя зовут Линк?",
-    "options": [
-      "Final Fantasy",
-      "The Legend of Zelda",
-      "Fire Emblem",
-      "Metroid"
-    ],
-    "correct_answer": 1,
-    "id": 304
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что такое AI?",
-    "options": [
-      "Advanced Internet",
-      "Artificial Intelligence",
-      "Automated Input",
-      "Applied Integration"
-    ],
-    "correct_answer": 1,
-    "id": 305
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какая компания разработала игру GTA V?",
-    "options": [
-      "EA",
-      "Ubisoft",
-      "Rockstar Games",
-      "Activision"
-    ],
-    "correct_answer": 2,
-    "id": 306
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "В какой игре есть криперы?",
-    "options": [
-      "Roblox",
-      "Terraria",
-      "Minecraft",
-      "Valheim"
-    ],
-    "correct_answer": 2,
-    "id": 307
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой формат файлов используется для веб-страниц?",
-    "options": [
-      ".doc",
-      ".html",
-      ".pdf",
-      ".exe"
-    ],
-    "correct_answer": 1,
-    "id": 308
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какая компания владеет Steam?",
-    "options": [
-      "EA",
-      "Epic Games",
-      "Valve",
-      "Activision"
-    ],
-    "correct_answer": 2,
-    "id": 309
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Какой протокол используется для безопасных соединений?",
-    "options": [
-      "HTTP",
-      "FTP",
-      "HTTPS",
-      "SMTP"
-    ],
-    "correct_answer": 2,
-    "id": 310
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "В какой серии игр есть покемоны?",
-    "options": [
-      "Digimon",
-      "Pokémon",
-      "Monster Hunter",
-      "Yo-kai Watch"
-    ],
-    "correct_answer": 1,
-    "id": 311
-  },
-  {
-    "category": "Игры и Технологии",
-    "text": "Что такое облачные вычисления?",
-    "options": [
-      "Вычисления на удалённых серверах",
-      "Вычисления в атмосфере",
-      "Квантовые вычисления",
-      "Аналоговые вычисления"
+      "Capcom",
+      "Sega Sports Japan",
+      "Q95",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 0,
-    "id": 312
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 74,
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom: Clash of Super Heroes»?",
+    "options": [
+      "Codemasters",
+      "Дмитрий Пучков",
+      "Capcom",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 75,
+    "text": "Какая компания/студия разработала игру «Lost Planet 2»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Q95",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 76,
+    "text": "Какая компания/студия разработала игру «Street Fighter Alpha 2»?",
+    "options": [
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 77,
+    "text": "Какая компания/студия разработала игру «Dino Crisis 3»?",
+    "options": [
+      "Sega Sports Japan",
+      "Konami",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 78,
+    "text": "Какая компания/студия разработала игру «Mega Man X5»?",
+    "options": [
+      "Q95",
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 79,
+    "text": "Какая компания/студия разработала игру «Street Fighter III»?",
+    "options": [
+      "Capcom",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 80,
+    "text": "Какая компания/студия разработала игру «Mega Man Star Force»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Q95",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 81,
+    "text": "Какая компания/студия разработала игру «Mega Man X8»?",
+    "options": [
+      "Q8093",
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 82,
+    "text": "Какая компания/студия разработала игру «Phoenix Wright: Ace Attorney – Dual Destinies»?",
+    "options": [
+      "Q2283",
+      "Q95",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 83,
+    "text": "Какая компания/студия разработала игру «Breath of Fire»?",
+    "options": [
+      "Capcom",
+      "Q2283",
+      "Konami",
+      "Q95"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 84,
+    "text": "Какая компания/студия разработала игру «Marvel Super Heroes»?",
+    "options": [
+      "Capcom",
+      "Sega Sports Japan",
+      "Дмитрий Пучков",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 85,
+    "text": "Какая компания/студия разработала игру «Final Fight 3»?",
+    "options": [
+      "Sega Sports Japan",
+      "Halo Studios",
+      "Дмитрий Пучков",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 86,
+    "text": "Какая компания/студия разработала игру «X-Men vs. Street Fighter»?",
+    "options": [
+      "Capcom",
+      "Проект GNU",
+      "Konami",
+      "Codemasters"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 87,
+    "text": "Какая компания/студия разработала игру «Demon’s Crest»?",
+    "options": [
+      "Capcom",
+      "Halo Studios",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 88,
+    "text": "Какая компания/студия разработала игру «The Punisher»?",
+    "options": [
+      "Capcom",
+      "Halo Studios",
+      "Q8093",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 89,
+    "text": "Какая компания/студия разработала игру «DuckTales 2»?",
+    "options": [
+      "Capcom",
+      "Дмитрий Пучков",
+      "Sony Interactive Entertainment",
+      "Halo Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 90,
+    "text": "Какая компания/студия разработала игру «Street Fighter Alpha 3»?",
+    "options": [
+      "Проект GNU",
+      "Codemasters",
+      "Capcom",
+      "Konami"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 91,
+    "text": "Какая компания/студия разработала игру «Clock Tower 3»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q2283",
+      "Capcom",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 92,
+    "text": "Какая компания/студия разработала игру «Mega Man X6»?",
+    "options": [
+      "Sega Sports Japan",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 93,
+    "text": "Какая компания/студия разработала игру «Dino Stalker»?",
+    "options": [
+      "Capcom",
+      "Q2283",
+      "Q8093",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 94,
+    "text": "Какая компания/студия разработала игру «Mega Man X7»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Sega Sports Japan",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 95,
+    "text": "Какая компания/студия разработала игру «Mega Man X3»?",
+    "options": [
+      "Q8093",
+      "Sega Sports Japan",
+      "Capcom",
+      "Halo Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 96,
+    "text": "Какая компания/студия разработала игру «Super Street Fighter II»?",
+    "options": [
+      "Halo Studios",
+      "Capcom",
+      "Sony Interactive Entertainment",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 97,
+    "text": "Какая компания/студия разработала игру «JoJo’s Bizarre Adventure»?",
+    "options": [
+      "Capcom",
+      "Halo Studios",
+      "Q95",
+      "Проект GNU"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 98,
+    "text": "Какая компания/студия разработала игру «Disney’s Aladdin (Capcom)»?",
+    "options": [
+      "Sega Sports Japan",
+      "Halo Studios",
+      "Capcom",
+      "Проект GNU"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 99,
+    "text": "Какая компания/студия разработала игру «Mega Man in Dr. Wily’s Revenge»?",
+    "options": [
+      "Codemasters",
+      "Sega Sports Japan",
+      "Sony Interactive Entertainment",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 100,
+    "text": "Какая компания/студия разработала игру «Mega Man & Bass»?",
+    "options": [
+      "Q95",
+      "Codemasters",
+      "Capcom",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 101,
+    "text": "Какая компания/студия разработала игру «Dragon’s Dogma»?",
+    "options": [
+      "Konami",
+      "Проект GNU",
+      "Capcom",
+      "Halo Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 102,
+    "text": "Какая компания/студия разработала игру «Marvel Super Heroes in War of the Gems»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Q8093",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 103,
+    "text": "Какая компания/студия разработала игру «El Dorado Gate»?",
+    "options": [
+      "Q95",
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 104,
+    "text": "Какая компания/студия разработала игру «Resident Evil Survivor 2 Code: Veronica»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q2283",
+      "Capcom",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 105,
+    "text": "Какая компания/студия разработала игру «Mega Man»?",
+    "options": [
+      "Capcom",
+      "Q95",
+      "Sega Sports Japan",
+      "Q8093"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 106,
+    "text": "Какая компания/студия разработала игру «The Nightmare Before Christmas: Oogie's Revenge»?",
+    "options": [
+      "Q8093",
+      "Wargaming Seattle",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 107,
+    "text": "Какая компания/студия разработала игру «Spawn: In the Demon’s Hand»?",
+    "options": [
+      "Wargaming Seattle",
+      "Sega Sports Japan",
+      "Q95",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 108,
+    "text": "Какая компания/студия разработала игру «Street Fighter III: 2nd Impact»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Capcom",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 109,
+    "text": "Какая компания/студия разработала игру «Disney’s The Little Mermaid»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Q95",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 110,
+    "text": "Какая компания/студия разработала игру «Maximo»?",
+    "options": [
+      "Halo Studios",
+      "Capcom",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 111,
+    "text": "Какая компания/студия разработала игру «Mega Man Battle & Chase»?",
+    "options": [
+      "Q2283",
+      "Q8093",
+      "Capcom",
+      "Q95"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 112,
+    "text": "Какая компания/студия разработала игру «Mega Man Soccer»?",
+    "options": [
+      "Halo Studios",
+      "Дмитрий Пучков",
+      "Codemasters",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 113,
+    "text": "Какая компания/студия разработала игру «Street Fighter III: 3rd Strike»?",
+    "options": [
+      "Halo Studios",
+      "Wargaming Seattle",
+      "Konami",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 114,
+    "text": "Какая компания/студия разработала игру «GioGio's Bizarre Adventure»?",
+    "options": [
+      "Q2283",
+      "Capcom",
+      "Проект GNU",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 115,
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom Origins»?",
+    "options": [
+      "Проект GNU",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 116,
+    "text": "Какая компания/студия разработала игру «Monster Hunter Freedom»?",
+    "options": [
+      "Codemasters",
+      "Halo Studios",
+      "Capcom",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 117,
+    "text": "Какая компания/студия разработала игру «ИнкБол»?",
+    "options": [
+      "Halo Studios",
+      "Проект GNU",
+      "Konami",
+      "Q2283"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 118,
+    "text": "Какая компания/студия разработала игру «Killzone 3»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Дмитрий Пучков",
+      "Wargaming Seattle",
+      "Halo Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 119,
+    "text": "Какая компания/студия разработала игру «Killzone 2»?",
+    "options": [
+      "Sega Sports Japan",
+      "Konami",
+      "Codemasters",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 120,
+    "text": "Какая компания/студия разработала игру «Killzone: Liberation»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Halo Studios",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 121,
+    "text": "Какая компания/студия разработала игру «Санитары подземелий»?",
+    "options": [
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Sega Sports Japan",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 122,
+    "text": "Какая компания/студия разработала игру «Санитары подземелий 2: Охота за Чёрным квадратом»?",
+    "options": [
+      "Q8093",
+      "Дмитрий Пучков",
+      "Проект GNU",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 123,
+    "text": "Какая компания/студия разработала игру «Mega Man V»?",
+    "options": [
+      "Codemasters",
+      "Wargaming Seattle",
+      "Capcom",
+      "Q2283"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 124,
+    "text": "Какая компания/студия разработала игру «Deep Down»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Q2283",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 125,
+    "text": "Какая компания/студия разработала игру «Mainichi Issho»?",
+    "options": [
+      "Konami",
+      "Wargaming Seattle",
+      "Q8093",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 126,
+    "text": "Какая компания/студия разработала игру «Tale Spin (NES)»?",
+    "options": [
+      "Codemasters",
+      "Q8093",
+      "Halo Studios",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 127,
+    "text": "Какая компания/студия разработала игру «The Great Ace Attorney: Adventures»?",
+    "options": [
+      "Sega Sports Japan",
+      "Capcom",
+      "Q2283",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 128,
+    "text": "Какая компания/студия разработала игру «Обитель зла: Откровения 2»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Проект GNU",
+      "Q8093"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 129,
+    "text": "Какая компания/студия разработала игру «Street Fighter V»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Capcom",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 130,
+    "text": "Какая компания/студия разработала игру «Monster Hunter Generations»?",
+    "options": [
+      "Capcom",
+      "Codemasters",
+      "Sega Sports Japan",
+      "Q2283"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 131,
+    "text": "Какая компания/студия разработала игру «Phoenix Wright: Ace Attorney – Spirit of Justice»?",
+    "options": [
+      "Проект GNU",
+      "Capcom",
+      "Halo Studios",
+      "Q8093"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 132,
+    "text": "Какая компания/студия разработала игру «Monster Hunter: World»?",
+    "options": [
+      "Q2283",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Halo Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 133,
+    "text": "Какая компания/студия разработала игру «Umbrella Corps»?",
+    "options": [
+      "Konami",
+      "Q95",
+      "Capcom",
+      "Q8093"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 134,
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom: Infinite»?",
+    "options": [
+      "Halo Studios",
+      "Q2283",
+      "Capcom",
+      "Q8093"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 135,
+    "text": "Какая компания/студия разработала игру «Resident Evil Village»?",
+    "options": [
+      "Проект GNU",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Q2283"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 136,
+    "text": "Какая компания/студия разработала игру «Devil May Cry 4: Special Edition»?",
+    "options": [
+      "Q2283",
+      "Capcom",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 137,
+    "text": "Какая компания/студия разработала игру «Resident Evil 3»?",
+    "options": [
+      "Halo Studios",
+      "Дмитрий Пучков",
+      "Capcom",
+      "Codemasters"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 138,
+    "text": "Какая компания/студия разработала игру «Phoenix Wright: Ace Attorney Trilogy»?",
+    "options": [
+      "Konami",
+      "Wargaming Seattle",
+      "Capcom",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 139,
+    "text": "Какая компания/студия разработала игру «Resident Evil 2»?",
+    "options": [
+      "Capcom",
+      "Q95",
+      "Sega Sports Japan",
+      "Проект GNU"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 140,
+    "text": "Какая компания/студия разработала игру «Devil May Cry 5»?",
+    "options": [
+      "Sega Sports Japan",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 141,
+    "text": "Какая компания/студия разработала игру «Resident Evil: Resistance»?",
+    "options": [
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 142,
+    "text": "Какая компания/студия разработала игру «Mega Man 11»?",
+    "options": [
+      "Sega Sports Japan",
+      "Halo Studios",
+      "Capcom",
+      "Codemasters"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 143,
+    "text": "Какая компания/студия разработала игру «Street Fighter 6»?",
+    "options": [
+      "Konami",
+      "Дмитрий Пучков",
+      "Capcom",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 144,
+    "text": "Какая компания/студия разработала игру «Dragon’s Dogma II»?",
+    "options": [
+      "Halo Studios",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Q8093"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 145,
+    "text": "Какая компания/студия разработала игру «Monster Hunter Rise»?",
+    "options": [
+      "Проект GNU",
+      "Q2283",
+      "Capcom",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 146,
+    "text": "Какая компания/студия разработала игру «Resident Evil Re:Verse»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Capcom",
+      "Q95"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 147,
+    "text": "Какая компания/студия разработала игру «Yie Ar Kung-Fu»?",
+    "options": [
+      "Q8093",
+      "Halo Studios",
+      "Konami",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 148,
+    "text": "Какая компания/студия разработала игру «Sonic the Hedgehog»?",
+    "options": [
+      "Capcom",
+      "Sega Sports Japan",
+      "Konami",
+      "Q95"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 149,
+    "text": "Какая компания/студия разработала игру «Monster Hunter Wilds»?",
+    "options": [
+      "Q2283",
+      "Sony Interactive Entertainment",
+      "Wargaming Seattle",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 150,
+    "text": "Какая компания/студия разработала игру «Marvel vs. Capcom Fighting Collection: Arcade Classics»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 151,
+    "text": "Какая компания/студия разработала игру «Metal Gear Solid 3: Snake Eater»?",
+    "options": [
+      "Halo Studios",
+      "Konami",
+      "Sega Sports Japan",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 152,
+    "text": "Какая компания/студия разработала игру «Silent Hill: The Arcade»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Wargaming Seattle",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 153,
+    "text": "Какая компания/студия разработала игру «Super Castlevania IV»?",
+    "options": [
+      "Konami",
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 154,
+    "text": "Какая компания/студия разработала игру «Frogger»?",
+    "options": [
+      "Konami",
+      "Capcom",
+      "Q8093",
+      "Codemasters"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 155,
+    "text": "Какая компания/студия разработала игру «ISS Pro Evolution»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Wargaming Seattle",
+      "Konami",
+      "Capcom"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 156,
+    "text": "Какая компания/студия разработала игру «Google Lively»?",
+    "options": [
+      "Codemasters",
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Q95"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 157,
+    "text": "Какая компания/студия разработала игру «Dinosaur Game»?",
+    "options": [
+      "Q95",
+      "Capcom",
+      "Sega Sports Japan",
+      "Codemasters"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 158,
+    "text": "Какая компания/студия разработала игру «Rockman Complete Works»?",
+    "options": [
+      "Проект GNU",
+      "Capcom",
+      "Codemasters",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 159,
+    "text": "Какая компания/студия разработала игру «Паук»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Дмитрий Пучков",
+      "Q2283"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 160,
+    "text": "Какая компания/студия разработала игру «Street Fighter Alpha»?",
+    "options": [
+      "Halo Studios",
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Capcom"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 161,
+    "text": "Какая компания/студия разработала игру «Hyper Sports»?",
+    "options": [
+      "Q8093",
+      "Sega Sports Japan",
+      "Capcom",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 162,
+    "text": "Какая компания/студия разработала игру «Castlevania: Lament of Innocence»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Codemasters",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 163,
+    "text": "Какая компания/студия разработала игру «Yume Penguin Monogatari»?",
+    "options": [
+      "Проект GNU",
+      "Konami",
+      "Capcom",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 164,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2010»?",
+    "options": [
+      "Konami",
+      "Проект GNU",
+      "Wargaming Seattle",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 165,
+    "text": "Какая компания/студия разработала игру «Castlevania Chronicles»?",
+    "options": [
+      "Проект GNU",
+      "Konami",
+      "Codemasters",
+      "Capcom"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 166,
+    "text": "Какая компания/студия разработала игру «Konami Krazy Racers»?",
+    "options": [
+      "Capcom",
+      "Дмитрий Пучков",
+      "Konami",
+      "Q2283"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 167,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles III: The Manhattan Project»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Дмитрий Пучков",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 168,
+    "text": "Какая компания/студия разработала игру «Scramble»?",
+    "options": [
+      "Q95",
+      "Konami",
+      "Дмитрий Пучков",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 169,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 6»?",
+    "options": [
+      "Q8093",
+      "Konami",
+      "Q95",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 170,
+    "text": "Какая компания/студия разработала игру «Silent Hill»?",
+    "options": [
+      "Q8093",
+      "Q2283",
+      "Konami",
+      "Codemasters"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 171,
+    "text": "Какая компания/студия разработала игру «Silent Hill 3»?",
+    "options": [
+      "Q95",
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Capcom"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 172,
+    "text": "Какая компания/студия разработала игру «Contra»?",
+    "options": [
+      "Wargaming Seattle",
+      "Konami",
+      "Q8093",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 173,
+    "text": "Какая компания/студия разработала игру «The Adventures of Batman and Robin»?",
+    "options": [
+      "Q2283",
+      "Q8093",
+      "Wargaming Seattle",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 174,
+    "text": "Какая компания/студия разработала игру «Metal Gear Solid 2: Sons of Liberty»?",
+    "options": [
+      "Konami",
+      "Q95",
+      "Halo Studios",
+      "Q8093"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 175,
+    "text": "Какая компания/студия разработала игру «Gyruss»?",
+    "options": [
+      "Wargaming Seattle",
+      "Konami",
+      "Дмитрий Пучков",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 176,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles II: Back from the Sewers»?",
+    "options": [
+      "Capcom",
+      "Sega Sports Japan",
+      "Q2283",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 177,
+    "text": "Какая компания/студия разработала игру «Sunset Riders»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Capcom",
+      "Q8093",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 178,
+    "text": "Какая компания/студия разработала игру «Motor Toon Grand Prix»?",
+    "options": [
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 179,
+    "text": "Какая компания/студия разработала игру «The Legend of Dragoon»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Halo Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 180,
+    "text": "Какая компания/студия разработала игру «Killzone»?",
+    "options": [
+      "Sega Sports Japan",
+      "Sony Interactive Entertainment",
+      "Capcom",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 181,
+    "text": "Какая компания/студия разработала игру «Patapon 2: Don Chaka»?",
+    "options": [
+      "Q2283",
+      "Дмитрий Пучков",
+      "Codemasters",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 182,
+    "text": "Какая компания/студия разработала игру «Klonoa 2: Lunatea’s Veil»?",
+    "options": [
+      "Konami",
+      "Q95",
+      "Проект GNU",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 183,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2008»?",
+    "options": [
+      "Konami",
+      "Capcom",
+      "Дмитрий Пучков",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 184,
+    "text": "Какая компания/студия разработала игру «Boktai: The Sun is in Your Hand»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Sega Sports Japan",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 185,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 4»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 186,
+    "text": "Какая компания/студия разработала игру «Monster in My Pocket»?",
+    "options": [
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 187,
+    "text": "Какая компания/студия разработала игру «Super Contra»?",
+    "options": [
+      "Codemasters",
+      "Halo Studios",
+      "Konami",
+      "Проект GNU"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 188,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles: The Hyperstone Heist»?",
+    "options": [
+      "Q2283",
+      "Capcom",
+      "Q95",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 189,
+    "text": "Какая компания/студия разработала игру «Knightmare»?",
+    "options": [
+      "Konami",
+      "Sega Sports Japan",
+      "Codemasters",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 190,
+    "text": "Какая компания/студия разработала игру «Dance Dance Revolution SuperNOVA»?",
+    "options": [
+      "Capcom",
+      "Konami",
+      "Codemasters",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 191,
+    "text": "Какая компания/студия разработала игру «Road Fighter»?",
+    "options": [
+      "Konami",
+      "Q8093",
+      "Sega Sports Japan",
+      "Q95"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 192,
+    "text": "Какая компания/студия разработала игру «Salamander 2»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Q95",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 193,
+    "text": "Какая компания/студия разработала игру «Sexy Parodius»?",
+    "options": [
+      "Codemasters",
+      "Konami",
+      "Halo Studios",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 194,
+    "text": "Какая компания/студия разработала игру «Batman: The Animated Series»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Halo Studios",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 195,
+    "text": "Какая компания/студия разработала игру «Castlevania»?",
+    "options": [
+      "Q8093",
+      "Дмитрий Пучков",
+      "Konami",
+      "Capcom"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 196,
+    "text": "Какая компания/студия разработала игру «Silent Hill: Play Novel»?",
+    "options": [
+      "Проект GNU",
+      "Q2283",
+      "Wargaming Seattle",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 197,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2013»?",
+    "options": [
+      "Halo Studios",
+      "Capcom",
+      "Q8093",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 198,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2»?",
+    "options": [
+      "Wargaming Seattle",
+      "Sega Sports Japan",
+      "Q2283",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 199,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 3»?",
+    "options": [
+      "Konami",
+      "Halo Studios",
+      "Wargaming Seattle",
+      "Проект GNU"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 200,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 5»?",
+    "options": [
+      "Capcom",
+      "Q95",
+      "Halo Studios",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 201,
+    "text": "Какая компания/студия разработала игру «Time Pilot»?",
+    "options": [
+      "Konami",
+      "Q95",
+      "Capcom",
+      "Halo Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 202,
+    "text": "Какая компания/студия разработала игру «Snake's Revenge»?",
+    "options": [
+      "Halo Studios",
+      "Capcom",
+      "Konami",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 203,
+    "text": "Какая компания/студия разработала игру «Pooyan»?",
+    "options": [
+      "Konami",
+      "Проект GNU",
+      "Дмитрий Пучков",
+      "Capcom"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 204,
+    "text": "Какая компания/студия разработала игру «Snatcher»?",
+    "options": [
+      "Halo Studios",
+      "Konami",
+      "Wargaming Seattle",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 205,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2012»?",
+    "options": [
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Q2283",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 206,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2011»?",
+    "options": [
+      "Capcom",
+      "Konami",
+      "Q95",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 207,
+    "text": "Какая компания/студия разработала игру «TwinBee»?",
+    "options": [
+      "Codemasters",
+      "Sega Sports Japan",
+      "Konami",
+      "Q2283"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 208,
+    "text": "Какая компания/студия разработала игру «Metal Gear 2: Solid Snake»?",
+    "options": [
+      "Capcom",
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Q95"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 209,
+    "text": "Какая компания/студия разработала игру «Castlevania: Symphony of the Night»?",
+    "options": [
+      "Q95",
+      "Capcom",
+      "Konami",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 210,
+    "text": "Какая компания/студия разработала игру «Gunvalkyrie»?",
+    "options": [
+      "Sega Sports Japan",
+      "Проект GNU",
+      "Wargaming Seattle",
+      "Q95"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 211,
+    "text": "Какая компания/студия разработала игру «Halo 4»?",
+    "options": [
+      "Capcom",
+      "Halo Studios",
+      "Q8093",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 212,
+    "text": "Какая компания/студия разработала игру «Age of Empires Online»?",
+    "options": [
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Проект GNU",
+      "Q95"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 213,
+    "text": "Какая компания/студия разработала игру «Supreme Commander»?",
+    "options": [
+      "Capcom",
+      "Halo Studios",
+      "Wargaming Seattle",
+      "Codemasters"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 214,
+    "text": "Какая компания/студия разработала игру «ToCA Race Driver 3»?",
+    "options": [
+      "Capcom",
+      "Sony Interactive Entertainment",
+      "Codemasters",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 215,
+    "text": "Какая компания/студия разработала игру «F1 2010»?",
+    "options": [
+      "Sega Sports Japan",
+      "Codemasters",
+      "Halo Studios",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 216,
+    "text": "Какая компания/студия разработала игру «GRID 2»?",
+    "options": [
+      "Codemasters",
+      "Q95",
+      "Halo Studios",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 217,
+    "text": "Какая компания/студия разработала игру «Dungeon Siege»?",
+    "options": [
+      "Wargaming Seattle",
+      "Дмитрий Пучков",
+      "Capcom",
+      "Проект GNU"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 218,
+    "text": "Какая компания/студия разработала игру «Patapon 3»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Sony Interactive Entertainment",
+      "Wargaming Seattle",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 219,
+    "text": "Какая компания/студия разработала игру «Облачно, возможны осадки в виде фрикаделек»?",
+    "options": [
+      "Halo Studios",
+      "Q2283",
+      "Q95",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 220,
+    "text": "Какая компания/студия разработала игру «Killzone: Shadow Fall»?",
+    "options": [
+      "Q8093",
+      "Sega Sports Japan",
+      "Q95",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 221,
+    "text": "Какая компания/студия разработала игру «Antarctic Adventure»?",
+    "options": [
+      "Konami",
+      "Wargaming Seattle",
+      "Q2283",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 222,
+    "text": "Какая компания/студия разработала игру «Gradius»?",
+    "options": [
+      "Codemasters",
+      "Q8093",
+      "Sony Interactive Entertainment",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 223,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles: Fall of the Foot Clan»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Konami",
+      "Q2283"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 224,
+    "text": "Какая компания/студия разработала игру «Contra III: The Alien Wars»?",
+    "options": [
+      "Halo Studios",
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Sega Sports Japan"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 225,
+    "text": "Какая компания/студия разработала игру «Salamander»?",
+    "options": [
+      "Konami",
+      "Capcom",
+      "Codemasters",
+      "Проект GNU"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 226,
+    "text": "Какая компания/студия разработала игру «Rocket Knight Adventures»?",
+    "options": [
+      "Q2283",
+      "Konami",
+      "Q8093",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 227,
+    "text": "Какая компания/студия разработала игру «Donkey Kong»?",
+    "options": [
+      "Проект GNU",
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Codemasters"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 228,
+    "text": "Какая компания/студия разработала игру «Race Driver: Grid»?",
+    "options": [
+      "Sega Sports Japan",
+      "Capcom",
+      "Wargaming Seattle",
+      "Codemasters"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 229,
+    "text": "Какая компания/студия разработала игру «Supreme Commander 2»?",
+    "options": [
+      "Q8093",
+      "Wargaming Seattle",
+      "Проект GNU",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 230,
+    "text": "Какая компания/студия разработала игру «Mario & Sonic at the London 2012 Olympic Games»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Sega Sports Japan",
+      "Konami",
+      "Capcom"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 231,
+    "text": "Какая компания/студия разработала игру «Mario & Sonic at the Olympic Games»?",
+    "options": [
+      "Sega Sports Japan",
+      "Wargaming Seattle",
+      "Sony Interactive Entertainment",
+      "Codemasters"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 232,
+    "text": "Какая компания/студия разработала игру «Jet Set Radio Future»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Halo Studios",
+      "Sega Sports Japan",
+      "Q8093"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 233,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles»?",
+    "options": [
+      "Sega Sports Japan",
+      "Konami",
+      "Codemasters",
+      "Q8093"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 234,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer»?",
+    "options": [
+      "Konami",
+      "Проект GNU",
+      "Codemasters",
+      "Capcom"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 235,
+    "text": "Какая компания/студия разработала игру «Dance Dance Revolution SuperNOVA 2»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Konami",
+      "Codemasters",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 236,
+    "text": "Какая компания/студия разработала игру «Xexex»?",
+    "options": [
+      "Konami",
+      "Дмитрий Пучков",
+      "Codemasters",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 237,
+    "text": "Какая компания/студия разработала игру «Space Manbow»?",
+    "options": [
+      "Q95",
+      "Konami",
+      "Wargaming Seattle",
+      "Q2283"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 238,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles 3: Mutant Nightmare»?",
+    "options": [
+      "Halo Studios",
+      "Konami",
+      "Wargaming Seattle",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 239,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles 2: Battle Nexus»?",
+    "options": [
+      "Sega Sports Japan",
+      "Codemasters",
+      "Q95",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 240,
+    "text": "Какая компания/студия разработала игру «Tiny Toon Adventures 2: Trouble in Wackyland»?",
+    "options": [
+      "Проект GNU",
+      "Konami",
+      "Q2283",
+      "Q95"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 241,
+    "text": "Какая компания/студия разработала игру «New Super Mario Bros.»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Дмитрий Пучков",
+      "Проект GNU"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 242,
+    "text": "Какая компания/студия разработала игру «The Legend of Zelda: Ocarina of Time»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Дмитрий Пучков",
+      "Q8093",
+      "Проект GNU"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 243,
+    "text": "Какая компания/студия разработала игру «Donkey Kong 3»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Q8093",
+      "Konami",
+      "Codemasters"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 244,
+    "text": "Какая компания/студия разработала игру «Track & Field»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Konami",
+      "Проект GNU"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 245,
+    "text": "Какая компания/студия разработала игру «Pro Evolution Soccer 2009»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Konami",
+      "Capcom",
+      "Q2283"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 246,
+    "text": "Какая компания/студия разработала игру «Neo Contra»?",
+    "options": [
+      "Q2283",
+      "Sony Interactive Entertainment",
+      "Konami",
+      "Halo Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 247,
+    "text": "Какая компания/студия разработала игру «Green Beret»?",
+    "options": [
+      "Codemasters",
+      "Konami",
+      "Capcom",
+      "Halo Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 248,
+    "text": "Какая компания/студия разработала игру «Mario Bros.»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Halo Studios",
+      "Q2283"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 249,
+    "text": "Какая компания/студия разработала игру «Colin McRae Rally 2005»?",
+    "options": [
+      "Q2283",
+      "Дмитрий Пучков",
+      "Проект GNU",
+      "Codemasters"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 250,
+    "text": "Какая компания/студия разработала игру «Space Siege»?",
+    "options": [
+      "Wargaming Seattle",
+      "Q2283",
+      "Проект GNU",
+      "Capcom"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 251,
+    "text": "Какая компания/студия разработала игру «Operation Flashpoint: Red River»?",
+    "options": [
+      "Проект GNU",
+      "Codemasters",
+      "Halo Studios",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 252,
+    "text": "Какая компания/студия разработала игру «Halo: Combat Evolved Anniversary»?",
+    "options": [
+      "Halo Studios",
+      "Codemasters",
+      "Sega Sports Japan",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 253,
+    "text": "Какая компания/студия разработала игру «Demigod»?",
+    "options": [
+      "Capcom",
+      "Q8093",
+      "Konami",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 254,
+    "text": "Какая компания/студия разработала игру «Supreme Commander: Forged Alliance»?",
+    "options": [
+      "Дмитрий Пучков",
+      "Wargaming Seattle",
+      "Q2283",
+      "Q8093"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 255,
+    "text": "Какая компания/студия разработала игру «Operation Flashpoint: Dragon Rising»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Codemasters",
+      "Проект GNU",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 256,
+    "text": "Какая компания/студия разработала игру «King’s Valley»?",
+    "options": [
+      "Konami",
+      "Halo Studios",
+      "Дмитрий Пучков",
+      "Q95"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 257,
+    "text": "Какая компания/студия разработала игру «Top Gun: The Second Mission»?",
+    "options": [
+      "Konami",
+      "Sony Interactive Entertainment",
+      "Codemasters",
+      "Wargaming Seattle"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 258,
+    "text": "Какая компания/студия разработала игру «Haunted Castle»?",
+    "options": [
+      "Konami",
+      "Q2283",
+      "Sega Sports Japan",
+      "Q8093"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 259,
+    "text": "Какая компания/студия разработала игру «Castlevania: Dawn of Sorrow»?",
+    "options": [
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Дмитрий Пучков",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 260,
+    "text": "Какая компания/студия разработала игру «Castlevania: Portrait of Ruin»?",
+    "options": [
+      "Codemasters",
+      "Sony Interactive Entertainment",
+      "Sega Sports Japan",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 261,
+    "text": "Какая компания/студия разработала игру «Castlevania: Aria of Sorrow»?",
+    "options": [
+      "Wargaming Seattle",
+      "Halo Studios",
+      "Konami",
+      "Q8093"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 262,
+    "text": "Какая компания/студия разработала игру «Teenage Mutant Ninja Turtles: Turtles in Time»?",
+    "options": [
+      "Проект GNU",
+      "Konami",
+      "Q95",
+      "Sony Interactive Entertainment"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 263,
+    "text": "Какая компания/студия разработала игру «Vampire Killer»?",
+    "options": [
+      "Capcom",
+      "Q8093",
+      "Проект GNU",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 264,
+    "text": "Какая компания/студия разработала игру «Castlevania III: Dracula’s Curse»?",
+    "options": [
+      "Capcom",
+      "Q2283",
+      "Konami",
+      "Дмитрий Пучков"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 265,
+    "text": "Какая компания/студия разработала игру «The Legend of Zelda: A Link to the Past and Four Swords»?",
+    "options": [
+      "Halo Studios",
+      "Q8093",
+      "Проект GNU",
+      "Q95"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 266,
+    "text": "Какая компания/студия разработала игру «DSiWare»?",
+    "options": [
+      "Sony Interactive Entertainment",
+      "Q8093",
+      "Capcom",
+      "Q2283"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 267,
+    "text": "Какая компания/студия разработала игру «GNU Go»?",
+    "options": [
+      "Q95",
+      "Capcom",
+      "Sega Sports Japan",
+      "Проект GNU"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 268,
+    "text": "Какая компания/студия разработала игру «Super Mario All-Stars»?",
+    "options": [
+      "Wargaming Seattle",
+      "Q8093",
+      "Q95",
+      "Halo Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
   }
 ]
