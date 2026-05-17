@@ -360,15 +360,16 @@ io.on('connection', (socket) => {
     console.log(`[ANSWER] ${info.playerId} answered ${answerIndex} (${isCorrect ? '✓' : '✗'}) in ${info.lobbyCode}`);
 
     // Отправить обновление количества ответов
+    const activePlayers = getActivePlayerCount(lobby);
     io.to(info.lobbyCode).emit('answer_count', {
       count: roundAnswers.size,
-      total: lobby.players.length,
+      total: activePlayers,
     });
 
     callback?.({ isCorrect, correctAnswer: question.correct_answer });
 
-    // Все ответили?
-    if (roundAnswers.size >= lobby.players.length) {
+    // Все активные игроки ответили?
+    if (roundAnswers.size >= activePlayers) {
       endRound(lobby);
     }
   });
@@ -452,8 +453,31 @@ io.on('connection', (socket) => {
       // Если он вернется, он сможет переподключиться.
       // Таймер раунда сам переключит вопрос, если игрок не успеет ответить.
     }
+  // ─── FORCE END ROUND (client fallback) ─────────────
+  socket.on('force_end_round', (_, callback) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return callback?.({ error: 'Не в лобби' });
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'playing') return callback?.({ error: 'Игра не идёт' });
+    console.log(`[FORCE] Round force-ended by client in ${info.lobbyCode}`);
+    endRound(lobby);
+    callback?.({ ok: true });
   });
 });
+
+// ─── Helper: count connected players ──────────────────
+function getActivePlayerCount(lobby) {
+  let count = 0;
+  for (const p of lobby.players) {
+    for (const [, info] of playerSockets) {
+      if (info.lobbyCode === lobby.code && info.playerId === p.id) {
+        count++;
+        break;
+      }
+    }
+  }
+  return Math.max(count, 1); // минимум 1 чтобы избежать деления на 0
+}
 
 // ─── Game Logic ───────────────────────────────────────
 
@@ -490,47 +514,75 @@ function sendQuestion(lobby) {
 }
 
 function endRound(lobby) {
-  // Очистить таймер
-  if (lobby.roundTimer) {
-    clearTimeout(lobby.roundTimer);
-    lobby.roundTimer = null;
-  }
-
-  const qi = lobby.currentQuestionIndex;
-  const question = lobby.questions[qi];
-  const roundAnswers = lobby.answers.get(qi) || new Map();
-
-  // Добавляем неправильные ответы тем, кто не ответил
-  lobby.players.forEach(p => {
-    if (!roundAnswers.has(p.id)) {
-      roundAnswers.set(p.id, {
-        playerId: p.id,
-        answerIndex: -1,
-        isCorrect: false,
-        time: ROUND_DURATION,
-      });
-      p.streak = 0; // Сбрасываем стрик для тех кто промолчал
+  try {
+    // Очистить таймер
+    if (lobby.roundTimer) {
+      clearTimeout(lobby.roundTimer);
+      lobby.roundTimer = null;
     }
-  });
 
-  // Отправить результаты раунда
-  io.to(lobby.code).emit('round_results', {
-    correctAnswer: question.correct_answer,
-    answers: Array.from(roundAnswers.values()),
-    players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
-    })),
-  });
+    // Защита от повторного вызова
+    if (lobby._endingRound) return;
+    lobby._endingRound = true;
 
-  // Через RESULTS_DELAY — следующий вопрос
-  lobby.roundTimer = setTimeout(() => {
-    lobby.currentQuestionIndex++;
-    if (lobby.currentQuestionIndex >= lobby.questions.length) {
+    const qi = lobby.currentQuestionIndex;
+    const question = lobby.questions[qi];
+    
+    if (!question) {
+      lobby._endingRound = false;
       finishGame(lobby);
-    } else {
-      sendQuestion(lobby);
+      return;
     }
-  }, RESULTS_DELAY);
+    
+    const roundAnswers = lobby.answers.get(qi) || new Map();
+
+    // Добавляем неправильные ответы тем, кто не ответил
+    lobby.players.forEach(p => {
+      if (!roundAnswers.has(p.id)) {
+        roundAnswers.set(p.id, {
+          playerId: p.id,
+          answerIndex: -1,
+          isCorrect: false,
+          time: ROUND_DURATION,
+        });
+        p.streak = 0;
+      }
+    });
+
+    // Отправить результаты раунда
+    io.to(lobby.code).emit('round_results', {
+      correctAnswer: question.correct_answer,
+      answers: Array.from(roundAnswers.values()),
+      players: lobby.players.map(p => ({
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+      })),
+    });
+
+    // Через RESULTS_DELAY — следующий вопрос
+    lobby.roundTimer = setTimeout(() => {
+      lobby._endingRound = false;
+      lobby.currentQuestionIndex++;
+      if (lobby.currentQuestionIndex >= lobby.questions.length) {
+        finishGame(lobby);
+      } else {
+        sendQuestion(lobby);
+      }
+    }, RESULTS_DELAY);
+  } catch (err) {
+    console.error('[ERROR] endRound crashed:', err);
+    lobby._endingRound = false;
+    // Попытка восстановить игру
+    try {
+      lobby.currentQuestionIndex++;
+      if (lobby.currentQuestionIndex >= lobby.questions.length) {
+        finishGame(lobby);
+      } else {
+        sendQuestion(lobby);
+      }
+    } catch (e) {
+      console.error('[FATAL] Could not recover:', e);
+    }
+  }
 }
 
 function finishGame(lobby) {
