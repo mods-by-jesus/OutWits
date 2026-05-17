@@ -1,18 +1,25 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { socket } from '../lib/socket';
 
 interface Player {
   id: string;
   nickname: string;
   is_host: boolean;
   score: number;
+  correctCount?: number;
 }
+
+const AUTO_RETURN_SECONDS = 10;
 
 export function Results() {
   const { code } = useParams<{ code: string }>();
   const navigate = useNavigate();
   const [players, setPlayers] = useState<Player[]>([]);
   const [loading, setLoading] = useState(true);
+  const [countdown, setCountdown] = useState(AUTO_RETURN_SECONDS);
+  const intervalRef = useRef<number | null>(null);
+  const returnedRef = useRef(false);
 
   useEffect(() => {
     if (!code) {
@@ -20,12 +27,10 @@ export function Results() {
       return;
     }
 
-    // Результаты берём из sessionStorage (сохранены при game_finished)
     const stored = sessionStorage.getItem('gameResults');
     if (stored) {
       try {
-        const parsed = JSON.parse(stored);
-        setPlayers(parsed);
+        setPlayers(JSON.parse(stored));
       } catch {
         navigate('/');
         return;
@@ -36,13 +41,62 @@ export function Results() {
     }
 
     setLoading(false);
+
+    // Запускаем обратный отсчёт
+    setCountdown(AUTO_RETURN_SECONDS);
+    intervalRef.current = window.setInterval(() => {
+      setCountdown(prev => {
+        if (prev <= 1) {
+          if (intervalRef.current) clearInterval(intervalRef.current);
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
   }, [code, navigate]);
 
-  const handleGoHome = () => {
+  const handleGoHome = useCallback(() => {
     sessionStorage.removeItem('playerId');
     sessionStorage.removeItem('gameResults');
     navigate('/');
-  };
+  }, [navigate]);
+
+  const handleReturnToLobby = useCallback(() => {
+    if (returnedRef.current) return;
+    returnedRef.current = true;
+    socket.emit('return_to_lobby');
+  }, []);
+
+  useEffect(() => {
+    const onReturnedToLobby = (data: any) => {
+      const playerId = sessionStorage.getItem('playerId');
+      navigate(`/lobby/${code}`, {
+        state: {
+          ...data,
+          player: data?.players?.find((p: any) => p.id === playerId)
+        }
+      });
+    };
+    socket.on('returned_to_lobby', onReturnedToLobby);
+    return () => {
+      socket.off('returned_to_lobby', onReturnedToLobby);
+    };
+  }, [code, navigate]);
+
+  const currentPlayerId = sessionStorage.getItem('playerId');
+  const currentPlayer = players.find(p => p.id === currentPlayerId);
+  const isHost = currentPlayer?.is_host;
+
+  // Автовозврат в лобби когда таймер дошёл до 0
+  useEffect(() => {
+    if (countdown === 0 && isHost && !returnedRef.current) {
+      handleReturnToLobby();
+    }
+  }, [countdown, isHost, handleReturnToLobby]);
 
   if (loading) {
     return (
@@ -85,7 +139,14 @@ export function Results() {
             >
               <div className="flex items-center gap-4">
                 <span className="text-2xl w-10 text-center">{getMedal(index)}</span>
-                <span className="text-lg font-bold">{player.nickname}</span>
+                <span className="text-lg font-bold flex items-center gap-2">
+                  {player.nickname}
+                  {player.correctCount !== undefined && player.correctCount > 0 && (
+                    <span className="bg-green-600/20 text-green-400 text-[10px] px-2 py-0.5 rounded-full border border-green-500/30 whitespace-nowrap">
+                      ✅ {player.correctCount}
+                    </span>
+                  )}
+                </span>
               </div>
               <span className={`text-2xl font-black ${index === 0 ? 'text-yellow-400' : 'text-white'}`}>
                 {player.score}
@@ -94,12 +155,26 @@ export function Results() {
           ))}
         </div>
 
-        <button
-          onClick={handleGoHome}
-          className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors"
-        >
-          На главную
-        </button>
+        <div className="flex flex-col gap-4">
+          {isHost ? (
+            <button
+              onClick={handleReturnToLobby}
+              className="w-full bg-blue-600 text-white font-bold py-4 rounded-xl text-xl hover:bg-blue-500 transition-colors shadow-[0_0_15px_rgba(37,99,235,0.5)] flex items-center justify-center gap-2"
+            >
+              Вернуться в лобби <span className="opacity-50">({countdown}s)</span>
+            </button>
+          ) : (
+            <div className="text-center p-4 bg-neutral-900 rounded-xl border border-neutral-800">
+              <p className="text-neutral-400 font-medium animate-pulse">Ожидаем хоста... ({countdown}s)</p>
+            </div>
+          )}
+          <button
+            onClick={handleGoHome}
+            className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors"
+          >
+            На главную
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -4,11 +4,13 @@ import { socket } from '../lib/socket';
 import { useTimer } from './useTimer';
 import { showToast } from '../lib/toast';
 
-interface Player {
+export interface Player {
   id: string;
   nickname: string;
   is_host: boolean;
   score: number;
+  streak: number;
+  correctCount?: number;
 }
 
 interface Question {
@@ -20,6 +22,7 @@ interface AnswerInfo {
   playerId: string;
   answerIndex: number;
   isCorrect: boolean;
+  time?: number;
 }
 
 const ROUND_DURATION = 20;
@@ -39,6 +42,7 @@ export function useGameState() {
   const [correctAnswer, setCorrectAnswer] = useState<number | null>(null);
   const [roundAnswers, setRoundAnswers] = useState<AnswerInfo[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activePlayersCount, setActivePlayersCount] = useState(0);
 
   const handleRoundEnd = useCallback(() => {
     // Таймер клиента истёк — сервер тоже завершит раунд
@@ -82,6 +86,7 @@ export function useGameState() {
 
     const onAnswerCount = (data: { count: number; total: number }) => {
       setAnswerCount(data.count);
+      setActivePlayersCount(data.total);
     };
 
     const onRoundResults = (data: {
@@ -122,6 +127,18 @@ export function useGameState() {
     };
   }, [code, navigate, resetTimer, stopTimer]);
 
+  // Fallback: если таймер истёк и через 5 сек нет round_results — просим сервер завершить раунд
+  useEffect(() => {
+    if (timeLeft !== 0 || showResults || loading) return;
+    const fallback = setTimeout(() => {
+      if (!showResults) {
+        console.log('[OutWits] Timer expired, forcing round end...');
+        socket.emit('force_end_round');
+      }
+    }, 5000);
+    return () => clearTimeout(fallback);
+  }, [timeLeft, showResults, loading]);
+
   // Submit answer
   const submitAnswer = useCallback((index: number) => {
     if (selectedAnswer !== null || showResults || !question) return;
@@ -146,7 +163,7 @@ export function useGameState() {
     totalQuestions,
     players,
     answerCount,
-    totalPlayers: players.length,
+    totalPlayers: activePlayersCount > 0 ? activePlayersCount : players.length,
     timeLeft,
     showResults,
     selectedAnswer,

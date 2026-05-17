@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react';
 import { useGameState } from '../hooks/useGameState';
 
 export function Game() {
@@ -19,10 +20,120 @@ export function Game() {
     submitAnswer,
   } = useGameState();
 
+  const audioCtxRef = useRef<AudioContext | null>(null);
+
+  // Разблокировка аудиоконтекста по первому клику/тапу на экран (для Safari/Chrome)
+  useEffect(() => {
+    const unlock = () => {
+      try {
+        if (!audioCtxRef.current) {
+          audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+        }
+        if (audioCtxRef.current.state === 'suspended') {
+          audioCtxRef.current.resume();
+        }
+      } catch (e) {
+        console.log('Unlock audio error:', e);
+      }
+      // Удаляем слушатели после первой же активности
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+    };
+
+    document.addEventListener('click', unlock);
+    document.addEventListener('touchstart', unlock);
+
+    return () => {
+      document.removeEventListener('click', unlock);
+      document.removeEventListener('touchstart', unlock);
+    };
+  }, []);
+
+  // Звуковые эффекты
+  const playSound = (type: 'correct' | 'incorrect' | 'tick') => {
+    try {
+      if (!audioCtxRef.current) {
+        audioCtxRef.current = new (window.AudioContext || (window as any).webkitAudioContext)();
+      }
+      if (audioCtxRef.current.state === 'suspended') {
+        audioCtxRef.current.resume();
+      }
+      const ctx = audioCtxRef.current;
+      const now = ctx.currentTime;
+
+      if (type === 'correct') {
+        // Приятный восходящий аккорд (C-E-G)
+        [523, 659, 784].forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.08);
+          gain.gain.setValueAtTime(0, now);
+          gain.gain.linearRampToValueAtTime(0.08, now + i * 0.08);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.5);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.08);
+          osc.stop(now + 0.5);
+        });
+      } else if (type === 'incorrect') {
+        // Мягкий нисходящий тон (два тона вниз)
+        [400, 300].forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now + i * 0.12);
+          gain.gain.setValueAtTime(0.06, now + i * 0.12);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + 0.4);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + i * 0.12);
+          osc.stop(now + 0.4);
+        });
+      } else {
+        // Тик обратного отсчёта
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+        const freq = timeLeft === 1 ? 1200 : 800;
+        osc.frequency.setValueAtTime(freq, now);
+        gain.gain.setValueAtTime(0.1, now);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + 0.1);
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.start();
+        osc.stop(now + 0.1);
+      }
+    } catch (e) {
+      console.log('Audio error:', e);
+    }
+  };
+
+  // Звук при получении результатов раунда
+  const prevShowResults = useRef(false);
+  useEffect(() => {
+    if (showResults && !prevShowResults.current) {
+      // Результаты только что появились
+      const myAnswer = roundAnswers.find(a => a.playerId === playerId);
+      if (myAnswer) {
+        playSound(myAnswer.isCorrect ? 'correct' : 'incorrect');
+      }
+    }
+    prevShowResults.current = showResults;
+  }, [showResults, roundAnswers, playerId]);
+
+  // Звук обратного отсчёта (последние 5 секунд)
+  useEffect(() => {
+    if (timeLeft <= 5 && timeLeft > 0 && !showResults) {
+      playSound('tick');
+    }
+  }, [timeLeft, showResults]);
+
   if (loading || !question) {
     return (
-      <div className="flex items-center justify-center min-h-screen w-full bg-neutral-900 text-white">
-        <div className="text-xl font-bold text-neutral-500 animate-pulse">Загрузка...</div>
+      <div className="flex flex-col items-center justify-center min-h-screen w-full bg-neutral-900 text-white space-y-4">
+        <div className="text-3xl font-black animate-pulse tracking-widest">ИГРА НАЧИНАЕТСЯ</div>
+        <div className="text-neutral-500 font-bold uppercase text-sm tracking-widest">Готовьтесь к первому вопросу...</div>
       </div>
     );
   }
@@ -81,9 +192,12 @@ export function Game() {
                       .map(a => (
                         <span
                           key={a.playerId}
-                          className="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap"
+                          className="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap flex items-center gap-1"
                         >
-                          {players.find(p => p.id === a.playerId)?.nickname}
+                          <span>{players.find(p => p.id === a.playerId)?.nickname}</span>
+                          {a.time !== undefined && (
+                            <span className="text-white/60 text-[10px] ml-1">{a.time}s</span>
+                          )}
                         </span>
                       ))}
                   </div>
@@ -109,7 +223,7 @@ export function Game() {
             .map(p => (
               <div
                 key={p.id}
-                className={`bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
+                className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
                   p.id === playerId
                     ? 'border-white/30'
                     : 'border-neutral-700/50'
@@ -119,6 +233,20 @@ export function Game() {
                   {p.nickname}
                 </div>
                 <div className="text-xl font-black">{p.score}</div>
+                {p.streak >= 10 ? (
+                  <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
+                    🔥 x2
+                  </div>
+                ) : p.streak >= 3 ? (
+                  <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
+                    🔥 x1.5
+                  </div>
+                ) : null}
+                {p.correctCount !== undefined && p.correctCount > 0 && (
+                  <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
+                    ✅ {p.correctCount}
+                  </div>
+                )}
               </div>
             ))}
         </div>

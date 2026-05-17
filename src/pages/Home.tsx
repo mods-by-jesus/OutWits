@@ -39,6 +39,7 @@ export function Home() {
       lobby?: { code: string; status: string };
       player?: { id: string; nickname: string; is_host: boolean; score: number };
       players?: { id: string; nickname: string; is_host: boolean; score: number }[];
+      availableCategories?: string[];
       error?: string;
     }) => {
       setCreating(false);
@@ -51,7 +52,12 @@ export function Home() {
       if (response.lobby && response.player) {
         sessionStorage.setItem('playerId', response.player.id);
         navigate(`/lobby/${response.lobby.code}`, {
-          state: { lobby: response.lobby, player: response.player, players: response.players },
+          state: { 
+            lobby: response.lobby, 
+            player: response.player, 
+            players: response.players,
+            availableCategories: response.availableCategories,
+          },
         });
       }
     });
@@ -68,6 +74,7 @@ export function Home() {
       lobby?: { code: string; status: string };
       player?: { id: string; nickname: string; is_host: boolean; score: number };
       players?: { id: string; nickname: string; is_host: boolean; score: number }[];
+      availableCategories?: string[];
       error?: string;
     }) => {
       setJoining(false);
@@ -80,7 +87,12 @@ export function Home() {
       if (response.lobby && response.player) {
         sessionStorage.setItem('playerId', response.player.id);
         navigate(`/lobby/${response.lobby.code}`, {
-          state: { lobby: response.lobby, player: response.player, players: response.players },
+          state: { 
+            lobby: response.lobby, 
+            player: response.player, 
+            players: response.players,
+            availableCategories: response.availableCategories,
+          },
         });
       }
     });
