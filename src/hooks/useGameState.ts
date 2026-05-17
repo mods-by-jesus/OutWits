@@ -27,6 +27,12 @@ interface AnswerInfo {
   time?: number;
 }
 
+export interface FloatingReaction {
+  id: number;
+  emoji: string;
+  nickname: string;
+}
+
 const ROUND_DURATION = 20;
 
 export function useGameState() {
@@ -46,6 +52,17 @@ export function useGameState() {
   const [loading, setLoading] = useState(true);
   const [activePlayersCount, setActivePlayersCount] = useState(0);
 
+  // Betting state
+  const [bettingPhase, setBettingPhase] = useState(false);
+  const [bettingCategory, setBettingCategory] = useState('');
+  const [, setBettingDuration] = useState(8);
+  const [currentBet, setCurrentBet] = useState<number | null>(null);
+  const [betCount, setBetCount] = useState(0);
+  const [betTotal, setBetTotal] = useState(0);
+
+  // Reactions state
+  const [reactions, setReactions] = useState<FloatingReaction[]>([]);
+
   const handleRoundEnd = useCallback(() => {
     // Таймер клиента истёк — сервер тоже завершит раунд
   }, []);
@@ -53,6 +70,14 @@ export function useGameState() {
   const { timeLeft, reset: resetTimer, stop: stopTimer } = useTimer({
     duration: ROUND_DURATION,
     onExpire: handleRoundEnd,
+    autoStart: false,
+  });
+
+  // Betting timer
+  const handleBettingEnd = useCallback(() => {}, []);
+  const { timeLeft: bettingTimeLeft, reset: resetBettingTimer, stop: stopBettingTimer } = useTimer({
+    duration: 8,
+    onExpire: handleBettingEnd,
     autoStart: false,
   });
 
@@ -74,6 +99,8 @@ export function useGameState() {
       question: Question;
       duration: number;
     }) => {
+      setBettingPhase(false);
+      stopBettingTimer();
       setQuestion(data.question);
       setQuestionIndex(data.questionIndex);
       setTotalQuestions(data.totalQuestions);
@@ -82,8 +109,25 @@ export function useGameState() {
       setRoundAnswers([]);
       setShowResults(false);
       setAnswerCount(0);
+      setCurrentBet(null);
       setLoading(false);
       resetTimer(data.duration);
+    };
+
+    const onBettingPhase = (data: { category: string; duration: number }) => {
+      setBettingPhase(true);
+      setBettingCategory(data.category);
+      setBettingDuration(data.duration);
+      setCurrentBet(null);
+      setBetCount(0);
+      setBetTotal(0);
+      setLoading(false);
+      resetBettingTimer(data.duration);
+    };
+
+    const onBetCount = (data: { count: number; total: number }) => {
+      setBetCount(data.count);
+      setBetTotal(data.total);
     };
 
     const onAnswerCount = (data: { count: number; total: number }) => {
@@ -103,10 +147,13 @@ export function useGameState() {
       stopTimer();
     };
 
-    const onGameFinished = (data: { players: Player[] }) => {
+    const onGameFinished = (data: { players: Player[]; achievements?: any[] }) => {
       setPlayers(data.players);
       // Сохраняем результаты и переходим
       sessionStorage.setItem('gameResults', JSON.stringify(data.players));
+      if (data.achievements) {
+        sessionStorage.setItem('gameAchievements', JSON.stringify(data.achievements));
+      }
       navigate(`/results/${code}`);
     };
 
@@ -114,24 +161,39 @@ export function useGameState() {
       setPlayers(data.players);
     };
 
+    const onReaction = (data: { emoji: string; nickname: string }) => {
+      const id = Date.now() + Math.random();
+      setReactions(prev => [...prev, { id, emoji: data.emoji, nickname: data.nickname }]);
+      // Auto-remove after animation
+      setTimeout(() => {
+        setReactions(prev => prev.filter(r => r.id !== id));
+      }, 2500);
+    };
+
     socket.on('new_question', onNewQuestion);
+    socket.on('betting_phase', onBettingPhase);
+    socket.on('bet_count', onBetCount);
     socket.on('answer_count', onAnswerCount);
     socket.on('round_results', onRoundResults);
     socket.on('game_finished', onGameFinished);
     socket.on('players_updated', onPlayersUpdated);
+    socket.on('reaction', onReaction);
 
     return () => {
       socket.off('new_question', onNewQuestion);
+      socket.off('betting_phase', onBettingPhase);
+      socket.off('bet_count', onBetCount);
       socket.off('answer_count', onAnswerCount);
       socket.off('round_results', onRoundResults);
       socket.off('game_finished', onGameFinished);
       socket.off('players_updated', onPlayersUpdated);
+      socket.off('reaction', onReaction);
     };
-  }, [code, navigate, resetTimer, stopTimer]);
+  }, [code, navigate, resetTimer, stopTimer, resetBettingTimer, stopBettingTimer]);
 
   // Fallback: если таймер истёк и через 5 сек нет round_results — просим сервер завершить раунд
   useEffect(() => {
-    if (timeLeft !== 0 || showResults || loading) return;
+    if (timeLeft !== 0 || showResults || loading || bettingPhase) return;
     const fallback = setTimeout(() => {
       if (!showResults) {
         console.log('[OutWits] Timer expired, forcing round end...');
@@ -139,7 +201,7 @@ export function useGameState() {
       }
     }, 5000);
     return () => clearTimeout(fallback);
-  }, [timeLeft, showResults, loading]);
+  }, [timeLeft, showResults, loading, bettingPhase]);
 
   // Submit answer
   const submitAnswer = useCallback((index: number) => {
@@ -158,6 +220,22 @@ export function useGameState() {
     });
   }, [selectedAnswer, showResults, question]);
 
+  // Submit bet
+  const submitBet = useCallback((amount: number) => {
+    if (currentBet !== null) return;
+    setCurrentBet(amount);
+    socket.emit('submit_bet', { amount }, (response: { ok?: boolean; error?: string }) => {
+      if (response.error) {
+        showToast(response.error, 'error');
+      }
+    });
+  }, [currentBet]);
+
+  // Send reaction
+  const sendReaction = useCallback((emoji: string) => {
+    socket.emit('reaction', { emoji });
+  }, []);
+
   return {
     code,
     question,
@@ -174,5 +252,16 @@ export function useGameState() {
     loading,
     playerId,
     submitAnswer,
+    // Betting
+    bettingPhase,
+    bettingCategory,
+    bettingTimeLeft,
+    currentBet,
+    betCount,
+    betTotal,
+    submitBet,
+    // Reactions
+    reactions,
+    sendReaction,
   };
 }

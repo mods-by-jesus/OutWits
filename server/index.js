@@ -12,6 +12,7 @@ const __dirname = dirname(__filename);
 // ─── Config ───────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
 const RESULTS_DELAY = 5000; // мс — пауза перед следующим вопросом
+const BETTING_DURATION = 8000; // мс — время на ставку
 const MAX_PLAYERS = 5;
 const QUESTIONS_PER_GAME = 10;
 
@@ -155,7 +156,7 @@ io.on('connection', (socket) => {
       status: 'waiting',
       players: [player],
       selectedCategories: [...availableCategories],
-      settings: { speedBonus: false, hotStreak: false, questionsCount: 10, roundDuration: 20 },
+      settings: { speedBonus: false, hotStreak: false, betting: false, questionsCount: 10, roundDuration: 20 },
       usedQuestions: new Set(),
       questions: [],
       currentQuestionIndex: -1,
@@ -263,6 +264,8 @@ io.on('connection', (socket) => {
     lobby.currentQuestionIndex = 0;
     lobby.status = 'playing';
     lobby.answers = new Map();
+    lobby.bets = new Map(); // questionIndex -> Map(playerId -> betAmount)
+    lobby.playerStats = new Map(); // playerId -> { totalTime, wrongCount, maxStreak, currentStreak }
 
     console.log(`[GAME] Started in ${info.lobbyCode} with ${lobby.players.length} players`);
 
@@ -340,6 +343,21 @@ io.on('connection', (socket) => {
     const isCorrect = answerIndex === question.correct_answer;
     const elapsed = lobby.roundStartTime ? ((Date.now() - lobby.roundStartTime) / 1000).toFixed(1) : '0.0';
 
+    // Track player stats for achievements
+    if (!lobby.playerStats) lobby.playerStats = new Map();
+    if (!lobby.playerStats.has(info.playerId)) {
+      lobby.playerStats.set(info.playerId, { totalTime: 0, wrongCount: 0, maxStreak: 0, currentStreak: 0 });
+    }
+    const stats = lobby.playerStats.get(info.playerId);
+    stats.totalTime += parseFloat(elapsed);
+    if (!isCorrect) {
+      stats.wrongCount++;
+      stats.currentStreak = 0;
+    } else {
+      stats.currentStreak++;
+      if (stats.currentStreak > stats.maxStreak) stats.maxStreak = stats.currentStreak;
+    }
+
     roundAnswers.set(info.playerId, {
       playerId: info.playerId,
       answerIndex,
@@ -373,9 +391,23 @@ io.on('connection', (socket) => {
           }
         }
 
+        // Betting bonus
+        if (lobby.settings?.betting && lobby.bets) {
+          const roundBets = lobby.bets.get(qi);
+          if (roundBets && roundBets.has(info.playerId)) {
+            points += roundBets.get(info.playerId);
+          }
+        }
         player.score += points;
       } else {
         player.streak = 0;
+        // Betting penalty
+        if (lobby.settings?.betting && lobby.bets) {
+          const roundBets = lobby.bets.get(qi);
+          if (roundBets && roundBets.has(info.playerId)) {
+            player.score = Math.max(0, player.score - roundBets.get(info.playerId));
+          }
+        }
       }
     }
 
@@ -521,6 +553,62 @@ io.on('connection', (socket) => {
     endRound(lobby);
     callback?.({ ok: true });
   });
+
+  // ─── SUBMIT BET ─────────────────────────────────────
+  socket.on('submit_bet', ({ amount }, callback) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return callback?.({ error: 'Не в лобби' });
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'playing') return callback?.({ error: 'Игра не идёт' });
+    if (!lobby.settings?.betting) return callback?.({ error: 'Ставки выключены' });
+
+    const qi = lobby.currentQuestionIndex;
+    if (!lobby.bets) lobby.bets = new Map();
+    if (!lobby.bets.has(qi)) lobby.bets.set(qi, new Map());
+    const roundBets = lobby.bets.get(qi);
+
+    if (roundBets.has(info.playerId)) return callback?.({ error: 'Уже сделал ставку' });
+
+    const bet = Math.max(0, Math.min(20, parseInt(amount) || 0));
+    roundBets.set(info.playerId, bet);
+    console.log(`[BET] ${info.playerId} bet ${bet} in ${info.lobbyCode}`);
+
+    // Notify all about bet count
+    const activePlayers = getActivePlayerCount(lobby);
+    io.to(info.lobbyCode).emit('bet_count', { count: roundBets.size, total: activePlayers });
+
+    callback?.({ ok: true });
+
+    // If all active players bet, end betting phase early
+    if (roundBets.size >= activePlayers && lobby._bettingTimer) {
+      clearTimeout(lobby._bettingTimer);
+      lobby._bettingTimer = null;
+      sendQuestionAfterBetting(lobby);
+    }
+  });
+
+  // ─── REACTION ───────────────────────────────────────
+  socket.on('reaction', ({ emoji }) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return;
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby) return;
+
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player) return;
+
+    // Rate limit: 1 per 2 seconds
+    const now = Date.now();
+    if (!lobby._lastReaction) lobby._lastReaction = new Map();
+    const lastTime = lobby._lastReaction.get(info.playerId) || 0;
+    if (now - lastTime < 2000) return;
+    lobby._lastReaction.set(info.playerId, now);
+
+    const validEmojis = ['😂', '🔥', '💀', '😱', '👏', '🤡'];
+    if (!validEmojis.includes(emoji)) return;
+
+    io.to(info.lobbyCode).emit('reaction', { emoji, nickname: player.nickname });
+  });
 });
 
 // ─── Helper: count connected players ──────────────────
@@ -562,6 +650,32 @@ function sendQuestion(lobby) {
   // Очистить предыдущий таймер
   if (lobby.roundTimer) {
     clearTimeout(lobby.roundTimer);
+  }
+
+  // If betting is enabled, start betting phase first
+  if (lobby.settings?.betting) {
+    io.to(lobby.code).emit('betting_phase', {
+      category: question.category || 'Общие знания',
+      duration: BETTING_DURATION / 1000,
+    });
+
+    lobby._bettingTimer = setTimeout(() => {
+      lobby._bettingTimer = null;
+      sendQuestionAfterBetting(lobby);
+    }, BETTING_DURATION);
+    return;
+  }
+
+  sendQuestionAfterBetting(lobby);
+}
+
+function sendQuestionAfterBetting(lobby) {
+  const qi = lobby.currentQuestionIndex;
+  const question = lobby.questions[qi];
+
+  if (!question) {
+    finishGame(lobby);
+    return;
   }
 
   // Отправить вопрос всем
@@ -672,15 +786,70 @@ function finishGame(lobby) {
     .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false }))
     .sort((a, b) => b.score - a.score);
 
-  io.to(lobby.code).emit('game_finished', { players: finalPlayers });
+  // Calculate achievements
+  const achievements = calculateAchievements(lobby);
+
+  io.to(lobby.code).emit('game_finished', { players: finalPlayers, achievements });
 
   console.log(`[FINISH] Game ended in ${lobby.code}`);
 
-  // Удалить лобби через 60 сек (дать время увидеть результаты)
+  // Удалить лобби через 90 сек (дать время увидеть результаты + ачивки)
   lobby.cleanupTimer = setTimeout(() => {
     lobbies.delete(lobby.code);
     console.log(`[CLEANUP] Lobby ${lobby.code} removed`);
-  }, 60000);
+  }, 90000);
+}
+
+function calculateAchievements(lobby) {
+  const achievements = [];
+  if (!lobby.playerStats || lobby.playerStats.size === 0) return achievements;
+
+  const stats = Array.from(lobby.playerStats.entries()).map(([playerId, s]) => {
+    const player = lobby.players.find(p => p.id === playerId);
+    const answeredCount = (player?.correctCount || 0) + (s.wrongCount || 0);
+    return {
+      playerId,
+      nickname: player?.nickname || '???',
+      avgTime: answeredCount > 0 ? s.totalTime / answeredCount : 999,
+      maxStreak: s.maxStreak || 0,
+      wrongCount: s.wrongCount || 0,
+      correctCount: player?.correctCount || 0,
+    };
+  });
+
+  if (stats.length === 0) return achievements;
+
+  // ⚡ Шумахер — fastest avg time
+  const fastest = stats.reduce((a, b) => a.avgTime < b.avgTime ? a : b);
+  if (fastest.avgTime < 900) {
+    achievements.push({ emoji: '⚡', title: 'Шумахер', description: 'Самые быстрые ответы', nickname: fastest.nickname, value: fastest.avgTime.toFixed(1) + 'с (ср.)' });
+  }
+
+  // 🧊 Хладнокровный — slowest avg time
+  const slowest = stats.reduce((a, b) => a.avgTime > b.avgTime ? a : b);
+  if (slowest.avgTime < 900 && slowest.playerId !== fastest.playerId) {
+    achievements.push({ emoji: '🧊', title: 'Хладнокровный', description: 'Самые обдуманные ответы', nickname: slowest.nickname, value: slowest.avgTime.toFixed(1) + 'с (ср.)' });
+  }
+
+  // 🎯 Снайпер — longest streak
+  const sniper = stats.reduce((a, b) => a.maxStreak > b.maxStreak ? a : b);
+  if (sniper.maxStreak >= 2) {
+    achievements.push({ emoji: '🎯', title: 'Снайпер', description: 'Самая длинная серия', nickname: sniper.nickname, value: sniper.maxStreak + ' подряд' });
+  }
+
+  // 💀 Страдалец — most wrong answers
+  const sufferer = stats.reduce((a, b) => a.wrongCount > b.wrongCount ? a : b);
+  if (sufferer.wrongCount >= 2) {
+    achievements.push({ emoji: '💀', title: 'Страдалец', description: 'Больше всех ошибок', nickname: sufferer.nickname, value: sufferer.wrongCount + ' ошибок' });
+  }
+
+  // 🧠 Всезнайка — most correct answers
+  const brain = stats.reduce((a, b) => a.correctCount > b.correctCount ? a : b);
+  if (brain.correctCount >= 2) {
+    achievements.push({ emoji: '🧠', title: 'Всезнайка', description: 'Максимум правильных', nickname: brain.nickname, value: brain.correctCount + ' верных' });
+  }
+
+  return achievements;
 }
 
 function removePlayerById(lobbyCode, playerId) {

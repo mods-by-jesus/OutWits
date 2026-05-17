@@ -144,6 +144,19 @@ export function Lobby() {
                 disabled={!currentPlayer?.is_host}
               />
             </label>
+            <label className="flex items-center justify-between cursor-pointer opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Betting 🎰</span>
+                <span className="text-xs text-neutral-500">Ставки очками перед вопросом</span>
+              </div>
+              <input
+                type="checkbox"
+                className="toggle toggle-primary"
+                checked={settings?.betting || false}
+                onChange={() => toggleSetting('betting')}
+                disabled={!currentPlayer?.is_host}
+              />
+            </label>
             <hr className="border-neutral-800" />
             <label className="flex items-center justify-between opacity-100">
               <div className="flex flex-col">

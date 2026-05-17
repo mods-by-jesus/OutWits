@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react';
-import { useGameState } from '../hooks/useGameState';
+import { useGameState, type FloatingReaction } from '../hooks/useGameState';
+
+const REACTION_EMOJIS = ['😂', '🔥', '💀', '😱', '👏', '🤡'];
 
 export function Game() {
   const {
@@ -18,6 +20,17 @@ export function Game() {
     loading,
     playerId,
     submitAnswer,
+    // Betting
+    bettingPhase,
+    bettingCategory,
+    bettingTimeLeft,
+    currentBet,
+    betCount,
+    betTotal,
+    submitBet,
+    // Reactions
+    reactions,
+    sendReaction,
   } = useGameState();
 
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -129,7 +142,8 @@ export function Game() {
     }
   }, [timeLeft, showResults]);
 
-  if (loading || !question) {
+  // Loading screen
+  if (loading || (!question && !bettingPhase)) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen w-full bg-neutral-900 text-white space-y-4">
         <div className="text-3xl font-black animate-pulse tracking-widest">ИГРА НАЧИНАЕТСЯ</div>
@@ -138,8 +152,85 @@ export function Game() {
     );
   }
 
+  // Betting phase screen
+  if (bettingPhase) {
+    return (
+      <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4">
+        <div className="w-full max-w-4xl mt-12">
+          {/* Header */}
+          <div className="flex justify-between items-center mb-12">
+            <div className="bg-neutral-800 px-6 py-2 rounded-full border border-neutral-700 font-bold">
+              {code}
+            </div>
+            <div className={`text-4xl font-black transition-colors ${bettingTimeLeft < 3 ? 'text-red-500 animate-pulse' : 'text-yellow-400'}`}>
+              {bettingTimeLeft}s
+            </div>
+            <div className="bg-neutral-800 px-6 py-2 rounded-full border border-neutral-700 font-bold">
+              {betCount} / {betTotal} ставок
+            </div>
+          </div>
+
+          {/* Betting UI */}
+          <div className="text-center mb-8">
+            <div className="text-6xl mb-4">🎰</div>
+            <p className="text-neutral-500 font-bold uppercase tracking-widest text-xs mb-2">
+              Вопрос {questionIndex + 1} из {totalQuestions} · Категория
+            </p>
+            <h2 className="text-3xl font-black text-yellow-400 mb-2">{bettingCategory}</h2>
+            <p className="text-neutral-400 text-sm">Поставь очки — если ответишь правильно, получишь их обратно!</p>
+            <p className="text-neutral-500 text-xs">Ошибёшься — потеряешь ставку</p>
+          </div>
+
+          <div className="grid grid-cols-5 gap-3 max-w-lg mx-auto mb-8">
+            {[0, 5, 10, 15, 20].map(amount => (
+              <button
+                key={amount}
+                onClick={() => submitBet(amount)}
+                disabled={currentBet !== null}
+                className={`py-6 rounded-2xl border-2 text-xl font-black transition-all ${
+                  currentBet === amount
+                    ? 'bg-yellow-500 border-yellow-400 text-black scale-105'
+                    : currentBet !== null
+                      ? 'bg-neutral-800 border-neutral-800 text-neutral-600 cursor-default opacity-50'
+                      : 'bg-neutral-800 border-neutral-700 text-white hover:border-yellow-500 hover:bg-yellow-500/10'
+                }`}
+              >
+                {amount === 0 ? '—' : amount}
+              </button>
+            ))}
+          </div>
+
+          {currentBet !== null && (
+            <div className="text-center animate-pulse">
+              <p className="text-yellow-400 font-bold uppercase tracking-widest text-sm">
+                Ставка {currentBet > 0 ? `${currentBet} очков` : 'пропущена'} · Ожидаем остальных...
+              </p>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
   return (
-    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4">
+    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4 relative overflow-hidden">
+      {/* Floating Reactions */}
+      {reactions.map((r: FloatingReaction) => (
+        <div
+          key={r.id}
+          className="fixed pointer-events-none z-50 animate-float-up"
+          style={{
+            left: `${Math.random() * 60 + 20}%`,
+            bottom: '80px',
+          }}
+        >
+          <div className="flex flex-col items-center">
+            <span className="text-4xl">{r.emoji}</span>
+            <span className="text-xs font-bold text-white/70 bg-black/40 px-2 py-0.5 rounded-full mt-1">{r.nickname}</span>
+          </div>
+        </div>
+      ))}
+
       <div className="w-full max-w-4xl mt-12">
         {/* Header: Timer and Info */}
         <div className="flex justify-between items-center mb-12">
@@ -163,7 +254,7 @@ export function Game() {
 
         {/* Question */}
         <div className="text-center mb-12">
-          {question.image && (
+          {question?.image && (
             <div className="mb-6 flex justify-center">
               <img 
                 src={question.image} 
@@ -174,12 +265,12 @@ export function Game() {
               />
             </div>
           )}
-          <h2 className="text-4xl font-bold leading-tight">{question.text}</h2>
+          <h2 className="text-4xl font-bold leading-tight">{question?.text}</h2>
         </div>
 
         {/* Answers Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
-          {question.options.map((option, idx) => {
+          {question?.options.map((option, idx) => {
             let bgColor = 'bg-neutral-800 border-neutral-700 hover:border-white';
             if (selectedAnswer === idx && !showResults) bgColor = 'bg-blue-600 border-blue-400';
             if (showResults) {
@@ -226,6 +317,19 @@ export function Game() {
             </p>
           </div>
         )}
+
+        {/* Reactions bar */}
+        <div className="flex justify-center gap-2 mb-8">
+          {REACTION_EMOJIS.map(emoji => (
+            <button
+              key={emoji}
+              onClick={() => sendReaction(emoji)}
+              className="text-3xl hover:scale-125 active:scale-90 transition-transform bg-neutral-800/50 rounded-full w-14 h-14 flex items-center justify-center border border-neutral-700/50 hover:border-neutral-500"
+            >
+              {emoji}
+            </button>
+          ))}
+        </div>
 
         {/* Players Scoreboard */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">

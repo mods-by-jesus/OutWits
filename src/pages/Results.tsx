@@ -10,12 +10,21 @@ interface Player {
   correctCount?: number;
 }
 
-const AUTO_RETURN_SECONDS = 10;
+interface Achievement {
+  emoji: string;
+  title: string;
+  description: string;
+  nickname: string;
+  value: string;
+}
+
+const AUTO_RETURN_SECONDS = 20;
 
 export function Results() {
   const { code } = useParams<{ code: string }>();
   const navigate = useNavigate();
   const [players, setPlayers] = useState<Player[]>([]);
+  const [achievements, setAchievements] = useState<Achievement[]>([]);
   const [loading, setLoading] = useState(true);
   const [countdown, setCountdown] = useState(AUTO_RETURN_SECONDS);
   const intervalRef = useRef<number | null>(null);
@@ -40,6 +49,15 @@ export function Results() {
       return;
     }
 
+    const storedAchievements = sessionStorage.getItem('gameAchievements');
+    if (storedAchievements) {
+      try {
+        setAchievements(JSON.parse(storedAchievements));
+      } catch {
+        // ignore
+      }
+    }
+
     setLoading(false);
 
     // Запускаем обратный отсчёт
@@ -62,6 +80,7 @@ export function Results() {
   const handleGoHome = useCallback(() => {
     sessionStorage.removeItem('playerId');
     sessionStorage.removeItem('gameResults');
+    sessionStorage.removeItem('gameAchievements');
     navigate('/');
   }, [navigate]);
 
@@ -74,6 +93,7 @@ export function Results() {
   useEffect(() => {
     const onReturnedToLobby = (data: any) => {
       const playerId = sessionStorage.getItem('playerId');
+      sessionStorage.removeItem('gameAchievements');
       navigate(`/lobby/${code}`, {
         state: {
           ...data,
@@ -154,6 +174,38 @@ export function Results() {
             </div>
           ))}
         </div>
+
+        {/* Achievements section */}
+        {achievements.length > 0 && (
+          <div className="mb-10">
+            <p className="text-neutral-500 text-center font-bold uppercase tracking-widest text-sm mb-4">
+              🏆 Спец-номинации
+            </p>
+            <div className="grid grid-cols-1 gap-3">
+              {achievements.map((ach, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 p-4 rounded-2xl bg-neutral-800/70 border border-neutral-700/50"
+                  style={{ animationDelay: `${i * 150}ms` }}
+                >
+                  <div className="text-3xl w-12 h-12 flex items-center justify-center bg-neutral-700/50 rounded-xl shrink-0">
+                    {ach.emoji}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="font-black text-white">{ach.title}</span>
+                      <span className="text-xs text-neutral-500">{ach.description}</span>
+                    </div>
+                    <div className="flex items-center gap-2 mt-0.5">
+                      <span className="text-sm font-bold text-yellow-400 truncate">{ach.nickname}</span>
+                      <span className="text-xs text-neutral-500">{ach.value}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         <div className="flex flex-col gap-4">
           {isHost ? (
