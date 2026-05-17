@@ -15,6 +15,13 @@ export const socket: Socket = io(URL, {
 // Логирование для отладки
 socket.on('connect', () => {
   console.log('[OutWits] Socket connected:', socket.id);
+  
+  const playerId = sessionStorage.getItem('playerId');
+  const code = window.location.pathname.split('/').pop();
+  
+  if (playerId && code && code.length === 5) {
+    socket.emit('rejoin_lobby', { code, playerId });
+  }
 });
 
 socket.on('disconnect', (reason) => {

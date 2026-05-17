@@ -409,15 +409,40 @@ io.on('connection', (socket) => {
     callback?.({ ok: true });
   });
 
+  // ─── REJOIN LOBBY ─────────────────────────────────
+  socket.on('rejoin_lobby', ({ code, playerId }, callback) => {
+    const lobby = lobbies.get(code);
+    if (!lobby) return callback?.({ error: 'Лобби не найдено' });
+    
+    const player = lobby.players.find(p => p.id === playerId);
+    if (!player) return callback?.({ error: 'Игрок не найден' });
+
+    socket.join(code);
+    playerSockets.set(socket.id, { lobbyCode: code, playerId });
+    console.log(`[REJOIN] ${player.nickname} reconnected to ${code}`);
+    callback?.({ ok: true });
+  });
+
   // ─── LEAVE LOBBY ──────────────────────────────────
   socket.on('leave_lobby', () => {
-    removePlayer(socket);
+    const info = playerSockets.get(socket.id);
+    if (info) {
+      removePlayerById(info.lobbyCode, info.playerId);
+      playerSockets.delete(socket.id);
+      socket.leave(info.lobbyCode);
+    }
   });
 
   // ─── DISCONNECT ───────────────────────────────────
   socket.on('disconnect', () => {
     console.log(`[-] Disconnected: ${socket.id}`);
-    removePlayer(socket);
+    const info = playerSockets.get(socket.id);
+    if (info) {
+      playerSockets.delete(socket.id);
+      // Мы НЕ удаляем игрока из lobby.players при обрыве связи!
+      // Если он вернется, он сможет переподключиться.
+      // Таймер раунда сам переключит вопрос, если игрок не успеет ответить.
+    }
   });
 });
 
@@ -509,42 +534,35 @@ function finishGame(lobby) {
   }, 60000);
 }
 
-function removePlayer(socket) {
-  const info = playerSockets.get(socket.id);
-  if (!info) return;
-
-  const lobby = lobbies.get(info.lobbyCode);
-  playerSockets.delete(socket.id);
-
+function removePlayerById(lobbyCode, playerId) {
+  const lobby = lobbies.get(lobbyCode);
   if (!lobby) return;
 
-  const playerIndex = lobby.players.findIndex(p => p.id === info.playerId);
+  const playerIndex = lobby.players.findIndex(p => p.id === playerId);
   if (playerIndex === -1) return;
 
   const wasHost = lobby.players[playerIndex].is_host;
   const playerName = lobby.players[playerIndex].nickname;
   lobby.players.splice(playerIndex, 1);
 
-  console.log(`[LEAVE] ${playerName} left ${info.lobbyCode} (${lobby.players.length} remaining)`);
-
-  socket.leave(info.lobbyCode);
+  console.log(`[LEAVE] ${playerName} permanently left ${lobbyCode} (${lobby.players.length} remaining)`);
 
   // Если никого не осталось — удалить лобби
   if (lobby.players.length === 0) {
     if (lobby.roundTimer) clearTimeout(lobby.roundTimer);
-    lobbies.delete(info.lobbyCode);
-    console.log(`[CLEANUP] Empty lobby ${info.lobbyCode} removed`);
+    lobbies.delete(lobbyCode);
+    console.log(`[CLEANUP] Empty lobby ${lobbyCode} removed`);
     return;
   }
 
   // Если хост ушёл — назначить нового хоста
   if (wasHost && lobby.players.length > 0) {
     lobby.players[0].is_host = true;
-    console.log(`[HOST] New host: ${lobby.players[0].nickname} in ${info.lobbyCode}`);
+    console.log(`[HOST] New host: ${lobby.players[0].nickname} in ${lobbyCode}`);
   }
 
   // Оповестить оставшихся
-  io.to(info.lobbyCode).emit('players_updated', {
+  io.to(lobbyCode).emit('players_updated', {
     players: lobby.players.map(p => ({
       id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
     })),
