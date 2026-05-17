@@ -358,5 +358,245 @@
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
+  },
+  {
+    "text": "Кто является главным создателем операционной системы Linux?",
+    "options": [
+      "Стив Джобс",
+      "Билл Гейтс",
+      "Линус Торвальдс",
+      "Марк Цукерберг"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 31
+  },
+  {
+    "text": "Какая игра популяризировала жанр «Королевская битва» в 2017 году?",
+    "options": [
+      "Fortnite",
+      "PUBG",
+      "Apex Legends",
+      "Call of Duty: Warzone"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 32
+  },
+  {
+    "text": "В каком году компания Apple представила первый iPhone?",
+    "options": [
+      "2005",
+      "2007",
+      "2009",
+      "2011"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 33
+  },
+  {
+    "text": "Какой популярный язык программирования назван в честь сорта кофе?",
+    "options": [
+      "Python",
+      "C++",
+      "Ruby",
+      "Java"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 34
+  },
+  {
+    "text": "Какая студия разработала игру «Ведьмак 3: Дикая Охота»?",
+    "options": [
+      "Bethesda",
+      "Ubisoft",
+      "CD Projekt RED",
+      "BioWare"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 35
+  },
+  {
+    "text": "Как расшифровывается аббревиатура URL?",
+    "options": [
+      "Universal Record Locator",
+      "Uniform Resource Locator",
+      "Unified Region Link",
+      "Universal Routing Language"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 36
+  },
+  {
+    "text": "Какая игровая консоль стала самой продаваемой в истории (на 2024 год)?",
+    "options": [
+      "Nintendo Switch",
+      "PlayStation 2",
+      "Xbox 360",
+      "PlayStation 4"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 37
+  },
+  {
+    "text": "В какой популярной игре от инди-разработчиков нужно строить мега-фабрики на чужой планете?",
+    "options": [
+      "Factorio",
+      "RimWorld",
+      "Terraria",
+      "Stardew Valley"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "id": 38
+  },
+  {
+    "text": "Какой язык программирования чаще всего используется для создания смарт-контрактов Ethereum?",
+    "options": [
+      "Python",
+      "Rust",
+      "Solidity",
+      "Go"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 39
+  },
+  {
+    "text": "Какая крупная корпорация купила игру Minecraft в 2014 году?",
+    "options": [
+      "Google",
+      "Sony",
+      "Microsoft",
+      "Tencent"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 40
+  },
+  {
+    "text": "В какой серии командных шутеров от Valve игроки делятся на террористов и спецназ?",
+    "options": [
+      "Team Fortress",
+      "Counter-Strike",
+      "Half-Life",
+      "Left 4 Dead"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 41
+  },
+  {
+    "text": "Что из этого НЕ является языком программирования?",
+    "options": [
+      "Python",
+      "JavaScript",
+      "C#",
+      "HTML"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 42
+  },
+  {
+    "text": "В какой знаменитой серии игр главный герой — ассасин по имени Эцио Аудиторе?",
+    "options": [
+      "Hitman",
+      "Assassin's Creed",
+      "Dishonored",
+      "Thief"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "id": 43
+  },
+  {
+    "text": "Как называется популярный игровой движок, разработанный компанией Epic Games?",
+    "options": [
+      "Unity",
+      "CryEngine",
+      "Source",
+      "Unreal Engine"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 44
+  },
+  {
+    "text": "Кто вместе со Стивом Джобсом стоял у истоков основания компании Apple?",
+    "options": [
+      "Билл Гейтс",
+      "Стив Балмер",
+      "Стив Возняк",
+      "Тим Кук"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 45
+  },
+  {
+    "text": "В какой MOBA-игре есть карта под названием Summoner's Rift?",
+    "options": [
+      "Dota 2",
+      "Heroes of the Storm",
+      "Smite",
+      "League of Legends"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 46
+  },
+  {
+    "text": "Как называется виртуальная валюта на популярной платформе Roblox?",
+    "options": [
+      "V-Bucks",
+      "Minecoins",
+      "Robux",
+      "Tix"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 47
+  },
+  {
+    "text": "Какой технологический гигант является владельцем видеохостинга YouTube?",
+    "options": [
+      "Facebook",
+      "Microsoft",
+      "Amazon",
+      "Google"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "id": 48
+  },
+  {
+    "text": "Какая компания выпускает видеокарты популярной линейки GeForce?",
+    "options": [
+      "AMD",
+      "Intel",
+      "NVIDIA",
+      "Qualcomm"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "id": 49
+  },
+  {
+    "text": "Как назывался первый в мире электронный цифровой вычислительный компьютер (1945 год)?",
+    "options": [
+      "ENIAC",
+      "IBM PC",
+      "Colossus",
+      "Altair"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "id": 50
   }
 ]
