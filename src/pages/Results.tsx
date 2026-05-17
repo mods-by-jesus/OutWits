@@ -50,8 +50,14 @@ export function Results() {
   };
 
   useEffect(() => {
-    socket.on('returned_to_lobby', () => {
-      navigate(`/lobby/${code}`);
+    socket.on('returned_to_lobby', (data) => {
+      const playerId = sessionStorage.getItem('playerId');
+      navigate(`/lobby/${code}`, {
+        state: {
+          ...data,
+          player: data?.players?.find((p: any) => p.id === playerId)
+        }
+      });
     });
     return () => {
       socket.off('returned_to_lobby');

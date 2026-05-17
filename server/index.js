@@ -399,7 +399,13 @@ io.on('connection', (socket) => {
     });
 
     console.log(`[LOBBY] ${info.lobbyCode} returned to waiting state by ${player.nickname}`);
-    io.to(lobby.code).emit('returned_to_lobby');
+    io.to(lobby.code).emit('returned_to_lobby', {
+      lobby: { code: lobby.code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
+      players: lobby.players.map(p => ({
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0,
+      })),
+      availableCategories,
+    });
     callback?.({ ok: true });
   });
 
