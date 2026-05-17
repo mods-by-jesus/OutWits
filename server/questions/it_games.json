@@ -1,1790 +1,5645 @@
 [
   {
     "id": 1,
-    "text": "Игра «Тетрис» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
     "options": [
-      "TaleWorlds",
-      "Insomniac Games",
-      "Алексей Пажитнов",
-      "Crytek"
+      "Профессор Икс",
+      "Микки Маус",
+      "Харон",
+      "Гермес"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Mickey%20Mouse%20%28poster%20version%29.svg"
   },
   {
     "id": 2,
-    "text": "Кто является создателем видеоигры «Тетрис»?",
+    "text": "Как зовут этого персонажа из игры «Hades»?",
     "options": [
-      "Алексей Пажитнов",
-      "Похилько, Владимир Иванович",
-      "2K Czech",
-      "Blizzard North"
+      "Йода",
+      "Алая ведьма",
+      "Скрудж Макдак",
+      "Зевс"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jupiter%20J1a.jpg"
   },
   {
     "id": 3,
-    "text": "Кто является создателем видеоигры «Roblox»?",
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
     "options": [
-      "Rockstar San Diego",
-      "Arkane Studios",
-      "Roblox Corporation",
-      "Maxis"
+      "Роберт Лэнгдон",
+      "Человек-паук",
+      "Зелёная Стрела",
+      "Соник"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 4,
-    "text": "Игра «World of Warcraft» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Spider-Man: Shattered Dimensions»?",
     "options": [
-      "Blizzard Entertainment",
-      "Sonic Team",
-      "Eidos Montreal",
-      "Avalanche Software"
+      "Соник",
+      "Орфей",
+      "Человек-паук",
+      "Тесей"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 5,
-    "text": "Какая компания или студия разработала игру «Super Mario Bros.»?",
+    "text": "Как зовут этого персонажа из игры «Spider-Man: Friend or Foe»?",
     "options": [
-      "Gaijin Entertainment",
-      "Алексей Пажитнов",
-      "Ubisoft Quebec",
-      "Nintendo Entertainment Analysis and Development"
+      "Посейдон",
+      "Сизиф",
+      "Хан Соло",
+      "Человек-паук"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 6,
-    "text": "Игра «Pac-Man» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Spider-Man 3»?",
     "options": [
-      "Nintendo Entertainment Analysis and Development",
-      "Namco",
-      "Superscape",
-      "Rockstar San Diego"
+      "Аквамен",
+      "Человек-паук",
+      "Железный человек",
+      "Tux"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 7,
-    "text": "Кто является создателем видеоигры «Clash of Clans»?",
+    "text": "Как зовут этого персонажа из игры «Spider-Man: Edge of Time»?",
     "options": [
-      "Ubisoft Quebec",
-      "Studio MDHR",
-      "Ubisoft Singapore",
-      "Supercell"
+      "Саруман",
+      "Артемида",
+      "Человек-паук",
+      "Лернейская гидра"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 8,
-    "text": "Какая компания или студия разработала игру «The Elder Scrolls V: Skyrim»?",
+    "text": "Как зовут этого персонажа из игры «Spider-Man»?",
     "options": [
-      "Eidos Montreal",
-      "SkyBox Labs",
-      "FromSoftware",
-      "Bethesda Game Studios"
+      "Ахилл",
+      "Нюкта",
+      "Зевс",
+      "Человек-паук"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 9,
-    "text": "Игра «Among Us» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Infinite»?",
     "options": [
-      "Infinity Ward",
-      "Innersloth",
-      "Алексей Пажитнов",
-      "Похилько, Владимир Иванович"
+      "Человек-паук",
+      "Хан Соло",
+      "Джек Воробей",
+      "Люк Скайуокер"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spiderman.JPG"
   },
   {
     "id": 10,
-    "text": "Игра «Half-Life 2» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Hades»?",
     "options": [
-      "Ubisoft Barcelona",
-      "Rockstar New England",
-      "TaleWorlds",
-      "Valve Corporation"
+      "Гуфи",
+      "Афродита",
+      "Лернейская гидра",
+      "Аквамен"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Aphrodite8.jpg"
   },
   {
     "id": 11,
-    "text": "Кто является создателем видеоигры «Call of Duty 4: Modern Warfare»?",
+    "text": "Как зовут этого персонажа из игры «Hades»?",
     "options": [
-      "Square",
-      "Treyarch",
-      "Ubisoft Toronto",
-      "Blizzard North"
+      "Капитан Америка",
+      "Афина",
+      "Гуфи",
+      "Человек-паук"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bust%20Athena%20Velletri%20Glyptothek%20Munich%20213.jpg"
   },
   {
     "id": 12,
-    "text": "Игра «Call of Duty 4: Modern Warfare» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из видеоигры?",
     "options": [
-      "Infinity Ward",
-      "Вадим Герасимов",
-      "Crytek",
-      "miHoYo"
+      "Скрудж Макдак",
+      "Сатана",
+      "Орфей",
+      "Роберт Лэнгдон"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GustaveDoreParadiseLostSatanProfile.jpg"
   },
   {
     "id": 13,
-    "text": "Какая компания или студия разработала игру «Call of Duty 4: Modern Warfare»?",
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
     "options": [
-      "Ubisoft Red Storm",
-      "Linden Lab",
-      "Game Science",
-      "Aspyr Media"
+      "Хаос",
+      "Женщина-кошка",
+      "Афродита",
+      "Бэтмен"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 14,
-    "text": "Какая компания или студия разработала игру «Genshin Impact»?",
+    "text": "Как зовут этого персонажа из игры «Batman»?",
     "options": [
-      "miHoYo",
-      "Скотт Коутон",
-      "Namco",
-      "Матеус Валадарес"
+      "Бэтмен",
+      "Алая ведьма",
+      "Смог",
+      "Танос"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 15,
-    "text": "Какая компания или студия разработала игру «The Last of Us»?",
+    "text": "Как зовут этого персонажа из видеоигры?",
     "options": [
-      "Konami",
-      "miHoYo",
-      "Nintendo Entertainment Analysis and Development",
-      "Naughty Dog"
+      "Джин Грей",
+      "Бэтмен",
+      "Дэдпул",
+      "Гуфи"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 16,
-    "text": "Игра «Assassin’s Creed» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman: Return of the Joker»?",
     "options": [
-      "Тоби Фокс",
-      "Rockstar Vancouver",
-      "Taito Corporation",
-      "Ubisoft Montreal"
+      "Луиджи",
+      "Зелёная Стрела",
+      "Бэтмен",
+      "Супермен"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 17,
-    "text": "Какая компания или студия разработала игру «Pong»?",
+    "text": "Как зовут этого персонажа из игры «Batman: Dark Tomorrow»?",
     "options": [
-      "Iron Galaxy Studios",
-      "Eidos Montreal",
-      "Atari, Inc",
-      "Red Barrels"
+      "Луиджи",
+      "Бэтмен",
+      "Дидона",
+      "Хаос"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 18,
-    "text": "Какая компания или студия разработала игру «The Sims»?",
+    "text": "Как зовут этого персонажа из игры «Batman: Arkham City Lockdown»?",
     "options": [
-      "Maxis",
-      "Sonic Team",
-      "Crytek",
-      "Konami"
+      "Танатос",
+      "Железный человек",
+      "Сунь Укун",
+      "Бэтмен"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 19,
-    "text": "Какая компания или студия разработала игру «Cyberpunk 2077»?",
+    "text": "Как зовут этого персонажа из видеоигры?",
     "options": [
-      "Taito Corporation",
-      "Game Science",
-      "Алексей Пажитнов",
-      "CD Projekt RED"
+      "Бэтмен",
+      "Индиана Джонс",
+      "Афина",
+      "Минни Маус"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 20,
-    "text": "Игра «Grand Theft Auto» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
     "options": [
-      "Avalanche Software",
-      "Rockstar Lincoln",
-      "Sonic Team",
-      "TaleWorlds"
+      "Луиджи",
+      "Бэтмен",
+      "Гильгамеш",
+      "Оби-Ван Кеноби"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 21,
-    "text": "Кто является создателем видеоигры «Second Life»?",
+    "text": "Как зовут этого персонажа из игры «Batman: Arkham Asylum»?",
     "options": [
-      "Ubisoft Shanghai",
-      "Linden Lab",
-      "EA Vancouver",
-      "Ubisoft Montpellier"
+      "Бэтмен",
+      "Гермес",
+      "Скрудж Макдак",
+      "Смог"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 22,
-    "text": "Кто является создателем видеоигры «Undertale»?",
+    "text": "Как зовут этого персонажа из игры «The Adventures of Batman and Robin»?",
     "options": [
-      "Тоби Фокс",
-      "Respawn Entertainment",
-      "Sledgehammer Games",
-      "Firaxis Games"
+      "Смог",
+      "Ахилл",
+      "Бэтмен",
+      "Чубакка"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 23,
-    "text": "Игра «The Sims 2» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman: The Animated Series»?",
     "options": [
-      "Maxis",
-      "Скотт Коутон",
-      "Capcom",
-      "Матеус Валадарес"
+      "Оби-Ван Кеноби",
+      "Супермен",
+      "Бэтмен",
+      "Аид"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 24,
-    "text": "Игра «Mafia: The City of Lost Heaven» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman: Vengeance»?",
     "options": [
-      "Blizzard North",
-      "2K Czech",
-      "Taito Corporation",
-      "Atari, Inc"
+      "Люк Скайуокер",
+      "Роберт Лэнгдон",
+      "Патрокл",
+      "Бэтмен"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 25,
-    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 2»?",
+    "text": "Как зовут этого персонажа из игры «Batman: The Brave and the Bold — The Videogame»?",
     "options": [
-      "Infinity Ward",
-      "Rovio Entertainment",
-      "Ubisoft Toronto",
-      "Rockstar Lincoln"
+      "Хаос",
+      "Бэтмен",
+      "Супермен",
+      "Дионис"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 26,
-    "text": "Кто является создателем видеоигры «Far Cry 3»?",
+    "text": "Как зовут этого персонажа из игры «Batman: The Caped Crusader»?",
     "options": [
-      "Ubisoft Red Storm",
-      "EA Vancouver",
-      "Rockstar Vancouver",
-      "Скотт Коутон"
+      "Дидона",
+      "Джек Воробей",
+      "Бэтмен",
+      "Женщина-кошка"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 27,
-    "text": "Игра «Ведьмак 3: Дикая Охота» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman Forever»?",
     "options": [
-      "CD Projekt RED",
-      "Respawn Entertainment",
-      "Iron Galaxy Studios",
-      "Capcom"
+      "Бэтмен",
+      "Йода",
+      "Дидона",
+      "Женщина-кошка"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 28,
-    "text": "Игра «Clash Royale» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman (NES)»?",
     "options": [
-      "Sonic Team",
-      "Capcom",
-      "Konami",
-      "Supercell"
+      "Гильгамеш",
+      "Халк",
+      "Бэтмен",
+      "Гуфи"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 29,
-    "text": "Игра «Warcraft III: Reign of Chaos» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Batman: Arkham Origins»?",
     "options": [
-      "Ubisoft Reflections",
-      "Blizzard North",
-      "Blizzard Entertainment",
-      "Sledgehammer Games"
+      "Халк",
+      "Гипнос",
+      "Сизиф",
+      "Бэтмен"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 30,
-    "text": "Какая компания или студия разработала игру «Space Invaders»?",
+    "text": "Как зовут этого персонажа из игры «Batman: Arkham Origins Blackgate»?",
     "options": [
-      "Gearbox Software",
-      "Taito Corporation",
-      "Стив Расселл",
-      "Rockstar Leeds"
+      "Бэтмен",
+      "Гипнос",
+      "Халк",
+      "Хан Соло"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 31,
-    "text": "Какая компания или студия разработала игру «Resident Evil 4»?",
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
     "options": [
-      "Supercell",
-      "Capcom",
-      "Naughty Dog",
-      "Bungie"
+      "Микки Маус",
+      "Женщина-кошка",
+      "Бэтмен",
+      "Аид"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 32,
-    "text": "Кто является создателем видеоигры «Spore»?",
+    "text": "Как зовут этого персонажа из игры «Batman: The Enemy Within»?",
     "options": [
-      "Maxis",
-      "Ikegami",
-      "Gearbox Software",
-      "Roblox Corporation"
+      "Йода",
+      "Бэтмен",
+      "Алая ведьма",
+      "Железный человек"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/San%20Diego%20Comic-Con%202024%20Masquerade%20-%20Cosplay%20of%20Batman%203.jpg"
   },
   {
     "id": 33,
-    "text": "Игра «Portal 2» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Hades»?",
     "options": [
-      "Riot Games",
-      "Valve Corporation",
-      "EA Black Box",
-      "Ubisoft Montpellier"
+      "Аид",
+      "Артемида",
+      "Дональд Дак",
+      "Роберт Лэнгдон"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Artemis%2C%20Diana%20%28Museum%20Capitolinum%29.png"
   },
   {
     "id": 34,
-    "text": "Игра «Call of Duty: World at War» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Hades»?",
     "options": [
-      "Blizzard Entertainment",
-      "Treyarch",
-      "Santa Monica Studio",
-      "Nintendo Entertainment Analysis and Development"
+      "Женщина-кошка",
+      "Артемида",
+      "Гильгамеш",
+      "Посейдон"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Poseidon%20sculpture%20Copenhagen%202005.jpg"
   },
   {
     "id": 35,
-    "text": "Игра «Donkey Kong» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «DC Universe Online»?",
     "options": [
-      "Firaxis Games",
-      "Square",
-      "Тоби Фокс",
-      "Ikegami"
+      "Микки Маус",
+      "Железный человек",
+      "Хаос",
+      "Супермен"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 36,
-    "text": "Кто является создателем видеоигры «Call of Duty: World at War»?",
+    "text": "Как зовут этого персонажа из игры «Superman»?",
     "options": [
-      "Edge of Reality",
-      "Team Silent",
-      "Arkane Studios",
-      "Maxis"
+      "Лернейская гидра",
+      "Супермен",
+      "Профессор Икс",
+      "Патрокл"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 37,
-    "text": "Игра «Call of Duty: Modern Warfare 3» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
     "options": [
-      "Insomniac Games",
-      "Firaxis Games",
-      "Naughty Dog",
-      "Treyarch"
+      "Минни Маус",
+      "Гильгамеш",
+      "Аквамен",
+      "Супермен"
     ],
     "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 38,
-    "text": "Кто является создателем видеоигры «Valorant»?",
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
     "options": [
-      "Nixxes Software",
-      "Eidos Montreal",
-      "Riot Games",
-      "Ensemble Studios"
+      "Вито Корлеоне",
+      "Патрокл",
+      "Супермен",
+      "Лея Органа"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 39,
-    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 3»?",
+    "text": "Как зовут этого персонажа из игры «Mortal Kombat vs. DC Universe»?",
     "options": [
-      "Ubisoft Reflections",
-      "Raven Software",
-      "Ubisoft Barcelona",
-      "EA Black Box"
+      "Супермен",
+      "Роберт Лэнгдон",
+      "Смог",
+      "Минни Маус"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 40,
-    "text": "Кто является создателем видеоигры «Red Dead Redemption»?",
+    "text": "Как зовут этого персонажа из игры «Superman Returns»?",
     "options": [
-      "Rockstar San Diego",
-      "Linden Lab",
-      "Bethesda Game Studios",
-      "Iron Galaxy Studios"
+      "Луиджи",
+      "Кербер",
+      "Супермен",
+      "Дионис"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 41,
-    "text": "Какая компания или студия разработала игру «Metal Gear Solid»?",
+    "text": "Как зовут этого персонажа из игры «Superman: Shadow of Apokolips»?",
     "options": [
-      "Тоби Фокс",
-      "Вадим Герасимов",
-      "Ubisoft Montpellier",
-      "Konami"
+      "Посейдон",
+      "Супермен",
+      "Афродита",
+      "Роберт Лэнгдон"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 42,
-    "text": "Игра «Halo: Combat Evolved» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Justice League Heroes»?",
     "options": [
-      "Gearbox Software",
-      "Linden Lab",
-      "Bungie",
-      "Feral Interactive"
+      "Супермен",
+      "Гермес",
+      "Орфей",
+      "Сатана"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 43,
-    "text": "Какая компания или студия разработала игру «Halo: Combat Evolved»?",
+    "text": "Как зовут этого персонажа из игры «The Death and Return of Superman»?",
     "options": [
-      "Avalanche Software",
-      "Стив Расселл",
-      "Sonic Team",
-      "Gearbox Software"
+      "Гильгамеш",
+      "Персефона",
+      "Супермен",
+      "Гуфи"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 44,
-    "text": "Какая компания или студия разработала игру «Euro Truck Simulator 2»?",
+    "text": "Как зовут этого персонажа из игры «Superman 64»?",
     "options": [
-      "GSC Game World",
-      "SCS Software",
-      "Roblox Corporation",
-      "Ubisoft Shanghai"
+      "Профессор Икс",
+      "Супермен",
+      "Джин Грей",
+      "Бэтмен"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 45,
-    "text": "Какая компания или студия разработала игру «Need for Speed: Most Wanted»?",
+    "text": "Как зовут этого персонажа из видеоигры?",
     "options": [
-      "Ubisoft Singapore",
-      "Bungie",
-      "Firaxis Games",
-      "EA Black Box"
+      "Дональд Дак",
+      "Вито Корлеоне",
+      "Супермен",
+      "Индиана Джонс"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 46,
-    "text": "Кто является создателем видеоигры «Far Cry»?",
+    "text": "Как зовут этого персонажа из игры «Superman: Countdown to Apokolips»?",
     "options": [
-      "Crytek",
-      "miHoYo",
-      "Atari, Inc",
-      "Тоби Фокс"
+      "Халк",
+      "Супермен",
+      "Персефона",
+      "Минни Маус"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 47,
-    "text": "Кто является создателем видеоигры «Overwatch»?",
+    "text": "Как зовут этого персонажа из игры «Superman: The Game»?",
     "options": [
-      "Gearbox Software",
-      "Blizzard Entertainment",
-      "Superscape",
-      "Guerrilla Games"
+      "Железный человек",
+      "Супермен",
+      "Афродита",
+      "Роберт Лэнгдон"
     ],
     "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 48,
-    "text": "Игра «Super Mario Bros. 3» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Superman: The Man of Steel»?",
     "options": [
-      "Gaijin Entertainment",
-      "Wargaming.net",
-      "Nintendo Entertainment Analysis and Development",
-      "CD Projekt RED"
+      "Посейдон",
+      "Лара Крофт",
+      "Лея Органа",
+      "Супермен"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 49,
-    "text": "Кто является создателем видеоигры «The Last of Us Part II»?",
+    "text": "Как зовут этого персонажа из игры «Superman Returns: Fortress of Solitude»?",
     "options": [
-      "Naughty Dog",
-      "Insomniac Games",
-      "Gaijin Entertainment",
-      "Bethesda Game Studios"
+      "Аид",
+      "Кербер",
+      "Алая ведьма",
+      "Супермен"
     ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 50,
-    "text": "Игра «Brawl Stars» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
     "options": [
-      "Supercell",
-      "Red Barrels",
-      "Team Silent",
-      "FromSoftware"
+      "Супермен",
+      "Дидона",
+      "Гермес",
+      "Кербер"
     ],
     "correct_answer": 0,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kirk%20Alyn%20as%20Superman%20in%20a%20publicity%20still%20from%201948.jpg"
   },
   {
     "id": 51,
-    "text": "Кто является создателем видеоигры «Grand Theft Auto: Vice City Stories»?",
+    "text": "Как зовут этого персонажа из игры «DC Universe Online»?",
     "options": [
-      "Nintendo Research & Development 1",
-      "Ubisoft Singapore",
-      "Rockstar Leeds",
-      "Capcom"
+      "Лара Крофт",
+      "Лернейская гидра",
+      "Саруман",
+      "Супермен"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
   },
   {
     "id": 52,
-    "text": "Какая компания или студия разработала игру «War Thunder»?",
+    "text": "Как зовут этого персонажа из игры «Superman»?",
     "options": [
-      "Вадим Герасимов",
-      "Insomniac Games",
-      "Gaijin Entertainment",
-      "Guerrilla Games"
+      "Танос",
+      "Супермен",
+      "Лара Крофт",
+      "Дональд Дак"
     ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
   },
   {
     "id": 53,
-    "text": "Игра «Elden Ring» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
     "options": [
-      "CD Projekt RED",
-      "FromSoftware",
-      "Team Silent",
-      "Crytek"
+      "Лара Крофт",
+      "Человек-паук",
+      "Сатана",
+      "Супермен"
     ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
   },
   {
     "id": 54,
-    "text": "Какая компания или студия разработала игру «Fallout 3»?",
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
     "options": [
-      "Raven Software",
-      "Riot Games",
-      "2K Czech",
-      "Bethesda Game Studios"
+      "Хан Соло",
+      "Дональд Дак",
+      "Супермен",
+      "Дионис"
     ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
   },
   {
     "id": 55,
-    "text": "Игра «Agar.io» была выпущена разработчиками из:",
+    "text": "Как зовут этого персонажа из игры «Mortal Kombat vs. DC Universe»?",
     "options": [
-      "Aspyr Media",
-      "Insomniac Games",
-      "Матеус Валадарес",
-      "Arkane Studios"
+      "Лея Органа",
+      "Лернейская гидра",
+      "Супермен",
+      "Саруман"
     ],
     "correct_answer": 2,
-    "category": "Игры и Технологии"
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
   },
   {
     "id": 56,
-    "text": "Какая компания или студия разработала игру «Diablo III»?",
+    "text": "Как зовут этого персонажа из игры «Superman Returns»?",
     "options": [
-      "Blizzard Entertainment",
-      "Guerrilla Games",
-      "Linden Lab",
-      "Вадим Герасимов"
+      "Капитан Америка",
+      "Супермен",
+      "Сунь Укун",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 57,
+    "text": "Как зовут этого персонажа из игры «Superman: Shadow of Apokolips»?",
+    "options": [
+      "Гуфи",
+      "Орфей",
+      "Супермен",
+      "Оби-Ван Кеноби"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 58,
+    "text": "Как зовут этого персонажа из игры «Justice League Heroes»?",
+    "options": [
+      "Саруман",
+      "Оби-Ван Кеноби",
+      "Веном",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 59,
+    "text": "Как зовут этого персонажа из игры «The Death and Return of Superman»?",
+    "options": [
+      "Супермен",
+      "Профессор Икс",
+      "Tux",
+      "Луиджи"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 60,
+    "text": "Как зовут этого персонажа из игры «Superman 64»?",
+    "options": [
+      "Минни Маус",
+      "Тесей",
+      "Супермен",
+      "Вито Корлеоне"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 61,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Скрудж Макдак",
+      "Супермен",
+      "Деметра",
+      "Персефона"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 62,
+    "text": "Как зовут этого персонажа из игры «Superman: Countdown to Apokolips»?",
+    "options": [
+      "Супермен",
+      "Гипнос",
+      "Гуфи",
+      "Орфей"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 63,
+    "text": "Как зовут этого персонажа из игры «Superman: The Game»?",
+    "options": [
+      "Орфей",
+      "Хаос",
+      "Алая ведьма",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 64,
+    "text": "Как зовут этого персонажа из игры «Superman: The Man of Steel»?",
+    "options": [
+      "Харон",
+      "Сунь Укун",
+      "Посейдон",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 65,
+    "text": "Как зовут этого персонажа из игры «Superman Returns: Fortress of Solitude»?",
+    "options": [
+      "Аид",
+      "Лара Крофт",
+      "Супермен",
+      "Человек-паук"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 66,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Гильгамеш",
+      "Голлум",
+      "Супермен",
+      "Соник"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stamp%20Day%20for%20Superman.jpg"
+  },
+  {
+    "id": 67,
+    "text": "Как зовут этого персонажа из игры «DC Universe Online»?",
+    "options": [
+      "Сатана",
+      "Танос",
+      "Гипнос",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 68,
+    "text": "Как зовут этого персонажа из игры «Superman»?",
+    "options": [
+      "Вито Корлеоне",
+      "Капитан Америка",
+      "Супермен",
+      "Аид"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 69,
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
+    "options": [
+      "Дональд Дак",
+      "Супермен",
+      "Чубакка",
+      "Люк Скайуокер"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 70,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Супермен",
+      "Скрудж Макдак",
+      "Чубакка",
+      "Халк"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 71,
+    "text": "Как зовут этого персонажа из игры «Mortal Kombat vs. DC Universe»?",
+    "options": [
+      "Капитан Америка",
+      "Гермес",
+      "Бэтмен",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 72,
+    "text": "Как зовут этого персонажа из игры «Superman Returns»?",
+    "options": [
+      "Гермес",
+      "Хан Соло",
+      "Оби-Ван Кеноби",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 73,
+    "text": "Как зовут этого персонажа из игры «Superman: Shadow of Apokolips»?",
+    "options": [
+      "Танатос",
+      "Минни Маус",
+      "Вито Корлеоне",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 74,
+    "text": "Как зовут этого персонажа из игры «Justice League Heroes»?",
+    "options": [
+      "Соник",
+      "Чудо-женщина",
+      "Вито Корлеоне",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 75,
+    "text": "Как зовут этого персонажа из игры «The Death and Return of Superman»?",
+    "options": [
+      "Чубакка",
+      "Патрокл",
+      "Супермен",
+      "Афина"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 76,
+    "text": "Как зовут этого персонажа из игры «Superman 64»?",
+    "options": [
+      "Гипнос",
+      "Супермен",
+      "Деметра",
+      "Сатана"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 77,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Вито Корлеоне",
+      "Супермен",
+      "Дидона",
+      "Соник"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 78,
+    "text": "Как зовут этого персонажа из игры «Superman: Countdown to Apokolips»?",
+    "options": [
+      "Донки Конг",
+      "Зелёная Стрела",
+      "Луиджи",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 79,
+    "text": "Как зовут этого персонажа из игры «Superman: The Game»?",
+    "options": [
+      "Супермен",
+      "Хан Соло",
+      "Женщина-кошка",
+      "Артемида"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 80,
+    "text": "Как зовут этого персонажа из игры «Superman: The Man of Steel»?",
+    "options": [
+      "Индиана Джонс",
+      "Посейдон",
+      "Лернейская гидра",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 81,
+    "text": "Как зовут этого персонажа из игры «Superman Returns: Fortress of Solitude»?",
+    "options": [
+      "Сунь Укун",
+      "Женщина-кошка",
+      "Соник",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 82,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Супермен",
+      "Джин Грей",
+      "Алая ведьма",
+      "Афина"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/1951Superman.jpg"
+  },
+  {
+    "id": 83,
+    "text": "Как зовут этого персонажа из игры «DC Universe Online»?",
+    "options": [
+      "Лея Органа",
+      "Гермес",
+      "Сунь Укун",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 84,
+    "text": "Как зовут этого персонажа из игры «Superman»?",
+    "options": [
+      "Гильгамеш",
+      "Чубакка",
+      "Супермен",
+      "Голлум"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 85,
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
+    "options": [
+      "Супермен",
+      "Роберт Лэнгдон",
+      "Капитан Америка",
+      "Деметра"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 86,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Супермен",
+      "Бэтмен",
+      "Хан Соло",
+      "Персефона"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 87,
+    "text": "Как зовут этого персонажа из игры «Mortal Kombat vs. DC Universe»?",
+    "options": [
+      "Супермен",
+      "Сатана",
+      "Tux",
+      "Оби-Ван Кеноби"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 88,
+    "text": "Как зовут этого персонажа из игры «Superman Returns»?",
+    "options": [
+      "Веном",
+      "Посейдон",
+      "Супермен",
+      "Танос"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 89,
+    "text": "Как зовут этого персонажа из игры «Superman: Shadow of Apokolips»?",
+    "options": [
+      "Танатос",
+      "Люк Скайуокер",
+      "Микки Маус",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 90,
+    "text": "Как зовут этого персонажа из игры «Justice League Heroes»?",
+    "options": [
+      "Смог",
+      "Супермен",
+      "Афродита",
+      "Гипнос"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 91,
+    "text": "Как зовут этого персонажа из игры «The Death and Return of Superman»?",
+    "options": [
+      "Аквамен",
+      "Халк",
+      "Супермен",
+      "Деметра"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 92,
+    "text": "Как зовут этого персонажа из игры «Superman 64»?",
+    "options": [
+      "Хаос",
+      "Микки Маус",
+      "Супермен",
+      "Чубакка"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 93,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Супермен",
+      "Саруман",
+      "Вито Корлеоне",
+      "Чубакка"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 94,
+    "text": "Как зовут этого персонажа из игры «Superman: Countdown to Apokolips»?",
+    "options": [
+      "Супермен",
+      "Луиджи",
+      "Tux",
+      "Персефона"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 95,
+    "text": "Как зовут этого персонажа из игры «Superman: The Game»?",
+    "options": [
+      "Донки Конг",
+      "Гипнос",
+      "Нюкта",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 96,
+    "text": "Как зовут этого персонажа из игры «Superman: The Man of Steel»?",
+    "options": [
+      "Гильгамеш",
+      "Танос",
+      "Человек-паук",
+      "Супермен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 97,
+    "text": "Как зовут этого персонажа из игры «Superman Returns: Fortress of Solitude»?",
+    "options": [
+      "Аквамен",
+      "Харон",
+      "Супермен",
+      "Йода"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 98,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Супермен",
+      "Чубакка",
+      "Гуфи",
+      "Профессор Икс"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Superman%20in%20MultiVersus%20trailer%202.png"
+  },
+  {
+    "id": 99,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Ахилл",
+      "Сон Гоку",
+      "Гуфи",
+      "Лея Органа"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Achilles%20by%20Lycomedes%20Louvre%20Ma2120.jpg"
+  },
+  {
+    "id": 100,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Афина",
+      "Гермес",
+      "Дидона",
+      "Артемида"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hermes%20Logios%20Altemps%20Inv8624%20n2bb.jpg"
+  },
+  {
+    "id": 101,
+    "text": "Как зовут этого персонажа из игры «Deep Duck Trouble Starring Donald Duck»?",
+    "options": [
+      "Чудо-женщина",
+      "Смог",
+      "Танос",
+      "Дональд Дак"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Etalages%2C%20winkels%2C%20speelgoed%2C%20stripfiguren%2C%20reclame%2C%20Bestanddeelnr%20932-4221.jpg"
+  },
+  {
+    "id": 102,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Зелёная Стрела",
+      "Микки Маус",
+      "Дональд Дак",
+      "Дидона"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Etalages%2C%20winkels%2C%20speelgoed%2C%20stripfiguren%2C%20reclame%2C%20Bestanddeelnr%20932-4221.jpg"
+  },
+  {
+    "id": 103,
+    "text": "Как зовут этого персонажа из игры «Deep Duck Trouble Starring Donald Duck»?",
+    "options": [
+      "Аид",
+      "Дионис",
+      "Джек Воробей",
+      "Дональд Дак"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalle%20Ankas%20adventskalender.jpg"
+  },
+  {
+    "id": 104,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Хаос",
+      "Сон Гоку",
+      "Чудо-женщина",
+      "Дональд Дак"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kalle%20Ankas%20adventskalender.jpg"
+  },
+  {
+    "id": 105,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Зевс",
+      "Профессор Икс",
+      "Смог",
+      "Чудо-женщина"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lynda%20Carter%20Wonder%20Woman.JPG"
+  },
+  {
+    "id": 106,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Джин Грей",
+      "Чудо-женщина",
+      "Сатана",
+      "Смог"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lynda%20Carter%20Wonder%20Woman.JPG"
+  },
+  {
+    "id": 107,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Танатос",
+      "Танос",
+      "Арес",
+      "Артемида"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%CE%9F%20%CE%86%CF%81%CE%B7%CF%82%20%28Borghese-%CE%9B%CE%BF%CF%8D%CE%B2%CF%81%CE%BF%CF%85%29.jpg"
+  },
+  {
+    "id": 108,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Дионис",
+      "Лара Крофт",
+      "Гуфи",
+      "Аид"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Detail%20of%20Pluto-Serapis%2C%20Statue%20group%20of%20Persephone%20%28as%20Isis%29%20and%20Pluto%20%28as%20Serapis%29%2C%20from%20the%20Sanctuary%20of%20the%20Egyptian%20Gods%20at%20Gortyna%2C%20mid-2nd%20century%20AD%2C%20Heraklion%20Archaeological%20Museum%20%2830305313721%29.jpg"
+  },
+  {
+    "id": 109,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Дионис",
+      "Сунь Укун",
+      "Веном",
+      "Аид"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dionysos%20Louvre%20Ma87%20n2.jpg"
+  },
+  {
+    "id": 110,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Дионис",
+      "Сунь Укун",
+      "Арес",
+      "Деметра"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%28Venice%29%20Demeter%20in%20the%20Museo%20archeologico%20nazionale.jpg"
+  },
+  {
+    "id": 111,
+    "text": "Как зовут этого персонажа из игры «Sid Meier’s Civilization VI»?",
+    "options": [
+      "Ахилл",
+      "Сизиф",
+      "Персефона",
+      "Гильгамеш"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hero%20lion%20Dur-Sharrukin%20Louvre%20AO19862.jpg"
+  },
+  {
+    "id": 112,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "options": [
+      "Халк",
+      "Лара Крофт",
+      "Дэдпул",
+      "Оби-Ван Кеноби"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hulk%20%282540708438%29.jpg"
+  },
+  {
+    "id": 113,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Афина",
+      "Джин Грей",
+      "Лернейская гидра",
+      "Персефона"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Rape%20of%20Prosepina%20September%202015-3a.jpg"
+  },
+  {
+    "id": 114,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Сизиф",
+      "Соник",
+      "Кербер",
+      "Деметра"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cerberus-Blake.jpeg"
+  },
+  {
+    "id": 115,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Тесей",
+      "Зевс",
+      "Патрокл",
+      "Кербер"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Teseo%20liberatore.JPG"
+  },
+  {
+    "id": 116,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends II: Rise of Apocalypse»?",
+    "options": [
+      "Дональд Дак",
+      "Тесей",
+      "Вито Корлеоне",
+      "Железный человек"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iron%20Man%20transparent%20background.png"
+  },
+  {
+    "id": 117,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "options": [
+      "Железный человек",
+      "Зелёная Стрела",
+      "Человек-паук",
+      "Соник"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iron%20Man%20transparent%20background.png"
+  },
+  {
+    "id": 118,
+    "text": "Как зовут этого персонажа из игры «Iron Man»?",
+    "options": [
+      "Гуфи",
+      "Кербер",
+      "Лернейская гидра",
+      "Железный человек"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iron%20Man%20transparent%20background.png"
+  },
+  {
+    "id": 119,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Infinite»?",
+    "options": [
+      "Нюкта",
+      "Гильгамеш",
+      "Гермес",
+      "Железный человек"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iron%20Man%20transparent%20background.png"
+  },
+  {
+    "id": 120,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Ахилл",
+      "Сизиф",
+      "Танос",
+      "Капитан Америка"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Punishment%20sisyph.jpg"
+  },
+  {
+    "id": 121,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Афродита",
+      "Сизиф",
+      "Сон Гоку",
+      "Минни Маус"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Minnie%20Mouse%20%28Steamboat%20Willie%29.png"
+  },
+  {
+    "id": 122,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "options": [
+      "Халк",
+      "Джин Грей",
+      "Капитан Америка",
+      "Женщина-кошка"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo%20de%20las%20Ciencias%20Pr%C3%ADncipe%20Felipe%20%287202221662%29.jpg"
+  },
+  {
+    "id": 123,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Infinite»?",
+    "options": [
+      "Гермес",
+      "Чубакка",
+      "Капитан Америка",
+      "Харон"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Museo%20de%20las%20Ciencias%20Pr%C3%ADncipe%20Felipe%20%287202221662%29.jpg"
+  },
+  {
+    "id": 124,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Орфей",
+      "Донки Конг",
+      "Артемида",
+      "Железный человек"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/DSC00355%20-%20Orfeo%20%28epoca%20romana%29%20-%20Foto%20G.%20Dall%27Orto.jpg"
+  },
+  {
+    "id": 125,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Орфей",
+      "Джин Грей",
+      "Ахилл",
+      "Лара Крофт"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Franc%20Kav%C4%8Di%C4%8D%20-%20The%20Lament%20of%20Orpheus.jpg"
+  },
+  {
+    "id": 126,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Танатос",
+      "Нюкта",
+      "Джин Грей",
+      "Роберт Лэнгдон"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/BnF%20MS%20Gr139%20folio%20435%20verso%20-%20detail%20-%20Nyx.jpg"
+  },
+  {
+    "id": 127,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Лернейская гидра",
+      "Алая ведьма",
+      "Смог",
+      "Луиджи"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/H%C3%A9rakl%C3%A9sz%20H%C3%BCdra%20Iolaosz.png"
+  },
+  {
+    "id": 128,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Голлум",
+      "Капитан Америка",
+      "Лернейская гидра",
+      "Харон"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Herakles%20membunuh%20Hidra.jpg"
+  },
+  {
+    "id": 129,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Супермен",
+      "Лернейская гидра",
+      "Орфей",
+      "Гуфи"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gustave%20Moreau%20-%20Hercules%20and%20the%20Lernaean%20Hydra%20-%201964.231%20-%20Art%20Institute%20of%20Chicago.jpg"
+  },
+  {
+    "id": 130,
+    "text": "Как зовут этого персонажа из игры «Kingdom Hearts II»?",
+    "options": [
+      "Индиана Джонс",
+      "Халк",
+      "Минни Маус",
+      "Джек Воробей"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Depp%20as%20Captain%20Jack%20Sparrow%20in%20Queensland%2C%20Australia.jpg"
+  },
+  {
+    "id": 131,
+    "text": "Как зовут этого персонажа из игры «Kingdom Hearts III»?",
+    "options": [
+      "Джек Воробей",
+      "Люк Скайуокер",
+      "Орфей",
+      "Луиджи"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Depp%20as%20Captain%20Jack%20Sparrow%20in%20Queensland%2C%20Australia.jpg"
+  },
+  {
+    "id": 132,
+    "text": "Как зовут этого персонажа из игры «Sea of Thieves»?",
+    "options": [
+      "Профессор Икс",
+      "Джек Воробей",
+      "Индиана Джонс",
+      "Дональд Дак"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Johnny%20Depp%20as%20Captain%20Jack%20Sparrow%20in%20Queensland%2C%20Australia.jpg"
+  },
+  {
+    "id": 133,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Афина",
+      "Зелёная Стрела",
+      "Сунь Укун",
+      "Йода"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-10-31%2011-09-16%20sf-connexion-Colmar.jpg"
+  },
+  {
+    "id": 134,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Yoda Stories»?",
+    "options": [
+      "Йода",
+      "Скрудж Макдак",
+      "Афина",
+      "Патрокл"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-10-31%2011-09-16%20sf-connexion-Colmar.jpg"
+  },
+  {
+    "id": 135,
+    "text": "Как зовут этого персонажа из игры «Soulcalibur IV»?",
+    "options": [
+      "Йода",
+      "Лернейская гидра",
+      "Патрокл",
+      "Микки Маус"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2021-10-31%2011-09-16%20sf-connexion-Colmar.jpg"
+  },
+  {
+    "id": 136,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Тесей",
+      "Люк Скайуокер",
+      "Зевс",
+      "Харон"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Sabouroff%20Painter%20ARV%20846%20196%20Hermes%20leading%20a%20deceased%20to%20Charon%20%2802%29.jpg"
+  },
+  {
+    "id": 137,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Персефона",
+      "Смог",
+      "Гуфи",
+      "Хаос"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Lotto%20Capoferri%20Magnum%20Chaos.jpg"
+  },
+  {
+    "id": 138,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Masters of Teräs Käsi»?",
+    "options": [
+      "Алая ведьма",
+      "Дэдпул",
+      "Саруман",
+      "Люк Скайуокер"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luke%20Skywalker%20-%20Welcome%20Banner%20%28Cropped%29.jpg"
+  },
+  {
+    "id": 139,
+    "text": "Как зовут этого персонажа из игры «Star Wars Galaxies»?",
+    "options": [
+      "Смог",
+      "Зевс",
+      "Кербер",
+      "Люк Скайуокер"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luke%20Skywalker%20-%20Welcome%20Banner%20%28Cropped%29.jpg"
+  },
+  {
+    "id": 140,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Донки Конг",
+      "Люк Скайуокер",
+      "Саруман",
+      "Дионис"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luke%20Skywalker%20-%20Welcome%20Banner%20%28Cropped%29.jpg"
+  },
+  {
+    "id": 141,
+    "text": "Как зовут этого персонажа из игры «Sonic the Hedgehog 2»?",
+    "options": [
+      "Капитан Америка",
+      "Джин Грей",
+      "Соник",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 142,
+    "text": "Как зовут этого персонажа из игры «Sonic Chaos»?",
+    "options": [
+      "Аквамен",
+      "Донки Конг",
+      "Соник",
+      "Хан Соло"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 143,
+    "text": "Как зовут этого персонажа из игры «Sonic the Hedgehog CD»?",
+    "options": [
+      "Смог",
+      "Минни Маус",
+      "Роберт Лэнгдон",
+      "Соник"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 144,
+    "text": "Как зовут этого персонажа из игры «Sonic Battle»?",
+    "options": [
+      "Соник",
+      "Сизиф",
+      "Чубакка",
+      "Артемида"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 145,
+    "text": "Как зовут этого персонажа из игры «Sonic the Hedgehog»?",
+    "options": [
+      "Дональд Дак",
+      "Железный человек",
+      "Соник",
+      "Орфей"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 146,
+    "text": "Как зовут этого персонажа из игры «Sonic Heroes»?",
+    "options": [
+      "Гуфи",
+      "Лея Органа",
+      "Соник",
+      "Йода"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 147,
+    "text": "Как зовут этого персонажа из игры «Shadow the Hedgehog»?",
+    "options": [
+      "Соник",
+      "Скрудж Макдак",
+      "Вито Корлеоне",
+      "Сон Гоку"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 148,
+    "text": "Как зовут этого персонажа из игры «Sonic the Hedgehog Spinball»?",
+    "options": [
+      "Соник",
+      "Гипнос",
+      "Женщина-кошка",
+      "Хаос"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 149,
+    "text": "Как зовут этого персонажа из игры «Sonic Advance 2»?",
+    "options": [
+      "Хаос",
+      "Соник",
+      "Профессор Икс",
+      "Сунь Укун"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 150,
+    "text": "Как зовут этого персонажа из игры «Sonic Mania»?",
+    "options": [
+      "Алая ведьма",
+      "Соник",
+      "Гильгамеш",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 151,
+    "text": "Как зовут этого персонажа из игры «Sonic Forces»?",
+    "options": [
+      "Ахилл",
+      "Халк",
+      "Соник",
+      "Алая ведьма"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 152,
+    "text": "Как зовут этого персонажа из игры «Sonic Adventure DX: Director's Cut»?",
+    "options": [
+      "Соник",
+      "Йода",
+      "Профессор Икс",
+      "Джин Грей"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 153,
+    "text": "Как зовут этого персонажа из игры «Sonic Frontiers»?",
+    "options": [
+      "Афродита",
+      "Минни Маус",
+      "Соник",
+      "Патрокл"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Modern%20Sonic.png"
+  },
+  {
+    "id": 154,
+    "text": "Как зовут этого персонажа из игры «Indiana Jones and the Fate of Atlantis»?",
+    "options": [
+      "Голлум",
+      "Хан Соло",
+      "Индиана Джонс",
+      "Смог"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indianajones4.jpg"
+  },
+  {
+    "id": 155,
+    "text": "Как зовут этого персонажа из игры «Indiana Jones and the Infernal Machine»?",
+    "options": [
+      "Индиана Джонс",
+      "Супермен",
+      "Скрудж Макдак",
+      "Зевс"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indianajones4.jpg"
+  },
+  {
+    "id": 156,
+    "text": "Как зовут этого персонажа из игры «Indiana Jones and the Last Crusade: The Graphic Adventure»?",
+    "options": [
+      "Алая ведьма",
+      "Дональд Дак",
+      "Джек Воробей",
+      "Индиана Джонс"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indianajones4.jpg"
+  },
+  {
+    "id": 157,
+    "text": "Как зовут этого персонажа из игры «Indiana Jones and the Staff of Kings»?",
+    "options": [
+      "Люк Скайуокер",
+      "Голлум",
+      "Индиана Джонс",
+      "Хан Соло"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Indianajones4.jpg"
+  },
+  {
+    "id": 158,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Деметра",
+      "Голлум",
+      "Гуфи",
+      "Соник"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/2010-365-158%20Goofy%20Bush%20%284681671250%29.jpg"
+  },
+  {
+    "id": 159,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Гуфи",
+      "Саруман",
+      "Посейдон",
+      "Дэдпул"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Goofy.jpg"
+  },
+  {
+    "id": 160,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Орфей",
+      "Дионис",
+      "Железный человек",
+      "Гуфи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Goofy%20House%20TDL.JPG"
+  },
+  {
+    "id": 161,
+    "text": "Как зовут этого персонажа из игры «Tux Racer»?",
+    "options": [
+      "Вито Корлеоне",
+      "Tux",
+      "Джек Воробей",
+      "Сон Гоку"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tux.svg"
+  },
+  {
+    "id": 162,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Афина",
+      "Дионис",
+      "Сатана",
+      "Tux"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tux.svg"
+  },
+  {
+    "id": 163,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Сунь Укун",
+      "Tux",
+      "Посейдон",
+      "Соник"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tux.svg"
+  },
+  {
+    "id": 164,
+    "text": "Как зовут этого персонажа из игры «TuxTyping»?",
+    "options": [
+      "Tux",
+      "Железный человек",
+      "Афина",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tux.svg"
+  },
+  {
+    "id": 165,
+    "text": "Как зовут этого персонажа из игры «LEGO Star Wars: The Video Game»?",
+    "options": [
+      "Оби-Ван Кеноби",
+      "Джин Грей",
+      "Сон Гоку",
+      "Дидона"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Obi-Wan.jpg"
+  },
+  {
+    "id": 166,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Чубакка",
+      "Tux",
+      "Сизиф",
+      "Оби-Ван Кеноби"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Obi-Wan.jpg"
+  },
+  {
+    "id": 167,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Masters of Teräs Käsi»?",
+    "options": [
+      "Хаос",
+      "Алая ведьма",
+      "Луиджи",
+      "Лея Органа"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrie%20Fisher%20as%20Princess%20Leia%20Organa%20with%20Jabba%20the%20Hutt%20and%20Salacious%20B.%20Crumb%20%2833726767023%29.jpg"
+  },
+  {
+    "id": 168,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Железный человек",
+      "Лея Органа",
+      "Деметра",
+      "Нюкта"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Carrie%20Fisher%20as%20Princess%20Leia%20Organa%20with%20Jabba%20the%20Hutt%20and%20Salacious%20B.%20Crumb%20%2833726767023%29.jpg"
+  },
+  {
+    "id": 169,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Танатос",
+      "Гермес",
+      "Нюкта",
+      "Танос"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Euphronios%20krater%20side%20A%20MET%20L.2006.10.jpg"
+  },
+  {
+    "id": 170,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Веном",
+      "Патрокл",
+      "Соник",
+      "Зевс"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Wall%20painting%20-%20Briseis%20taken%20away%20from%20Achilles%20-%20Pompeii%20%28VI%208%205%29%20-%20Napoli%20MAN%209105%20-%2003%20%28cropped%29.jpg"
+  },
+  {
+    "id": 171,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends II: Rise of Apocalypse»?",
+    "options": [
+      "Дэдпул",
+      "Лернейская гидра",
+      "Зевс",
+      "Джек Воробей"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 172,
+    "text": "Как зовут этого персонажа из игры «Spider-Man: Shattered Dimensions»?",
+    "options": [
+      "Капитан Америка",
+      "Tux",
+      "Дэдпул",
+      "Соник"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 173,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 3: Fate of Two Worlds»?",
+    "options": [
+      "Профессор Икс",
+      "Чубакка",
+      "Лея Органа",
+      "Дэдпул"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 174,
+    "text": "Как зовут этого персонажа из игры «Ultimate Marvel vs. Capcom 3»?",
+    "options": [
+      "Халк",
+      "Йода",
+      "Железный человек",
+      "Дэдпул"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 175,
+    "text": "Как зовут этого персонажа из игры «Marvel: Ultimate Alliance»?",
+    "options": [
+      "Дэдпул",
+      "Дональд Дак",
+      "Человек-паук",
+      "Афина"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 176,
+    "text": "Как зовут этого персонажа из игры «X-Men Origins: Wolverine»?",
+    "options": [
+      "Халк",
+      "Патрокл",
+      "Роберт Лэнгдон",
+      "Дэдпул"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 177,
+    "text": "Как зовут этого персонажа из игры «Marvel: Ultimate Alliance 2»?",
+    "options": [
+      "Зелёная Стрела",
+      "Tux",
+      "Нюкта",
+      "Дэдпул"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 178,
+    "text": "Как зовут этого персонажа из игры «Marvel Strike Force»?",
+    "options": [
+      "Сон Гоку",
+      "Дэдпул",
+      "Кербер",
+      "Зевс"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Cosplay%20of%20Deadpool%20at%20the%202021%20New%20York%20Comic%20Con%20%2851573817204%29.jpg"
+  },
+  {
+    "id": 179,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Человек-паук",
+      "Женщина-кошка",
+      "Минни Маус",
+      "Дидона"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eartha%20Kitt%20Catwoman%20debut%201967.jpg"
+  },
+  {
+    "id": 180,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Донки Конг",
+      "Минни Маус",
+      "Женщина-кошка",
+      "Посейдон"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eartha%20Kitt%20Catwoman%20debut%201967.jpg"
+  },
+  {
+    "id": 181,
+    "text": "Как зовут этого персонажа из игры «Batman: Arkham Origins Blackgate»?",
+    "options": [
+      "Артемида",
+      "Донки Конг",
+      "Tux",
+      "Женщина-кошка"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eartha%20Kitt%20Catwoman%20debut%201967.jpg"
+  },
+  {
+    "id": 182,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Женщина-кошка",
+      "Артемида",
+      "Зелёная Стрела",
+      "Гипнос"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eartha%20Kitt%20Catwoman%20debut%201967.jpg"
+  },
+  {
+    "id": 183,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Халк",
+      "Женщина-кошка",
+      "Профессор Икс",
+      "Ахилл"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Eartha%20Kitt%20Catwoman%20debut%201967.jpg"
+  },
+  {
+    "id": 184,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Танос",
+      "Супермен",
+      "Сунь Укун",
+      "Дидона"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 185,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "options": [
+      "Танос",
+      "Афина",
+      "Нюкта",
+      "Кербер"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 186,
+    "text": "Как зовут этого персонажа из игры «Marvel Super Heroes»?",
+    "options": [
+      "Скрудж Макдак",
+      "Танос",
+      "Гипнос",
+      "Танатос"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 187,
+    "text": "Как зовут этого персонажа из игры «Marvel Super Heroes in War of the Gems»?",
+    "options": [
+      "Посейдон",
+      "Чубакка",
+      "Танос",
+      "Гуфи"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 188,
+    "text": "Как зовут этого персонажа из игры «Marvel Super Hero Squad: The Infinity Gauntlet»?",
+    "options": [
+      "Веном",
+      "Гуфи",
+      "Танос",
+      "Дэдпул"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 189,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Infinite»?",
+    "options": [
+      "Танос",
+      "Хаос",
+      "Деметра",
+      "Гипнос"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/THANOS-Cosplay.jpg"
+  },
+  {
+    "id": 190,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Скрудж Макдак",
+      "Патрокл",
+      "Гуфи",
+      "Гермес"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Strips%21%20Museum%2020170723%20Donald%20Duck-tentoonstelling.jpg"
+  },
+  {
+    "id": 191,
+    "text": "Как зовут этого персонажа из игры «Disney Dreamlight Valley»?",
+    "options": [
+      "Танос",
+      "Хан Соло",
+      "Артемида",
+      "Скрудж Макдак"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Spirit%2043%20-%20Scrooge%20-%20Oncle%20Picsou%20-%20Garrepa.JPG"
+  },
+  {
+    "id": 192,
+    "text": "Как зовут этого персонажа из игры «Civilization V»?",
+    "options": [
+      "Супермен",
+      "Дидона",
+      "Дональд Дак",
+      "Хаос"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Didon%2C%20d%C3%A9tail%20du%20Vergilius%20Romanus%2C%20folio%20100%2C%20verso.jpg"
+  },
+  {
+    "id": 193,
+    "text": "Как зовут этого персонажа из игры «Dragon Ball Heroes»?",
+    "options": [
+      "Лея Органа",
+      "Тесей",
+      "Харон",
+      "Сон Гоку"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/NYCC%202018%20pics%2027.jpg"
+  },
+  {
+    "id": 194,
+    "text": "Как зовут этого персонажа из игры «Dragon Ball Legends»?",
+    "options": [
+      "Гипнос",
+      "Железный человек",
+      "Лара Крофт",
+      "Сон Гоку"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/NYCC%202018%20pics%2027.jpg"
+  },
+  {
+    "id": 195,
+    "text": "Как зовут этого персонажа из игры «Jump Force»?",
+    "options": [
+      "Джек Воробей",
+      "Сон Гоку",
+      "Ахилл",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/NYCC%202018%20pics%2027.jpg"
+  },
+  {
+    "id": 196,
+    "text": "Как зовут этого персонажа из игры «Dragon Ball Heroes»?",
+    "options": [
+      "Дидона",
+      "Чудо-женщина",
+      "Сон Гоку",
+      "Минни Маус"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CPBR2015%20-%2002%20%28cropped%29.jpg"
+  },
+  {
+    "id": 197,
+    "text": "Как зовут этого персонажа из игры «Dragon Ball Legends»?",
+    "options": [
+      "Артемида",
+      "Лея Органа",
+      "Тесей",
+      "Сон Гоку"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CPBR2015%20-%2002%20%28cropped%29.jpg"
+  },
+  {
+    "id": 198,
+    "text": "Как зовут этого персонажа из игры «Jump Force»?",
+    "options": [
+      "Сон Гоку",
+      "Йода",
+      "Роберт Лэнгдон",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/CPBR2015%20-%2002%20%28cropped%29.jpg"
+  },
+  {
+    "id": 199,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Masters of Teräs Käsi»?",
+    "options": [
+      "Гермес",
+      "Оби-Ван Кеноби",
+      "Люк Скайуокер",
+      "Хан Соло"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Han%20Solo%20in%20Carbonite%20%2831649435213%29.jpg"
+  },
+  {
+    "id": 200,
+    "text": "Как зовут этого персонажа из игры «Star Wars Galaxies»?",
+    "options": [
+      "Хан Соло",
+      "Сатана",
+      "Халк",
+      "Патрокл"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Han%20Solo%20in%20Carbonite%20%2831649435213%29.jpg"
+  },
+  {
+    "id": 201,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Деметра",
+      "Афродита",
+      "Тесей",
+      "Хан Соло"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Han%20Solo%20in%20Carbonite%20%2831649435213%29.jpg"
+  },
+  {
+    "id": 202,
+    "text": "Как зовут этого персонажа из игры «Super Mario Galaxy»?",
+    "options": [
+      "Люк Скайуокер",
+      "Аквамен",
+      "Луиджи",
+      "Индиана Джонс"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 203,
+    "text": "Как зовут этого персонажа из игры «Mario Party DS»?",
+    "options": [
+      "Профессор Икс",
+      "Микки Маус",
+      "Луиджи",
+      "Гермес"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 204,
+    "text": "Как зовут этого персонажа из игры «Super Paper Mario»?",
+    "options": [
+      "Вито Корлеоне",
+      "Персефона",
+      "Минни Маус",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 205,
+    "text": "Как зовут этого персонажа из игры «Mario Party 9»?",
+    "options": [
+      "Луиджи",
+      "Нюкта",
+      "Гермес",
+      "Скрудж Макдак"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 206,
+    "text": "Как зовут этого персонажа из игры «Super Mario Bros. 3»?",
+    "options": [
+      "Посейдон",
+      "Алая ведьма",
+      "Гуфи",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 207,
+    "text": "Как зовут этого персонажа из игры «Mario Party 3»?",
+    "options": [
+      "Супермен",
+      "Луиджи",
+      "Сон Гоку",
+      "Веном"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 208,
+    "text": "Как зовут этого персонажа из игры «Mario Party 8»?",
+    "options": [
+      "Сатана",
+      "Луиджи",
+      "Орфей",
+      "Деметра"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 209,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Чудо-женщина",
+      "Лара Крофт",
+      "Арес",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 210,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. Brawl»?",
+    "options": [
+      "Алая ведьма",
+      "Микки Маус",
+      "Луиджи",
+      "Человек-паук"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 211,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Луиджи",
+      "Бэтмен",
+      "Арес",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 212,
+    "text": "Как зовут этого персонажа из игры «Super Mario Bros. 2»?",
+    "options": [
+      "Афина",
+      "Чубакка",
+      "Луиджи",
+      "Донки Конг"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 213,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros.»?",
+    "options": [
+      "Голлум",
+      "Патрокл",
+      "Луиджи",
+      "Афина"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 214,
+    "text": "Как зовут этого персонажа из игры «Luigi's Mansion»?",
+    "options": [
+      "Дональд Дак",
+      "Аквамен",
+      "Луиджи",
+      "Дидона"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 215,
+    "text": "Как зовут этого персонажа из игры «Super Mario World 2: Yoshi’s Island»?",
+    "options": [
+      "Гипнос",
+      "Луиджи",
+      "Тесей",
+      "Алая ведьма"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 216,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. Melee»?",
+    "options": [
+      "Донки Конг",
+      "Гильгамеш",
+      "Джек Воробей",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 217,
+    "text": "Как зовут этого персонажа из игры «Mario Kart 7»?",
+    "options": [
+      "Сунь Укун",
+      "Дональд Дак",
+      "Чубакка",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 218,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. для Nintendo 3DS и Wii U»?",
+    "options": [
+      "Луиджи",
+      "Афродита",
+      "Нюкта",
+      "Харон"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 219,
+    "text": "Как зовут этого персонажа из игры «Mario Party 7»?",
+    "options": [
+      "Луиджи",
+      "Железный человек",
+      "Соник",
+      "Джин Грей"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 220,
+    "text": "Как зовут этого персонажа из игры «Mario Party 4»?",
+    "options": [
+      "Луиджи",
+      "Афина",
+      "Патрокл",
+      "Роберт Лэнгдон"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 221,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Скрудж Макдак",
+      "Луиджи",
+      "Посейдон",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 222,
+    "text": "Как зовут этого персонажа из игры «Mario Party 5»?",
+    "options": [
+      "Гермес",
+      "Оби-Ван Кеноби",
+      "Халк",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 223,
+    "text": "Как зовут этого персонажа из игры «Mario Party Advance»?",
+    "options": [
+      "Чудо-женщина",
+      "Человек-паук",
+      "Профессор Икс",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 224,
+    "text": "Как зовут этого персонажа из игры «Mario Party 6»?",
+    "options": [
+      "Луиджи",
+      "Железный человек",
+      "Нюкта",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 225,
+    "text": "Как зовут этого персонажа из игры «Hotel Mario»?",
+    "options": [
+      "Луиджи",
+      "Гипнос",
+      "Вито Корлеоне",
+      "Женщина-кошка"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 226,
+    "text": "Как зовут этого персонажа из игры «Super Princess Peach»?",
+    "options": [
+      "Хаос",
+      "Роберт Лэнгдон",
+      "Луиджи",
+      "Арес"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 227,
+    "text": "Как зовут этого персонажа из игры «Luigi’s Mansion 2»?",
+    "options": [
+      "Танос",
+      "Халк",
+      "Луиджи",
+      "Чубакка"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 228,
+    "text": "Как зовут этого персонажа из игры «Mario Is Missing!»?",
+    "options": [
+      "Танатос",
+      "Сатана",
+      "Луиджи",
+      "Оби-Ван Кеноби"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 229,
+    "text": "Как зовут этого персонажа из игры «Mario Kart: Double Dash‼»?",
+    "options": [
+      "Хан Соло",
+      "Чубакка",
+      "Луиджи",
+      "Ахилл"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 230,
+    "text": "Как зовут этого персонажа из игры «Mario Party»?",
+    "options": [
+      "Кербер",
+      "Деметра",
+      "Луиджи",
+      "Голлум"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 231,
+    "text": "Как зовут этого персонажа из игры «Mario Party: Island Tour»?",
+    "options": [
+      "Афродита",
+      "Луиджи",
+      "Сизиф",
+      "Нюкта"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 232,
+    "text": "Как зовут этого персонажа из игры «Mario Party 10»?",
+    "options": [
+      "Дидона",
+      "Джек Воробей",
+      "Посейдон",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 233,
+    "text": "Как зовут этого персонажа из игры «Super Mario Maker»?",
+    "options": [
+      "Луиджи",
+      "Алая ведьма",
+      "Дональд Дак",
+      "Сунь Укун"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 234,
+    "text": "Как зовут этого персонажа из игры «Mario Party: Star Rush»?",
+    "options": [
+      "Патрокл",
+      "Дионис",
+      "Луиджи",
+      "Капитан Америка"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 235,
+    "text": "Как зовут этого персонажа из игры «Mario Kart 8 Deluxe»?",
+    "options": [
+      "Дональд Дак",
+      "Сизиф",
+      "Минни Маус",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 236,
+    "text": "Как зовут этого персонажа из игры «Mario Party: The Top 100»?",
+    "options": [
+      "Аид",
+      "Бэтмен",
+      "Гипнос",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 237,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. Ultimate»?",
+    "options": [
+      "Луиджи",
+      "Донки Конг",
+      "Тесей",
+      "Саруман"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 238,
+    "text": "Как зовут этого персонажа из игры «Super Mario Party»?",
+    "options": [
+      "Тесей",
+      "Человек-паук",
+      "Йода",
+      "Луиджи"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 239,
+    "text": "Как зовут этого персонажа из игры «Luigi’s Mansion 3»?",
+    "options": [
+      "Нюкта",
+      "Джин Грей",
+      "Луиджи",
+      "Саруман"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 240,
+    "text": "Как зовут этого персонажа из игры «Super Mario Maker 2»?",
+    "options": [
+      "Tux",
+      "Роберт Лэнгдон",
+      "Луиджи",
+      "Голлум"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/GER%20Wuppertal%2C%20Obere%20Lichtenplatzer%20Stra%C3%9Fe%20010.jpg"
+  },
+  {
+    "id": 241,
+    "text": "Как зовут этого персонажа из игры «Hades»?",
+    "options": [
+      "Смог",
+      "Дионис",
+      "Гипнос",
+      "Сон Гоку"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Waterhouse-sleep%20and%20his%20half-brother%20death-1874.jpg"
+  },
+  {
+    "id": 242,
+    "text": "Как зовут этого персонажа из игры «The Lord of the Rings: Gollum»?",
+    "options": [
+      "Голлум",
+      "Гермес",
+      "Веном",
+      "Женщина-кошка"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Gollum%20s%20journey%20commences%20by%20Frederic%20Bennett%20%28detail%29.jpg"
+  },
+  {
+    "id": 243,
+    "text": "Как зовут этого персонажа из игры «Lego The Hobbit»?",
+    "options": [
+      "Посейдон",
+      "Кербер",
+      "Смог",
+      "Зевс"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smaug%20par%20David%20Demaret.jpg"
+  },
+  {
+    "id": 244,
+    "text": "Как зовут этого персонажа из игры «Властелин Колец Онлайн»?",
+    "options": [
+      "Донки Конг",
+      "Персефона",
+      "Смог",
+      "Кербер"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smaug%20par%20David%20Demaret.jpg"
+  },
+  {
+    "id": 245,
+    "text": "Как зовут этого персонажа из игры «The Hobbit»?",
+    "options": [
+      "Скрудж Макдак",
+      "Луиджи",
+      "Человек-паук",
+      "Смог"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Smaug%20par%20David%20Demaret.jpg"
+  },
+  {
+    "id": 246,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Посейдон",
+      "Хаос",
+      "Капитан Америка",
+      "Лара Крофт"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 247,
+    "text": "Как зовут этого персонажа из игры «Tomb Raider: The Angel of Darkness»?",
+    "options": [
+      "Лара Крофт",
+      "Джек Воробей",
+      "Роберт Лэнгдон",
+      "Посейдон"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 248,
+    "text": "Как зовут этого персонажа из игры «Tomb Raider: Chronicles»?",
+    "options": [
+      "Сизиф",
+      "Tux",
+      "Дэдпул",
+      "Лара Крофт"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 249,
+    "text": "Как зовут этого персонажа из игры «Tomb Raider»?",
+    "options": [
+      "Минни Маус",
+      "Алая ведьма",
+      "Дэдпул",
+      "Лара Крофт"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 250,
+    "text": "Как зовут этого персонажа из игры «Rise of the Tomb Raider»?",
+    "options": [
+      "Патрокл",
+      "Лара Крофт",
+      "Голлум",
+      "Зевс"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 251,
+    "text": "Как зовут этого персонажа из игры «Shadow of the Tomb Raider»?",
+    "options": [
+      "Оби-Ван Кеноби",
+      "Люк Скайуокер",
+      "Лара Крофт",
+      "Микки Маус"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 252,
+    "text": "Как зовут этого персонажа из игры «PowerWash Simulator»?",
+    "options": [
+      "Чудо-женщина",
+      "Танос",
+      "Лара Крофт",
+      "Tux"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alison%20Carroll%2020080926%20Festival%20du%20jeu%20video%2001.jpg"
+  },
+  {
+    "id": 253,
+    "text": "Как зовут этого персонажа из игры «DC Universe Online»?",
+    "options": [
+      "Зелёная Стрела",
+      "Tux",
+      "Аквамен",
+      "Гуфи"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 254,
+    "text": "Как зовут этого персонажа из игры «LEGO Batman 2: DC Super Heroes»?",
+    "options": [
+      "Афродита",
+      "Соник",
+      "Джин Грей",
+      "Аквамен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 255,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Женщина-кошка",
+      "Донки Конг",
+      "Гермес",
+      "Аквамен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 256,
+    "text": "Как зовут этого персонажа из игры «Mortal Kombat vs. DC Universe»?",
+    "options": [
+      "Человек-паук",
+      "Аквамен",
+      "Гипнос",
+      "Минни Маус"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 257,
+    "text": "Как зовут этого персонажа из игры «Batman: The Brave and the Bold — The Videogame»?",
+    "options": [
+      "Танос",
+      "Зелёная Стрела",
+      "Аквамен",
+      "Сатана"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 258,
+    "text": "Как зовут этого персонажа из игры «Justice League Heroes»?",
+    "options": [
+      "Аквамен",
+      "Зелёная Стрела",
+      "Афина",
+      "Афродита"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 259,
+    "text": "Как зовут этого персонажа из игры «Justice League Task Force»?",
+    "options": [
+      "Афина",
+      "Посейдон",
+      "Аквамен",
+      "Джин Грей"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 260,
+    "text": "Как зовут этого персонажа из игры «Aquaman: Battle for Atlantis»?",
+    "options": [
+      "Чудо-женщина",
+      "Танос",
+      "Человек-паук",
+      "Аквамен"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 261,
+    "text": "Как зовут этого персонажа из игры «Infinite Crisis»?",
+    "options": [
+      "Йода",
+      "Кербер",
+      "Аквамен",
+      "Тесей"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 262,
+    "text": "Как зовут этого персонажа из игры «Lego Batman 3: Beyond Gotham»?",
+    "options": [
+      "Джек Воробей",
+      "Лея Органа",
+      "Аквамен",
+      "Харон"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 263,
+    "text": "Как зовут этого персонажа из игры «Lego Dimensions»?",
+    "options": [
+      "Арес",
+      "Оби-Ван Кеноби",
+      "Аквамен",
+      "Чубакка"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 264,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Аквамен",
+      "Сизиф",
+      "Афина",
+      "Деметра"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Chris%20Hardwick%20%26%20Jason%20Momoa%20%2835368589944%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 265,
+    "text": "Как зовут этого персонажа из игры «Black Myth: Wukong»?",
+    "options": [
+      "Аквамен",
+      "Сунь Укун",
+      "Чудо-женщина",
+      "Лернейская гидра"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xiyou.PNG"
+  },
+  {
+    "id": 266,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends II: Rise of Apocalypse»?",
+    "options": [
+      "Минни Маус",
+      "Орфей",
+      "Профессор Икс",
+      "Железный человек"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SDCC13%20-%20The%20original%20X-Men%20%289348050080%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 267,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends»?",
+    "options": [
+      "Арес",
+      "Соник",
+      "Профессор Икс",
+      "Орфей"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SDCC13%20-%20The%20original%20X-Men%20%289348050080%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 268,
+    "text": "Как зовут этого персонажа из игры «X-Men: Mutant Academy»?",
+    "options": [
+      "Вито Корлеоне",
+      "Профессор Икс",
+      "Микки Маус",
+      "Лара Крофт"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SDCC13%20-%20The%20original%20X-Men%20%289348050080%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 269,
+    "text": "Как зовут этого персонажа из игры «Spider-Man 2: Enter Electro»?",
+    "options": [
+      "Микки Маус",
+      "Голлум",
+      "Танос",
+      "Профессор Икс"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SDCC13%20-%20The%20original%20X-Men%20%289348050080%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 270,
+    "text": "Как зовут этого персонажа из игры «X-Men: Mutant Academy 2»?",
+    "options": [
+      "Профессор Икс",
+      "Железный человек",
+      "Лернейская гидра",
+      "Аид"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SDCC13%20-%20The%20original%20X-Men%20%289348050080%29%20%28cropped%29.jpg"
+  },
+  {
+    "id": 271,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Masters of Teräs Käsi»?",
+    "options": [
+      "Танос",
+      "Орфей",
+      "Чубакка",
+      "Халк"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Solo-%20A%20Star%20Wars%20Story%20Japan%20Premiere%20Red%20Carpet-%20Chewbacca.jpg"
+  },
+  {
+    "id": 272,
+    "text": "Как зовут этого персонажа из игры «Star Wars: Battlefront II»?",
+    "options": [
+      "Дональд Дак",
+      "Танос",
+      "Минни Маус",
+      "Чубакка"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Solo-%20A%20Star%20Wars%20Story%20Japan%20Premiere%20Red%20Carpet-%20Chewbacca.jpg"
+  },
+  {
+    "id": 273,
+    "text": "Как зовут этого персонажа из игры «The Lord of the Rings: The Two Towers»?",
+    "options": [
+      "Голлум",
+      "Сизиф",
+      "Саруман",
+      "Танатос"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Curun%C3%ADr.jpg"
+  },
+  {
+    "id": 274,
+    "text": "Как зовут этого персонажа из игры «Injustice: Gods Among Us»?",
+    "options": [
+      "Вито Корлеоне",
+      "Танос",
+      "Зевс",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stephen%20Amell%202014.jpg"
+  },
+  {
+    "id": 275,
+    "text": "Как зовут этого персонажа из игры «Injustice 2»?",
+    "options": [
+      "Харон",
+      "Хаос",
+      "Афродита",
+      "Зелёная Стрела"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Stephen%20Amell%202014.jpg"
+  },
+  {
+    "id": 276,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends II: Rise of Apocalypse»?",
+    "options": [
+      "Ахилл",
+      "Лернейская гидра",
+      "Танос",
+      "Джин Грей"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Jean%20Grey%202015%20Calgary%20Expo%20%E2%80%93%20Calgary%20Comic%20%26%20Entertainment%20Expo%20%2817031961118%29.jpg"
+  },
+  {
+    "id": 277,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. Brawl»?",
+    "options": [
+      "Алая ведьма",
+      "Танос",
+      "Донки Конг",
+      "Аквамен"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 278,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros.»?",
+    "options": [
+      "Оби-Ван Кеноби",
+      "Донки Конг",
+      "Сон Гоку",
+      "Луиджи"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 279,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Соник",
+      "Минни Маус",
+      "Донки Конг",
+      "Йода"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 280,
+    "text": "Как зовут этого персонажа из игры «Super Smash Bros. Melee»?",
+    "options": [
+      "Сатана",
+      "Человек-паук",
+      "Донки Конг",
+      "Зевс"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 281,
+    "text": "Как зовут этого персонажа из видеоигры?",
+    "options": [
+      "Донки Конг",
+      "Дональд Дак",
+      "Аид",
+      "Дидона"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 282,
+    "text": "Как зовут этого персонажа из игры «Super Mario Party»?",
+    "options": [
+      "Донки Конг",
+      "Супермен",
+      "Алая ведьма",
+      "Голлум"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anime%20Expo%202011%20-%20Donkey%20Kong%20%285893313508%29.jpg"
+  },
+  {
+    "id": 283,
+    "text": "Как зовут этого персонажа из игры «The Da Vinci Code»?",
+    "options": [
+      "Роберт Лэнгдон",
+      "Лара Крофт",
+      "Оби-Ван Кеноби",
+      "Смог"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tom%20Hanks%20as%20Robert%20Langdon.JPG"
+  },
+  {
+    "id": 284,
+    "text": "Как зовут этого персонажа из игры «The Godfather: The Game»?",
+    "options": [
+      "Веном",
+      "Дональд Дак",
+      "Чубакка",
+      "Вито Корлеоне"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marlon%20Brando%20as%20Vito%20Corleone.png"
+  },
+  {
+    "id": 285,
+    "text": "Как зовут этого персонажа из игры «The Godfather II»?",
+    "options": [
+      "Дионис",
+      "Железный человек",
+      "Аквамен",
+      "Вито Корлеоне"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Marlon%20Brando%20as%20Vito%20Corleone.png"
+  },
+  {
+    "id": 286,
+    "text": "Как зовут этого персонажа из игры «X-Men Legends II: Rise of Apocalypse»?",
+    "options": [
+      "Аид",
+      "Алая ведьма",
+      "Джек Воробей",
+      "Дионис"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Supanova%202022%20092-Edit.jpg"
+  },
+  {
+    "id": 287,
+    "text": "Как зовут этого персонажа из игры «Spider-Man»?",
+    "options": [
+      "Сатана",
+      "Веном",
+      "Арес",
+      "Кербер"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venom%20cosplay%20madrid.jpg"
+  },
+  {
+    "id": 288,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom 2: New Age of Heroes»?",
+    "options": [
+      "Индиана Джонс",
+      "Голлум",
+      "Нюкта",
+      "Веном"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venom%20cosplay%20madrid.jpg"
+  },
+  {
+    "id": 289,
+    "text": "Как зовут этого персонажа из игры «Spider-Man 3»?",
+    "options": [
+      "Дональд Дак",
+      "Харон",
+      "Веном",
+      "Голлум"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venom%20cosplay%20madrid.jpg"
+  },
+  {
+    "id": 290,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Clash of Super Heroes»?",
+    "options": [
+      "Бэтмен",
+      "Веном",
+      "Супермен",
+      "Вито Корлеоне"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venom%20cosplay%20madrid.jpg"
+  },
+  {
+    "id": 291,
+    "text": "Как зовут этого персонажа из игры «Marvel vs. Capcom: Infinite»?",
+    "options": [
+      "Кербер",
+      "Веном",
+      "Саруман",
+      "Лара Крофт"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Venom%20cosplay%20madrid.jpg"
+  },
+  {
+    "id": 292,
+    "text": "Кто является создателем видеоигры «Тетрис»?",
+    "options": [
+      "Алексей Пажитнов",
+      "Nixxes Software",
+      "Ubisoft Red Storm",
+      "Ubisoft Montreal"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 57,
-    "text": "Игра «Assassin’s Creed IV: Black Flag» была выпущена разработчиками из:",
+    "id": 293,
+    "text": "Игра «Тетрис» была выпущена разработчиками из:",
     "options": [
-      "Blizzard Entertainment",
-      "Ubisoft Shanghai",
-      "Gaijin Entertainment",
-      "Ubisoft Romania"
+      "Лукас Поуп",
+      "Maxis",
+      "Ensemble Studios",
+      "Похилько, Владимир Иванович"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 58,
-    "text": "Кто является создателем видеоигры «Call of Duty: Black Ops»?",
+    "id": 294,
+    "text": "Какая компания или студия разработала игру «Тетрис»?",
     "options": [
-      "Maxis",
-      "Похилько, Владимир Иванович",
-      "Treyarch",
-      "MicroProse"
+      "Naughty Dog",
+      "Iron Galaxy Studios",
+      "Team Silent",
+      "Вадим Герасимов"
     ],
-    "correct_answer": 2,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 59,
-    "text": "Какая компания или студия разработала игру «World of Tanks»?",
+    "id": 295,
+    "text": "Кто является создателем видеоигры «Roblox»?",
     "options": [
-      "Wargaming.net",
-      "Blizzard Entertainment",
-      "Feral Interactive",
-      "Don’t Nod"
+      "Roblox Corporation",
+      "Linden Lab",
+      "Team Silent",
+      "Red Barrels"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 60,
-    "text": "Какая компания или студия разработала игру «The Elder Scrolls IV: Oblivion»?",
+    "id": 296,
+    "text": "Кто является создателем видеоигры «World of Warcraft»?",
     "options": [
-      "Матеус Валадарес",
-      "Red Barrels",
-      "4J Studios",
-      "Nixxes Software"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 61,
-    "text": "Кто является создателем видеоигры «Far Cry 4»?",
-    "options": [
-      "Rockstar New England",
-      "Guerrilla Games",
-      "Ubisoft Toronto",
-      "Тоби Фокс"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 62,
-    "text": "Какая компания или студия разработала игру «God of War»?",
-    "options": [
-      "Square",
-      "Avalanche Software",
-      "Santa Monica Studio",
+      "FromSoftware",
+      "Ikegami",
+      "Blizzard Entertainment",
       "Feral Interactive"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 63,
-    "text": "Кто является создателем видеоигры «Call of Duty 2»?",
-    "options": [
-      "Rovio Entertainment",
-      "MicroProse",
-      "Roblox Corporation",
-      "Infinity Ward"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 64,
-    "text": "Игра «Call of Duty 2» была выпущена разработчиками из:",
-    "options": [
-      "Atari, Inc",
-      "Ubisoft Quebec",
-      "Aspyr Media",
-      "Capcom"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 65,
-    "text": "Игра «Assassin’s Creed II» была выпущена разработчиками из:",
-    "options": [
-      "Ubisoft Montreal",
-      "Blizzard Entertainment",
-      "Sledgehammer Games",
-      "Square"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 66,
-    "text": "Кто является создателем видеоигры «Assassin’s Creed IV: Black Flag»?",
+    "id": 297,
+    "text": "Какая компания или студия разработала игру «Super Mario Bros.»?",
     "options": [
       "Innersloth",
-      "Ubisoft Montreal",
+      "GSC Game World",
       "Sony Interactive Entertainment",
-      "Arkane Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 67,
-    "text": "Какая компания или студия разработала игру «Far Cry 4»?",
-    "options": [
-      "Avalanche Software",
-      "Playdead",
-      "Ubisoft Shanghai",
-      "Ubisoft Kyiv"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 68,
-    "text": "Какая компания или студия разработала игру «Assassin’s Creed IV: Black Flag»?",
-    "options": [
-      "EA Digital Illusions CE",
-      "Rockstar New England",
-      "Ubisoft Annecy",
-      "Ubisoft Barcelona"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 69,
-    "text": "Игра «The Elder Scrolls IV: Oblivion» была выпущена разработчиками из:",
-    "options": [
-      "Bethesda Game Studios",
-      "Nintendo Entertainment Analysis and Development",
-      "Eidos Montreal",
-      "Namco"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 70,
-    "text": "Кто является создателем видеоигры «Fallout 4»?",
-    "options": [
-      "Raven Software",
-      "Bethesda Game Studios",
-      "SCS Software",
-      "4J Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 71,
-    "text": "Кто является создателем видеоигры «Wii Sports»?",
-    "options": [
-      "Red Barrels",
-      "Rovio Entertainment",
-      "Creative Assembly",
       "Nintendo Entertainment Analysis and Development"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 72,
-    "text": "Кто является создателем видеоигры «Far Cry 5»?",
-    "options": [
-      "Стив Расселл",
-      "Red Barrels",
-      "Ubisoft Toronto",
-      "miHoYo"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 73,
-    "text": "Какая компания или студия разработала игру «Far Cry 5»?",
-    "options": [
-      "Taito Corporation",
-      "Ubisoft Quebec",
-      "Atari, Inc",
-      "Ubisoft Kyiv"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 74,
-    "text": "Какая компания или студия разработала игру «Need for Speed: Carbon»?",
-    "options": [
-      "Bethesda Game Studios",
-      "Ubisoft Barcelona",
-      "Creative Assembly",
-      "EA Vancouver"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 75,
-    "text": "Игра «Call of Duty: Ghosts» была выпущена разработчиками из:",
-    "options": [
-      "Infinity Ward",
-      "Don’t Nod",
-      "Capcom",
-      "Rockstar Vancouver"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 76,
-    "text": "Игра «Diablo II» была выпущена разработчиками из:",
-    "options": [
-      "Digital Eclipse",
-      "Riot Games",
-      "Blizzard North",
-      "Creative Assembly"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 77,
-    "text": "Игра «Apex Legends» была выпущена разработчиками из:",
-    "options": [
-      "Iron Galaxy Studios",
-      "Стив Расселл",
-      "Rockstar Lincoln",
-      "Atari, Inc"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 78,
-    "text": "Кто является создателем видеоигры «Apex Legends»?",
-    "options": [
-      "MicroProse",
-      "Playdead",
-      "Rockstar New England",
-      "Respawn Entertainment"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 79,
-    "text": "Игра «Call of Duty 3» была выпущена разработчиками из:",
-    "options": [
-      "Rockstar Lincoln",
-      "Treyarch",
-      "Похилько, Владимир Иванович",
-      "EA Digital Illusions CE"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 80,
-    "text": "Какая компания или студия разработала игру «Age of Mythology»?",
-    "options": [
-      "Ensemble Studios",
-      "Wargaming.net",
-      "Похилько, Владимир Иванович",
-      "Team Silent"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 81,
-    "text": "Кто является создателем видеоигры «Silent Hill 2»?",
-    "options": [
-      "Вадим Герасимов",
-      "Team Silent",
-      "Rovio Entertainment",
-      "Edge of Reality"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 82,
-    "text": "Игра «Civilization» была выпущена разработчиками из:",
-    "options": [
-      "MicroProse",
-      "Crytek",
-      "Ubisoft Kyiv",
-      "FromSoftware"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 83,
-    "text": "Игра «Battlefield 3» была выпущена разработчиками из:",
-    "options": [
-      "Crytek",
-      "SCS Software",
-      "Sledgehammer Games",
-      "EA Digital Illusions CE"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 84,
-    "text": "Игра «Assassin’s Creed: Brotherhood» была выпущена разработчиками из:",
-    "options": [
-      "Blizzard Entertainment",
-      "Ubisoft Montreal",
-      "Riot Games",
-      "Ubisoft Montpellier"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 85,
-    "text": "Игра «Resident Evil» была выпущена разработчиками из:",
-    "options": [
-      "Studio MDHR",
-      "EA Digital Illusions CE",
-      "Capcom",
-      "Sledgehammer Games"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 86,
-    "text": "Какая компания или студия разработала игру «Horizon Zero Dawn»?",
-    "options": [
-      "Sony Interactive Entertainment",
-      "Nintendo Entertainment Analysis and Development",
-      "Скотт Коутон",
-      "Edge of Reality"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 87,
-    "text": "Кто является создателем видеоигры «The Legend of Zelda: Ocarina of Time»?",
-    "options": [
-      "Nintendo Entertainment Analysis and Development",
-      "SkyBox Labs",
-      "Вадим Герасимов",
-      "Don’t Nod"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 88,
-    "text": "Какая компания или студия разработала игру «Mass Effect»?",
-    "options": [
-      "Ubisoft Quebec",
-      "Лукас Поуп",
-      "Ubisoft Kyiv",
-      "BioWare"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 89,
-    "text": "Какая компания или студия разработала игру «Rome: Total War»?",
-    "options": [
-      "SCS Software",
-      "EA Vancouver",
-      "Creative Assembly",
-      "Sony Interactive Entertainment"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 90,
-    "text": "Какая компания или студия разработала игру «Final Fantasy X»?",
-    "options": [
-      "Innersloth",
-      "Square",
-      "Raven Software",
-      "Naughty Dog"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 91,
-    "text": "Кто является создателем видеоигры «Final Fantasy VIII»?",
-    "options": [
-      "miHoYo",
-      "Rockstar New England",
-      "Square",
-      "Superscape"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 92,
-    "text": "Игра «Rome: Total War» была выпущена разработчиками из:",
-    "options": [
-      "4J Studios",
-      "Avalanche Software",
-      "Ubisoft Toronto",
-      "Feral Interactive"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 93,
-    "text": "Кто является создателем видеоигры «Angry Birds»?",
-    "options": [
-      "Тоби Фокс",
-      "Rovio Entertainment",
-      "Ubisoft Toronto",
-      "FromSoftware"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 94,
-    "text": "Игра «Ведьмак» была выпущена разработчиками из:",
-    "options": [
-      "4J Studios",
-      "CD Projekt RED",
-      "EA Digital Illusions CE",
-      "Вадим Герасимов"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 95,
-    "text": "Игра «S.T.A.L.K.E.R.: Тень Чернобыля» была выпущена разработчиками из:",
-    "options": [
-      "EA Digital Illusions CE",
-      "Скотт Коутон",
-      "Creative Assembly",
-      "GSC Game World"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 96,
-    "text": "Кто является создателем видеоигры «Bully»?",
-    "options": [
-      "Red Barrels",
-      "2K Czech",
-      "Rockstar New England",
-      "Game Science"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 97,
-    "text": "Какая компания или студия разработала игру «Bully»?",
-    "options": [
-      "Insomniac Games",
-      "Ubisoft Toronto",
-      "Rockstar Vancouver",
-      "Стив Расселл"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 98,
-    "text": "Игра «Mass Effect» была выпущена разработчиками из:",
-    "options": [
-      "Матеус Валадарес",
-      "Edge of Reality",
-      "Nixxes Software",
-      "Ubisoft Quebec"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 99,
-    "text": "Кто является создателем видеоигры «Sonic the Hedgehog»?",
+    "id": 298,
+    "text": "Кто является создателем видеоигры «Pac-Man»?",
     "options": [
       "Ubisoft Montpellier",
-      "Konami",
-      "Iron Galaxy Studios",
+      "TaleWorlds",
+      "Square Enix",
+      "Namco"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 299,
+    "text": "Игра «Clash of Clans» была выпущена разработчиками из:",
+    "options": [
+      "Nintendo Research & Development 1",
+      "Supercell",
+      "Ubisoft Red Storm",
+      "Avalanche Software"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 300,
+    "text": "Какая компания или студия разработала игру «The Elder Scrolls V: Skyrim»?",
+    "options": [
+      "Valve Corporation",
+      "Bethesda Game Studios",
+      "Ubisoft Quebec",
       "Aspyr Media"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 100,
-    "text": "Какая компания или студия разработала игру «Crysis»?",
+    "id": 301,
+    "text": "Игра «Among Us» была выпущена разработчиками из:",
     "options": [
-      "Crytek",
-      "Treyarch",
-      "BioWare",
-      "Лукас Поуп"
+      "Gearbox Software",
+      "Nintendo Entertainment Analysis and Development",
+      "FromSoftware",
+      "Innersloth"
     ],
-    "correct_answer": 0,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 101,
-    "text": "Кто является создателем видеоигры «Hearthstone: Heroes of Warcraft»?",
+    "id": 302,
+    "text": "Какая компания или студия разработала игру «Half-Life 2»?",
     "options": [
-      "Blizzard Entertainment",
-      "Taito Corporation",
-      "Edge of Reality",
+      "Valve Corporation",
+      "Nintendo Entertainment Analysis and Development",
+      "Roblox Corporation",
       "Rocksteady Studios"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 102,
-    "text": "Игра «Super Mario Bros. 2» была выпущена разработчиками из:",
+    "id": 303,
+    "text": "Игра «Call of Duty 4: Modern Warfare» была выпущена разработчиками из:",
     "options": [
-      "Rockstar Lincoln",
-      "Linden Lab",
-      "Nintendo Entertainment Analysis and Development",
-      "Taito Corporation"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 103,
-    "text": "Какая компания или студия разработала игру «Mass Effect 2»?",
-    "options": [
-      "BioWare",
-      "Ubisoft Montreal",
-      "Rockstar San Diego",
-      "Creative Assembly"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 104,
-    "text": "Кто является создателем видеоигры «Hogwarts Legacy»?",
-    "options": [
-      "Rockstar New England",
-      "Crytek",
-      "Avalanche Software",
-      "Taito Corporation"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 105,
-    "text": "Какая компания или студия разработала игру «Assassin’s Creed: Revelations»?",
-    "options": [
-      "Sonic Team",
-      "Ubisoft Montreal",
-      "TaleWorlds",
-      "Ubisoft Annecy"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 106,
-    "text": "Кто является создателем видеоигры «Civilization V»?",
-    "options": [
-      "Rocksteady Studios",
-      "Ubisoft Barcelona",
-      "Portkey Games",
-      "Firaxis Games"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 107,
-    "text": "Игра «Spacewar!» была выпущена разработчиками из:",
-    "options": [
-      "EA Digital Illusions CE",
-      "Studio MDHR",
-      "Innersloth",
-      "Стив Расселл"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 108,
-    "text": "Какая компания или студия разработала игру «Tomb Raider»?",
-    "options": [
-      "Eidos Montreal",
-      "MicroProse",
-      "Square Enix",
-      "Nintendo Entertainment Analysis and Development"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 109,
-    "text": "Игра «Tomb Raider» была выпущена разработчиками из:",
-    "options": [
-      "Nixxes Software",
-      "Rocksteady Studios",
-      "2K Czech",
-      "Portkey Games"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 110,
-    "text": "Какая компания или студия разработала игру «Five Nights at Freddy’s»?",
-    "options": [
-      "Nixxes Software",
-      "Riot Games",
-      "Red Barrels",
-      "Скотт Коутон"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 111,
-    "text": "Игра «Grand Theft Auto Advance» была выпущена разработчиками из:",
-    "options": [
-      "Sonic Team",
-      "Superscape",
-      "Digital Eclipse",
-      "Ubisoft Reflections"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 112,
-    "text": "Какая компания или студия разработала игру «Cuphead»?",
-    "options": [
-      "Studio MDHR",
-      "2K Czech",
-      "Rocksteady Studios",
-      "Taito Corporation"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 113,
-    "text": "Игра «Black Myth: Wukong» была выпущена разработчиками из:",
-    "options": [
-      "Game Science",
-      "Rovio Entertainment",
-      "Ubisoft Toronto",
-      "4J Studios"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 114,
-    "text": "Какая компания или студия разработала игру «Battlefield 4»?",
-    "options": [
-      "Innersloth",
-      "Superscape",
-      "Santa Monica Studio",
-      "EA Digital Illusions CE"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 115,
-    "text": "Игра «Far Cry 2» была выпущена разработчиками из:",
-    "options": [
-      "Ubisoft Montreal",
-      "Naughty Dog",
-      "TaleWorlds",
-      "Ubisoft Toronto"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 116,
-    "text": "Игра «Sid Meier’s Civilization VI» была выпущена разработчиками из:",
-    "options": [
-      "Ubisoft Romania",
-      "CD Projekt RED",
-      "Ubisoft Montreal",
-      "Firaxis Games"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 117,
-    "text": "Кто является создателем видеоигры «Grand Theft Auto: Chinatown Wars»?",
-    "options": [
-      "Portkey Games",
-      "Sonic Team",
-      "Rockstar New England",
-      "Rockstar Leeds"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 118,
-    "text": "Игра «Dark Souls» была выпущена разработчиками из:",
-    "options": [
-      "Aspyr Media",
-      "FromSoftware",
-      "Maxis",
-      "EA Digital Illusions CE"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 119,
-    "text": "Кто является создателем видеоигры «Life Is Strange»?",
-    "options": [
-      "Don’t Nod",
-      "Avalanche Software",
-      "Gearbox Software",
-      "Wargaming.net"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 120,
-    "text": "Игра «Resident Evil 5» была выпущена разработчиками из:",
-    "options": [
-      "FromSoftware",
-      "Матеус Валадарес",
-      "Rockstar Leeds",
-      "Capcom"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 121,
-    "text": "Кто является создателем видеоигры «Super Mario Galaxy»?",
-    "options": [
-      "Nintendo Entertainment Analysis and Development",
-      "Rockstar Lincoln",
-      "Riot Games",
-      "Sonic Team"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 122,
-    "text": "Кто является создателем видеоигры «Final Fantasy XII»?",
-    "options": [
-      "Bungie",
-      "Square Enix",
-      "Playdead",
-      "SkyBox Labs"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 123,
-    "text": "Какая компания или студия разработала игру «Need for Speed: Underground 2»?",
-    "options": [
-      "SCS Software",
-      "EA Black Box",
-      "Game Science",
-      "EA Vancouver"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 124,
-    "text": "Игра «Halo 3» была выпущена разработчиками из:",
-    "options": [
-      "Ubisoft Montreal",
-      "Innersloth",
-      "Creative Assembly",
-      "Bungie"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 125,
-    "text": "Кто является создателем видеоигры «Battlefield 1»?",
-    "options": [
-      "CD Projekt RED",
-      "Ubisoft Toronto",
-      "BioWare",
-      "EA Digital Illusions CE"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 126,
-    "text": "Игра «Final Fantasy» была выпущена разработчиками из:",
-    "options": [
-      "Square",
       "Team Silent",
-      "Bethesda Game Studios",
-      "TaleWorlds"
+      "Ubisoft Toronto",
+      "Ubisoft Barcelona",
+      "Treyarch"
     ],
-    "correct_answer": 0,
+    "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 127,
-    "text": "Кто является создателем видеоигры «Limbo»?",
-    "options": [
-      "Ikegami",
-      "Playdead",
-      "Game Science",
-      "Bethesda Game Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 128,
-    "text": "Какая компания или студия разработала игру «Outlast»?",
-    "options": [
-      "Blizzard North",
-      "Алексей Пажитнов",
-      "Red Barrels",
-      "Ubisoft Red Storm"
-    ],
-    "correct_answer": 2,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 129,
-    "text": "Кто является создателем видеоигры «Silent Hill»?",
-    "options": [
-      "Konami",
-      "Eidos Montreal",
-      "Treyarch",
-      "Nintendo Research & Development 1"
-    ],
-    "correct_answer": 0,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 130,
-    "text": "Игра «Warcraft: Orcs & Humans» была выпущена разработчиками из:",
+    "id": 304,
+    "text": "Какая компания или студия разработала игру «Call of Duty 4: Modern Warfare»?",
     "options": [
       "Infinity Ward",
-      "BioWare",
-      "Rockstar Leeds",
-      "Blizzard Entertainment"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 131,
-    "text": "Какая компания или студия разработала игру «Assassin’s Creed III»?",
-    "options": [
-      "Ubisoft Romania",
-      "Naughty Dog",
-      "Ubisoft Shanghai",
-      "Nintendo Research & Development 1"
+      "Feral Interactive",
+      "4J Studios",
+      "CD Projekt RED"
     ],
     "correct_answer": 0,
     "category": "Игры и Технологии"
   },
   {
-    "id": 132,
-    "text": "Игра «The Legend of Zelda: A Link to the Past» была выпущена разработчиками из:",
+    "id": 305,
+    "text": "Кто является создателем видеоигры «Call of Duty 4: Modern Warfare»?",
     "options": [
-      "Sonic Team",
-      "Nintendo Entertainment Analysis and Development",
-      "Eidos Montreal",
-      "Ubisoft Kyiv"
+      "Aspyr Media",
+      "Valve Corporation",
+      "Ubisoft Quebec",
+      "Ikegami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 306,
+    "text": "Какая компания или студия разработала игру «Genshin Impact»?",
+    "options": [
+      "Infinity Ward",
+      "miHoYo",
+      "SkyBox Labs",
+      "Sony Interactive Entertainment"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 133,
-    "text": "Кто является создателем видеоигры «The Legend of Zelda: Majora’s Mask»?",
+    "id": 307,
+    "text": "Кто является создателем видеоигры «The Last of Us»?",
     "options": [
-      "Atari, Inc",
-      "Guerrilla Games",
-      "MicroProse",
-      "Nintendo Entertainment Analysis and Development"
-    ],
-    "correct_answer": 3,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 134,
-    "text": "Кто является создателем видеоигры «Star Wars: Knights of the Old Republic»?",
-    "options": [
-      "Rovio Entertainment",
+      "Sony Interactive Entertainment",
       "BioWare",
-      "Linden Lab",
-      "Ubisoft Barcelona"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 135,
-    "text": "Какая компания или студия разработала игру «Far Cry 6»?",
-    "options": [
-      "Rovio Entertainment",
-      "Ubisoft Toronto",
-      "EA Vancouver",
-      "Iron Galaxy Studios"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 136,
-    "text": "Кто является создателем видеоигры «God of War II»?",
-    "options": [
-      "Bungie",
-      "GSC Game World",
-      "CD Projekt RED",
-      "Santa Monica Studio"
+      "Ubisoft Quebec",
+      "Naughty Dog"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 137,
-    "text": "Кто является создателем видеоигры «Halo 2»?",
+    "id": 308,
+    "text": "Игра «Assassin’s Creed» была выпущена разработчиками из:",
     "options": [
-      "Rocksteady Studios",
-      "Rockstar Vancouver",
+      "Ubisoft Montreal",
+      "Respawn Entertainment",
+      "EA Digital Illusions CE",
+      "Похилько, Владимир Иванович"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 309,
+    "text": "Какая компания или студия разработала игру «Pong»?",
+    "options": [
+      "Iron Galaxy Studios",
       "Bungie",
-      "Infinity Ward"
+      "Atari, Inc",
+      "Crytek"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 138,
-    "text": "Кто является создателем видеоигры «Final Fantasy IX»?",
+    "id": 310,
+    "text": "Какая компания или студия разработала игру «The Sims»?",
     "options": [
-      "Eidos Montreal",
-      "Square",
-      "Wargaming.net",
-      "Ubisoft Annecy"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 139,
-    "text": "Кто является создателем видеоигры «Assassin’s Creed III»?",
-    "options": [
-      "Bethesda Game Studios",
-      "Ubisoft Montreal",
-      "Ikegami",
-      "Creative Assembly"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 140,
-    "text": "Кто является создателем видеоигры «Watch Dogs»?",
-    "options": [
-      "Eidos Montreal",
-      "Ubisoft Montreal",
-      "Edge of Reality",
-      "Wargaming.net"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 141,
-    "text": "Кто является создателем видеоигры «Spider-Man»?",
-    "options": [
-      "EA Vancouver",
-      "Insomniac Games",
-      "Nintendo Research & Development 1",
-      "Eidos Montreal"
-    ],
-    "correct_answer": 1,
-    "category": "Игры и Технологии"
-  },
-  {
-    "id": 142,
-    "text": "Какая компания или студия разработала игру «Hay Day»?",
-    "options": [
-      "Стив Расселл",
-      "Blizzard North",
-      "TaleWorlds",
-      "Supercell"
+      "Sony Interactive Entertainment",
+      "Ubisoft Romania",
+      "Ensemble Studios",
+      "Maxis"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 143,
-    "text": "Какая компания или студия разработала игру «Mount & Blade»?",
+    "id": 311,
+    "text": "Какая компания или студия разработала игру «Cyberpunk 2077»?",
     "options": [
-      "Capcom",
+      "Roblox Corporation",
+      "Iron Galaxy Studios",
+      "CD Projekt RED",
+      "Wargaming.net"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 312,
+    "text": "Игра «Grand Theft Auto» была выпущена разработчиками из:",
+    "options": [
+      "Rockstar Lincoln",
+      "Studio MDHR",
+      "EA Vancouver",
+      "Creative Assembly"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 313,
+    "text": "Игра «Second Life» была выпущена разработчиками из:",
+    "options": [
+      "Portkey Games",
+      "EA Digital Illusions CE",
+      "Linden Lab",
+      "Ubisoft Annecy"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 314,
+    "text": "Какая компания или студия разработала игру «Undertale»?",
+    "options": [
       "TaleWorlds",
+      "Linden Lab",
+      "Тоби Фокс",
+      "Digital Eclipse"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 315,
+    "text": "Кто является создателем видеоигры «The Sims 2»?",
+    "options": [
+      "Roblox Corporation",
+      "Red Barrels",
+      "Ubisoft Quebec",
+      "Maxis"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 316,
+    "text": "Игра «Mafia: The City of Lost Heaven» была выпущена разработчиками из:",
+    "options": [
+      "Taito Corporation",
+      "BioWare",
+      "2K Czech",
+      "Sonic Team"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 317,
+    "text": "Какая компания или студия разработала игру «Call of Duty: Modern Warfare 2»?",
+    "options": [
+      "Blizzard Entertainment",
+      "Iron Galaxy Studios",
+      "Taito Corporation",
+      "Infinity Ward"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 318,
+    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 2»?",
+    "options": [
+      "Maxis",
+      "Roblox Corporation",
+      "Studio MDHR",
+      "Aspyr Media"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 319,
+    "text": "Игра «Far Cry 3» была выпущена разработчиками из:",
+    "options": [
+      "Aspyr Media",
+      "Creative Assembly",
+      "Digital Eclipse",
+      "Ubisoft Shanghai"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 320,
+    "text": "Кто является создателем видеоигры «Far Cry 3»?",
+    "options": [
+      "Rockstar San Diego",
+      "Ubisoft Red Storm",
+      "Naughty Dog",
+      "Roblox Corporation"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 321,
+    "text": "Игра «Ведьмак 3: Дикая Охота» была выпущена разработчиками из:",
+    "options": [
+      "CD Projekt RED",
+      "Arkane Studios",
+      "Скотт Коутон",
+      "Blizzard Entertainment"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 322,
+    "text": "Кто является создателем видеоигры «Clash Royale»?",
+    "options": [
+      "Supercell",
+      "Iron Galaxy Studios",
       "Crytek",
+      "Алексей Пажитнов"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 323,
+    "text": "Игра «Warcraft III: Reign of Chaos» была выпущена разработчиками из:",
+    "options": [
+      "Ubisoft Barcelona",
+      "Raven Software",
+      "Blizzard Entertainment",
+      "Taito Corporation"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 324,
+    "text": "Кто является создателем видеоигры «Space Invaders»?",
+    "options": [
+      "Aspyr Media",
+      "Atari, Inc",
+      "SCS Software",
+      "Taito Corporation"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 325,
+    "text": "Кто является создателем видеоигры «Resident Evil 4»?",
+    "options": [
+      "Rockstar Lincoln",
+      "Capcom",
+      "Guerrilla Games",
+      "Ubisoft Montreal"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 326,
+    "text": "Кто является создателем видеоигры «Spore»?",
+    "options": [
+      "Maxis",
+      "Digital Eclipse",
+      "2K Czech",
+      "Square"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 327,
+    "text": "Кто является создателем видеоигры «Donkey Kong»?",
+    "options": [
+      "Ikegami",
+      "Linden Lab",
+      "Bethesda Game Studios",
+      "Firaxis Games"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 328,
+    "text": "Игра «Portal 2» была выпущена разработчиками из:",
+    "options": [
+      "Blizzard Entertainment",
+      "Eidos Montreal",
+      "FromSoftware",
+      "Valve Corporation"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 329,
+    "text": "Игра «Call of Duty: World at War» была выпущена разработчиками из:",
+    "options": [
+      "Treyarch",
+      "Playdead",
+      "Ubisoft Annecy",
+      "Nixxes Software"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 330,
+    "text": "Игра «Donkey Kong» была выпущена разработчиками из:",
+    "options": [
+      "Лукас Поуп",
+      "Nintendo Research & Development 1",
+      "BioWare",
+      "Taito Corporation"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 331,
+    "text": "Кто является создателем видеоигры «Call of Duty: Modern Warfare 3»?",
+    "options": [
+      "Supercell",
+      "Creative Assembly",
+      "Ubisoft Kyiv",
+      "Treyarch"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 332,
+    "text": "Игра «Call of Duty: Modern Warfare 3» была выпущена разработчиками из:",
+    "options": [
+      "Guerrilla Games",
+      "miHoYo",
+      "Ubisoft Romania",
+      "Infinity Ward"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 333,
+    "text": "Игра «Red Dead Redemption» была выпущена разработчиками из:",
+    "options": [
+      "Rockstar San Diego",
+      "Taito Corporation",
+      "Ubisoft Quebec",
+      "Sledgehammer Games"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 334,
+    "text": "Какая компания или студия разработала игру «Call of Duty: Modern Warfare 3»?",
+    "options": [
+      "Nintendo Entertainment Analysis and Development",
+      "EA Vancouver",
+      "Nintendo Research & Development 1",
+      "Raven Software"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 335,
+    "text": "Кто является создателем видеоигры «Valorant»?",
+    "options": [
+      "Rockstar Vancouver",
+      "GSC Game World",
+      "Ubisoft Quebec",
+      "Riot Games"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 336,
+    "text": "Кто является создателем видеоигры «Metal Gear Solid»?",
+    "options": [
+      "Ubisoft Red Storm",
+      "Konami",
+      "CD Projekt RED",
+      "Digital Eclipse"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 337,
+    "text": "Кто является создателем видеоигры «Halo: Combat Evolved»?",
+    "options": [
+      "MicroProse",
+      "Bungie",
+      "Firaxis Games",
       "Rockstar Lincoln"
     ],
     "correct_answer": 1,
     "category": "Игры и Технологии"
   },
   {
-    "id": 144,
-    "text": "Кто является создателем видеоигры «Batman: Arkham Asylum»?",
+    "id": 338,
+    "text": "Какая компания или студия разработала игру «Halo: Combat Evolved»?",
     "options": [
+      "Gearbox Software",
+      "Insomniac Games",
       "Atari, Inc",
-      "Ubisoft Annecy",
-      "Rocksteady Studios",
-      "MicroProse"
+      "Blizzard North"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 339,
+    "text": "Игра «Euro Truck Simulator 2» была выпущена разработчиками из:",
+    "options": [
+      "Iron Galaxy Studios",
+      "Innersloth",
+      "SCS Software",
+      "BioWare"
     ],
     "correct_answer": 2,
     "category": "Игры и Технологии"
   },
   {
-    "id": 145,
-    "text": "Игра «Assassin’s Creed III» была выпущена разработчиками из:",
+    "id": 340,
+    "text": "Кто является создателем видеоигры «Need for Speed: Most Wanted»?",
     "options": [
-      "Nintendo Entertainment Analysis and Development",
-      "Ubisoft Reflections",
-      "Santa Monica Studio",
-      "Ubisoft Annecy"
+      "Red Barrels",
+      "Treyarch",
+      "Gaijin Entertainment",
+      "EA Black Box"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 146,
-    "text": "Игра «Papers, Please» была выпущена разработчиками из:",
+    "id": 341,
+    "text": "Кто является создателем видеоигры «Far Cry»?",
+    "options": [
+      "Алексей Пажитнов",
+      "Insomniac Games",
+      "Ubisoft Kyiv",
+      "Crytek"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 342,
+    "text": "Кто является создателем видеоигры «Super Mario Bros. 3»?",
+    "options": [
+      "Тоби Фокс",
+      "Sony Interactive Entertainment",
+      "Nintendo Entertainment Analysis and Development",
+      "Nintendo Research & Development 1"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 343,
+    "text": "Кто является создателем видеоигры «Overwatch»?",
+    "options": [
+      "Скотт Коутон",
+      "Nixxes Software",
+      "Superscape",
+      "Blizzard Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 344,
+    "text": "Игра «The Last of Us Part II» была выпущена разработчиками из:",
+    "options": [
+      "FromSoftware",
+      "Naughty Dog",
+      "Maxis",
+      "Edge of Reality"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 345,
+    "text": "Кто является создателем видеоигры «Brawl Stars»?",
+    "options": [
+      "Supercell",
+      "Taito Corporation",
+      "Ubisoft Reflections",
+      "Sonic Team"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 346,
+    "text": "Какая компания или студия разработала игру «War Thunder»?",
+    "options": [
+      "MicroProse",
+      "GSC Game World",
+      "4J Studios",
+      "Gaijin Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 347,
+    "text": "Какая компания или студия разработала игру «Grand Theft Auto: Vice City Stories»?",
+    "options": [
+      "Gearbox Software",
+      "Nintendo Research & Development 1",
+      "Rockstar Leeds",
+      "Raven Software"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 348,
+    "text": "Кто является создателем видеоигры «Elden Ring»?",
+    "options": [
+      "Лукас Поуп",
+      "FromSoftware",
+      "EA Black Box",
+      "Sonic Team"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 349,
+    "text": "Кто является создателем видеоигры «Fallout 3»?",
+    "options": [
+      "Похилько, Владимир Иванович",
+      "Bethesda Game Studios",
+      "Namco",
+      "Стив Расселл"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 350,
+    "text": "Кто является создателем видеоигры «Agar.io»?",
+    "options": [
+      "Firaxis Games",
+      "miHoYo",
+      "Матеус Валадарес",
+      "Namco"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 351,
+    "text": "Игра «The Elder Scrolls IV: Oblivion» была выпущена разработчиками из:",
+    "options": [
+      "Game Science",
+      "Aspyr Media",
+      "4J Studios",
+      "Roblox Corporation"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 352,
+    "text": "Кто является создателем видеоигры «Assassin’s Creed IV: Black Flag»?",
+    "options": [
+      "2K Czech",
+      "Arkane Studios",
+      "Ubisoft Annecy",
+      "Ubisoft Romania"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 353,
+    "text": "Какая компания или студия разработала игру «Diablo III»?",
+    "options": [
+      "Roblox Corporation",
+      "Blizzard Entertainment",
+      "Linden Lab",
+      "Supercell"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 354,
+    "text": "Какая компания или студия разработала игру «Call of Duty: Black Ops»?",
+    "options": [
+      "Maxis",
+      "Вадим Герасимов",
+      "Лукас Поуп",
+      "Treyarch"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 355,
+    "text": "Кто является создателем видеоигры «World of Tanks»?",
+    "options": [
+      "Ubisoft Romania",
+      "Valve Corporation",
+      "EA Vancouver",
+      "Wargaming.net"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 356,
+    "text": "Игра «Far Cry 4» была выпущена разработчиками из:",
+    "options": [
+      "Лукас Поуп",
+      "Ubisoft Toronto",
+      "Rockstar Leeds",
+      "Riot Games"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 357,
+    "text": "Кто является создателем видеоигры «God of War»?",
+    "options": [
+      "Santa Monica Studio",
+      "miHoYo",
+      "Riot Games",
+      "Linden Lab"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 358,
+    "text": "Кто является создателем видеоигры «Call of Duty 2»?",
+    "options": [
+      "Infinity Ward",
+      "Superscape",
+      "Edge of Reality",
+      "Capcom"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 359,
+    "text": "Какая компания или студия разработала игру «Call of Duty 2»?",
+    "options": [
+      "EA Black Box",
+      "Aspyr Media",
+      "Вадим Герасимов",
+      "Sonic Team"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 360,
+    "text": "Какая компания или студия разработала игру «Far Cry 4»?",
+    "options": [
+      "Playdead",
+      "Ubisoft Barcelona",
+      "Ubisoft Kyiv",
+      "Ubisoft Shanghai"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 361,
+    "text": "Кто является создателем видеоигры «Assassin’s Creed II»?",
+    "options": [
+      "Ubisoft Montreal",
+      "Ubisoft Montpellier",
+      "EA Vancouver",
+      "Ubisoft Barcelona"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 362,
+    "text": "Какая компания или студия разработала игру «Assassin’s Creed IV: Black Flag»?",
+    "options": [
+      "Стив Расселл",
+      "Digital Eclipse",
+      "Supercell",
+      "Ubisoft Montreal"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 363,
+    "text": "Какая компания или студия разработала игру «The Elder Scrolls IV: Oblivion»?",
     "options": [
       "Superscape",
-      "Rockstar San Diego",
-      "Sledgehammer Games",
-      "Лукас Поуп"
+      "Rockstar Vancouver",
+      "Treyarch",
+      "Konami"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 364,
+    "text": "Игра «Fallout 4» была выпущена разработчиками из:",
+    "options": [
+      "Матеус Валадарес",
+      "Ubisoft Singapore",
+      "Bethesda Game Studios",
+      "Portkey Games"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 365,
+    "text": "Какая компания или студия разработала игру «Wii Sports»?",
+    "options": [
+      "Konami",
+      "Nintendo Entertainment Analysis and Development",
+      "Arkane Studios",
+      "Ubisoft Kyiv"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 366,
+    "text": "Кто является создателем видеоигры «Far Cry 5»?",
+    "options": [
+      "Iron Galaxy Studios",
+      "Ubisoft Reflections",
+      "Red Barrels",
+      "Ubisoft Toronto"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 147,
-    "text": "Какая компания или студия разработала игру «Resident Evil Village»?",
+    "id": 367,
+    "text": "Какая компания или студия разработала игру «Far Cry 5»?",
     "options": [
-      "Gaijin Entertainment",
-      "Studio MDHR",
-      "4J Studios",
+      "Ubisoft Kyiv",
+      "Ubisoft Singapore",
+      "Insomniac Games",
+      "Вадим Герасимов"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 368,
+    "text": "Игра «Call of Duty: Ghosts» была выпущена разработчиками из:",
+    "options": [
+      "Rocksteady Studios",
+      "Infinity Ward",
+      "Blizzard Entertainment",
+      "Bethesda Game Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 369,
+    "text": "Игра «Far Cry 5» была выпущена разработчиками из:",
+    "options": [
+      "Eidos Montreal",
+      "Ensemble Studios",
+      "Ubisoft Reflections",
+      "Capcom"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 370,
+    "text": "Игра «Need for Speed: Carbon» была выпущена разработчиками из:",
+    "options": [
+      "Blizzard Entertainment",
+      "Nixxes Software",
+      "EA Vancouver",
+      "2K Czech"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 371,
+    "text": "Кто является создателем видеоигры «Diablo II»?",
+    "options": [
+      "Bethesda Game Studios",
+      "FromSoftware",
+      "Firaxis Games",
+      "Blizzard North"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 372,
+    "text": "Игра «Apex Legends» была выпущена разработчиками из:",
+    "options": [
+      "Respawn Entertainment",
+      "Ubisoft Annecy",
+      "Insomniac Games",
+      "Bethesda Game Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 373,
+    "text": "Кто является создателем видеоигры «Apex Legends»?",
+    "options": [
+      "Sledgehammer Games",
+      "Avalanche Software",
+      "EA Vancouver",
+      "Iron Galaxy Studios"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 374,
+    "text": "Кто является создателем видеоигры «Age of Mythology»?",
+    "options": [
+      "Square Enix",
+      "Roblox Corporation",
+      "Ensemble Studios",
+      "Don’t Nod"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 375,
+    "text": "Игра «Call of Duty 3» была выпущена разработчиками из:",
+    "options": [
+      "CD Projekt RED",
+      "Bungie",
+      "Treyarch",
+      "Santa Monica Studio"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 376,
+    "text": "Игра «Silent Hill 2» была выпущена разработчиками из:",
+    "options": [
+      "Team Silent",
+      "EA Vancouver",
+      "Don’t Nod",
+      "Iron Galaxy Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 377,
+    "text": "Игра «Civilization» была выпущена разработчиками из:",
+    "options": [
+      "Firaxis Games",
+      "MicroProse",
+      "Gearbox Software",
+      "Infinity Ward"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 378,
+    "text": "Игра «Battlefield 3» была выпущена разработчиками из:",
+    "options": [
+      "SkyBox Labs",
+      "Eidos Montreal",
+      "FromSoftware",
+      "EA Digital Illusions CE"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 379,
+    "text": "Игра «Assassin’s Creed: Brotherhood» была выпущена разработчиками из:",
+    "options": [
+      "Ubisoft Kyiv",
+      "Ubisoft Montreal",
+      "MicroProse",
+      "Digital Eclipse"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 380,
+    "text": "Какая компания или студия разработала игру «Age of Mythology»?",
+    "options": [
+      "Namco",
+      "SkyBox Labs",
+      "Square",
+      "Rockstar Vancouver"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 381,
+    "text": "Игра «Resident Evil» была выпущена разработчиками из:",
+    "options": [
+      "MicroProse",
+      "Edge of Reality",
+      "Ubisoft Annecy",
       "Capcom"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 148,
-    "text": "Кто является создателем видеоигры «Super Mario Bros.: The Lost Levels»?",
+    "id": 382,
+    "text": "Кто является создателем видеоигры «Horizon Zero Dawn»?",
     "options": [
-      "MicroProse",
-      "Ubisoft Montpellier",
-      "Maxis",
+      "Sony Interactive Entertainment",
+      "Скотт Коутон",
+      "CD Projekt RED",
+      "TaleWorlds"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 383,
+    "text": "Кто является создателем видеоигры «The Legend of Zelda: Ocarina of Time»?",
+    "options": [
+      "Rocksteady Studios",
+      "Алексей Пажитнов",
+      "Ubisoft Singapore",
       "Nintendo Entertainment Analysis and Development"
     ],
     "correct_answer": 3,
     "category": "Игры и Технологии"
   },
   {
-    "id": 149,
-    "text": "Какая компания или студия разработала игру «The Legend of Zelda: Twilight Princess»?",
+    "id": 384,
+    "text": "Кто является создателем видеоигры «Mass Effect»?",
     "options": [
+      "BioWare",
+      "Sledgehammer Games",
+      "Ikegami",
+      "Iron Galaxy Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 385,
+    "text": "Какая компания или студия разработала игру «Horizon Zero Dawn»?",
+    "options": [
+      "Nintendo Research & Development 1",
+      "Guerrilla Games",
+      "Gaijin Entertainment",
+      "Feral Interactive"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 386,
+    "text": "Какая компания или студия разработала игру «Rome: Total War»?",
+    "options": [
+      "Team Silent",
+      "Creative Assembly",
+      "Firaxis Games",
+      "Santa Monica Studio"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 387,
+    "text": "Игра «Final Fantasy X» была выпущена разработчиками из:",
+    "options": [
+      "Ubisoft Romania",
       "Ubisoft Kyiv",
-      "Edge of Reality",
-      "Nintendo Entertainment Analysis and Development",
-      "Linden Lab"
+      "Ubisoft Quebec",
+      "Square"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 388,
+    "text": "Кто является создателем видеоигры «Final Fantasy VIII»?",
+    "options": [
+      "SCS Software",
+      "Похилько, Владимир Иванович",
+      "Square",
+      "Nixxes Software"
     ],
     "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 389,
+    "text": "Игра «Rome: Total War» была выпущена разработчиками из:",
+    "options": [
+      "Studio MDHR",
+      "4J Studios",
+      "Тоби Фокс",
+      "Feral Interactive"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 390,
+    "text": "Игра «Angry Birds» была выпущена разработчиками из:",
+    "options": [
+      "Rovio Entertainment",
+      "Maxis",
+      "Linden Lab",
+      "Gaijin Entertainment"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 391,
+    "text": "Игра «Ведьмак» была выпущена разработчиками из:",
+    "options": [
+      "Ubisoft Annecy",
+      "Gearbox Software",
+      "CD Projekt RED",
+      "EA Digital Illusions CE"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 392,
+    "text": "Игра «S.T.A.L.K.E.R.: Тень Чернобыля» была выпущена разработчиками из:",
+    "options": [
+      "EA Vancouver",
+      "Rockstar Lincoln",
+      "FromSoftware",
+      "GSC Game World"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 393,
+    "text": "Какая компания или студия разработала игру «Bully»?",
+    "options": [
+      "Rovio Entertainment",
+      "Rockstar Vancouver",
+      "EA Digital Illusions CE",
+      "Wargaming.net"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 394,
+    "text": "Игра «Mass Effect» была выпущена разработчиками из:",
+    "options": [
+      "EA Black Box",
+      "Edge of Reality",
+      "Namco",
+      "Taito Corporation"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 395,
+    "text": "Игра «Sonic the Hedgehog» была выпущена разработчиками из:",
+    "options": [
+      "4J Studios",
+      "Konami",
+      "Taito Corporation",
+      "Ensemble Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 396,
+    "text": "Какая компания или студия разработала игру «Crysis»?",
+    "options": [
+      "Sledgehammer Games",
+      "Team Silent",
+      "Crytek",
+      "Rockstar Leeds"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 397,
+    "text": "Кто является создателем видеоигры «Super Mario Bros. 2»?",
+    "options": [
+      "Sonic Team",
+      "Матеус Валадарес",
+      "Nintendo Entertainment Analysis and Development",
+      "Arkane Studios"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 398,
+    "text": "Кто является создателем видеоигры «Mass Effect 2»?",
+    "options": [
+      "Playdead",
+      "BioWare",
+      "Ubisoft Red Storm",
+      "Gearbox Software"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 399,
+    "text": "Кто является создателем видеоигры «Hearthstone: Heroes of Warcraft»?",
+    "options": [
+      "Studio MDHR",
+      "Лукас Поуп",
+      "Digital Eclipse",
+      "Blizzard Entertainment"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 400,
+    "text": "Какая компания или студия разработала игру «Hogwarts Legacy»?",
+    "options": [
+      "Nintendo Research & Development 1",
+      "Ubisoft Quebec",
+      "Insomniac Games",
+      "Avalanche Software"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 401,
+    "text": "Какая компания или студия разработала игру «Civilization V»?",
+    "options": [
+      "Firaxis Games",
+      "Namco",
+      "Feral Interactive",
+      "Ensemble Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 402,
+    "text": "Кто является создателем видеоигры «Assassin’s Creed: Revelations»?",
+    "options": [
+      "4J Studios",
+      "Ubisoft Montreal",
+      "FromSoftware",
+      "Konami"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 403,
+    "text": "Какая компания или студия разработала игру «Sonic the Hedgehog»?",
+    "options": [
+      "Sonic Team",
+      "4J Studios",
+      "CD Projekt RED",
+      "Creative Assembly"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 404,
+    "text": "Какая компания или студия разработала игру «Spacewar!»?",
+    "options": [
+      "Стив Расселл",
+      "Rocksteady Studios",
+      "Supercell",
+      "Arkane Studios"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 405,
+    "text": "Кто является создателем видеоигры «Tomb Raider»?",
+    "options": [
+      "Treyarch",
+      "Studio MDHR",
+      "Eidos Montreal",
+      "CD Projekt RED"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 406,
+    "text": "Игра «Tomb Raider» была выпущена разработчиками из:",
+    "options": [
+      "Playdead",
+      "Алексей Пажитнов",
+      "Nixxes Software",
+      "Feral Interactive"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 407,
+    "text": "Игра «Five Nights at Freddy’s» была выпущена разработчиками из:",
+    "options": [
+      "Square Enix",
+      "Вадим Герасимов",
+      "BioWare",
+      "Скотт Коутон"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 408,
+    "text": "Какая компания или студия разработала игру «Grand Theft Auto Advance»?",
+    "options": [
+      "Ubisoft Toronto",
+      "Wargaming.net",
+      "Digital Eclipse",
+      "Rockstar New England"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 409,
+    "text": "Какая компания или студия разработала игру «Cuphead»?",
+    "options": [
+      "Studio MDHR",
+      "EA Black Box",
+      "Ubisoft Shanghai",
+      "EA Vancouver"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 410,
+    "text": "Какая компания или студия разработала игру «Black Myth: Wukong»?",
+    "options": [
+      "SkyBox Labs",
+      "Game Science",
+      "Sonic Team",
+      "Square"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 411,
+    "text": "Кто является создателем видеоигры «Battlefield 4»?",
+    "options": [
+      "Ubisoft Red Storm",
+      "EA Digital Illusions CE",
+      "Respawn Entertainment",
+      "Atari, Inc"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 412,
+    "text": "Какая компания или студия разработала игру «Sid Meier’s Civilization VI»?",
+    "options": [
+      "Ikegami",
+      "Santa Monica Studio",
+      "Firaxis Games",
+      "EA Black Box"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 413,
+    "text": "Игра «Far Cry 2» была выпущена разработчиками из:",
+    "options": [
+      "Похилько, Владимир Иванович",
+      "Ubisoft Montreal",
+      "Riot Games",
+      "Nintendo Entertainment Analysis and Development"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 414,
+    "text": "Игра «Grand Theft Auto: Chinatown Wars» была выпущена разработчиками из:",
+    "options": [
+      "Bungie",
+      "Santa Monica Studio",
+      "Aspyr Media",
+      "Rockstar Leeds"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 415,
+    "text": "Кто является создателем видеоигры «Dark Souls»?",
+    "options": [
+      "Iron Galaxy Studios",
+      "GSC Game World",
+      "Bethesda Game Studios",
+      "FromSoftware"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 416,
+    "text": "Кто является создателем видеоигры «Life Is Strange»?",
+    "options": [
+      "EA Black Box",
+      "Don’t Nod",
+      "Insomniac Games",
+      "Алексей Пажитнов"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 417,
+    "text": "Игра «Resident Evil 5» была выпущена разработчиками из:",
+    "options": [
+      "Bethesda Game Studios",
+      "Capcom",
+      "Ubisoft Toronto",
+      "Ubisoft Reflections"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 418,
+    "text": "Игра «Super Mario Galaxy» была выпущена разработчиками из:",
+    "options": [
+      "Blizzard Entertainment",
+      "Nintendo Entertainment Analysis and Development",
+      "Ubisoft Montreal",
+      "Wargaming.net"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 419,
+    "text": "Какая компания или студия разработала игру «Final Fantasy XII»?",
+    "options": [
+      "Gearbox Software",
+      "Square Enix",
+      "Blizzard Entertainment",
+      "Bethesda Game Studios"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 420,
+    "text": "Какая компания или студия разработала игру «Halo 3»?",
+    "options": [
+      "Ubisoft Singapore",
+      "Santa Monica Studio",
+      "Bungie",
+      "Gearbox Software"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 421,
+    "text": "Кто является создателем видеоигры «Battlefield 1»?",
+    "options": [
+      "Ubisoft Montpellier",
+      "EA Digital Illusions CE",
+      "Crytek",
+      "Riot Games"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 422,
+    "text": "Какая компания или студия разработала игру «Final Fantasy»?",
+    "options": [
+      "Square",
+      "Ubisoft Shanghai",
+      "Ensemble Studios",
+      "Roblox Corporation"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 423,
+    "text": "Игра «Need for Speed: Underground 2» была выпущена разработчиками из:",
+    "options": [
+      "Вадим Герасимов",
+      "Game Science",
+      "EA Vancouver",
+      "Wargaming.net"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 424,
+    "text": "Игра «Limbo» была выпущена разработчиками из:",
+    "options": [
+      "Innersloth",
+      "Bethesda Game Studios",
+      "Playdead",
+      "Riot Games"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 425,
+    "text": "Какая компания или студия разработала игру «Outlast»?",
+    "options": [
+      "Ensemble Studios",
+      "Red Barrels",
+      "Rocksteady Studios",
+      "Тоби Фокс"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 426,
+    "text": "Кто является создателем видеоигры «Silent Hill»?",
+    "options": [
+      "TaleWorlds",
+      "EA Vancouver",
+      "Square",
+      "Konami"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 427,
+    "text": "Кто является создателем видеоигры «The Legend of Zelda: A Link to the Past»?",
+    "options": [
+      "Square",
+      "Insomniac Games",
+      "EA Black Box",
+      "Nintendo Entertainment Analysis and Development"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 428,
+    "text": "Какая компания или студия разработала игру «The Legend of Zelda: Majora’s Mask»?",
+    "options": [
+      "Firaxis Games",
+      "Arkane Studios",
+      "Roblox Corporation",
+      "Nintendo Entertainment Analysis and Development"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 429,
+    "text": "Какая компания или студия разработала игру «Assassin’s Creed III»?",
+    "options": [
+      "Rockstar San Diego",
+      "CD Projekt RED",
+      "Guerrilla Games",
+      "Ubisoft Romania"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 430,
+    "text": "Какая компания или студия разработала игру «Star Wars: Knights of the Old Republic»?",
+    "options": [
+      "Game Science",
+      "Infinity Ward",
+      "BioWare",
+      "Eidos Montreal"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 431,
+    "text": "Какая компания или студия разработала игру «Warcraft: Orcs & Humans»?",
+    "options": [
+      "4J Studios",
+      "Blizzard Entertainment",
+      "Wargaming.net",
+      "Ubisoft Singapore"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 432,
+    "text": "Какая компания или студия разработала игру «Far Cry 6»?",
+    "options": [
+      "Sledgehammer Games",
+      "Rockstar Lincoln",
+      "Ubisoft Toronto",
+      "Rockstar Leeds"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 433,
+    "text": "Игра «God of War II» была выпущена разработчиками из:",
+    "options": [
+      "Crytek",
+      "EA Vancouver",
+      "Santa Monica Studio",
+      "Скотт Коутон"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 434,
+    "text": "Какая компания или студия разработала игру «Halo 2»?",
+    "options": [
+      "Infinity Ward",
+      "Bungie",
+      "SCS Software",
+      "Supercell"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 435,
+    "text": "Кто является создателем видеоигры «Final Fantasy IX»?",
+    "options": [
+      "Blizzard Entertainment",
+      "Square",
+      "Treyarch",
+      "Valve Corporation"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 436,
+    "text": "Какая компания или студия разработала игру «Watch Dogs»?",
+    "options": [
+      "Ubisoft Romania",
+      "Atari, Inc",
+      "Treyarch",
+      "Ubisoft Montreal"
+    ],
+    "correct_answer": 3,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 437,
+    "text": "Какая компания или студия разработала игру «Hay Day»?",
+    "options": [
+      "Supercell",
+      "Ubisoft Singapore",
+      "Arkane Studios",
+      "Capcom"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 438,
+    "text": "Какая компания или студия разработала игру «Spider-Man»?",
+    "options": [
+      "Don’t Nod",
+      "Rockstar Leeds",
+      "Insomniac Games",
+      "Konami"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 439,
+    "text": "Какая компания или студия разработала игру «Batman: Arkham Asylum»?",
+    "options": [
+      "Namco",
+      "Don’t Nod",
+      "Rocksteady Studios",
+      "Ubisoft Montreal"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 440,
+    "text": "Игра «Mount & Blade» была выпущена разработчиками из:",
+    "options": [
+      "Team Silent",
+      "Konami",
+      "TaleWorlds",
+      "Ubisoft Singapore"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 441,
+    "text": "Игра «Assassin’s Creed III» была выпущена разработчиками из:",
+    "options": [
+      "Respawn Entertainment",
+      "Ubisoft Barcelona",
+      "Ubisoft Quebec",
+      "Aspyr Media"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 442,
+    "text": "Кто является создателем видеоигры «Assassin’s Creed III»?",
+    "options": [
+      "EA Black Box",
+      "Ubisoft Singapore",
+      "Capcom",
+      "Playdead"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 443,
+    "text": "Кто является создателем видеоигры «Papers, Please»?",
+    "options": [
+      "SkyBox Labs",
+      "Blizzard North",
+      "Лукас Поуп",
+      "Rockstar San Diego"
+    ],
+    "correct_answer": 2,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 444,
+    "text": "Какая компания или студия разработала игру «Resident Evil Village»?",
+    "options": [
+      "Capcom",
+      "Sledgehammer Games",
+      "Blizzard North",
+      "Sonic Team"
+    ],
+    "correct_answer": 0,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 445,
+    "text": "Игра «Super Mario Bros.: The Lost Levels» была выпущена разработчиками из:",
+    "options": [
+      "Aspyr Media",
+      "Nintendo Entertainment Analysis and Development",
+      "SkyBox Labs",
+      "Bungie"
+    ],
+    "correct_answer": 1,
+    "category": "Игры и Технологии"
+  },
+  {
+    "id": 446,
+    "text": "Игра «The Legend of Zelda: Twilight Princess» была выпущена разработчиками из:",
+    "options": [
+      "Nintendo Entertainment Analysis and Development",
+      "Sony Interactive Entertainment",
+      "Ubisoft Montpellier",
+      "Rockstar New England"
+    ],
+    "correct_answer": 0,
     "category": "Игры и Технологии"
   }
 ]
