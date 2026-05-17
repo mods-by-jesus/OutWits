@@ -1222,5 +1222,305 @@
     ],
     "correct_answer": 0,
     "id": 140
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая компания создала PlayStation?",
+    "options": [
+      "Nintendo",
+      "Microsoft",
+      "Sony",
+      "Sega"
+    ],
+    "correct_answer": 2,
+    "id": 288
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что означает аббревиатура GPU?",
+    "options": [
+      "General Processing Unit",
+      "Graphics Processing Unit",
+      "Global Power Unit",
+      "Game Play Utility"
+    ],
+    "correct_answer": 1,
+    "id": 289
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В какой игре персонаж собирает кольца?",
+    "options": [
+      "Марио",
+      "Соник",
+      "Крэш Бандикут",
+      "Мегамен"
+    ],
+    "correct_answer": 1,
+    "id": 290
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Кто основал компанию Apple?",
+    "options": [
+      "Билл Гейтс",
+      "Стив Джобс",
+      "Марк Цукерберг",
+      "Джефф Безос"
+    ],
+    "correct_answer": 1,
+    "id": 291
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая операционная система с открытым исходным кодом?",
+    "options": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "iOS"
+    ],
+    "correct_answer": 2,
+    "id": 292
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Сколько бит в одном байте?",
+    "options": [
+      "4",
+      "6",
+      "8",
+      "16"
+    ],
+    "correct_answer": 2,
+    "id": 293
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая игра стала первой Battle Royale-хитом?",
+    "options": [
+      "Fortnite",
+      "PUBG",
+      "Apex Legends",
+      "H1Z1"
+    ],
+    "correct_answer": 1,
+    "id": 294
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что такое RAM?",
+    "options": [
+      "Постоянная память",
+      "Оперативная память",
+      "Видеопамять",
+      "Кэш-память"
+    ],
+    "correct_answer": 1,
+    "id": 295
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В какой игре есть режим 'Королевская битва' с постройками?",
+    "options": [
+      "PUBG",
+      "Apex Legends",
+      "Fortnite",
+      "Warzone"
+    ],
+    "correct_answer": 2,
+    "id": 296
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какой язык программирования назван в честь змеи?",
+    "options": [
+      "Java",
+      "Ruby",
+      "Python",
+      "Go"
+    ],
+    "correct_answer": 2,
+    "id": 297
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что такое VPN?",
+    "options": [
+      "Virtual Private Network",
+      "Visual Programming Node",
+      "Video Processing Network",
+      "Virtual Public Node"
+    ],
+    "correct_answer": 0,
+    "id": 298
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В каком году вышел первый iPhone?",
+    "options": [
+      "2005",
+      "2006",
+      "2007",
+      "2008"
+    ],
+    "correct_answer": 2,
+    "id": 299
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая социальная сеть принадлежит компании Meta?",
+    "options": [
+      "Twitter",
+      "TikTok",
+      "Instagram",
+      "Snapchat"
+    ],
+    "correct_answer": 2,
+    "id": 300
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какой игровой движок используется в Fortnite?",
+    "options": [
+      "Unity",
+      "Unreal Engine",
+      "CryEngine",
+      "Source"
+    ],
+    "correct_answer": 1,
+    "id": 301
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что такое SSD?",
+    "options": [
+      "Super Speed Drive",
+      "Solid State Drive",
+      "System Storage Device",
+      "Smart Sync Disk"
+    ],
+    "correct_answer": 1,
+    "id": 302
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какой браузер разработан компанией Google?",
+    "options": [
+      "Firefox",
+      "Safari",
+      "Chrome",
+      "Edge"
+    ],
+    "correct_answer": 2,
+    "id": 303
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В какой серии игр главного героя зовут Линк?",
+    "options": [
+      "Final Fantasy",
+      "The Legend of Zelda",
+      "Fire Emblem",
+      "Metroid"
+    ],
+    "correct_answer": 1,
+    "id": 304
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что такое AI?",
+    "options": [
+      "Advanced Internet",
+      "Artificial Intelligence",
+      "Automated Input",
+      "Applied Integration"
+    ],
+    "correct_answer": 1,
+    "id": 305
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая компания разработала игру GTA V?",
+    "options": [
+      "EA",
+      "Ubisoft",
+      "Rockstar Games",
+      "Activision"
+    ],
+    "correct_answer": 2,
+    "id": 306
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В какой игре есть криперы?",
+    "options": [
+      "Roblox",
+      "Terraria",
+      "Minecraft",
+      "Valheim"
+    ],
+    "correct_answer": 2,
+    "id": 307
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какой формат файлов используется для веб-страниц?",
+    "options": [
+      ".doc",
+      ".html",
+      ".pdf",
+      ".exe"
+    ],
+    "correct_answer": 1,
+    "id": 308
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какая компания владеет Steam?",
+    "options": [
+      "EA",
+      "Epic Games",
+      "Valve",
+      "Activision"
+    ],
+    "correct_answer": 2,
+    "id": 309
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Какой протокол используется для безопасных соединений?",
+    "options": [
+      "HTTP",
+      "FTP",
+      "HTTPS",
+      "SMTP"
+    ],
+    "correct_answer": 2,
+    "id": 310
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "В какой серии игр есть покемоны?",
+    "options": [
+      "Digimon",
+      "Pokémon",
+      "Monster Hunter",
+      "Yo-kai Watch"
+    ],
+    "correct_answer": 1,
+    "id": 311
+  },
+  {
+    "category": "Игры и Технологии",
+    "text": "Что такое облачные вычисления?",
+    "options": [
+      "Вычисления на удалённых серверах",
+      "Вычисления в атмосфере",
+      "Квантовые вычисления",
+      "Аналоговые вычисления"
+    ],
+    "correct_answer": 0,
+    "id": 312
   }
 ]
