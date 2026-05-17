@@ -515,15 +515,15 @@ function sendQuestion(lobby) {
 
 function endRound(lobby) {
   try {
+    // Защита от повторного вызова
+    if (lobby._endingRound) return;
+    lobby._endingRound = true;
+
     // Очистить таймер
     if (lobby.roundTimer) {
       clearTimeout(lobby.roundTimer);
       lobby.roundTimer = null;
     }
-
-    // Защита от повторного вызова
-    if (lobby._endingRound) return;
-    lobby._endingRound = true;
 
     const qi = lobby.currentQuestionIndex;
     const question = lobby.questions[qi];

@@ -42,6 +42,7 @@ export function useGameState() {
   const [correctAnswer, setCorrectAnswer] = useState<number | null>(null);
   const [roundAnswers, setRoundAnswers] = useState<AnswerInfo[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activePlayersCount, setActivePlayersCount] = useState(0);
 
   const handleRoundEnd = useCallback(() => {
     // Таймер клиента истёк — сервер тоже завершит раунд
@@ -85,6 +86,7 @@ export function useGameState() {
 
     const onAnswerCount = (data: { count: number; total: number }) => {
       setAnswerCount(data.count);
+      setActivePlayersCount(data.total);
     };
 
     const onRoundResults = (data: {
@@ -161,7 +163,7 @@ export function useGameState() {
     totalQuestions,
     players,
     answerCount,
-    totalPlayers: players.length,
+    totalPlayers: activePlayersCount > 0 ? activePlayersCount : players.length,
     timeLeft,
     showResults,
     selectedAnswer,
