@@ -146,9 +146,12 @@ export function Game() {
                       .map(a => (
                         <span
                           key={a.playerId}
-                          className="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap"
+                          className="bg-white/20 text-white text-xs font-bold px-2 py-1 rounded-full whitespace-nowrap flex items-center gap-1"
                         >
-                          {players.find(p => p.id === a.playerId)?.nickname}
+                          <span>{players.find(p => p.id === a.playerId)?.nickname}</span>
+                          {a.time !== undefined && (
+                            <span className="text-white/60 text-[10px] ml-1">{a.time}s</span>
+                          )}
                         </span>
                       ))}
                   </div>

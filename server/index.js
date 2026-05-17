@@ -317,11 +317,13 @@ io.on('connection', (socket) => {
     }
 
     const isCorrect = answerIndex === question.correct_answer;
+    const elapsed = lobby.roundStartTime ? ((Date.now() - lobby.roundStartTime) / 1000).toFixed(1) : '0.0';
 
     roundAnswers.set(info.playerId, {
       playerId: info.playerId,
       answerIndex,
       isCorrect,
+      time: parseFloat(elapsed),
     });
 
     // Начислить очки

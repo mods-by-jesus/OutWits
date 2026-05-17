@@ -21,6 +21,7 @@ interface AnswerInfo {
   playerId: string;
   answerIndex: number;
   isCorrect: boolean;
+  time?: number;
 }
 
 const ROUND_DURATION = 20;
