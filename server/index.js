@@ -56,18 +56,31 @@ function shuffleArray(arr) {
   return shuffled;
 }
 
-function selectQuestions(allowedCategories, limit = 10) {
+function selectQuestions(allowedCategories, limit = 10, usedQuestions = new Set()) {
   let filtered = allQuestions;
   if (allowedCategories && allowedCategories.length > 0) {
     filtered = allQuestions.filter(q => allowedCategories.includes(q.category));
   }
   
-  if (filtered.length === 0) {
-    filtered = allQuestions; // Фолбэк, если выбрали категории без вопросов
+  let unused = filtered.filter(q => !usedQuestions.has(`${q.category}-${q.id}`));
+
+  if (unused.length < limit) {
+    // Если неиспользованных вопросов меньше, чем нужно — сбрасываем историю
+    usedQuestions.clear();
+    unused = filtered;
+  }
+
+  if (unused.length === 0) {
+    unused = allQuestions; // Фолбэк, если выбрали категории без вопросов
   }
   
-  const shuffled = shuffleArray(filtered);
-  return shuffled.slice(0, Math.min(limit, shuffled.length));
+  const shuffled = shuffleArray(unused);
+  const selected = shuffled.slice(0, Math.min(limit, shuffled.length));
+
+  // Записываем выбранные вопросы в использованные
+  selected.forEach(q => usedQuestions.add(`${q.category}-${q.id}`));
+
+  return selected;
 }
 
 // ─── Express app ──────────────────────────────────────
@@ -124,6 +137,7 @@ io.on('connection', (socket) => {
       players: [player],
       selectedCategories: [...availableCategories],
       settings: { speedBonus: false, hotStreak: false, questionsCount: 10 },
+      usedQuestions: new Set(),
       questions: [],
       currentQuestionIndex: -1,
       answers: new Map(), // questionIndex -> Map(playerId -> answer)
@@ -224,7 +238,7 @@ io.on('connection', (socket) => {
 
     // Подготовить вопросы
     const limit = lobby.settings?.questionsCount || 10;
-    lobby.questions = selectQuestions(lobby.selectedCategories, limit);
+    lobby.questions = selectQuestions(lobby.selectedCategories, limit, lobby.usedQuestions);
     lobby.currentQuestionIndex = 0;
     lobby.status = 'playing';
     lobby.answers = new Map();
