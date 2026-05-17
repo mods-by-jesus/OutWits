@@ -133,6 +133,137 @@ const generators = [
       });
     }
   },
+  {
+    categoryFile: CATEGORIES.GEOGRAPHY,
+    categoryName: 'География',
+    name: 'Флаги стран',
+    query: `
+      SELECT DISTINCT ?countryLabel ?image WHERE {
+        ?country wdt:P31 wd:Q6256.
+        ?country wdt:P41 ?image.
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.countryLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const country = b.countryLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        return {
+          category: 'География',
+          text: 'Флаг какой страны изображен на картинке?',
+          options,
+          correct_answer: options.indexOf(country),
+          image
+        };
+      });
+    }
+  },
+  {
+    categoryFile: CATEGORIES.GEOGRAPHY,
+    categoryName: 'География',
+    name: 'Контурные карты',
+    query: `
+      SELECT DISTINCT ?countryLabel ?image WHERE {
+        ?country wdt:P31 wd:Q6256.
+        ?country wdt:P242 ?image.
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.countryLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const country = b.countryLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        return {
+          category: 'География',
+          text: 'Контуры какой страны выделены на этой карте?',
+          options,
+          correct_answer: options.indexOf(country),
+          image
+        };
+      });
+    }
+  },
+  {
+    categoryFile: CATEGORIES.GEOGRAPHY,
+    categoryName: 'География',
+    name: 'Гербы стран',
+    query: `
+      SELECT DISTINCT ?countryLabel ?image WHERE {
+        ?country wdt:P31 wd:Q6256.
+        ?country wdt:P94 ?image.
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.countryLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const country = b.countryLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        return {
+          category: 'География',
+          text: 'Герб какого государства перед вами?',
+          options,
+          correct_answer: options.indexOf(country),
+          image
+        };
+      });
+    }
+  },
+  {
+    categoryFile: CATEGORIES.GEOGRAPHY,
+    categoryName: 'География',
+    name: 'Достопримечательности',
+    query: `
+      SELECT DISTINCT ?siteLabel ?countryLabel ?image WHERE {
+        ?site wdt:P1435 wd:Q9259.
+        ?site wdt:P17 ?country.
+        ?site wdt:P18 ?image.
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 400
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.siteLabel?.value) && /[а-яА-Я]/.test(b.countryLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.countryLabel.value))];
+      return filteredBindings.map(b => {
+        const site = b.siteLabel.value;
+        const country = b.countryLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== country)).slice(0, 3);
+        const options = shuffle([country, ...wrong]);
+        
+        const templates = [
+          (s) => `В какой стране находится этот объект («${s}»)?`,
+          (s) => `Где можно увидеть достопримечательность под названием «${s}»?`,
+        ];
+        
+        return {
+          category: 'География',
+          text: getRandomTemplate(templates, site),
+          options,
+          correct_answer: options.indexOf(country),
+          image
+        };
+      });
+    }
+  },
 
   // ---------------- SCIENCE ----------------
   {
@@ -405,7 +536,75 @@ const generators = [
       });
     }
   },
-
+  {
+    categoryFile: CATEGORIES.HISTORY,
+    categoryName: 'История',
+    name: 'Исторические портреты',
+    query: `
+      SELECT DISTINCT ?personLabel ?image WHERE {
+        { ?person wdt:P106 wd:Q116. } UNION
+        { ?person wdt:P39 wd:Q11696. } UNION
+        { ?person wdt:P106 wd:Q82955. }
+        ?person wdt:P18 ?image.
+        ?person wikibase:sitelinks ?sitelinks.
+        FILTER(?sitelinks > 80)
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 400
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.personLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.personLabel.value))];
+      return filteredBindings.map(b => {
+        const person = b.personLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== person)).slice(0, 3);
+        const options = shuffle([person, ...wrong]);
+        
+        return {
+          category: 'История',
+          text: 'Кто из известных исторических правителей или политиков изображен на портрете / фотографии?',
+          options,
+          correct_answer: options.indexOf(person),
+          image
+        };
+      });
+    }
+  },
+  {
+    categoryFile: CATEGORIES.HISTORY,
+    categoryName: 'История',
+    name: 'Исторические события (Иллюстрации)',
+    query: `
+      SELECT DISTINCT ?eventLabel ?image WHERE {
+        { ?event wdt:P31 wd:Q178561. } UNION
+        { ?event wdt:P31 wd:Q13418847. }
+        ?event wdt:P18 ?image.
+        ?event wikibase:sitelinks ?sitelinks.
+        FILTER(?sitelinks > 25)
+        SERVICE wikibase:label { bd:serviceParam wikibase:language "ru". }
+      } LIMIT 300
+    `,
+    process: (bindings) => {
+      const filteredBindings = bindings.filter(b => /[а-яА-Я]/.test(b.eventLabel?.value) && b.image?.value);
+      const allAnswers = [...new Set(filteredBindings.map(b => b.eventLabel.value))];
+      return filteredBindings.map(b => {
+        const event = b.eventLabel.value;
+        const image = b.image.value.replace('http://', 'https://');
+        
+        const wrong = shuffle(allAnswers.filter(a => a !== event)).slice(0, 3);
+        const options = shuffle([event, ...wrong]);
+        
+        return {
+          category: 'История',
+          text: 'Какое историческое событие запечатлено на этой иллюстрации?',
+          options,
+          correct_answer: options.indexOf(event),
+          image
+        };
+      });
+    }
+  },
   // ---------------- SPORT ----------------
   {
     categoryFile: CATEGORIES.SPORT,
@@ -511,8 +710,9 @@ async function main() {
         if (q.text.includes('undefined') || q.options.some(o => typeof o !== 'string' || o.includes('undefined'))) continue;
         if (q.text.length < 10) continue;
         
-        if (!seen.has(q.text)) {
-          seen.add(q.text);
+        const uniqueKey = q.image ? `${q.text}-${q.correct_answer}-${q.image}` : q.text;
+        if (!seen.has(uniqueKey)) {
+          seen.add(uniqueKey);
           filtered.push(q);
         }
       }
