@@ -358,12 +358,7 @@ io.on('connection', (socket) => {
       if (stats.currentStreak > stats.maxStreak) stats.maxStreak = stats.currentStreak;
     }
 
-    roundAnswers.set(info.playerId, {
-      playerId: info.playerId,
-      answerIndex,
-      isCorrect,
-      time: parseFloat(elapsed),
-    });
+    let betResult = 0;
 
     // Начислить очки
     const player = lobby.players.find(p => p.id === info.playerId);
@@ -395,7 +390,9 @@ io.on('connection', (socket) => {
         if (lobby.settings?.betting && lobby.bets) {
           const roundBets = lobby.bets.get(qi);
           if (roundBets && roundBets.has(info.playerId)) {
-            points += roundBets.get(info.playerId);
+            const betAmount = roundBets.get(info.playerId);
+            points += betAmount;
+            betResult = betAmount;
           }
         }
         player.score += points;
@@ -405,11 +402,21 @@ io.on('connection', (socket) => {
         if (lobby.settings?.betting && lobby.bets) {
           const roundBets = lobby.bets.get(qi);
           if (roundBets && roundBets.has(info.playerId)) {
-            player.score = Math.max(0, player.score - roundBets.get(info.playerId));
+            const betAmount = roundBets.get(info.playerId);
+            player.score = Math.max(0, player.score - betAmount);
+            betResult = -betAmount;
           }
         }
       }
     }
+
+    roundAnswers.set(info.playerId, {
+      playerId: info.playerId,
+      answerIndex,
+      isCorrect,
+      time: parseFloat(elapsed),
+      betResult,
+    });
 
     console.log(`[ANSWER] ${info.playerId} answered ${answerIndex} (${isCorrect ? '✓' : '✗'}) in ${info.lobbyCode}`);
 
@@ -587,28 +594,7 @@ io.on('connection', (socket) => {
     }
   });
 
-  // ─── REACTION ───────────────────────────────────────
-  socket.on('reaction', ({ emoji }) => {
-    const info = playerSockets.get(socket.id);
-    if (!info) return;
-    const lobby = lobbies.get(info.lobbyCode);
-    if (!lobby) return;
-
-    const player = lobby.players.find(p => p.id === info.playerId);
-    if (!player) return;
-
-    // Rate limit: 1 per 2 seconds
-    const now = Date.now();
-    if (!lobby._lastReaction) lobby._lastReaction = new Map();
-    const lastTime = lobby._lastReaction.get(info.playerId) || 0;
-    if (now - lastTime < 2000) return;
-    lobby._lastReaction.set(info.playerId, now);
-
-    const validEmojis = ['😂', '🔥', '💀', '😱', '👏', '🤡'];
-    if (!validEmojis.includes(emoji)) return;
-
-    io.to(info.lobbyCode).emit('reaction', { emoji, nickname: player.nickname });
-  });
+  // Reaction handler removed
 });
 
 // ─── Helper: count connected players ──────────────────
@@ -678,18 +664,31 @@ function sendQuestionAfterBetting(lobby) {
     return;
   }
 
+  // Shuffle options to have random locations
+  const correctOptionText = question.options[question.correct_answer];
+  const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+  const newCorrectAnswer = shuffledOptions.indexOf(correctOptionText);
+
+  // Update question with shuffled options so correct answer index is accurate
+  lobby.questions[qi] = {
+    ...question,
+    options: shuffledOptions,
+    correct_answer: newCorrectAnswer
+  };
+  const updatedQuestion = lobby.questions[qi];
+
   // Отправить вопрос всем
   lobby.roundStartTime = Date.now();
   const baseRd = lobby.settings?.roundDuration || 20;
-  const rd = getDynamicDuration(question, baseRd);
+  const rd = getDynamicDuration(updatedQuestion, baseRd);
 
   io.to(lobby.code).emit('new_question', {
     questionIndex: qi,
     totalQuestions: lobby.questions.length,
     question: {
-      text: question.text,
-      options: question.options,
-      image: question.image,
+      text: updatedQuestion.text,
+      options: updatedQuestion.options,
+      image: updatedQuestion.image,
     },
     duration: rd,
   });
@@ -728,11 +727,24 @@ function endRound(lobby) {
       if (!roundAnswers.has(p.id)) {
         const baseRd = lobby.settings?.roundDuration || 20;
         const rd = getDynamicDuration(question, baseRd);
+        
+        let betResult = 0;
+        // Betting penalty if they didn't answer
+        if (lobby.settings?.betting && lobby.bets) {
+          const roundBets = lobby.bets.get(qi);
+          if (roundBets && roundBets.has(p.id)) {
+            const betAmount = roundBets.get(p.id);
+            p.score = Math.max(0, p.score - betAmount);
+            betResult = -betAmount;
+          }
+        }
+
         roundAnswers.set(p.id, {
           playerId: p.id,
           answerIndex: -1,
           isCorrect: false,
           time: rd,
+          betResult,
         });
         p.streak = 0;
       }

@@ -1,7 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { useGameState, type FloatingReaction } from '../hooks/useGameState';
-
-const REACTION_EMOJIS = ['😂', '🔥', '💀', '😱', '👏', '🤡'];
+import { useGameState } from '../hooks/useGameState';
 
 export function Game() {
   const {
@@ -28,9 +26,6 @@ export function Game() {
     betCount,
     betTotal,
     submitBet,
-    // Reactions
-    reactions,
-    sendReaction,
   } = useGameState();
 
   const audioCtxRef = useRef<AudioContext | null>(null);
@@ -213,25 +208,7 @@ export function Game() {
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4 relative overflow-hidden">
-      {/* Floating Reactions */}
-      {reactions.map((r: FloatingReaction) => (
-        <div
-          key={r.id}
-          className="fixed pointer-events-none z-50 animate-float-up"
-          style={{
-            left: `${Math.random() * 60 + 20}%`,
-            bottom: '80px',
-          }}
-        >
-          <div className="flex flex-col items-center">
-            <span className="text-4xl">{r.emoji}</span>
-            <span className="text-xs font-bold text-white/70 bg-black/40 px-2 py-0.5 rounded-full mt-1">{r.nickname}</span>
-          </div>
-        </div>
-      ))}
-
-      <div className="w-full max-w-4xl mt-12">
+    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4 relative overflow-hidden">      <div className="w-full max-w-4xl mt-12">
         {/* Header: Timer and Info */}
         <div className="flex justify-between items-center mb-12">
           <div className="bg-neutral-800 px-6 py-2 rounded-full border border-neutral-700 font-bold">
@@ -318,52 +295,52 @@ export function Game() {
           </div>
         )}
 
-        {/* Reactions bar */}
-        <div className="flex justify-center gap-2 mb-8">
-          {REACTION_EMOJIS.map(emoji => (
-            <button
-              key={emoji}
-              onClick={() => sendReaction(emoji)}
-              className="text-3xl hover:scale-125 active:scale-90 transition-transform bg-neutral-800/50 rounded-full w-14 h-14 flex items-center justify-center border border-neutral-700/50 hover:border-neutral-500"
-            >
-              {emoji}
-            </button>
-          ))}
-        </div>
 
         {/* Players Scoreboard */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
           {players
             .sort((a, b) => b.score - a.score)
-            .map(p => (
-              <div
-                key={p.id}
-                className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
-                  p.id === playerId
-                    ? 'border-white/30'
-                    : 'border-neutral-700/50'
-                }`}
-              >
-                <div className={`text-xs font-bold uppercase mb-1 truncate ${p.online === false ? 'text-red-500' : 'text-neutral-500'}`}>
-                  {p.nickname} {p.online === false && '(Офлайн)'}
+            .map(p => {
+              const myAnswer = roundAnswers.find(a => a.playerId === p.id);
+              const betResult = myAnswer?.betResult;
+              
+              return (
+                <div
+                  key={p.id}
+                  className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
+                    p.id === playerId
+                      ? 'border-white/30'
+                      : 'border-neutral-700/50'
+                  }`}
+                >
+                  <div className={`text-xs font-bold uppercase mb-1 truncate ${p.online === false ? 'text-red-500' : 'text-neutral-500'}`}>
+                    {p.nickname} {p.online === false && '(Офлайн)'}
+                  </div>
+                  <div className="text-xl font-black flex items-center justify-center gap-2">
+                    {p.score}
+                    {showResults && betResult !== undefined && betResult !== 0 && (
+                      <span className={`text-sm font-bold ${betResult > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                        {betResult > 0 ? `+${betResult}` : betResult}
+                      </span>
+                    )}
+                  </div>
+                  {p.streak >= 10 ? (
+                    <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
+                      🔥 x2
+                    </div>
+                  ) : p.streak >= 3 ? (
+                    <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
+                      🔥 x1.5
+                    </div>
+                  ) : null}
+                  {p.correctCount !== undefined && p.correctCount > 0 && (
+                    <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
+                      ✅ {p.correctCount}
+                    </div>
+                  )}
                 </div>
-                <div className="text-xl font-black">{p.score}</div>
-                {p.streak >= 10 ? (
-                  <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
-                    🔥 x2
-                  </div>
-                ) : p.streak >= 3 ? (
-                  <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
-                    🔥 x1.5
-                  </div>
-                ) : null}
-                {p.correctCount !== undefined && p.correctCount > 0 && (
-                  <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
-                    ✅ {p.correctCount}
-                  </div>
-                )}
-              </div>
-            ))}
+              );
+            })}
         </div>
       </div>
     </div>

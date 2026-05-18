@@ -25,12 +25,7 @@ interface AnswerInfo {
   answerIndex: number;
   isCorrect: boolean;
   time?: number;
-}
-
-export interface FloatingReaction {
-  id: number;
-  emoji: string;
-  nickname: string;
+  betResult?: number;
 }
 
 const ROUND_DURATION = 20;
@@ -60,8 +55,7 @@ export function useGameState() {
   const [betCount, setBetCount] = useState(0);
   const [betTotal, setBetTotal] = useState(0);
 
-  // Reactions state
-  const [reactions, setReactions] = useState<FloatingReaction[]>([]);
+
 
   const handleRoundEnd = useCallback(() => {
     // Таймер клиента истёк — сервер тоже завершит раунд
@@ -161,15 +155,8 @@ export function useGameState() {
       setPlayers(data.players);
     };
 
-    const onReaction = (data: { emoji: string; nickname: string }) => {
-      const id = Date.now() + Math.random();
-      setReactions(prev => [...prev, { id, emoji: data.emoji, nickname: data.nickname }]);
-      // Auto-remove after animation
-      setTimeout(() => {
-        setReactions(prev => prev.filter(r => r.id !== id));
-      }, 2500);
-    };
 
+    socket.on('betting_phase', onBettingPhase);
     socket.on('new_question', onNewQuestion);
     socket.on('betting_phase', onBettingPhase);
     socket.on('bet_count', onBetCount);
@@ -177,7 +164,6 @@ export function useGameState() {
     socket.on('round_results', onRoundResults);
     socket.on('game_finished', onGameFinished);
     socket.on('players_updated', onPlayersUpdated);
-    socket.on('reaction', onReaction);
 
     return () => {
       socket.off('new_question', onNewQuestion);
@@ -187,7 +173,6 @@ export function useGameState() {
       socket.off('round_results', onRoundResults);
       socket.off('game_finished', onGameFinished);
       socket.off('players_updated', onPlayersUpdated);
-      socket.off('reaction', onReaction);
     };
   }, [code, navigate, resetTimer, stopTimer, resetBettingTimer, stopBettingTimer]);
 
@@ -231,11 +216,6 @@ export function useGameState() {
     });
   }, [currentBet]);
 
-  // Send reaction
-  const sendReaction = useCallback((emoji: string) => {
-    socket.emit('reaction', { emoji });
-  }, []);
-
   return {
     code,
     question,
@@ -260,8 +240,5 @@ export function useGameState() {
     betCount,
     betTotal,
     submitBet,
-    // Reactions
-    reactions,
-    sendReaction,
   };
 }
