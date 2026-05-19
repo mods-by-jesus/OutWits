@@ -15,6 +15,7 @@ const RESULTS_DELAY = 5000; // мс — пауза перед следующим
 const BETTING_DURATION = 8000; // мс — время на ставку
 const MAX_PLAYERS = 5;
 const QUESTIONS_PER_GAME = 10;
+const HOUSE_SPONSOR_BONUS = 50;
 
 // ─── Load questions ───────────────────────────────────
 const questionsDir = join(__dirname, 'questions');
@@ -641,6 +642,9 @@ function sendQuestion(lobby) {
 
   // If betting is enabled, start betting phase first
   if (lobby.settings?.betting) {
+    // Add house sponsor bonus at start of betting phase
+    lobby.pot = (lobby.pot || 0) + HOUSE_SPONSOR_BONUS;
+
     io.to(lobby.code).emit('betting_phase', {
       category: question.category || 'Общие знания',
       duration: BETTING_DURATION / 1000,
@@ -744,23 +748,34 @@ function endRound(lobby) {
     // Handle Shared Pot betting distribution
     if (lobby.settings?.betting) {
       const correctPlayers = Array.from(roundAnswers.values()).filter(a => a.isCorrect).map(a => a.playerId);
-      if (correctPlayers.length > 0 && lobby.pot > 0) {
-        const splitAmount = Math.floor(lobby.pot / correctPlayers.length);
+      
+      // Calculate total bets placed by correct players
+      let totalCorrectBets = 0;
+      const roundBets = lobby.bets.get(qi);
+      correctPlayers.forEach(pid => {
+        const pBet = (roundBets && roundBets.get(pid)) || 0;
+        totalCorrectBets += pBet;
+      });
+
+      if (totalCorrectBets > 0 && lobby.pot > 0) {
         correctPlayers.forEach(pid => {
+          const pBet = (roundBets && roundBets.get(pid)) || 0;
+          const gain = Math.floor(lobby.pot * (pBet / totalCorrectBets));
+          
           const p = lobby.players.find(player => player.id === pid);
-          if (p) p.score += splitAmount;
+          if (p) p.score += gain;
           
           const answer = roundAnswers.get(pid);
-          if (answer) answer.betResult = splitAmount;
+          if (answer) answer.betResult = gain;
         });
-        console.log(`[POT] Split ${lobby.pot} among ${correctPlayers.length} winners (${splitAmount} each)`);
+        console.log(`[POT] Split ${lobby.pot} proportionally among winners. Total correct bets: ${totalCorrectBets}`);
         lobby.pot = 0; // Reset pot after distributing
-      } else if (lobby.pot > 0) {
-        // Nobody got it right -> pot carries over to the next round!
-        console.log(`[POT] No winners, pot of ${lobby.pot} carries over!`);
-        // We set betResult to 0 for everyone since they lost their bets
+      } else {
+        // Carry over the pot (either no one answered correctly, or only those who bet 0 did)
+        console.log(`[POT] No betters won, pot of ${lobby.pot} carries over!`);
+        // Set betResult to 0 for everyone since they didn't win anything from the pot
         Array.from(roundAnswers.values()).forEach(a => {
-          if (!a.isCorrect) a.betResult = 0; // We don't show negative because it was deducted at bet time
+          a.betResult = 0;
         });
       }
     }
