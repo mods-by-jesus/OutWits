@@ -136,11 +136,25 @@ export function Solo() {
             setScore(parsed.score);
             setSelectedCategories(parsed.selectedCategories);
             setAnsweredQuestionKeys(parsed.answeredQuestionKeys || []);
-            setCurrentQuestion(parsed.currentQuestion);
-            setShuffledOptions(parsed.shuffledOptions || []);
-            setCorrectAnswerIndex(parsed.correctAnswerIndex);
-            setStatus(parsed.status);
-            setSelectedAnswerIndex(parsed.selectedAnswerIndex);
+            // Принудительно сбрасываем сессию в настройку категорий при входе
+            setStatus('setup');
+            setCurrentQuestion(null);
+            setShuffledOptions([]);
+            setCorrectAnswerIndex(-1);
+            setSelectedAnswerIndex(null);
+
+            // Записываем сброшенное состояние сессии
+            const updatedState: SoloState = {
+              score: parsed.score,
+              selectedCategories: parsed.selectedCategories,
+              answeredQuestionKeys: parsed.answeredQuestionKeys || [],
+              currentQuestion: null,
+              shuffledOptions: [],
+              correctAnswerIndex: -1,
+              status: 'setup',
+              selectedAnswerIndex: null
+            };
+            localStorage.setItem('outwits_solo_state', JSON.stringify(updatedState));
           } catch (e) {
             console.error('Ошибка восстановления состояния:', e);
           }
@@ -321,15 +335,21 @@ export function Solo() {
     }
   };
 
-  // Выход на главную
+  // Выход на главную или к настройкам
   const handleExit = () => {
-    navigate('/');
+    if (status !== 'setup') {
+      setStatus('setup');
+      setCurrentQuestion(null);
+      saveState({ status: 'setup', currentQuestion: null });
+    } else {
+      navigate('/');
+    }
   };
 
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen bg-neutral-900 text-white">
-        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-violet-500 mb-4"></div>
+        <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-white mb-4"></div>
         <p className="text-xl font-medium text-neutral-400">Загрузка вопросов...</p>
       </div>
     );
@@ -360,14 +380,14 @@ export function Solo() {
               Выйти
             </button>
             <span className="text-sm md:text-base font-bold text-neutral-400 tracking-wider">
-              ОДИНАРНЫЙ РЕЖИМ
+              ОДИНОЧНЫЙ РЕЖИМ
             </span>
           </div>
 
           <div className="flex items-center gap-4">
             <div className="text-right">
               <div className="text-xs text-neutral-400 font-semibold uppercase tracking-wider">Счет</div>
-              <div className="text-2xl font-black text-violet-400 transition-all">
+              <div className="text-2xl font-black text-white transition-all">
                 {score}
               </div>
             </div>
@@ -394,7 +414,7 @@ export function Solo() {
                     onClick={() => toggleCategory(cat)}
                     className={`flex items-center justify-between p-4 rounded-xl border-2 text-left transition-all ${
                       isSelected
-                        ? 'border-violet-500 bg-violet-500/10 text-white shadow-[0_0_15px_rgba(124,58,237,0.2)]'
+                        ? 'border-white bg-white/10 text-white shadow-[0_0_15px_rgba(255,255,255,0.1)]'
                         : 'border-neutral-700/60 bg-neutral-800/40 text-neutral-400 hover:border-neutral-600 hover:bg-neutral-700/20'
                     }`}
                   >
@@ -405,9 +425,9 @@ export function Solo() {
                       </div>
                     </div>
                     <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
-                      isSelected ? 'border-violet-500 bg-violet-500' : 'border-neutral-600'
+                      isSelected ? 'border-white bg-white' : 'border-neutral-600'
                     }`}>
-                      {isSelected && <span className="text-xs text-white">✓</span>}
+                      {isSelected && <span className="text-xs text-black font-bold">✓</span>}
                     </div>
                   </button>
                 );
@@ -439,7 +459,7 @@ export function Solo() {
           <div className="space-y-6 animate-fade-in">
             {/* Индикатор темы и прогресса */}
             <div className="flex justify-between items-center text-sm text-neutral-400 font-semibold border-b border-neutral-700/30 pb-2">
-              <span className="bg-neutral-700/40 px-3 py-1 rounded-full border border-neutral-600/20 text-violet-300 font-bold">
+              <span className="bg-neutral-700/40 px-3 py-1 rounded-full border border-neutral-600/20 text-white font-bold">
                 {currentQuestion.category}
               </span>
               <span>
