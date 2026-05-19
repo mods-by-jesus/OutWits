@@ -473,7 +473,9 @@ export function Solo() {
                 <img
                   src={currentQuestion.image}
                   alt="Вопрос"
-                  className="max-w-full max-h-[200px] object-contain rounded-lg filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]"
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
+                  className="max-w-full max-h-[200px] object-contain rounded-lg filter drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] select-none pointer-events-none"
                 />
               </div>
             )}
