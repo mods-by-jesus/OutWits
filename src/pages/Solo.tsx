@@ -23,6 +23,12 @@ interface SoloState {
   selectedAnswerIndex: number | null;
 }
 
+const getApiUrl = () => {
+  const socketUrl = import.meta.env.VITE_SOCKET_URL || '';
+  if (!socketUrl) return '';
+  return socketUrl.replace(/^ws(s)?:\/\//, 'http$1://');
+};
+
 export function Solo() {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(true);
@@ -112,7 +118,7 @@ export function Solo() {
 
   // Загрузка всех вопросов с бэкенда
   useEffect(() => {
-    fetch('/api/questions')
+    fetch(`${getApiUrl()}/api/questions`)
       .then((res) => {
         if (!res.ok) throw new Error('Не удалось загрузить вопросы');
         return res.json();
@@ -349,9 +355,9 @@ export function Solo() {
           <div className="flex items-center gap-3">
             <button
               onClick={handleExit}
-              className="text-neutral-400 hover:text-white transition-colors bg-neutral-700/30 hover:bg-neutral-700/60 p-2 rounded-xl border border-neutral-600/30"
+              className="bg-white text-black font-semibold px-4 py-2 rounded-xl hover:bg-neutral-200 transition-colors shadow-md text-sm md:text-base"
             >
-              🚪 Выйти
+              Выйти
             </button>
             <span className="text-sm md:text-base font-bold text-neutral-400 tracking-wider">
               ОДИНАРНЫЙ РЕЖИМ
@@ -411,17 +417,17 @@ export function Solo() {
             <div className="pt-4 flex gap-3">
               <button
                 onClick={handleStartGame}
-                className="flex-1 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold py-4 rounded-xl text-xl transition-all shadow-[0_0_20px_rgba(124,58,237,0.4)]"
+                className="flex-1 bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)]"
               >
-                🎮 Начать игру
+                Начать игру
               </button>
               {answeredQuestionKeys.length > 0 && (
                 <button
                   onClick={handleFullReset}
-                  className="bg-neutral-700/40 hover:bg-neutral-700/70 border border-neutral-600/50 text-neutral-300 font-bold px-6 rounded-xl transition-colors"
+                  className="bg-white text-black font-bold px-6 rounded-xl hover:bg-neutral-200 transition-colors shadow-md"
                   title="Полный сброс"
                 >
-                  🔄
+                  Сбросить
                 </button>
               )}
             </div>
@@ -502,9 +508,9 @@ export function Solo() {
               <div className="pt-4 flex gap-3 animate-slide-up">
                 <button
                   onClick={handleNextQuestion}
-                  className="flex-1 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold py-4 rounded-xl text-xl transition-all shadow-[0_0_20px_rgba(124,58,237,0.4)]"
+                  className="flex-1 bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.15)]"
                 >
-                  ➡️ Следующий вопрос
+                  Следующий вопрос
                 </button>
               </div>
             )}
@@ -514,28 +520,28 @@ export function Solo() {
         {/* ───────── SCREEN 3: COMPLETED (Все вопросы пройдены) ───────── */}
         {status === 'completed' && (
           <div className="space-y-6 text-center py-6 animate-fade-in">
-            <div className="inline-block p-4 bg-violet-500/15 rounded-full border border-violet-500/30 text-5xl mb-2 animate-bounce">
-              🏆
+            <div className="inline-block px-6 py-3 bg-white/10 rounded-full border border-white/20 text-xl font-bold tracking-widest text-white mb-2 animate-bounce">
+              ПОБЕДА!
             </div>
             
             <div className="space-y-2">
               <h2 className="text-3xl font-black text-white">Все вопросы пройдены!</h2>
               <p className="text-neutral-400 max-w-md mx-auto leading-relaxed">
-                Поздравляем! Вы ответили на все доступные вопросы в выбранных категориях. Вы можете сбросить историю и продолжить копить очки, либо начать с нуля.
+                Вы ответили на все доступные вопросы в выбранных категориях. Вы можете сбросить историю и продолжить копить очки, либо начать с нуля.
               </p>
             </div>
 
             <div className="border border-neutral-700/40 bg-neutral-800/30 rounded-xl p-4 max-w-sm mx-auto">
               <div className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Текущий счет</div>
-              <div className="text-4xl font-black text-violet-400">{score}</div>
+              <div className="text-4xl font-black text-white">{score}</div>
             </div>
 
             <div className="space-y-3 max-w-md mx-auto pt-4">
               <button
                 onClick={handleResetHistoryOnly}
-                className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold py-4 rounded-xl text-lg transition-all shadow-[0_0_20px_rgba(124,58,237,0.3)]"
+                className="w-full bg-white text-black font-bold py-4 rounded-xl text-lg hover:bg-neutral-200 transition-all shadow-lg"
               >
-                🔄 Сбросить историю ответов и продолжить
+                Сбросить историю ответов и продолжить
               </button>
               
               <button
@@ -543,16 +549,16 @@ export function Solo() {
                   setStatus('setup');
                   saveState({ status: 'setup' });
                 }}
-                className="w-full bg-neutral-700/50 hover:bg-neutral-700/80 border border-neutral-600/50 text-neutral-200 font-bold py-4 rounded-xl text-lg transition-colors"
+                className="w-full bg-white text-black font-bold py-4 rounded-xl text-lg hover:bg-neutral-200 transition-all shadow-lg"
               >
-                ⚙️ Изменить категории
+                Изменить категории
               </button>
 
               <button
                 onClick={handleFullReset}
-                className="w-full bg-rose-950/20 hover:bg-rose-950/40 border border-rose-800/40 text-rose-300 font-bold py-4 rounded-xl text-lg transition-colors"
+                className="w-full bg-rose-600 hover:bg-rose-500 text-white font-bold py-4 rounded-xl text-lg transition-colors shadow-md"
               >
-                🗑️ Сбросить всё и начать с нуля
+                Сбросить всё и начать с нуля
               </button>
             </div>
           </div>
