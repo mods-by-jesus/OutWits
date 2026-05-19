@@ -330,7 +330,6 @@ export function Solo() {
       setCorrectAnswerIndex(-1);
       setSelectedAnswerIndex(null);
       setStatus('setup');
-      setSelectedCategories(categories);
       showToast('Прогресс полностью сброшен!', 'success');
     }
   };
