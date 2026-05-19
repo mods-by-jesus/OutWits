@@ -25,6 +25,7 @@ export function Game() {
     currentBet,
     betCount,
     betTotal,
+    pot,
     submitBet,
   } = useGameState();
 
@@ -147,6 +148,58 @@ export function Game() {
     );
   }
 
+  const currentPlayer = players.find(p => p.id === playerId);
+  const myScore = currentPlayer?.score || 0;
+
+  // Render Scoreboard
+  const renderScoreboard = () => (
+    <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      {players
+        .sort((a, b) => b.score - a.score)
+        .map(p => {
+          const myAnswer = roundAnswers.find(a => a.playerId === p.id);
+          const betResult = myAnswer?.betResult;
+          
+          return (
+            <div
+              key={p.id}
+              className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
+                p.id === playerId
+                  ? 'border-white/30'
+                  : 'border-neutral-700/50'
+              }`}
+            >
+              <div className={`text-xs font-bold uppercase mb-1 truncate ${p.online === false ? 'text-red-500' : 'text-neutral-500'}`}>
+                {p.nickname} {p.online === false && '(Офлайн)'}
+              </div>
+              <div className="text-xl font-black flex items-center justify-center gap-2">
+                {p.score}
+                {showResults && betResult !== undefined && betResult !== 0 && (
+                  <span className={`text-sm font-bold ${betResult > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                    {betResult > 0 ? `+${betResult}` : betResult}
+                  </span>
+                )}
+              </div>
+              {p.streak >= 10 ? (
+                <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
+                  🔥 x2
+                </div>
+              ) : p.streak >= 3 ? (
+                <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
+                  🔥 x1.5
+                </div>
+              ) : null}
+              {p.correctCount !== undefined && p.correctCount > 0 && (
+                <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
+                  ✅ {p.correctCount}
+                </div>
+              )}
+            </div>
+          );
+        })}
+    </div>
+  );
+
   // Betting phase screen
   if (bettingPhase) {
     return (
@@ -165,50 +218,76 @@ export function Game() {
             </div>
           </div>
 
-          {/* Betting UI */}
-          <div className="text-center mb-8">
-            <div className="text-6xl mb-4">🎰</div>
-            <p className="text-neutral-500 font-bold uppercase tracking-widest text-xs mb-2">
-              Вопрос {questionIndex + 1} из {totalQuestions} · Категория
-            </p>
-            <h2 className="text-3xl font-black text-yellow-400 mb-2">{bettingCategory}</h2>
-            <p className="text-neutral-400 text-sm">Поставь очки — если ответишь правильно, получишь их обратно!</p>
-            <p className="text-neutral-500 text-xs">Ошибёшься — потеряешь ставку</p>
-          </div>
-
-          <div className="grid grid-cols-5 gap-3 max-w-lg mx-auto mb-8">
-            {[0, 5, 10, 15, 20].map(amount => (
-              <button
-                key={amount}
-                onClick={() => submitBet(amount)}
-                disabled={currentBet !== null}
-                className={`py-6 rounded-2xl border-2 text-xl font-black transition-all ${
-                  currentBet === amount
-                    ? 'bg-yellow-500 border-yellow-400 text-black scale-105'
-                    : currentBet !== null
-                      ? 'bg-neutral-800 border-neutral-800 text-neutral-600 cursor-default opacity-50'
-                      : 'bg-neutral-800 border-neutral-700 text-white hover:border-yellow-500 hover:bg-yellow-500/10'
-                }`}
-              >
-                {amount === 0 ? '—' : amount}
-              </button>
-            ))}
-          </div>
-
-          {currentBet !== null && (
-            <div className="text-center animate-pulse">
-              <p className="text-yellow-400 font-bold uppercase tracking-widest text-sm">
-                Ставка {currentBet > 0 ? `${currentBet} очков` : 'пропущена'} · Ожидаем остальных...
+            <div className="text-center mb-8">
+              <div className="inline-block bg-yellow-500/20 text-yellow-400 px-6 py-3 rounded-2xl border-2 border-yellow-500/50 mb-6">
+                <span className="text-2xl mr-2">💰</span>
+                <span className="text-sm font-bold uppercase tracking-widest mr-2">Банк:</span>
+                <span className="text-3xl font-black">{pot}</span>
+              </div>
+              <p className="text-neutral-500 font-bold uppercase tracking-widest text-xs mb-2">
+                Вопрос {questionIndex + 1} из {totalQuestions} · Категория
               </p>
+              <h2 className="text-3xl font-black text-white mb-2">{bettingCategory}</h2>
+              <p className="text-neutral-400 text-sm">Сделай ставку в общий котёл!</p>
+              <p className="text-neutral-500 text-xs">Победители поделят банк. Не угадаешь — потеряешь ставку.</p>
             </div>
-          )}
+
+            <div className="grid grid-cols-4 gap-3 max-w-xl mx-auto mb-8">
+              {[0, 25, 50, 100].map(pct => {
+                const amount = Math.floor(myScore * (pct / 100));
+                const isDisabled = currentBet !== null || (pct > 0 && amount === 0);
+                
+                return (
+                  <button
+                    key={pct}
+                    onClick={() => submitBet(amount)}
+                    disabled={isDisabled}
+                    className={`py-6 flex flex-col items-center justify-center rounded-2xl border-2 transition-all ${
+                      currentBet === amount && currentBet !== null
+                        ? 'bg-yellow-500 border-yellow-400 text-black scale-105'
+                        : isDisabled
+                          ? 'bg-neutral-800 border-neutral-800 text-neutral-600 cursor-default opacity-50'
+                          : 'bg-neutral-800 border-neutral-700 text-white hover:border-yellow-500 hover:bg-yellow-500/10'
+                    }`}
+                  >
+                    <span className="text-sm font-bold opacity-70 mb-1">
+                      {pct === 0 ? 'Пас' : pct === 100 ? 'Ва-банк' : `${pct}%`}
+                    </span>
+                    <span className="text-2xl font-black">
+                      {amount}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+
+            {currentBet !== null && (
+              <div className="text-center animate-pulse mb-8">
+                <p className="text-yellow-400 font-bold uppercase tracking-widest text-sm">
+                  Ставка {currentBet > 0 ? `${currentBet} очков` : 'пропущена'} · Ожидаем остальных...
+                </p>
+              </div>
+            )}
+
+            {/* Scoreboard in betting phase */}
+            <div className="mt-8 border-t border-neutral-800 pt-8">
+              {renderScoreboard()}
+            </div>
         </div>
       </div>
     );
   }
 
   return (
-    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4 relative overflow-hidden">      <div className="w-full max-w-4xl mt-12">
+    <div className="flex flex-col items-center min-h-screen w-full bg-neutral-900 text-white p-4 relative overflow-hidden">
+      <div className="w-full max-w-4xl mt-12">
+        {/* Pot display during question */}
+        {pot > 0 && (
+          <div className="absolute top-4 right-4 bg-yellow-500/20 text-yellow-400 px-4 py-2 rounded-xl border border-yellow-500/50 flex items-center gap-2 animate-pulse">
+            <span>💰</span>
+            <span className="font-bold">Банк: {pot}</span>
+          </div>
+        )}
         {/* Header: Timer and Info */}
         <div className="flex justify-between items-center mb-12">
           <div className="bg-neutral-800 px-6 py-2 rounded-full border border-neutral-700 font-bold">
@@ -297,51 +376,8 @@ export function Game() {
 
 
         {/* Players Scoreboard */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-          {players
-            .sort((a, b) => b.score - a.score)
-            .map(p => {
-              const myAnswer = roundAnswers.find(a => a.playerId === p.id);
-              const betResult = myAnswer?.betResult;
-              
-              return (
-                <div
-                  key={p.id}
-                  className={`relative bg-neutral-800/50 p-4 rounded-xl border text-center transition-all ${
-                    p.id === playerId
-                      ? 'border-white/30'
-                      : 'border-neutral-700/50'
-                  }`}
-                >
-                  <div className={`text-xs font-bold uppercase mb-1 truncate ${p.online === false ? 'text-red-500' : 'text-neutral-500'}`}>
-                    {p.nickname} {p.online === false && '(Офлайн)'}
-                  </div>
-                  <div className="text-xl font-black flex items-center justify-center gap-2">
-                    {p.score}
-                    {showResults && betResult !== undefined && betResult !== 0 && (
-                      <span className={`text-sm font-bold ${betResult > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                        {betResult > 0 ? `+${betResult}` : betResult}
-                      </span>
-                    )}
-                  </div>
-                  {p.streak >= 10 ? (
-                    <div className="absolute -top-3 -right-3 bg-purple-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-purple-400 shadow-lg animate-bounce">
-                      🔥 x2
-                    </div>
-                  ) : p.streak >= 3 ? (
-                    <div className="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-red-400 shadow-lg animate-bounce">
-                      🔥 x1.5
-                    </div>
-                  ) : null}
-                  {p.correctCount !== undefined && p.correctCount > 0 && (
-                    <div className="absolute -bottom-3 -left-3 bg-green-600 text-white text-[10px] font-black px-2 py-1 rounded-full border border-green-400 shadow-lg">
-                      ✅ {p.correctCount}
-                    </div>
-                  )}
-                </div>
-              );
-            })}
-        </div>
+        {/* Players Scoreboard */}
+        {renderScoreboard()}
       </div>
     </div>
   );

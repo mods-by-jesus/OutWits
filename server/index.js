@@ -265,6 +265,7 @@ io.on('connection', (socket) => {
     lobby.status = 'playing';
     lobby.answers = new Map();
     lobby.bets = new Map(); // questionIndex -> Map(playerId -> betAmount)
+    lobby.pot = 0; // Shared pot for betting
     lobby.playerStats = new Map(); // playerId -> { totalTime, wrongCount, maxStreak, currentStreak }
 
     console.log(`[GAME] Started in ${info.lobbyCode} with ${lobby.players.length} players`);
@@ -386,27 +387,10 @@ io.on('connection', (socket) => {
           }
         }
 
-        // Betting bonus
-        if (lobby.settings?.betting && lobby.bets) {
-          const roundBets = lobby.bets.get(qi);
-          if (roundBets && roundBets.has(info.playerId)) {
-            const betAmount = roundBets.get(info.playerId);
-            points += betAmount;
-            betResult = betAmount;
-          }
-        }
+        // Betting bonus/penalty will be handled in endRound
         player.score += points;
       } else {
         player.streak = 0;
-        // Betting penalty
-        if (lobby.settings?.betting && lobby.bets) {
-          const roundBets = lobby.bets.get(qi);
-          if (roundBets && roundBets.has(info.playerId)) {
-            const betAmount = roundBets.get(info.playerId);
-            player.score = Math.max(0, player.score - betAmount);
-            betResult = -betAmount;
-          }
-        }
       }
     }
 
@@ -456,12 +440,16 @@ io.on('connection', (socket) => {
     lobby.status = 'waiting';
     lobby.questions = [];
     lobby.currentQuestionIndex = -1;
-    lobby.answers = new Map();
+    lobby.answers.clear();
+    lobby.bets.clear();
+    lobby.pot = 0;
+    lobby.playerStats.clear();
+    lobby.roundStartTime = null;
+
     if (lobby.roundTimer) {
       clearTimeout(lobby.roundTimer);
       lobby.roundTimer = null;
     }
-    lobby.roundStartTime = null;
 
     lobby.players.forEach(p => {
       p.score = 0;
@@ -576,13 +564,26 @@ io.on('connection', (socket) => {
 
     if (roundBets.has(info.playerId)) return callback?.({ error: 'Уже сделал ставку' });
 
-    const bet = Math.max(0, Math.min(20, parseInt(amount) || 0));
-    roundBets.set(info.playerId, bet);
-    console.log(`[BET] ${info.playerId} bet ${bet} in ${info.lobbyCode}`);
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player) return callback?.({ error: 'Игрок не найден' });
 
-    // Notify all about bet count
+    const bet = Math.max(0, Math.min(player.score, parseInt(amount) || 0));
+    roundBets.set(info.playerId, bet);
+    
+    // Deduct immediately and add to pot
+    player.score -= bet;
+    lobby.pot += bet;
+
+    console.log(`[BET] ${info.playerId} bet ${bet} in ${info.lobbyCode}, pot is now ${lobby.pot}`);
+
+    // Notify all about bet count and new pot
     const activePlayers = getActivePlayerCount(lobby);
-    io.to(info.lobbyCode).emit('bet_count', { count: roundBets.size, total: activePlayers });
+    io.to(info.lobbyCode).emit('bet_count', { count: roundBets.size, total: activePlayers, pot: lobby.pot });
+    io.to(info.lobbyCode).emit('players_updated', {
+      players: lobby.players.map(p => ({
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
+      })),
+    });
 
     callback?.({ ok: true });
 
@@ -643,6 +644,7 @@ function sendQuestion(lobby) {
     io.to(lobby.code).emit('betting_phase', {
       category: question.category || 'Общие знания',
       duration: BETTING_DURATION / 1000,
+      pot: lobby.pot || 0,
     });
 
     lobby._bettingTimer = setTimeout(() => {
@@ -728,32 +730,46 @@ function endRound(lobby) {
         const baseRd = lobby.settings?.roundDuration || 20;
         const rd = getDynamicDuration(question, baseRd);
         
-        let betResult = 0;
-        // Betting penalty if they didn't answer
-        if (lobby.settings?.betting && lobby.bets) {
-          const roundBets = lobby.bets.get(qi);
-          if (roundBets && roundBets.has(p.id)) {
-            const betAmount = roundBets.get(p.id);
-            p.score = Math.max(0, p.score - betAmount);
-            betResult = -betAmount;
-          }
-        }
-
         roundAnswers.set(p.id, {
           playerId: p.id,
           answerIndex: -1,
           isCorrect: false,
           time: rd,
-          betResult,
+          betResult: 0,
         });
         p.streak = 0;
       }
     });
 
+    // Handle Shared Pot betting distribution
+    if (lobby.settings?.betting) {
+      const correctPlayers = Array.from(roundAnswers.values()).filter(a => a.isCorrect).map(a => a.playerId);
+      if (correctPlayers.length > 0 && lobby.pot > 0) {
+        const splitAmount = Math.floor(lobby.pot / correctPlayers.length);
+        correctPlayers.forEach(pid => {
+          const p = lobby.players.find(player => player.id === pid);
+          if (p) p.score += splitAmount;
+          
+          const answer = roundAnswers.get(pid);
+          if (answer) answer.betResult = splitAmount;
+        });
+        console.log(`[POT] Split ${lobby.pot} among ${correctPlayers.length} winners (${splitAmount} each)`);
+        lobby.pot = 0; // Reset pot after distributing
+      } else if (lobby.pot > 0) {
+        // Nobody got it right -> pot carries over to the next round!
+        console.log(`[POT] No winners, pot of ${lobby.pot} carries over!`);
+        // We set betResult to 0 for everyone since they lost their bets
+        Array.from(roundAnswers.values()).forEach(a => {
+          if (!a.isCorrect) a.betResult = 0; // We don't show negative because it was deducted at bet time
+        });
+      }
+    }
+
     // Отправить результаты раунда
     io.to(lobby.code).emit('round_results', {
       correctAnswer: question.correct_answer,
       answers: Array.from(roundAnswers.values()),
+      pot: lobby.pot,
       players: lobby.players.map(p => ({
         id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),

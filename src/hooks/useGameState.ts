@@ -54,6 +54,7 @@ export function useGameState() {
   const [currentBet, setCurrentBet] = useState<number | null>(null);
   const [betCount, setBetCount] = useState(0);
   const [betTotal, setBetTotal] = useState(0);
+  const [pot, setPot] = useState(0);
 
 
 
@@ -108,20 +109,22 @@ export function useGameState() {
       resetTimer(data.duration);
     };
 
-    const onBettingPhase = (data: { category: string; duration: number }) => {
+    const onBettingPhase = (data: { category: string; duration: number; pot?: number }) => {
       setBettingPhase(true);
       setBettingCategory(data.category);
       setBettingDuration(data.duration);
       setCurrentBet(null);
       setBetCount(0);
       setBetTotal(0);
+      setPot(data.pot || 0);
       setLoading(false);
       resetBettingTimer(data.duration);
     };
 
-    const onBetCount = (data: { count: number; total: number }) => {
+    const onBetCount = (data: { count: number; total: number; pot?: number }) => {
       setBetCount(data.count);
       setBetTotal(data.total);
+      if (data.pot !== undefined) setPot(data.pot);
     };
 
     const onAnswerCount = (data: { count: number; total: number }) => {
@@ -133,10 +136,12 @@ export function useGameState() {
       correctAnswer: number;
       answers: AnswerInfo[];
       players: Player[];
+      pot?: number;
     }) => {
       setCorrectAnswer(data.correctAnswer);
       setRoundAnswers(data.answers);
       setPlayers(data.players);
+      if (data.pot !== undefined) setPot(data.pot);
       setShowResults(true);
       stopTimer();
     };
@@ -156,7 +161,7 @@ export function useGameState() {
     };
 
 
-    socket.on('betting_phase', onBettingPhase);
+
     socket.on('new_question', onNewQuestion);
     socket.on('betting_phase', onBettingPhase);
     socket.on('bet_count', onBetCount);
@@ -239,6 +244,7 @@ export function useGameState() {
     currentBet,
     betCount,
     betTotal,
+    pot,
     submitBet,
   };
 }
