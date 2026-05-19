@@ -10,7 +10,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zea_mays_stem_cross_section.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Zea%20mays%20stem%20cross%20section.jpg"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baby_Daisy_vacuum_cleaner.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Baby%20Daisy%20-%20Edwardian%20Vacuum%20Cleaner.jpg"
   },
   {
     "id": 3,
@@ -36,20 +36,20 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Horsehead_Nebula_Hubble.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Horsehead-Hubble.jpg"
   },
   {
     "id": 4,
-    "text": "В Москве установлен необычный памятник, на котором два известных персонажа басни Ивана Крылова дружески обнимаются и держат плавленый сырок «Дружба». Какие это персонажи?",
+    "text": "Этот 42-метровый монумент из титана, установленный в Москве в 1980 году, посвящен первому космонавту Земли Юрию Гагарину. Из-за футуристического дизайна и раскинутых рук его в народе часто сравнивают с...",
     "options": [
-      "Ворона и Лисица",
-      "Кот и Мышь",
-      "Волк и Ягненок",
-      "Мартышка и Очки"
+      "Роботом-трансформером",
+      "Ракетой-носителем",
+      "Самолетом Ил-18",
+      "Олимпийским Мишкой"
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monument_druzhba.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/%D0%9F%D0%B0%D0%BC%D1%8F%D1%82%D0%BD%D0%B8%D0%BA%20%D0%93%D0%B0%D0%B3%D0%B0%D1%80%D0%B8%D0%BD%D1%83%20%D0%BD%D0%B0%20%D0%9B%D0%B5%D0%BD%D0%B8%D0%BD%D1%81%D0%BA%D0%BE%D0%BC%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B5.jpg"
   },
   {
     "id": 5,
@@ -62,20 +62,20 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat_of_arms_of_Chelyabinsk.svg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Chelyabinsk.svg"
   },
   {
     "id": 6,
-    "text": "Какую строгую геометрическую форму имеют кристаллы обычной поваренной соли (хлорида натрия) при сильном увеличении под микроскопом?",
+    "text": "Этот знаменитый снимок 1902 года сделал «фермер-снежинка» Уилсон Бентли, впервые сфотографировав кристаллы льда под микроскопом. Какое утверждение о снежинках Бентли доказал с помощью сотен таких фото?",
     "options": [
-      "Куб",
-      "Тетраэдр",
-      "Шестигранная призма",
-      "Сфера"
+      "Не существует двух абсолютно одинаковых снежинок",
+      "Все снежинки имеют ровно восемь граней",
+      "Снежинки состоят из абсолютно сухого льда",
+      "Снежинки формируются только в безветренную погоду"
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Salt_crystals_under_SEM.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/SnowflakesWilsonBentley.jpg"
   },
   {
     "id": 7,
@@ -88,7 +88,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Scaphandre_de_Klingert_1797.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Taucheranzug%20Karl%20Heinrich%20Klingert.jpg"
   },
   {
     "id": 8,
@@ -101,20 +101,20 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pillars_of_creation_2014_HST_WFC3-UVIS_full-res_denoised.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pillars%20of%20Creation.jpg"
   },
   {
     "id": 9,
-    "text": "В курортном городе Железноводске Ставропольского края установлен уникальный памятник весом около 350 кг, который держат три ангелочка. Какому медицинскому инструменту он посвящен?",
+    "text": "21 июля 1950 года в немецком городе Вупперталь произошел курьезный случай: молодой слон по кличке Туффи выпал из вагона подвесной железной дороги в реку и выжил. Где именно ехал этот слон?",
     "options": [
-      "Клизме",
-      "Градуснику",
-      "Шприцу",
-      "Грелке"
+      "В подвесном монорельсе",
+      "В двухэтажном автобусе",
+      "В купе поезда",
+      "В кабине фуникулера"
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Monument_to_enema_Zheleznovodsk.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tuffi-Wandgemaelde%20an%20der%20Wupper.jpg"
   },
   {
     "id": 10,
@@ -127,7 +127,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Irkutsk_gerb_1790.png"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Irkutsk%201790.png"
   },
   {
     "id": 11,
@@ -140,7 +140,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Misc_pollen.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Misc%20pollen.jpg"
   },
   {
     "id": 12,
@@ -153,7 +153,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/East_Han_Seismograph.JPG"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/EastHanSeismograph.JPG"
   },
   {
     "id": 13,
@@ -166,7 +166,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ESO-Helix.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Helix%20Nebula.jpg"
   },
   {
     "id": 14,
@@ -179,7 +179,7 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Manneken_Pis_Bruxelles.jpg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bruxelles%20Manneken%20Pis.jpg"
   },
   {
     "id": 15,
@@ -192,6 +192,6 @@
     ],
     "correct_answer": 0,
     "category": "Тест Википедии",
-    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coats_of_arms_of_Australia.svg"
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20Arms%20of%20Australia.svg"
   }
 ]
