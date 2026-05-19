@@ -116,6 +116,11 @@ app.get('/health', (_req, res) => {
   });
 });
 
+app.get('/api/questions', (_req, res) => {
+  res.json(allQuestions);
+});
+
+
 const httpServer = createServer(app);
 
 // ─── Socket.IO ────────────────────────────────────────

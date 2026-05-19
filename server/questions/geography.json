@@ -18564,6 +18564,7 @@
     "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kathleen%20Lake%20Yukon.jpg"
   },
   {
+    "id": 1462,
     "text": "Какой географический курьез позволяет вам, находясь в одном месте, буквально путешествовать во времени на целые сутки, просто перейдя из одной деревни в другую, как будто вы сбежали от дедлайна?",
     "options": [
       "Между островом Малый Диомид (США) и островом Большой Диомид (Россия)",
@@ -18572,10 +18573,10 @@
       "В районе города Сент-Мартен (где аэропорт пересекает границу двух стран)"
     ],
     "correct_answer": 0,
-    "category": "🌍 География и Путешествия",
-    "id": 11
+    "category": "🌍 География и Путешествия"
   },
   {
+    "id": 1463,
     "text": "В мире существуют две реальные деревни, которые стали \"побратимами\" из-за весьма необычной и забавной причины. Одна из них – Боринг (Boring) в американском штате Орегон, а другая – Далл (Dull) в Шотландии. Что именно объединило эти два населенных пункта?",
     "options": [
       "Они обе известны своими рекордными урожаями самого невкусного овоща.",
@@ -18584,7 +18585,812 @@
       "В них обоих ежегодно проходит фестиваль тишины, где запрещены любые звуки громче шепота."
     ],
     "correct_answer": 2,
+    "category": "🌍 География и Путешествия"
+  },
+  {
+    "id": 1464,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "КНДР",
+      "Босния",
+      "Оман",
+      "Сент-Винсент и Гренадины"
+    ],
+    "correct_answer": 2,
     "category": "🌍 География и Путешествия",
-    "id": 65
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/National%20emblem%20of%20Oman.svg"
+  },
+  {
+    "id": 1465,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Словения",
+      "Китайская Республика (Тайвань)",
+      "Мексика",
+      "Суринам"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Locator%20map%20of%20the%20ROC%20Taiwan.svg"
+  },
+  {
+    "id": 1466,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Венгрия",
+      "Кабо-Верде",
+      "Шаханшахское Государство Иран",
+      "Марокко"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Iran%20%28orthographic%20projection%29.svg"
+  },
+  {
+    "id": 1467,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Соломоновы Острова",
+      "Острова Ашмор и Картье",
+      "Антигуа и Ба��буда",
+      "Хорватия"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Antigua%20and%20Barbuda.svg"
+  },
+  {
+    "id": 1468,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Британская Америка",
+      "Сейшельские Острова",
+      "Турция",
+      "Антигуа и Ба��буда"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/ATG%20orthographic.svg"
+  },
+  {
+    "id": 1469,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Антигуа и Ба��буда",
+      "Маврикий",
+      "Бельгия",
+      "Таиланд"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Antigua%20and%20Barbuda.svg"
+  },
+  {
+    "id": 1470,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Индонезия",
+      "Науру",
+      "Никарагуа",
+      "Танганьика"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tanganyika%20%281923%E2%80%931961%29.svg"
+  },
+  {
+    "id": 1471,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Германская Восточная Африка",
+      "Дания",
+      "Мавритания",
+      "Танганьика"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Tanganyika1934.jpg"
+  },
+  {
+    "id": 1472,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Мавритания",
+      "Сербия",
+      "Танганьика",
+      "Франция"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Badge%20of%20Tanganyika%20%281923%E2%80%931961%29.svg"
+  },
+  {
+    "id": 1473,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Лихтенштейн",
+      "Британская Америка",
+      "Мальдивы",
+      "Ливан"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20ensign%20of%20Great%20Britain%20%281707%E2%80%931800%2C%20square%20canton%29.svg"
+  },
+  {
+    "id": 1474,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Уганда",
+      "Британская Америка",
+      "Дания",
+      "Гвинея-Бисау"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/British%20America.png"
+  },
+  {
+    "id": 1475,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Антигуа и Барбуда",
+      "Британская Америка",
+      "Португалия",
+      "Зимбабве"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Great%20Britain%20%281714%E2%80%931801%29.svg"
+  },
+  {
+    "id": 1476,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Сомалиленд",
+      "Гваделупа",
+      "Эстония",
+      "Эритрея"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20France.svg"
+  },
+  {
+    "id": 1477,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Гвинея",
+      "Ватикан",
+      "Центральноафриканская Республика",
+      "Гваделупа"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Guadeloupe%20in%20France%202016.svg"
+  },
+  {
+    "id": 1478,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Германия",
+      "Пакистан",
+      "Ирландия",
+      "Гваделупа"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Guadeloupe.svg"
+  },
+  {
+    "id": 1479,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Коста-Рика",
+      "Бизония",
+      "Барбадос",
+      "Науру"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Merchant%20flag%20of%20Germany%20%281946%E2%80%931949%29.svg"
+  },
+  {
+    "id": 1480,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Бизония",
+      "Монако",
+      "Италия",
+      "Центральноафриканская Республика"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Bizone-green.png"
+  },
+  {
+    "id": 1481,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Реюньон",
+      "Узбекистан",
+      "Токелау",
+      "Россия"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Proposed%20flag%20of%20R%C3%A9union%20%28VAR%29.svg"
+  },
+  {
+    "id": 1482,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Реюньон",
+      "Швеция",
+      "Сейшельские Острова",
+      "Синт-Мартен"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/D%C3%A9partement%20974%20in%20France.svg"
+  },
+  {
+    "id": 1483,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Колумбия",
+      "Реюньон",
+      "Чад",
+      "Германская Восточная Африка"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20R%C3%A9union.svg"
+  },
+  {
+    "id": 1484,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Восточный Тимор",
+      "Земля Адели",
+      "Босния и Герцеговина",
+      "Американская зона оккупации Германии"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Antarktyda-TAAF.png"
+  },
+  {
+    "id": 1485,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Западная Белоруссия",
+      "Израиль",
+      "Объединённые Арабские Эмираты",
+      "Новая Зеландия"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Administrative%20division%20of%20Belarus%20%281939-1944%29.jpg"
+  },
+  {
+    "id": 1486,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Италия",
+      "Американская зона оккупации Германии",
+      "Исландия",
+      "Малайзия"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Merchant%20flag%20of%20Germany%20%281946%E2%80%931949%29.svg"
+  },
+  {
+    "id": 1487,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Кения",
+      "Тринидад и Тобаго",
+      "Американская зона оккупации Германии",
+      "Кирибати"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Deutschland%20Besatzungszonen%208%20Jun%201947%20-%2022%20Apr%201949%20amerikanisch.svg"
+  },
+  {
+    "id": 1488,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Республика Конго",
+      "Германия",
+      "Литва",
+      "Сент-Кристофер-Невис-Ангилья"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Saint%20Christopher-Nevis-Anguilla%20%281958-1967%29.svg"
+  },
+  {
+    "id": 1489,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Сент-Кристофер-Невис-Ангилья",
+      "Уганда",
+      "Намибия",
+      "Марокко"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LocationSt.Kitts%20Nevis%20Anguilla.PNG"
+  },
+  {
+    "id": 1490,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Австрия",
+      "Северная Македония",
+      "Сент-Кристофер-Невис-Ангилья",
+      "Туркменистан"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Saint%20Christopher-Nevis-Anguilla%20%281958-1967%29.svg"
+  },
+  {
+    "id": 1491,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Гвинея",
+      "Антигуа и Ба��буда",
+      "Массачусетс-Бэй",
+      "Португалия"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Red%20ensign%20of%20Great%20Britain%20%281707%E2%80%931800%29.svg"
+  },
+  {
+    "id": 1492,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Албания",
+      "Филиппины",
+      "Массачусетс-Бэй",
+      "Колумбия"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Masscolony.png"
+  },
+  {
+    "id": 1493,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Массачусетс-Бэй",
+      "Сан-Марино",
+      "Сейшельские Острова",
+      "Иордания"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Coat%20of%20arms%20of%20Great%20Britain%20%281714%E2%80%931801%29.svg"
+  },
+  {
+    "id": 1494,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Палестина в составе Османской империи",
+      "Болгария",
+      "Коста-Рика",
+      "Антигуа и Барбуда"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Ottoman%20Empire%20%281844%E2%80%931922%29.svg"
+  },
+  {
+    "id": 1495,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Словакия",
+      "Правление Птолемеев и Селевкидов",
+      "Мавритания",
+      "Палестина в составе Османской империи"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20Palestine.jpg"
+  },
+  {
+    "id": 1496,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Османская Сирия",
+      "Фиджи",
+      "Сент-Винсент и Гренадины",
+      "Бенин"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Ottoman%20Empire%20%281844%E2%80%931922%29.svg"
+  },
+  {
+    "id": 1497,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Бруней",
+      "Османская Сирия",
+      "Сингапур",
+      "Западная Белоруссия"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ottoman%20Syria.png"
+  },
+  {
+    "id": 1498,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Вануату",
+      "Токелау",
+      "Иран",
+      "Королевство Нидерландов"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tokelau.svg"
+  },
+  {
+    "id": 1499,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Белиз",
+      "Массачусетс-Бэй",
+      "Токелау",
+      "Бахрейн"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/LocationTokelau.png"
+  },
+  {
+    "id": 1500,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Румыния",
+      "Англия",
+      "Территория Нутка",
+      "Токелау"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Badge%20of%20Tokelau.svg"
+  },
+  {
+    "id": 1501,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Албания",
+      "Лихтенштейн",
+      "Генерал-капитанство Пуэрто-Рико",
+      "Османский Ирак"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ottoman%20flag%20alternative%202.svg"
+  },
+  {
+    "id": 1502,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Исландия",
+      "Римская Палестина",
+      "Палестина в составе Османской империи",
+      "Ливан"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Roman%20Empire%20-%20Iudaea%20%28125%20AD%29.svg"
+  },
+  {
+    "id": 1503,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Индия",
+      "Германская Восточная Африка",
+      "Танзания",
+      "Гайана"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Deutsch-Ostafrika.svg"
+  },
+  {
+    "id": 1504,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Сирия",
+      "Германская Восточная Африка",
+      "Массачусетс-Бэй",
+      "Оман"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Colonial%20Africa%201913%20German%20East%20Africa%20map.svg"
+  },
+  {
+    "id": 1505,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Маршалловы Острова",
+      "Германская Восточная Африка",
+      "Марокко",
+      "Швейцария"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Proposed%20Coat%20of%20Arms%20East%20Africa%201914.png"
+  },
+  {
+    "id": 1506,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Макао",
+      "Сан-Томе и Принсипи",
+      "Лесото",
+      "Таиланд"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Macau.svg"
+  },
+  {
+    "id": 1507,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Макао",
+      "Королевство Нидерландов",
+      "Гондурас",
+      "Либерия"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Macau%20locator%20map.svg"
+  },
+  {
+    "id": 1508,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Макао",
+      "Португалия",
+      "Мексика",
+      "Гаити"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Macau.svg"
+  },
+  {
+    "id": 1509,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Центральноафриканская Республика",
+      "Антигуа и Ба��буда",
+      "Французские Южные и Антарктические территории",
+      "Швейцария"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20French%20Southern%20and%20Antarctic%20Lands.svg"
+  },
+  {
+    "id": 1510,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Германия",
+      "Эсватини",
+      "Французские Южные и Антарктические территории",
+      "Османский Ирак"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/French%20Southern%20and%20Antarctic%20Lands%20in%20France%20%28zoomed%29.svg"
+  },
+  {
+    "id": 1511,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Клиппертон",
+      "Французские Южные и Антарктические территории",
+      "Турция",
+      "Нигер"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Armoiries%20Terres%20australes%20et%20antarctiques%20fran%C3%A7aises.svg"
+  },
+  {
+    "id": 1512,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Мартиника",
+      "Сент-Люсия",
+      "Территория Нутка",
+      "Палестина в составе Османской империи"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag-of-Martinique.svg"
+  },
+  {
+    "id": 1513,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Мартиника",
+      "Кения",
+      "Австралия",
+      "Колониальный период в истории Венесуэлы"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Martinique-CIA%20WFB%20Map.png"
+  },
+  {
+    "id": 1514,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Катар",
+      "Малави",
+      "Клиппертон",
+      "Египет"
+    ],
+    "correct_answer": 2,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20France.svg"
+  },
+  {
+    "id": 1515,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Тувалу",
+      "Клиппертон",
+      "Хорватия",
+      "Чили"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Clipperton%20Island%20in%20France.svg"
+  },
+  {
+    "id": 1516,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Османская Сирия",
+      "Португалия",
+      "Эфиопия",
+      "Новая Каледония"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20FLNKS.svg"
+  },
+  {
+    "id": 1517,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Новая Каледония",
+      "Нигер",
+      "Либерия",
+      "Ямайка"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/New%20Caledonia%20in%20France%20%28zoomed%29.svg"
+  },
+  {
+    "id": 1518,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Словакия",
+      "Суверенные территории Испании",
+      "Ливия",
+      "Новая Каледония"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Emblem%20of%20New%20Caledonia.svg"
+  },
+  {
+    "id": 1519,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Украина",
+      "Генерал-капитанство Пуэрто-Рико",
+      "Ливан",
+      "Алжир"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Spain%20%281785%E2%80%931873%2C%201875%E2%80%931931%29.svg"
+  },
+  {
+    "id": 1520,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Гайана",
+      "Гонконг",
+      "Сент-Винсент и Гренадины",
+      "Мозамбик"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Hong%20Kong.svg"
+  },
+  {
+    "id": 1521,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Буркина-Фасо",
+      "ЮАР",
+      "Антигуа и Ба��буда",
+      "Гонконг"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Hong%20Kong%20in%20China%20%28zoomed%29%20%28%2Ball%20claims%20hatched%29.svg"
+  },
+  {
+    "id": 1522,
+    "text": "Герб какого государства перед вами?",
+    "options": [
+      "Гонконг",
+      "Сан-Томе и Принсипи",
+      "Кения",
+      "Испания"
+    ],
+    "correct_answer": 0,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Regional%20Emblem%20of%20Hong%20Kong.svg"
+  },
+  {
+    "id": 1523,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Нигер",
+      "Португалия",
+      "Колумбия",
+      "Острова Ашмор и Картье"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Ashmore%20and%20Cartier%20Islands-CIA%20WFB%20Map.png"
+  },
+  {
+    "id": 1524,
+    "text": "Флаг какой страны изображен на картинке?",
+    "options": [
+      "Палау",
+      "Палестина в со��таве Османской империи",
+      "Римская Палестина",
+      "Земля Адели"
+    ],
+    "correct_answer": 1,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Ottoman%20Empire%20%281844%E2%80%931922%29.svg"
+  },
+  {
+    "id": 1525,
+    "text": "Контуры какой страны выделены на этой карте?",
+    "options": [
+      "Израиль",
+      "Швеция",
+      "Афганистан",
+      "Палестина в со��таве Османской империи"
+    ],
+    "correct_answer": 3,
+    "category": "🌍 География и Путешествия",
+    "image": "https://commons.wikimedia.org/wiki/Special:FilePath/Map%20of%20Palestine.jpg"
   }
 ]

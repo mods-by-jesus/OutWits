@@ -3,6 +3,7 @@ import { Home } from './pages/Home';
 import { Lobby } from './pages/Lobby';
 import { Game } from './pages/Game';
 import { Results } from './pages/Results';
+import { Solo } from './pages/Solo';
 import { ToastContainer } from './components/Toast';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Route path="/lobby/:code" element={<Lobby />} />
           <Route path="/game/:code" element={<Game />} />
           <Route path="/results/:code" element={<Results />} />
+          <Route path="/solo" element={<Solo />} />
         </Routes>
         <ToastContainer />
       </div>

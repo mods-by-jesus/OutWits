@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import confetti from 'canvas-confetti';
 import { useGameState } from '../hooks/useGameState';
 
 export function Game() {
@@ -125,7 +126,29 @@ export function Game() {
       // Результаты только что появились
       const myAnswer = roundAnswers.find(a => a.playerId === playerId);
       if (myAnswer) {
-        playSound(myAnswer.isCorrect ? 'correct' : 'incorrect');
+        if (myAnswer.isCorrect) {
+          playSound('correct');
+          // Ненавязчивый элегантный салют из углов
+          const colors = ['#10b981', '#34d399', '#6ee7b7', '#fef08a', '#ffffff'];
+          confetti({
+            particleCount: 20,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0, y: 0.8 },
+            colors: colors,
+            disableForReducedMotion: true
+          });
+          confetti({
+            particleCount: 20,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1, y: 0.8 },
+            colors: colors,
+            disableForReducedMotion: true
+          });
+        } else {
+          playSound('incorrect');
+        }
       }
     }
     prevShowResults.current = showResults;

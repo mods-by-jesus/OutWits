@@ -120,6 +120,18 @@ export function Home() {
 
         <div className="space-y-3">
           <button
+            onClick={() => {
+              if (nickname.trim()) {
+                localStorage.setItem('nickname', nickname.trim());
+              }
+              navigate('/solo');
+            }}
+            className="w-full bg-gradient-to-r from-violet-600 to-indigo-600 text-white font-bold py-4 rounded-xl text-xl hover:from-violet-500 hover:to-indigo-500 transition-all shadow-[0_0_15px_rgba(124,58,237,0.5)] hover:shadow-[0_0_25px_rgba(124,58,237,0.8)] border border-violet-500/30 mb-2"
+          >
+            🎮 Одиночная игра
+          </button>
+
+          <button
             onClick={handleCreateLobby}
             disabled={creating || joining}
             className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"

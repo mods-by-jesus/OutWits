@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { socket } from '../lib/socket';
+import confetti from 'canvas-confetti';
 
 interface Player {
   id: string;
@@ -110,6 +111,68 @@ export function Results() {
   const currentPlayerId = sessionStorage.getItem('playerId');
   const currentPlayer = players.find(p => p.id === currentPlayerId);
   const isHost = currentPlayer?.is_host;
+
+  const confettiTriggered = useRef(false);
+  useEffect(() => {
+    if (!loading && players.length > 0 && !confettiTriggered.current) {
+      confettiTriggered.current = true;
+      const sorted = [...players].sort((a, b) => b.score - a.score);
+      const myRankIndex = sorted.findIndex(p => p.id === currentPlayerId);
+
+      if (myRankIndex === 0) {
+        // Золотой кубок победителю: элегантный непрекращающийся 2-секундный фейерверк
+        const duration = 2 * 1000;
+        const end = Date.now() + duration;
+        const colors = ['#f59e0b', '#fbbf24', '#fef08a', '#ffffff', '#eab308'];
+
+        const frame = () => {
+          confetti({
+            particleCount: 2,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0, y: 0.85 },
+            colors: colors,
+            disableForReducedMotion: true
+          });
+          confetti({
+            particleCount: 2,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1, y: 0.85 },
+            colors: colors,
+            disableForReducedMotion: true
+          });
+
+          if (Date.now() < end) {
+            requestAnimationFrame(frame);
+          }
+        };
+        frame();
+      } else if (myRankIndex === 1 || myRankIndex === 2) {
+        // Серебряный или Бронзовый призер: благородные блестки соответствующего цвета
+        const colors = myRankIndex === 1
+          ? ['#94a3b8', '#cbd5e1', '#e2e8f0', '#ffffff'] // Серебро
+          : ['#d97706', '#f59e0b', '#ffedd5', '#ffffff']; // Бронза
+
+        confetti({
+          particleCount: 40,
+          spread: 70,
+          origin: { y: 0.75 },
+          colors: colors,
+          disableForReducedMotion: true
+        });
+      } else {
+        // Обычное завершение игры: аккуратный праздничный салют в честь окончания игры
+        confetti({
+          particleCount: 30,
+          spread: 60,
+          origin: { y: 0.8 },
+          colors: ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ffffff'],
+          disableForReducedMotion: true
+        });
+      }
+    }
+  }, [loading, players, currentPlayerId]);
 
   // Автовозврат в лобби когда таймер дошёл до 0
   useEffect(() => {
