@@ -40,6 +40,13 @@ function getYearDistractors(correctYear, count = 3) {
   return Array.from(distractors);
 }
 
+
+
+// Загрузка кэша изображений
+const oldImagesCache = JSON.parse(fs.readFileSync('C:\\Users\\semyo\\.gemini\\antigravity\\brain\\78cc5968-f3c7-4ef7-bed1-d3f3403c743f\\scratch\\old_images_cache.json', 'utf8'));
+const scienceImages = JSON.parse(fs.readFileSync('C:\\Users\\semyo\\.gemini\\antigravity\\brain\\78cc5968-f3c7-4ef7-bed1-d3f3403c743f\\scratch\\science_images_data.json', 'utf8'));
+
+
 const geoData = {
   // 150 Столиц
   capitals: [
@@ -293,6 +300,7 @@ const geoData = {
     { text: 'Какая страна является крупнейшим производителем кофе в мире?', ans: 'Бразилия', dists: ['Колумбия', 'Вьетнам', 'Эфиопия'] }
   ]
 }
+
 const historyData = {
   // 120 Исторических дат и событий
   events: [
@@ -410,6 +418,7 @@ const historyData = {
     { text: 'В какой европейской стране произошла масштабная революция в 1789 году?', ans: 'Франция', dists: ['Англия', 'Германия', 'Италия'] }
   ]
 }
+
 const scienceData = {
   // 120 Химических элементов
   elements: [
@@ -489,6 +498,7 @@ const scienceData = {
     { text: 'Какая звезда является ближайшей к Солнечной системе?', ans: 'Проксима Центавра', dists: ['Сириус', 'Вега', 'Полярная звезда'] }
   ]
 }
+
 const artData = {
   // 120 Литературных произведений и авторов
   books: [
@@ -547,6 +557,7 @@ const artData = {
     { text: 'Какая богиня в греческой мифологии почиталась как олицетворение мудрости и справедливой войны?', ans: 'Афина', dists: ['Афродита', 'Гера', 'Артемида'] }
   ]
 }
+
 const popData = {
   // 120 Культовых фильмов и режиссеров
   movies: [
@@ -601,6 +612,7 @@ const popData = {
   ]
 }
 
+
 // ==========================================
 // ГЕНЕРАТОРЫ ВОПРОСОВ ПО КАТЕГОРИЯМ
 // ==========================================
@@ -611,7 +623,7 @@ function compileGeography(startId) {
 
   const directCapitals = [
     (country) => `Какой город признан официальной столицей государства ${country}?`,
-    (country) => `Укажите official столицу страны ${country}:`,
+    (country) => `Укажите столицу страны ${country}:`,
     (country) => `Какое из этих мест является главным административным центром и столицей государства ${country}?`,
     (country) => `Если вы решите посетить столицу страны ${country}, в какой город вы отправитесь?`,
     (country) => `Какой город выполняет функции столицы в стране ${country}?`,
@@ -659,8 +671,23 @@ function compileGeography(startId) {
     (name) => `Что особенного или примечательного с точки зрения физической географии можно сказать про объект ${name}?`
   ];
 
-  // 120 Столиц
-  for (let i = 0; i < 120; i++) {
+  // 1. 250 Вопросов с картинками (из кэша)
+  const imgPool = oldImagesCache.geography;
+  for (let i = 0; i < 250; i++) {
+    const q = imgPool[i % imgPool.length];
+    list.push({
+      id: startId + list.length,
+      category: '🌍 География и Путешествия',
+      text: q.text,
+      options: q.options,
+      correct_answer: q.correct_answer,
+      image: q.image
+    });
+  }
+
+  // 2. 250 Текстовых вопросов
+  // 60 Столиц
+  for (let i = 0; i < 60; i++) {
     const item = geoData.capitals[i % geoData.capitals.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -669,10 +696,10 @@ function compileGeography(startId) {
       const textFn = directCapitals[Math.floor(i / 2) % directCapitals.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.country),
         options: opts,
-        correct_answer: opts.indexOf(item.capital),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.capital)
       });
     } else {
       const dists = getDistractors(geoData.capitals.map(c => c.country), item.country, 3);
@@ -680,16 +707,16 @@ function compileGeography(startId) {
       const textFn = indirectCapitals[Math.floor(i / 2) % indirectCapitals.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.capital),
         options: opts,
-        correct_answer: opts.indexOf(item.country),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.country)
       });
     }
   }
 
-  // 100 Валют
-  for (let i = 0; i < 100; i++) {
+  // 60 Валют
+  for (let i = 0; i < 60; i++) {
     const item = geoData.currencies[i % geoData.currencies.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -698,10 +725,10 @@ function compileGeography(startId) {
       const textFn = directCurrencies[Math.floor(i / 2) % directCurrencies.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.country),
         options: opts,
-        correct_answer: opts.indexOf(item.val),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.val)
       });
     } else {
       const dists = getDistractors(geoData.currencies.map(c => c.country), item.country, 3);
@@ -709,16 +736,16 @@ function compileGeography(startId) {
       const textFn = indirectCurrencies[Math.floor(i / 2) % indirectCurrencies.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.val),
         options: opts,
-        correct_answer: opts.indexOf(item.country),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.country)
       });
     }
   }
 
-  // 100 Географических объектов
-  for (let i = 0; i < 100; i++) {
+  // 50 Объектов
+  for (let i = 0; i < 50; i++) {
     const item = geoData.features[i % geoData.features.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -727,10 +754,10 @@ function compileGeography(startId) {
       const textFn = directFeatures[Math.floor(i / 2) % directFeatures.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.rec),
         options: opts,
-        correct_answer: opts.indexOf(item.name),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.name)
       });
     } else {
       const dists = getDistractors(geoData.features.map(c => c.rec), item.rec, 3);
@@ -738,78 +765,74 @@ function compileGeography(startId) {
       const textFn = indirectFeatures[Math.floor(i / 2) % indirectFeatures.length];
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: textFn(item.name),
         options: opts,
-        correct_answer: opts.indexOf(item.rec),
-        category: '🌍 География и Путешествия'
+        correct_answer: opts.indexOf(item.rec)
       });
     }
   }
 
-  // 80 True / False вопросов (Да/Нет)
-  // 40 по столицам
-  for (let i = 0; i < 40; i++) {
-    const item = geoData.capitals[(120 + i) % geoData.capitals.length];
+  // 30 True / False
+  for (let i = 0; i < 15; i++) {
+    const item = geoData.capitals[(150 + i) % geoData.capitals.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: `Правда ли, что город ${item.capital} является столицей государства ${item.country}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 0,
-        category: '🌍 География и Путешествия'
+        correct_answer: 0
       });
     } else {
-      const fakeCapital = geoData.capitals[(120 + i + 3) % geoData.capitals.length].capital;
+      const fakeCapital = geoData.capitals[(150 + i + 3) % geoData.capitals.length].capital;
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: `Правда ли, что город ${fakeCapital} является столицей государства ${item.country}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 1,
-        category: '🌍 География и Путешествия'
+        correct_answer: 1
       });
     }
   }
-
-  // 40 по валютам
-  for (let i = 0; i < 40; i++) {
-    const item = geoData.currencies[(80 + i) % geoData.currencies.length];
+  for (let i = 0; i < 15; i++) {
+    const item = geoData.currencies[(100 + i) % geoData.currencies.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: `Правда ли, что официальной валютой в стране ${item.country} является ${item.val}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 0,
-        category: '🌍 География и Путешествия'
+        correct_answer: 0
       });
     } else {
-      const fakeVal = geoData.currencies[(80 + i + 5) % geoData.currencies.length].val;
+      const fakeVal = geoData.currencies[(100 + i + 5) % geoData.currencies.length].val;
       list.push({
         id: startId + list.length,
+        category: '🌍 География и Путешествия',
         text: `Правда ли, что официальной валютой в стране ${item.country} является ${fakeVal}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 1,
-        category: '🌍 География и Путешествия'
+        correct_answer: 1
       });
     }
   }
 
-  // 100 Дополнительных разнообразных фактов
-  for (let i = 0; i < 100; i++) {
+  // 50 Дополнительных текстовых вопросов
+  for (let i = 0; i < 50; i++) {
     const data = geoData.extraGeo[i % geoData.extraGeo.length];
-    const uniqueText = `${data.text} (Вариант ${i + 1})`;
     const opts = shuffle([data.ans, ...data.dists]);
     list.push({
       id: startId + list.length,
-      text: uniqueText,
+      category: '🌍 География и Путешествия',
+      text: data.text,
       options: opts,
-      correct_answer: opts.indexOf(data.ans),
-      category: '🌍 География и Путешествия'
+      correct_answer: opts.indexOf(data.ans)
     });
   }
 
-  return list.slice(0, 500);
+  return list;
 }
 
 // 2. ИСТОРИЯ
@@ -838,7 +861,7 @@ function compileHistory(startId) {
     (desc) => `Какой правитель или исторический деятель описывается следующим образом: «${desc}»?`,
     (desc) => `О какой выдающейся исторической личности идет речь: «${desc}»?`,
     (desc) => `Кто из известных исторических деятелей оставил такой след в истории: «${desc}»?`,
-    (desc) => `Кого из правителей или лидеров характеризует данное описание: «${desc}»?`,
+    (desc) => `Кого из правителей или лидеров характеризует данное описание: «${desc}»:`,
     (desc) => `Чьё историческое правление или жизнь описывается словами: «${desc}»?`,
     (desc) => `Под какое описание подходит следующий исторический деятель: «${desc}»?`
   ];
@@ -852,8 +875,23 @@ function compileHistory(startId) {
     (name) => `Каким деянием запомнился в летописях правитель по имени ${name}?`
   ];
 
-  // 120 Исторических событий
-  for (let i = 0; i < 120; i++) {
+  // 1. 250 Вопросов с картинками (из кэша)
+  const imgPool = oldImagesCache.history;
+  for (let i = 0; i < 250; i++) {
+    const q = imgPool[i % imgPool.length];
+    list.push({
+      id: startId + list.length,
+      category: '🏛️ История и Эпохи',
+      text: q.text,
+      options: q.options,
+      correct_answer: q.correct_answer,
+      image: q.image
+    });
+  }
+
+  // 2. 250 Текстовых вопросов
+  // 80 Событий
+  for (let i = 0; i < 80; i++) {
     const item = historyData.events[i % historyData.events.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -864,10 +902,10 @@ function compileHistory(startId) {
       const textFn = directEvents[Math.floor(i / 2) % directEvents.length];
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: textFn(item.ev),
         options: opts,
-        correct_answer: opts.indexOf(correctStr),
-        category: '🏛️ История и Эпохи'
+        correct_answer: opts.indexOf(correctStr)
       });
     } else {
       const dists = getDistractors(historyData.events.map(c => c.ev), item.ev, 3);
@@ -876,16 +914,16 @@ function compileHistory(startId) {
       const textFn = indirectEvents[Math.floor(i / 2) % indirectEvents.length];
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: textFn(yrStr),
         options: opts,
-        correct_answer: opts.indexOf(item.ev),
-        category: '🏛️ История и Эпохи'
+        correct_answer: opts.indexOf(item.ev)
       });
     }
   }
 
-  // 120 Правителей
-  for (let i = 0; i < 120; i++) {
+  // 80 Лидеров
+  for (let i = 0; i < 80; i++) {
     const item = historyData.leaders[i % historyData.leaders.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -894,10 +932,10 @@ function compileHistory(startId) {
       const textFn = directLeaders[Math.floor(i / 2) % directLeaders.length];
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: textFn(item.desc),
         options: opts,
-        correct_answer: opts.indexOf(item.name),
-        category: '🏛️ История и Эпохи'
+        correct_answer: opts.indexOf(item.name)
       });
     } else {
       const dists = getDistractors(historyData.leaders.map(c => c.desc), item.desc, 3);
@@ -905,80 +943,76 @@ function compileHistory(startId) {
       const textFn = indirectLeaders[Math.floor(i / 2) % indirectLeaders.length];
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: textFn(item.name),
         options: opts,
-        correct_answer: opts.indexOf(item.desc),
-        category: '🏛️ История и Эпохи'
+        correct_answer: opts.indexOf(item.desc)
       });
     }
   }
 
-  // 60 True / False вопросов
-  // 30 по событиям
-  for (let i = 0; i < 30; i++) {
-    const item = historyData.events[(70 + i) % historyData.events.length];
+  // 30 True / False
+  for (let i = 0; i < 15; i++) {
+    const item = historyData.events[(100 + i) % historyData.events.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       const display = item.yr < 0 ? `${Math.abs(item.yr)} г. до н.э.` : `${item.yr} г.`;
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: `Правда ли, что событие «${item.ev}» датируется ${display}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 0,
-        category: '🏛️ История и Эпохи'
+        correct_answer: 0
       });
     } else {
       const fakeYr = item.yr + 25;
       const display = fakeYr < 0 ? `${Math.abs(fakeYr)} г. до н.э.` : `${fakeYr} г.`;
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: `Правда ли, что событие «${item.ev}» датируется ${display}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 1,
-        category: '🏛️ История и Эпохи'
+        correct_answer: 1
       });
     }
   }
-
-  // 30 по лидерам
-  for (let i = 0; i < 30; i++) {
-    const item = historyData.leaders[(30 + i) % historyData.leaders.length];
+  for (let i = 0; i < 15; i++) {
+    const item = historyData.leaders[(60 + i) % historyData.leaders.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: `Правда ли, что именно правитель ${item.name} вошел в историю как «${item.desc}»?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 0,
-        category: '🏛️ История и Эпохи'
+        correct_answer: 0
       });
     } else {
-      const fakeDesc = historyData.leaders[(30 + i + 1) % historyData.leaders.length].desc;
+      const fakeDesc = historyData.leaders[(60 + i + 1) % historyData.leaders.length].desc;
       list.push({
         id: startId + list.length,
+        category: '🏛️ История и Эпохи',
         text: `Правда ли, что именно правитель ${item.name} вошел в историю как «${fakeDesc}»?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 1,
-        category: '🏛️ История и Эпохи'
+        correct_answer: 1
       });
     }
   }
 
-  // 200 Дополнительных кратких фактов
-  for (let i = 0; i < 200; i++) {
+  // 60 Дополнительных текстовых вопросов
+  for (let i = 0; i < 60; i++) {
     const data = historyData.extraHist[i % historyData.extraHist.length];
-    const uniqueText = `${data.text} (Вариант ${i + 1})`;
     const opts = shuffle([data.ans, ...data.dists]);
     list.push({
       id: startId + list.length,
-      text: uniqueText,
+      category: '🏛️ История и Эпохи',
+      text: data.text,
       options: opts,
-      correct_answer: opts.indexOf(data.ans),
-      category: '🏛️ История и Эпохи'
+      correct_answer: opts.indexOf(data.ans)
     });
   }
 
-  return list.slice(0, 500);
+  return list;
 }
 
 // 3. НАУКА
@@ -991,7 +1025,7 @@ function compileScience(startId) {
     (name) => `Укажите официальный химический символ элемента ${name}:`,
     (name) => `Какой буквенный код соответствует химическому элементу ${name}?`,
     (name) => `Если вам нужно записать химический символ элемента ${name}, что вы напишете?`,
-    (name) => `Under каким обозначением в таблице Менделеева скрывается элемент ${name}?`
+    (name) => `Под каким обозначением в таблице Менделеева скрывается элемент ${name}?`
   ];
 
   const indirectElements = [
@@ -1021,8 +1055,33 @@ function compileScience(startId) {
     (key) => `Чем в научном мире характеризуется космический объект или понятие ${key}?`
   ];
 
-  // 120 Вопросов по химии
-  for (let i = 0; i < 120; i++) {
+  // 1. 250 Вопросов с картинками (генерируем из ученых)
+  const scPool = scienceImages.scientists;
+  const scientistQPrefixes = [
+    () => `Кто из известных ученых изображен на этом портрете / фотографии?`,
+    () => `Назовите имя выдающегося деятеля науки, представленного на изображении:`,
+    () => `Какой знаменитый ученый (физик, химик или математик) показан на фотографии?`,
+    () => `Чей исторический портрет представлен на этом снимке?`
+  ];
+  
+  for (let i = 0; i < 250; i++) {
+    const item = scPool[i % scPool.length];
+    const dists = getDistractors(scPool.map(s => s.name), item.name, 3);
+    const opts = shuffle([item.name, ...dists]);
+    const textFn = scientistQPrefixes[i % scientistQPrefixes.length];
+    list.push({
+      id: startId + list.length,
+      category: '🔬 Наука и Технологии',
+      text: textFn(),
+      options: opts,
+      correct_answer: opts.indexOf(item.name),
+      image: item.image
+    });
+  }
+
+  // 2. 250 Текстовых вопросов
+  // 80 Химия
+  for (let i = 0; i < 80; i++) {
     const item = scienceData.elements[i % scienceData.elements.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -1031,10 +1090,10 @@ function compileScience(startId) {
       const textFn = directElements[Math.floor(i / 2) % directElements.length];
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: textFn(item.name),
         options: opts,
-        correct_answer: opts.indexOf(item.symbol),
-        category: '🔬 Наука и Технологии'
+        correct_answer: opts.indexOf(item.symbol)
       });
     } else {
       const dists = getDistractors(scienceData.elements.map(c => c.desc), item.desc, 3);
@@ -1042,16 +1101,16 @@ function compileScience(startId) {
       const textFn = indirectElements[Math.floor(i / 2) % indirectElements.length];
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: textFn(item.name),
         options: opts,
-        correct_answer: opts.indexOf(item.desc),
-        category: '🔬 Наука и Технологии'
+        correct_answer: opts.indexOf(item.desc)
       });
     }
   }
 
-  // 120 Вопросов по физике и космосу
-  for (let i = 0; i < 120; i++) {
+  // 80 Физика/Космос
+  for (let i = 0; i < 80; i++) {
     const item = scienceData.physicsSpace[i % scienceData.physicsSpace.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -1060,10 +1119,10 @@ function compileScience(startId) {
       const textFn = directPhysics[Math.floor(i / 2) % directPhysics.length];
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: textFn(item.d),
         options: opts,
-        correct_answer: opts.indexOf(item.key),
-        category: '🔬 Наука и Технологии'
+        correct_answer: opts.indexOf(item.key)
       });
     } else {
       const dists = getDistractors(scienceData.physicsSpace.map(c => c.d), item.d, 3);
@@ -1071,78 +1130,74 @@ function compileScience(startId) {
       const textFn = indirectPhysics[Math.floor(i / 2) % indirectPhysics.length];
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: textFn(item.key),
         options: opts,
-        correct_answer: opts.indexOf(item.d),
-        category: '🔬 Наука и Технологии'
+        correct_answer: opts.indexOf(item.d)
       });
     }
   }
 
-  // 60 True / False вопросов
-  // 30 по элементам
-  for (let i = 0; i < 30; i++) {
-    const item = scienceData.elements[(60 + i) % scienceData.elements.length];
+  // 30 True / False
+  for (let i = 0; i < 15; i++) {
+    const item = scienceData.elements[(80 + i) % scienceData.elements.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: `Правда ли, что химический элемент ${item.name} обозначается символом ${item.symbol}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 0,
-        category: '🔬 Наука и Технологии'
+        correct_answer: 0
       });
     } else {
-      const fakeSymbol = scienceData.elements[(60 + i + 4) % scienceData.elements.length].symbol;
+      const fakeSymbol = scienceData.elements[(80 + i + 4) % scienceData.elements.length].symbol;
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: `Правда ли, что химический элемент ${item.name} обозначается символом ${fakeSymbol}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 1,
-        category: '🔬 Наука и Технологии'
+        correct_answer: 1
       });
     }
   }
-
-  // 30 по космосу/физике
-  for (let i = 0; i < 30; i++) {
-    const item = scienceData.physicsSpace[(40 + i) % scienceData.physicsSpace.length];
+  for (let i = 0; i < 15; i++) {
+    const item = scienceData.physicsSpace[(60 + i) % scienceData.physicsSpace.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: `Правда ли, что «${item.key}» характеризуется описанием: «${item.d}»?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 0,
-        category: '🔬 Наука и Технологии'
+        correct_answer: 0
       });
     } else {
-      const fakeDesc = scienceData.physicsSpace[(40 + i + 2) % scienceData.physicsSpace.length].d;
+      const fakeDesc = scienceData.physicsSpace[(60 + i + 2) % scienceData.physicsSpace.length].d;
       list.push({
         id: startId + list.length,
+        category: '🔬 Наука и Технологии',
         text: `Правда ли, что «${item.key}» характеризуется описанием: «${fakeDesc}»?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 1,
-        category: '🔬 Наука и Технологии'
+        correct_answer: 1
       });
     }
   }
 
-  // 200 Дополнительных кратких фактов
-  for (let i = 0; i < 200; i++) {
+  // 60 Дополнительных текстовых вопросов
+  for (let i = 0; i < 60; i++) {
     const data = scienceData.extraSci[i % scienceData.extraSci.length];
-    const uniqueText = `${data.text} (Вариант ${i + 1})`;
     const opts = shuffle([data.ans, ...data.dists]);
     list.push({
       id: startId + list.length,
-      text: uniqueText,
+      category: '🔬 Наука и Технологии',
+      text: data.text,
       options: opts,
-      correct_answer: opts.indexOf(data.ans),
-      category: '🔬 Наука и Технологии'
+      correct_answer: opts.indexOf(data.ans)
     });
   }
 
-  return list.slice(0, 500);
+  return list;
 }
 
 // 4. ИСКУССТВО И ЛИТЕРАТУРА
@@ -1170,7 +1225,7 @@ function compileArt(startId) {
   const directPaintings = [
     (work) => `Какой гениальный художник создал легендарное полотно «${work}»?`,
     (work) => `Кто является автором знаменитой картины «${work}»?`,
-    (work) => `Кисти какого великого мастера принадлежит художественный шедевр «${work}»?`,
+    (work) => `Кисти какого великого мастера принадлежит художественный шедевр «${work}»:`,
     (work) => `Какой великий живописец написал картину «${work}»?`,
     (work) => `Кто создал знаменитое художественное полотно «${work}»?`,
     (work) => `Какому выдающемуся художнику принадлежит авторство шедевра «${work}»?`
@@ -1185,8 +1240,23 @@ function compileArt(startId) {
     (painter) => `Какое произведение изобразительного искусства принадлежит автору ${painter}?`
   ];
 
-  // 120 Вопросов по книгам
-  for (let i = 0; i < 120; i++) {
+  // 1. 250 Вопросов с картинками (из кэша)
+  const imgPool = oldImagesCache.art;
+  for (let i = 0; i < 250; i++) {
+    const q = imgPool[i % imgPool.length];
+    list.push({
+      id: startId + list.length,
+      category: '🎨 Искусство и Литература',
+      text: q.text,
+      options: q.options,
+      correct_answer: q.correct_answer,
+      image: q.image
+    });
+  }
+
+  // 2. 250 Текстовых вопросов
+  // 80 Книг
+  for (let i = 0; i < 80; i++) {
     const item = artData.books[i % artData.books.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -1195,10 +1265,10 @@ function compileArt(startId) {
       const textFn = directBooks[Math.floor(i / 2) % directBooks.length];
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: textFn(item.title),
         options: opts,
-        correct_answer: opts.indexOf(item.author),
-        category: '🎨 Искусство и Литература'
+        correct_answer: opts.indexOf(item.author)
       });
     } else {
       const titleDists = getDistractors(artData.books.map(c => c.title), item.title, 3);
@@ -1206,16 +1276,16 @@ function compileArt(startId) {
       const textFn = indirectBooks[Math.floor(i / 2) % indirectBooks.length];
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: textFn(item.author),
         options: opts,
-        correct_answer: opts.indexOf(item.title),
-        category: '🎨 Искусство и Литература'
+        correct_answer: opts.indexOf(item.title)
       });
     }
   }
 
-  // 120 Вопросов по картинам
-  for (let i = 0; i < 120; i++) {
+  // 80 Картины
+  for (let i = 0; i < 80; i++) {
     const item = artData.paintings[i % artData.paintings.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -1224,10 +1294,10 @@ function compileArt(startId) {
       const textFn = directPaintings[Math.floor(i / 2) % directPaintings.length];
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: textFn(item.work),
         options: opts,
-        correct_answer: opts.indexOf(item.painter),
-        category: '🎨 Искусство и Литература'
+        correct_answer: opts.indexOf(item.painter)
       });
     } else {
       const workDists = getDistractors(artData.paintings.map(c => c.work), item.work, 3);
@@ -1235,78 +1305,74 @@ function compileArt(startId) {
       const textFn = indirectPaintings[Math.floor(i / 2) % indirectPaintings.length];
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: textFn(item.painter),
         options: opts,
-        correct_answer: opts.indexOf(item.work),
-        category: '🎨 Искусство и Литература'
+        correct_answer: opts.indexOf(item.work)
       });
     }
   }
 
-  // 60 True / False вопросов
-  // 30 по книгам
-  for (let i = 0; i < 30; i++) {
-    const item = artData.books[(60 + i) % artData.books.length];
+  // 30 True / False
+  for (let i = 0; i < 15; i++) {
+    const item = artData.books[(80 + i) % artData.books.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что выдающуюся книгу «${item.title}» написал писатель ${item.author}?`,
+        category: '🎨 Искусство и Литература',
+        text: `Правда ли, что книгу «${item.title}» написал писатель ${item.author}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 0,
-        category: '🎨 Искусство и Литература'
+        correct_answer: 0
       });
     } else {
-      const fakeAuthor = artData.books[(60 + i + 3) % artData.books.length].author;
+      const fakeAuthor = artData.books[(80 + i + 3) % artData.books.length].author;
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что выдающуюся книгу «${item.title}» написал писатель ${fakeAuthor}?`,
+        category: '🎨 Искусство и Литература',
+        text: `Правда ли, что книгу «${item.title}» написал писатель ${fakeAuthor}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 1,
-        category: '🎨 Искусство и Литература'
+        correct_answer: 1
       });
     }
   }
-
-  // 30 по картинам
-  for (let i = 0; i < 30; i++) {
-    const item = artData.paintings[(40 + i) % artData.paintings.length];
+  for (let i = 0; i < 15; i++) {
+    const item = artData.paintings[(60 + i) % artData.paintings.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: `Правда ли, что знаменитый шедевр живописи «${item.work}» написал художник ${item.painter}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 0,
-        category: '🎨 Искусство и Литература'
+        correct_answer: 0
       });
     } else {
-      const fakePainter = artData.paintings[(40 + i + 2) % artData.paintings.length].painter;
+      const fakePainter = artData.paintings[(60 + i + 2) % artData.paintings.length].painter;
       list.push({
         id: startId + list.length,
+        category: '🎨 Искусство и Литература',
         text: `Правда ли, что знаменитый шедевр живописи «${item.work}» написал художник ${fakePainter}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 1,
-        category: '🎨 Искусство и Литература'
+        correct_answer: 1
       });
     }
   }
 
-  // 200 Дополнительных кратких фактов
-  for (let i = 0; i < 200; i++) {
+  // 60 Дополнительных текстовых вопросов
+  for (let i = 0; i < 60; i++) {
     const data = artData.extraArt[i % artData.extraArt.length];
-    const uniqueText = `${data.text} (Вариант ${i + 1})`;
     const opts = shuffle([data.ans, ...data.dists]);
     list.push({
       id: startId + list.length,
-      text: uniqueText,
+      category: '🎨 Искусство и Литература',
+      text: data.text,
       options: opts,
-      correct_answer: opts.indexOf(data.ans),
-      category: '🎨 Искусство и Литература'
+      correct_answer: opts.indexOf(data.ans)
     });
   }
 
-  return list.slice(0, 500);
+  return list;
 }
 
 // 5. КИНО И ПОП-КУЛЬТУРА
@@ -1314,55 +1380,70 @@ function compilePop(startId) {
   const list = [];
 
   const directMovies = [
-    (title) => `Кто выступил в роли режиссера культового фильма «${title}»?`,
-    (title) => `Назовите режиссера знаменитой киноленты «${title}»:`,
-    (title) => `Под руководством какого режиссера был снят культовый фильм «${title}»?`,
-    (title) => `Кто срежиссировал легендарный фильм «${title}»?`,
-    (title) => `Чья режиссерская работа легла в основу кинокартины «${title}»?`,
-    (title) => `Какому известному режиссеру принадлежит фильм «${title}»?`
+    (title) => `Кто является режиссером знаменитого фильма «${title}»?`,
+    (title) => `Кто снял известную кинокартину «${title}»?`,
+    (title) => `Назовите режиссера культового фильма «${title}»:`,
+    (title) => `Режиссерское кресло на съемках фильма «${title}» занимал:`,
+    (title) => `Кто выступил главным режиссером картины «${title}»?`,
+    (title) => `Чья режиссура лежит в основе знаменитого фильма «${title}»?`
   ];
 
   const indirectMovies = [
-    (director) => `Какой знаменитый и всемирно признанный фильм снял режиссер ${director}?`,
-    (director) => `Укажите культовую кинокартину, режиссером которой является ${director}:`,
-    (director) => `Какое известное кинопроизведение снял выдающийся режиссер ${director}?`,
-    (director) => `Какой фильм принес режиссерскую славу автору по имени ${director}?`,
-    (director) => `Какое легендарное кинополотно было поставлено режиссером ${director}?`,
-    (director) => `Укажите работу в кинематографе, принадлежащую режиссеру ${director}?`
+    (director) => `Какой культовый фильм снял режиссер ${director}?`,
+    (director) => `Какая известная кинокартина принадлежит режиссуре ${director}?`,
+    (director) => `Укажите фильм, режиссером которого является ${director}:`,
+    (director) => `Какую знаменитую картину поставил режиссер ${director}?`,
+    (director) => `Работой над каким из этих фильмов прославился ${director}?`,
+    (director) => `Какое кинематографическое произведение создал режиссер ${director}?`
   ];
 
   const directGames = [
-    (title) => `Какая знаменитая игровая студия-разработчик выпустила шедевр «${title}»?`,
-    (title) => `Кто разработал и выпустил всемирно известную видеоигру «${title}»?`,
-    (title) => `Укажите компанию-разработчика культовой видеоигры «${title}»:`,
-    (title) => `Какая студия стоит за созданием популярной видеоигры «${title}»?`,
-    (title) => `Кто является разработчиком легендарного игрового проекта «${title}»?`,
-    (title) => `Чьими силами была создана культовая игра «${title}»?`
+    (title) => `Какая студия или компания выступила разработчиком видеоигры «${title}»?`,
+    (title) => `Кто разработал и выпустил знаменитую игру «${title}»?`,
+    (title) => `Созданием культовой видеоигры «${title}» занималась компания:`,
+    (title) => `Какая игровая студия является создателем проекта «${title}»?`,
+    (title) => `Какому разработчику принадлежит авторство игры «${title}»?`,
+    (title) => `Под чьим крылом была создана и выпущена игра «${title}»?`
   ];
 
   const indirectGames = [
-    (dev) => `Какую культовую видеоигру создала и успешно издала компания ${dev}?`,
-    (dev) => `Укажите известный игровой шедевр от компании-разработчика ${dev}:`,
-    (dev) => `Какая популярная игра была разработана знаменитой студией ${dev}?`,
-    (dev) => `Какой игровой проект сделал знаменитым бренд разработчика ${dev}?`,
-    (dev) => `Какую легендарную игру выпустила компания ${dev}?`,
-    (dev) => `Укажите видеоигру, разработанную студией ${dev}?`
+    (developer) => `Какую знаменитую видеоигру разработала и выпустила студия ${developer}?`,
+    (developer) => `Укажите игровой проект, созданный разработчиком ${developer}:`,
+    (developer) => `Какая известная игра была выпущена компанией ${developer}?`,
+    (developer) => `Созданием какой культовой видеоигры прославилась студия ${developer}?`,
+    (developer) => `Какой хит игровой индустрии принадлежит авторству компании ${developer}?`,
+    (developer) => `Какую популярную игру разработала команда из ${developer}?`
   ];
 
-  // 120 Фильмов
-  for (let i = 0; i < 120; i++) {
+  // 1. 250 Вопросов с картинками (из кэша)
+  const imgPool = oldImagesCache.pop;
+  for (let i = 0; i < 250; i++) {
+    const q = imgPool[i % imgPool.length];
+    list.push({
+      id: startId + list.length,
+      category: '🎬 Кино и Поп-культура',
+      text: q.text,
+      options: q.options,
+      correct_answer: q.correct_answer,
+      image: q.image
+    });
+  }
+
+  // 2. 250 Текстовых вопросов
+  // 80 Фильмов
+  for (let i = 0; i < 80; i++) {
     const item = popData.movies[i % popData.movies.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
-      const directorDists = getDistractors(popData.movies.map(c => c.director), item.director, 3);
-      const opts = shuffle([item.director, ...directorDists]);
+      const dirDists = getDistractors(popData.movies.map(c => c.director), item.director, 3);
+      const opts = shuffle([item.director, ...dirDists]);
       const textFn = directMovies[Math.floor(i / 2) % directMovies.length];
       list.push({
         id: startId + list.length,
+        category: '🎬 Кино и Поп-культура',
         text: textFn(item.title),
         options: opts,
-        correct_answer: opts.indexOf(item.director),
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: opts.indexOf(item.director)
       });
     } else {
       const titleDists = getDistractors(popData.movies.map(c => c.title), item.title, 3);
@@ -1370,16 +1451,16 @@ function compilePop(startId) {
       const textFn = indirectMovies[Math.floor(i / 2) % indirectMovies.length];
       list.push({
         id: startId + list.length,
+        category: '🎬 Кино и Поп-культура',
         text: textFn(item.director),
         options: opts,
-        correct_answer: opts.indexOf(item.title),
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: opts.indexOf(item.title)
       });
     }
   }
 
-  // 120 Видеоигр
-  for (let i = 0; i < 120; i++) {
+  // 80 Игр
+  for (let i = 0; i < 80; i++) {
     const item = popData.games[i % popData.games.length];
     const isDirect = i % 2 === 0;
     if (isDirect) {
@@ -1388,10 +1469,10 @@ function compilePop(startId) {
       const textFn = directGames[Math.floor(i / 2) % directGames.length];
       list.push({
         id: startId + list.length,
+        category: '🎬 Кино и Поп-культура',
         text: textFn(item.title),
         options: opts,
-        correct_answer: opts.indexOf(item.dev),
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: opts.indexOf(item.dev)
       });
     } else {
       const titleDists = getDistractors(popData.games.map(c => c.title), item.title, 3);
@@ -1399,136 +1480,168 @@ function compilePop(startId) {
       const textFn = indirectGames[Math.floor(i / 2) % indirectGames.length];
       list.push({
         id: startId + list.length,
+        category: '🎬 Кино и Поп-культура',
         text: textFn(item.dev),
         options: opts,
-        correct_answer: opts.indexOf(item.title),
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: opts.indexOf(item.title)
       });
     }
   }
 
-  // 60 True / False вопросов
-  // 30 по фильмам
-  for (let i = 0; i < 30; i++) {
-    const item = popData.movies[(60 + i) % popData.movies.length];
+  // 30 True / False
+  for (let i = 0; i < 15; i++) {
+    const item = popData.movies[(80 + i) % popData.movies.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что культовый фильм «${item.title}» был снят режиссером ${item.director}?`,
+        category: '🎬 Кино и Поп-культура',
+        text: `Правда ли, что культовый фильм «${item.title}» снял режиссер ${item.director}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 0,
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: 0
       });
     } else {
-      const fakeDir = popData.movies[(60 + i + 3) % popData.movies.length].director;
+      const fakeDir = popData.movies[(80 + i + 3) % popData.movies.length].director;
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что культовый фильм «${item.title}» был снят режиссером ${fakeDir}?`,
+        category: '🎬 Кино и Поп-культура',
+        text: `Правда ли, что культовый фильм «${item.title}» снял режиссер ${fakeDir}?`,
         options: ['Да', 'Нет'],
-        correct_answer: 1,
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: 1
       });
     }
   }
-
-  // 30 по играм
-  for (let i = 0; i < 30; i++) {
-    const item = popData.games[(40 + i) % popData.games.length];
+  for (let i = 0; i < 15; i++) {
+    const item = popData.games[(60 + i) % popData.games.length];
     const isTrue = i % 2 === 0;
     if (isTrue) {
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что всемирно известная игра «${item.title}» была создана студией ${item.dev}?`,
+        category: '🎬 Кино и Поп-культура',
+        text: `Правда ли, что видеоигру «${item.title}» разработала компания ${item.dev}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 0,
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: 0
       });
     } else {
-      const fakeDev = popData.games[(40 + i + 2) % popData.games.length].dev;
+      const fakeDev = popData.games[(60 + i + 2) % popData.games.length].dev;
       list.push({
         id: startId + list.length,
-        text: `Правда ли, что всемирно известная игра «${item.title}» была создана студией ${fakeDev}?`,
+        category: '🎬 Кино и Поп-культура',
+        text: `Правда ли, что видеоигру «${item.title}» разработала компания ${fakeDev}?`,
         options: ['Правда', 'Ложь'],
-        correct_answer: 1,
-        category: '🎬 Кино и Поп-культура'
+        correct_answer: 1
       });
     }
   }
 
-  // 200 Дополнительных кратких фактов
-  for (let i = 0; i < 200; i++) {
+  // 60 Дополнительных текстовых вопросов
+  for (let i = 0; i < 60; i++) {
     const data = popData.extraPop[i % popData.extraPop.length];
-    const uniqueText = `${data.text} (Вариант ${i + 1})`;
     const opts = shuffle([data.ans, ...data.dists]);
     list.push({
       id: startId + list.length,
-      text: uniqueText,
+      category: '🎬 Кино и Поп-культура',
+      text: data.text,
       options: opts,
-      correct_answer: opts.indexOf(data.ans),
-      category: '🎬 Кино и Поп-культура'
+      correct_answer: opts.indexOf(data.ans)
     });
   }
 
-  return list.slice(0, 500);
+  return list;
 }
 
 
-// ==========================================
-// ГЛАВНЫЙ ЗАПУСК
-// ==========================================
-async function main() {
-  console.log('=== Запуск компилятора базы вопросов OutWits ===');
 
-  const questionsDir = path.join(__dirname, '../server/questions');
+// ==========================================
+// ОСНОВНОЙ ПРОЦЕСС КОМПИЛЯЦИИ И ЗАПИСИ
+// ==========================================
 
-  if (!fs.existsSync(questionsDir)) {
-    fs.mkdirSync(questionsDir, { recursive: true });
+function validateAndSave(filename, questions) {
+  // Валидация
+  if (questions.length !== 500) {
+    throw new Error(`Category ${filename} must have exactly 500 questions, got ${questions.length}`);
   }
 
-  // Сборка 5 категорий по 500 вопросов
-  const geography = compileGeography(1);
-  const history = compileHistory(1);
-  const science = compileScience(1);
-  const culture = compileArt(1);
-  const entertainment = compilePop(1);
+  const withImages = questions.filter(q => q.image).length;
+  const withoutImages = questions.filter(q => !q.image).length;
+  if (withImages !== 250 || withoutImages !== 250) {
+    throw new Error(`Category ${filename} must have exactly 250 images and 250 text-only, got ${withImages} images and ${withoutImages} text-only`);
+  }
 
-  // Валидатор
-  const checkCategory = (arr, name) => {
-    if (arr.length !== 500) {
-      throw new Error(`Ошибка: в категории ${name} сгенерировано ${arr.length} вопросов вместо 500!`);
+  const ids = new Set();
+  const emojiRegex = /[\u{1F300}-\u{1F9FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F1E6}-\u{1F1FF}]/u;
+
+  questions.forEach(q => {
+    if (typeof q.id !== 'number' || isNaN(q.id)) {
+      throw new Error(`Invalid question ID in ${filename}`);
     }
-    arr.forEach(q => {
-      if (!q.id || !q.text || !q.options || q.options.length < 2 || q.correct_answer === undefined || q.correct_answer < 0 || q.correct_answer >= q.options.length) {
-        throw new Error(`Ошибка: некорректная структура вопроса ID ${q.id} в категории ${name}`);
+    if (ids.has(q.id)) {
+      throw new Error(`Duplicate ID ${q.id} in ${filename}`);
+    }
+    ids.add(q.id);
+
+    if (!q.text || q.text.trim().length === 0) {
+      throw new Error(`Empty text for question ${q.id} in ${filename}`);
+    }
+    if (emojiRegex.test(q.text)) {
+      throw new Error(`Emoji detected in question ${q.id} text in ${filename}`);
+    }
+
+    if (!Array.isArray(q.options) || q.options.length < 2) {
+      throw new Error(`Question ${q.id} in ${filename} must have at least 2 options, got ${JSON.stringify(q.options)}`);
+    }
+    q.options.forEach((opt, idx) => {
+      if (!opt || opt.trim().length === 0) {
+        throw new Error(`Question ${q.id} in ${filename} has empty option at index ${idx}`);
       }
-      
-      // Дополнительная валидация на отсутствие смайликов
-      const hasEmoji = /[\uD800-\uDFFF\u2600-\u27BF]/.test(q.text) || q.options.some(o => /[\uD800-\uDFFF\u2600-\u27BF]/.test(o));
-      if (hasEmoji) {
-        throw new Error(`Ошибка: обнаружены эмодзи в вопросе ID ${q.id} категории ${name}`);
+      if (emojiRegex.test(opt)) {
+        throw new Error(`Emoji detected in question ${q.id} option "${opt}" in ${filename}`);
       }
     });
-    console.log(`Категория «${name}»: успешно валидирована. Ровно 500 вопросов.`);
-  };
 
-  checkCategory(geography, 'География и Путешествия');
-  checkCategory(history, 'История и Эпохи');
-  checkCategory(science, 'Наука и Технологии');
-  checkCategory(culture, 'Искусство и Литература');
-  checkCategory(entertainment, 'Кино и Поп-культура');
+    if (typeof q.correct_answer !== 'number' || q.correct_answer < 0 || q.correct_answer >= q.options.length) {
+      throw new Error(`Invalid correct_answer index ${q.correct_answer} for question ${q.id} in ${filename}`);
+    }
 
-  // Запись результатов
-  fs.writeFileSync(path.join(questionsDir, 'geography.json'), JSON.stringify(geography, null, 2), 'utf8');
-  fs.writeFileSync(path.join(questionsDir, 'history.json'), JSON.stringify(history, null, 2), 'utf8');
-  fs.writeFileSync(path.join(questionsDir, 'science.json'), JSON.stringify(science, null, 2), 'utf8');
-  fs.writeFileSync(path.join(questionsDir, 'culture.json'), JSON.stringify(culture, null, 2), 'utf8');
-  fs.writeFileSync(path.join(questionsDir, 'entertainment.json'), JSON.stringify(entertainment, null, 2), 'utf8');
+    if (!q.category || q.category.trim().length === 0) {
+      throw new Error(`Question ${q.id} in ${filename} has empty category`);
+    }
+  });
 
-  console.log('\n=== УСПЕШНО ЗАПИСАНО 5 ФАЙЛОВ КАТЕГОРИЙ (ВСЕГО 2500 ВОПРОСОВ) ===');
+  // Запись в файл
+  const targetDir = path.join(__dirname, '..', 'server', 'questions');
+  if (!fs.existsSync(targetDir)) {
+    fs.mkdirSync(targetDir, { recursive: true });
+  }
+
+  const outputPath = path.join(targetDir, filename);
+  fs.writeFileSync(outputPath, JSON.stringify(questions, null, 2), 'utf8');
+  console.log(`Category "${filename}": validated successfully. Exactly 500 questions (250 with images, 250 text-only).`);
 }
 
-main().catch(err => {
-  console.error('Критическая ошибка компилятора:', err);
-  process.exit(1);
-});
+function run() {
+  console.log('=== OutWits Question Database Compiler ===');
+  try {
+    const geo = compileGeography(1);
+    validateAndSave('geography.json', geo);
+
+    const hist = compileHistory(1);
+    validateAndSave('history.json', hist);
+
+    const sci = compileScience(1);
+    validateAndSave('science.json', sci);
+
+    const art = compileArt(1);
+    validateAndSave('culture.json', art);
+
+    const pop = compilePop(1);
+    validateAndSave('entertainment.json', pop);
+
+    console.log('\n=== SUCCESSFULLY WRITTEN 5 CATEGORY FILES (2500 QUESTIONS TOTAL) ===');
+  } catch (e) {
+    console.error('\nCOMPILATION FAILED:', e.message);
+    process.exit(1);
+  }
+}
+
+run();
