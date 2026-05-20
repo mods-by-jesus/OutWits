@@ -56,9 +56,14 @@ export function Lobby() {
             {players.map((player) => (
               <div
                 key={player.id}
-                className="bg-neutral-900/50 p-4 rounded-xl flex justify-between items-center border border-neutral-700/50"
+                className={`bg-neutral-900/50 p-4 rounded-xl flex justify-between items-center border border-neutral-700/50 ${player.online === false ? 'opacity-50' : ''}`}
               >
-                <span className="text-lg font-bold">{player.nickname}</span>
+                <div className="flex items-center gap-2">
+                  <span className="text-lg font-bold">{player.nickname}</span>
+                  {player.online === false && (
+                    <span className="text-xs font-bold text-red-500 uppercase tracking-wider">(Офлайн)</span>
+                  )}
+                </div>
                 {player.is_host && (
                   <span className="bg-white text-black text-[10px] font-black px-2 py-1 rounded uppercase">
                     Host
@@ -139,6 +144,19 @@ export function Lobby() {
                 disabled={!currentPlayer?.is_host}
               />
             </label>
+            <label className="flex items-center justify-between cursor-pointer opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Betting 🎰</span>
+                <span className="text-xs text-neutral-500">Ставки очками перед вопросом</span>
+              </div>
+              <input
+                type="checkbox"
+                className="toggle toggle-primary"
+                checked={settings?.betting || false}
+                onChange={() => toggleSetting('betting')}
+                disabled={!currentPlayer?.is_host}
+              />
+            </label>
             <hr className="border-neutral-800" />
             <label className="flex items-center justify-between opacity-100">
               <div className="flex flex-col">
@@ -155,6 +173,24 @@ export function Lobby() {
                 <option value={10}>10</option>
                 <option value={15}>15</option>
                 <option value={20}>20</option>
+              </select>
+            </label>
+            <hr className="border-neutral-800" />
+            <label className="flex items-center justify-between opacity-100">
+              <div className="flex flex-col">
+                <span className="font-bold text-white">Время на ответ</span>
+                <span className="text-xs text-neutral-500">Секунд на один вопрос</span>
+              </div>
+              <select
+                className="bg-neutral-800 text-white font-bold py-1 px-3 rounded-lg border border-neutral-700 outline-none cursor-pointer disabled:opacity-50"
+                value={settings?.roundDuration || 20}
+                onChange={(e) => updateSettingValue('roundDuration', parseInt(e.target.value))}
+                disabled={!currentPlayer?.is_host}
+              >
+                <option value={10}>10с</option>
+                <option value={15}>15с</option>
+                <option value={20}>20с</option>
+                <option value={30}>30с</option>
               </select>
             </label>
           </div>

@@ -10,10 +10,11 @@ interface Player {
   score: number;
   streak: number;
   correctCount?: number;
+  online?: boolean;
 }
 
 interface LocationState {
-  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number } };
+  lobby?: { code: string; status: string; selectedCategories?: string[]; settings?: { speedBonus: boolean; hotStreak: boolean; betting: boolean; questionsCount?: number; roundDuration?: number } };
   player?: Player;
   players?: Player[];
   availableCategories?: string[];
@@ -40,8 +41,8 @@ export function useLobbyState() {
     navState?.lobby?.selectedCategories ?? navState?.availableCategories ?? []
   );
   
-  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean; questionsCount?: number }>(
-    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false, questionsCount: 10 }
+  const [settings, setSettings] = useState<{ speedBonus: boolean; hotStreak: boolean; betting: boolean; questionsCount?: number; roundDuration?: number }>(
+    navState?.lobby?.settings ?? { speedBonus: false, hotStreak: false, betting: false, questionsCount: 10, roundDuration: 20 }
   );
 
   const [loading, setLoading] = useState(!navState?.lobby);
@@ -81,7 +82,7 @@ export function useLobbyState() {
       setSelectedCategories(categories);
     };
 
-    const onSettingsUpdated = ({ settings: newSettings }: { settings: { speedBonus: boolean; hotStreak: boolean; questionsCount?: number } }) => {
+    const onSettingsUpdated = ({ settings: newSettings }: { settings: { speedBonus: boolean; hotStreak: boolean; betting: boolean; questionsCount?: number } }) => {
       setSettings(newSettings);
     };
 
@@ -134,7 +135,7 @@ export function useLobbyState() {
     });
   }, [currentPlayer]);
 
-  const toggleSetting = useCallback((key: 'speedBonus' | 'hotStreak') => {
+  const toggleSetting = useCallback((key: 'speedBonus' | 'hotStreak' | 'betting') => {
     if (!currentPlayer?.is_host) return;
 
     setSettings(prev => {
@@ -144,7 +145,7 @@ export function useLobbyState() {
     });
   }, [currentPlayer]);
 
-  const updateSettingValue = useCallback((key: 'questionsCount', value: number) => {
+  const updateSettingValue = useCallback((key: 'questionsCount' | 'roundDuration', value: number) => {
     if (!currentPlayer?.is_host) return;
 
     setSettings(prev => {

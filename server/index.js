@@ -11,10 +11,11 @@ const __dirname = dirname(__filename);
 
 // ─── Config ───────────────────────────────────────────
 const PORT = process.env.PORT || 3001;
-const ROUND_DURATION = 20; // секунды
 const RESULTS_DELAY = 5000; // мс — пауза перед следующим вопросом
+const BETTING_DURATION = 8000; // мс — время на ставку
 const MAX_PLAYERS = 5;
 const QUESTIONS_PER_GAME = 10;
+const HOUSE_SPONSOR_BONUS = 50;
 
 // ─── Load questions ───────────────────────────────────
 const questionsDir = join(__dirname, 'questions');
@@ -115,6 +116,11 @@ app.get('/health', (_req, res) => {
   });
 });
 
+app.get('/api/questions', (_req, res) => {
+  res.json(allQuestions);
+});
+
+
 const httpServer = createServer(app);
 
 // ─── Socket.IO ────────────────────────────────────────
@@ -156,7 +162,7 @@ io.on('connection', (socket) => {
       status: 'waiting',
       players: [player],
       selectedCategories: [...availableCategories],
-      settings: { speedBonus: false, hotStreak: false, questionsCount: 10 },
+      settings: { speedBonus: false, hotStreak: false, betting: false, questionsCount: 10, roundDuration: 20 },
       usedQuestions: new Set(),
       questions: [],
       currentQuestionIndex: -1,
@@ -176,7 +182,7 @@ io.on('connection', (socket) => {
       lobby: { code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
       player: { id: playerId, nickname: player.nickname, is_host: true, score: 0, streak: 0, correctCount: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
       availableCategories,
     });
@@ -212,6 +218,7 @@ io.on('connection', (socket) => {
       score: 0,
       streak: 0,
       correctCount: 0,
+      online: true,
       socketId: socket.id,
     };
 
@@ -224,7 +231,7 @@ io.on('connection', (socket) => {
     // Оповестить всех в лобби о новом игроке
     io.to(upperCode).emit('players_updated', {
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
     });
 
@@ -232,7 +239,7 @@ io.on('connection', (socket) => {
       lobby: { code: upperCode, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
       player: { id: playerId, nickname: player.nickname, is_host: false, score: 0, streak: 0, correctCount: 0 },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
       availableCategories,
     });
@@ -263,6 +270,9 @@ io.on('connection', (socket) => {
     lobby.currentQuestionIndex = 0;
     lobby.status = 'playing';
     lobby.answers = new Map();
+    lobby.bets = new Map(); // questionIndex -> Map(playerId -> betAmount)
+    lobby.pot = 0; // Shared pot for betting
+    lobby.playerStats = new Map(); // playerId -> { totalTime, wrongCount, maxStreak, currentStreak }
 
     console.log(`[GAME] Started in ${info.lobbyCode} with ${lobby.players.length} players`);
 
@@ -340,12 +350,22 @@ io.on('connection', (socket) => {
     const isCorrect = answerIndex === question.correct_answer;
     const elapsed = lobby.roundStartTime ? ((Date.now() - lobby.roundStartTime) / 1000).toFixed(1) : '0.0';
 
-    roundAnswers.set(info.playerId, {
-      playerId: info.playerId,
-      answerIndex,
-      isCorrect,
-      time: parseFloat(elapsed),
-    });
+    // Track player stats for achievements
+    if (!lobby.playerStats) lobby.playerStats = new Map();
+    if (!lobby.playerStats.has(info.playerId)) {
+      lobby.playerStats.set(info.playerId, { totalTime: 0, wrongCount: 0, maxStreak: 0, currentStreak: 0 });
+    }
+    const stats = lobby.playerStats.get(info.playerId);
+    stats.totalTime += parseFloat(elapsed);
+    if (!isCorrect) {
+      stats.wrongCount++;
+      stats.currentStreak = 0;
+    } else {
+      stats.currentStreak++;
+      if (stats.currentStreak > stats.maxStreak) stats.maxStreak = stats.currentStreak;
+    }
+
+    let betResult = 0;
 
     // Начислить очки
     const player = lobby.players.find(p => p.id === info.playerId);
@@ -357,7 +377,9 @@ io.on('connection', (socket) => {
         // Speed Bonus
         if (lobby.settings?.speedBonus && lobby.roundStartTime) {
           const elapsed = (Date.now() - lobby.roundStartTime) / 1000;
-          const remaining = Math.max(0, ROUND_DURATION - elapsed);
+          const baseRd = lobby.settings?.roundDuration || 20;
+          const rd = getDynamicDuration(question, baseRd);
+          const remaining = Math.max(0, rd - elapsed);
           points += Math.floor(remaining);
         }
 
@@ -371,11 +393,20 @@ io.on('connection', (socket) => {
           }
         }
 
+        // Betting bonus/penalty will be handled in endRound
         player.score += points;
       } else {
         player.streak = 0;
       }
     }
+
+    roundAnswers.set(info.playerId, {
+      playerId: info.playerId,
+      answerIndex,
+      isCorrect,
+      time: parseFloat(elapsed),
+      betResult,
+    });
 
     console.log(`[ANSWER] ${info.playerId} answered ${answerIndex} (${isCorrect ? '✓' : '✗'}) in ${info.lobbyCode}`);
 
@@ -415,12 +446,16 @@ io.on('connection', (socket) => {
     lobby.status = 'waiting';
     lobby.questions = [];
     lobby.currentQuestionIndex = -1;
-    lobby.answers = new Map();
+    lobby.answers.clear();
+    lobby.bets.clear();
+    lobby.pot = 0;
+    lobby.playerStats.clear();
+    lobby.roundStartTime = null;
+
     if (lobby.roundTimer) {
       clearTimeout(lobby.roundTimer);
       lobby.roundTimer = null;
     }
-    lobby.roundStartTime = null;
 
     lobby.players.forEach(p => {
       p.score = 0;
@@ -432,7 +467,7 @@ io.on('connection', (socket) => {
     io.to(lobby.code).emit('returned_to_lobby', {
       lobby: { code: lobby.code, status: lobby.status, selectedCategories: lobby.selectedCategories, settings: lobby.settings },
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
       availableCategories,
     });
@@ -447,9 +482,17 @@ io.on('connection', (socket) => {
     const player = lobby.players.find(p => p.id === playerId);
     if (!player) return callback?.({ error: 'Игрок не найден' });
 
+    player.online = true;
     socket.join(code);
     playerSockets.set(socket.id, { lobbyCode: code, playerId });
     console.log(`[REJOIN] ${player.nickname} reconnected to ${code}`);
+    
+    io.to(code).emit('players_updated', {
+      players: lobby.players.map(p => ({
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
+      })),
+    });
+    
     callback?.({ ok: true });
   });
 
@@ -469,10 +512,38 @@ io.on('connection', (socket) => {
     const info = playerSockets.get(socket.id);
     if (info) {
       playerSockets.delete(socket.id);
-      // Мы НЕ удаляем игрока из lobby.players при обрыве связи!
-      // Если он вернется, он сможет переподключиться.
-      // Таймер раунда сам переключит вопрос, если игрок не успеет ответить.
+      
+      const lobby = lobbies.get(info.lobbyCode);
+      if (lobby) {
+        const player = lobby.players.find(p => p.id === info.playerId);
+        if (player) {
+          player.online = false;
+          
+          io.to(info.lobbyCode).emit('players_updated', {
+            players: lobby.players.map(p => ({
+              id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
+            })),
+          });
+          
+          if (lobby.status === 'playing') {
+            const activePlayers = getActivePlayerCount(lobby);
+            const qi = lobby.currentQuestionIndex;
+            const roundAnswers = lobby.answers.get(qi) || new Map();
+            
+            io.to(info.lobbyCode).emit('answer_count', {
+              count: roundAnswers.size,
+              total: activePlayers,
+            });
+            
+            if (activePlayers > 0 && roundAnswers.size >= activePlayers && !lobby._endingRound) {
+              endRound(lobby);
+            }
+          }
+        }
+      }
     }
+  });
+
   // ─── FORCE END ROUND (client fallback) ─────────────
   socket.on('force_end_round', (_, callback) => {
     const info = playerSockets.get(socket.id);
@@ -483,6 +554,54 @@ io.on('connection', (socket) => {
     endRound(lobby);
     callback?.({ ok: true });
   });
+
+  // ─── SUBMIT BET ─────────────────────────────────────
+  socket.on('submit_bet', ({ amount }, callback) => {
+    const info = playerSockets.get(socket.id);
+    if (!info) return callback?.({ error: 'Не в лобби' });
+    const lobby = lobbies.get(info.lobbyCode);
+    if (!lobby || lobby.status !== 'playing') return callback?.({ error: 'Игра не идёт' });
+    if (!lobby.settings?.betting) return callback?.({ error: 'Ставки выключены' });
+
+    const qi = lobby.currentQuestionIndex;
+    if (!lobby.bets) lobby.bets = new Map();
+    if (!lobby.bets.has(qi)) lobby.bets.set(qi, new Map());
+    const roundBets = lobby.bets.get(qi);
+
+    if (roundBets.has(info.playerId)) return callback?.({ error: 'Уже сделал ставку' });
+
+    const player = lobby.players.find(p => p.id === info.playerId);
+    if (!player) return callback?.({ error: 'Игрок не найден' });
+
+    const bet = Math.max(0, Math.min(player.score, parseInt(amount) || 0));
+    roundBets.set(info.playerId, bet);
+    
+    // Deduct immediately and add to pot
+    player.score -= bet;
+    lobby.pot += bet;
+
+    console.log(`[BET] ${info.playerId} bet ${bet} in ${info.lobbyCode}, pot is now ${lobby.pot}`);
+
+    // Notify all about bet count and new pot
+    const activePlayers = getActivePlayerCount(lobby);
+    io.to(info.lobbyCode).emit('bet_count', { count: roundBets.size, total: activePlayers, pot: lobby.pot });
+    io.to(info.lobbyCode).emit('players_updated', {
+      players: lobby.players.map(p => ({
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
+      })),
+    });
+
+    callback?.({ ok: true });
+
+    // If all active players bet, end betting phase early
+    if (roundBets.size >= activePlayers && lobby._bettingTimer) {
+      clearTimeout(lobby._bettingTimer);
+      lobby._bettingTimer = null;
+      sendQuestionAfterBetting(lobby);
+    }
+  });
+
+  // Reaction handler removed
 });
 
 // ─── Helper: count connected players ──────────────────
@@ -497,6 +616,17 @@ function getActivePlayerCount(lobby) {
     }
   }
   return Math.max(count, 1); // минимум 1 чтобы избежать деления на 0
+}
+
+function getDynamicDuration(question, baseDuration) {
+  if (!question) return baseDuration;
+  const totalLength = question.text.length + question.options.join('').length;
+  if (totalLength > 250) {
+    return baseDuration + 20; // +20 секунд для очень длинных
+  } else if (totalLength > 150) {
+    return baseDuration + 10; // +10 секунд для длинных
+  }
+  return baseDuration;
 }
 
 // ─── Game Logic ───────────────────────────────────────
@@ -515,22 +645,69 @@ function sendQuestion(lobby) {
     clearTimeout(lobby.roundTimer);
   }
 
+  // If betting is enabled, start betting phase first
+  if (lobby.settings?.betting) {
+    // Add house sponsor bonus at start of betting phase
+    lobby.pot = (lobby.pot || 0) + HOUSE_SPONSOR_BONUS;
+
+    io.to(lobby.code).emit('betting_phase', {
+      category: question.category || 'Общие знания',
+      duration: BETTING_DURATION / 1000,
+      pot: lobby.pot || 0,
+    });
+
+    lobby._bettingTimer = setTimeout(() => {
+      lobby._bettingTimer = null;
+      sendQuestionAfterBetting(lobby);
+    }, BETTING_DURATION);
+    return;
+  }
+
+  sendQuestionAfterBetting(lobby);
+}
+
+function sendQuestionAfterBetting(lobby) {
+  const qi = lobby.currentQuestionIndex;
+  const question = lobby.questions[qi];
+
+  if (!question) {
+    finishGame(lobby);
+    return;
+  }
+
+  // Shuffle options to have random locations
+  const correctOptionText = question.options[question.correct_answer];
+  const shuffledOptions = [...question.options].sort(() => Math.random() - 0.5);
+  const newCorrectAnswer = shuffledOptions.indexOf(correctOptionText);
+
+  // Update question with shuffled options so correct answer index is accurate
+  lobby.questions[qi] = {
+    ...question,
+    options: shuffledOptions,
+    correct_answer: newCorrectAnswer
+  };
+  const updatedQuestion = lobby.questions[qi];
+
   // Отправить вопрос всем
   lobby.roundStartTime = Date.now();
+  const baseRd = lobby.settings?.roundDuration || 20;
+  const rd = getDynamicDuration(updatedQuestion, baseRd);
+
   io.to(lobby.code).emit('new_question', {
     questionIndex: qi,
     totalQuestions: lobby.questions.length,
     question: {
-      text: question.text,
-      options: question.options,
+      text: updatedQuestion.text,
+      options: updatedQuestion.options,
+      image: updatedQuestion.image,
     },
-    duration: ROUND_DURATION,
+    duration: rd,
   });
 
-  // Таймер раунда — принудительно завершить через ROUND_DURATION + 2 сек (буфер)
+  // Таймер раунда — принудительно завершить через roundDuration + 2 сек (буфер)
   lobby.roundTimer = setTimeout(() => {
     endRound(lobby);
-  }, (ROUND_DURATION + 2) * 1000);
+  }, (rd + 2) * 1000);
 }
 
 function endRound(lobby) {
@@ -559,22 +736,62 @@ function endRound(lobby) {
     // Добавляем неправильные ответы тем, кто не ответил
     lobby.players.forEach(p => {
       if (!roundAnswers.has(p.id)) {
+        const baseRd = lobby.settings?.roundDuration || 20;
+        const rd = getDynamicDuration(question, baseRd);
+        
         roundAnswers.set(p.id, {
           playerId: p.id,
           answerIndex: -1,
           isCorrect: false,
-          time: ROUND_DURATION,
+          time: rd,
+          betResult: 0,
         });
         p.streak = 0;
       }
     });
 
+    // Handle Shared Pot betting distribution
+    if (lobby.settings?.betting) {
+      const correctPlayers = Array.from(roundAnswers.values()).filter(a => a.isCorrect).map(a => a.playerId);
+      
+      // Calculate total bets placed by correct players
+      let totalCorrectBets = 0;
+      const roundBets = lobby.bets.get(qi);
+      correctPlayers.forEach(pid => {
+        const pBet = (roundBets && roundBets.get(pid)) || 0;
+        totalCorrectBets += pBet;
+      });
+
+      if (totalCorrectBets > 0 && lobby.pot > 0) {
+        correctPlayers.forEach(pid => {
+          const pBet = (roundBets && roundBets.get(pid)) || 0;
+          const gain = Math.floor(lobby.pot * (pBet / totalCorrectBets));
+          
+          const p = lobby.players.find(player => player.id === pid);
+          if (p) p.score += gain;
+          
+          const answer = roundAnswers.get(pid);
+          if (answer) answer.betResult = gain;
+        });
+        console.log(`[POT] Split ${lobby.pot} proportionally among winners. Total correct bets: ${totalCorrectBets}`);
+        lobby.pot = 0; // Reset pot after distributing
+      } else {
+        // Carry over the pot (either no one answered correctly, or only those who bet 0 did)
+        console.log(`[POT] No betters won, pot of ${lobby.pot} carries over!`);
+        // Set betResult to 0 for everyone since they didn't win anything from the pot
+        Array.from(roundAnswers.values()).forEach(a => {
+          a.betResult = 0;
+        });
+      }
+    }
+
     // Отправить результаты раунда
     io.to(lobby.code).emit('round_results', {
       correctAnswer: question.correct_answer,
       answers: Array.from(roundAnswers.values()),
+      pot: lobby.pot,
       players: lobby.players.map(p => ({
-        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+        id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
     });
 
@@ -614,18 +831,73 @@ function finishGame(lobby) {
   lobby.status = 'finished';
 
   const finalPlayers = lobby.players
-    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0 }))
+    .map(p => ({ id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false }))
     .sort((a, b) => b.score - a.score);
 
-  io.to(lobby.code).emit('game_finished', { players: finalPlayers });
+  // Calculate achievements
+  const achievements = calculateAchievements(lobby);
+
+  io.to(lobby.code).emit('game_finished', { players: finalPlayers, achievements });
 
   console.log(`[FINISH] Game ended in ${lobby.code}`);
 
-  // Удалить лобби через 60 сек (дать время увидеть результаты)
+  // Удалить лобби через 90 сек (дать время увидеть результаты + ачивки)
   lobby.cleanupTimer = setTimeout(() => {
     lobbies.delete(lobby.code);
     console.log(`[CLEANUP] Lobby ${lobby.code} removed`);
-  }, 60000);
+  }, 90000);
+}
+
+function calculateAchievements(lobby) {
+  const achievements = [];
+  if (!lobby.playerStats || lobby.playerStats.size === 0) return achievements;
+
+  const stats = Array.from(lobby.playerStats.entries()).map(([playerId, s]) => {
+    const player = lobby.players.find(p => p.id === playerId);
+    const answeredCount = (player?.correctCount || 0) + (s.wrongCount || 0);
+    return {
+      playerId,
+      nickname: player?.nickname || '???',
+      avgTime: answeredCount > 0 ? s.totalTime / answeredCount : 999,
+      maxStreak: s.maxStreak || 0,
+      wrongCount: s.wrongCount || 0,
+      correctCount: player?.correctCount || 0,
+    };
+  });
+
+  if (stats.length === 0) return achievements;
+
+  // ⚡ Шумахер — fastest avg time
+  const fastest = stats.reduce((a, b) => a.avgTime < b.avgTime ? a : b);
+  if (fastest.avgTime < 900) {
+    achievements.push({ emoji: '⚡', title: 'Шумахер', description: 'Самые быстрые ответы', nickname: fastest.nickname, value: fastest.avgTime.toFixed(1) + 'с (ср.)' });
+  }
+
+  // 🧊 Хладнокровный — slowest avg time
+  const slowest = stats.reduce((a, b) => a.avgTime > b.avgTime ? a : b);
+  if (slowest.avgTime < 900 && slowest.playerId !== fastest.playerId) {
+    achievements.push({ emoji: '🧊', title: 'Хладнокровный', description: 'Самые обдуманные ответы', nickname: slowest.nickname, value: slowest.avgTime.toFixed(1) + 'с (ср.)' });
+  }
+
+  // 🎯 Снайпер — longest streak
+  const sniper = stats.reduce((a, b) => a.maxStreak > b.maxStreak ? a : b);
+  if (sniper.maxStreak >= 2) {
+    achievements.push({ emoji: '🎯', title: 'Снайпер', description: 'Самая длинная серия', nickname: sniper.nickname, value: sniper.maxStreak + ' подряд' });
+  }
+
+  // 💀 Страдалец — most wrong answers
+  const sufferer = stats.reduce((a, b) => a.wrongCount > b.wrongCount ? a : b);
+  if (sufferer.wrongCount >= 2) {
+    achievements.push({ emoji: '💀', title: 'Страдалец', description: 'Больше всех ошибок', nickname: sufferer.nickname, value: sufferer.wrongCount + ' ошибок' });
+  }
+
+  // 🧠 Всезнайка — most correct answers
+  const brain = stats.reduce((a, b) => a.correctCount > b.correctCount ? a : b);
+  if (brain.correctCount >= 2) {
+    achievements.push({ emoji: '🧠', title: 'Всезнайка', description: 'Максимум правильных', nickname: brain.nickname, value: brain.correctCount + ' верных' });
+  }
+
+  return achievements;
 }
 
 function removePlayerById(lobbyCode, playerId) {
@@ -658,7 +930,7 @@ function removePlayerById(lobbyCode, playerId) {
   // Оповестить оставшихся
   io.to(lobbyCode).emit('players_updated', {
     players: lobby.players.map(p => ({
-      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0,
+      id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
     })),
   });
 

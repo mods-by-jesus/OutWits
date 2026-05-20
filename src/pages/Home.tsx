@@ -7,7 +7,7 @@ const MAX_NICKNAME_LENGTH = 12;
 const CODE_LENGTH = 5;
 
 export function Home() {
-  const [nickname, setNickname] = useState('');
+  const [nickname, setNickname] = useState(() => localStorage.getItem('nickname') || '');
   const [code, setCode] = useState('');
   const [creating, setCreating] = useState(false);
   const [joining, setJoining] = useState(false);
@@ -28,6 +28,7 @@ export function Home() {
       return false;
     }
     setError('');
+    localStorage.setItem('nickname', nickname.trim());
     return true;
   };
 
@@ -118,6 +119,18 @@ export function Home() {
         </div>
 
         <div className="space-y-3">
+          <button
+            onClick={() => {
+              if (nickname.trim()) {
+                localStorage.setItem('nickname', nickname.trim());
+              }
+              navigate('/solo');
+            }}
+            className="w-full bg-white text-black font-bold py-4 rounded-xl text-xl hover:bg-neutral-200 transition-colors mb-2"
+          >
+            Одиночная игра
+          </button>
+
           <button
             onClick={handleCreateLobby}
             disabled={creating || joining}
