@@ -483,9 +483,10 @@ io.on('connection', (socket) => {
     if (!player) return callback?.({ error: 'Игрок не найден' });
 
     player.online = true;
+    player.socketId = socket.id; // КРИТИЧЕСКИ ВАЖНО: обновить socketId при переподключении!
     socket.join(code);
     playerSockets.set(socket.id, { lobbyCode: code, playerId });
-    console.log(`[REJOIN] ${player.nickname} reconnected to ${code}`);
+    console.log(`[REJOIN] ${player.nickname} reconnected to ${code} with socket ${socket.id}`);
     
     io.to(code).emit('players_updated', {
       players: lobby.players.map(p => ({
