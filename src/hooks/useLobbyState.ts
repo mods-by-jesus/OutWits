@@ -34,7 +34,7 @@ export function useLobbyState() {
     navState?.player ?? null
   );
   
-  const [availableCategories] = useState<string[]>(
+  const [availableCategories, setAvailableCategories] = useState<string[]>(
     navState?.availableCategories ?? []
   );
   const [selectedCategories, setSelectedCategories] = useState<string[]>(
@@ -47,20 +47,38 @@ export function useLobbyState() {
 
   const [loading, setLoading] = useState(!navState?.lobby);
 
-  const playerId = sessionStorage.getItem('playerId');
+  const playerId = localStorage.getItem('playerId') || sessionStorage.getItem('playerId');
 
-  // Если нет данных — редирект
+  // Если нет данных — переподключаемся или выходим
   useEffect(() => {
     if (!code || !playerId) {
       navigate('/');
       return;
     }
-    // Если пришли по прямой ссылке без state — на главную
+
     if (!navState?.lobby) {
-      navigate('/');
-      return;
+      setLoading(true);
+      socket.emit('rejoin_lobby', { code, playerId }, (response: any) => {
+        if (response && response.ok && response.lobby) {
+          localStorage.setItem('playerId', playerId);
+          localStorage.setItem('lastLobbyCode', code);
+          sessionStorage.setItem('playerId', playerId);
+          
+          setPlayers(response.players);
+          setCurrentPlayer(response.player);
+          setAvailableCategories(response.availableCategories || []);
+          setSelectedCategories(response.lobby.selectedCategories || response.availableCategories || []);
+          setSettings(response.lobby.settings || {});
+          setLoading(false);
+        } else {
+          showToast(response?.error || 'Не удалось переподключиться к лобби', 'error');
+          localStorage.removeItem('lastLobbyCode');
+          navigate('/');
+        }
+      });
+    } else {
+      setLoading(false);
     }
-    setLoading(false);
   }, [code, playerId, navState, navigate]);
 
   // Socket.IO подписки
@@ -112,6 +130,8 @@ export function useLobbyState() {
   const leaveLobby = useCallback(() => {
     socket.emit('leave_lobby');
     sessionStorage.removeItem('playerId');
+    localStorage.removeItem('playerId');
+    localStorage.removeItem('lastLobbyCode');
     navigate('/');
   }, [navigate]);
 

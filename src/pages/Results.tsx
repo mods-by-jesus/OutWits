@@ -82,6 +82,8 @@ export function Results() {
     sessionStorage.removeItem('playerId');
     sessionStorage.removeItem('gameResults');
     sessionStorage.removeItem('gameAchievements');
+    localStorage.removeItem('playerId');
+    localStorage.removeItem('lastLobbyCode');
     navigate('/');
   }, [navigate]);
 

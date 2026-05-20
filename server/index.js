@@ -493,8 +493,78 @@ io.on('connection', (socket) => {
         id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
       })),
     });
+
+    // Считаем оставшееся время таймеров
+    let timeLeft = 20;
+    let bettingTimeLeft = 8;
     
-    callback?.({ ok: true });
+    if (lobby.status === 'playing') {
+      const now = Date.now();
+      if (lobby.bettingPhase && lobby.bettingStartTime) {
+        const elapsed = Math.floor((now - lobby.bettingStartTime) / 1000);
+        bettingTimeLeft = Math.max(0, 8 - elapsed);
+      } else if (lobby.questionStartTime) {
+        const elapsed = Math.floor((now - lobby.questionStartTime) / 1000);
+        const duration = lobby.settings?.roundDuration || 20;
+        timeLeft = Math.max(0, duration - elapsed);
+      }
+    }
+
+    const currentQuestionIndex = lobby.currentQuestionIndex || 0;
+    const roundAnswers = lobby.answers ? (lobby.answers.get(currentQuestionIndex) || new Map()) : new Map();
+    const roundBets = lobby.bets || new Map();
+
+    const gs = {
+      question: lobby.status === 'playing' ? {
+        text: lobby.questions[currentQuestionIndex]?.text,
+        options: lobby.questions[currentQuestionIndex]?.options,
+        image: lobby.questions[currentQuestionIndex]?.image,
+      } : null,
+      bettingPhase: lobby.bettingPhase || false,
+      bettingCategory: lobby.questions[currentQuestionIndex]?.category || '',
+      pot: lobby.pot || 0,
+      betCount: roundBets.size,
+      currentBet: roundBets.get(playerId) || null,
+      selectedAnswer: roundAnswers.get(playerId) || null,
+      answerCount: roundAnswers.size,
+      activePlayersCount: getActivePlayerCount(lobby),
+      showResults: lobby.showResults || false,
+      correctAnswer: lobby.showResults ? lobby.questions[currentQuestionIndex]?.correct : null,
+      roundAnswers: lobby.showResults ? (lobby.roundAnswers || []) : [],
+      timeLeft,
+      bettingTimeLeft,
+    };
+
+    callback?.({
+      ok: true,
+      lobby: {
+        code,
+        status: lobby.status,
+        selectedCategories: lobby.selectedCategories,
+        settings: lobby.settings,
+        currentQuestionIndex,
+        totalQuestions: lobby.questions.length,
+      },
+      player: {
+        id: playerId,
+        nickname: player.nickname,
+        is_host: player.is_host,
+        score: player.score,
+        streak: player.streak || 0,
+        correctCount: player.correctCount || 0,
+      },
+      players: lobby.players.map(p => ({
+        id: p.id,
+        nickname: p.nickname,
+        is_host: p.is_host,
+        score: p.score,
+        streak: p.streak || 0,
+        correctCount: p.correctCount || 0,
+        online: p.online !== false,
+      })),
+      availableCategories,
+      gameState: gs,
+    });
   });
 
   // ─── LEAVE LOBBY ──────────────────────────────────

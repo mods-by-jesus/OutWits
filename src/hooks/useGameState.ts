@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { socket } from '../lib/socket';
 import { useTimer } from './useTimer';
 import { showToast } from '../lib/toast';
@@ -33,30 +33,64 @@ const ROUND_DURATION = 20;
 export function useGameState() {
   const { code } = useParams<{ code: string }>();
   const navigate = useNavigate();
-  const playerId = sessionStorage.getItem('playerId');
+  const location = useLocation();
+  const rejoinData = (location.state as any)?.rejoinData;
+  const playerId = localStorage.getItem('playerId') || sessionStorage.getItem('playerId');
 
-  const [question, setQuestion] = useState<Question | null>(null);
-  const [questionIndex, setQuestionIndex] = useState(0);
-  const [totalQuestions, setTotalQuestions] = useState(0);
-  const [players, setPlayers] = useState<Player[]>([]);
-  const [answerCount, setAnswerCount] = useState(0);
-  const [showResults, setShowResults] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
-  const [correctAnswer, setCorrectAnswer] = useState<number | null>(null);
-  const [roundAnswers, setRoundAnswers] = useState<AnswerInfo[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [activePlayersCount, setActivePlayersCount] = useState(0);
+  const [question, setQuestion] = useState<Question | null>(
+    rejoinData?.gameState?.question ?? null
+  );
+  const [questionIndex, setQuestionIndex] = useState(
+    rejoinData?.lobby?.currentQuestionIndex ?? 0
+  );
+  const [totalQuestions, setTotalQuestions] = useState(
+    rejoinData?.lobby?.totalQuestions ?? 0
+  );
+  const [players, setPlayers] = useState<Player[]>(
+    rejoinData?.players ?? []
+  );
+  const [answerCount, setAnswerCount] = useState(
+    rejoinData?.gameState?.answerCount ?? 0
+  );
+  const [showResults, setShowResults] = useState(
+    rejoinData?.gameState?.showResults ?? false
+  );
+  const [selectedAnswer, setSelectedAnswer] = useState<number | null>(
+    rejoinData?.gameState?.selectedAnswer ?? null
+  );
+  const [correctAnswer, setCorrectAnswer] = useState<number | null>(
+    rejoinData?.gameState?.correctAnswer ?? null
+  );
+  const [roundAnswers, setRoundAnswers] = useState<AnswerInfo[]>(
+    rejoinData?.gameState?.roundAnswers ?? []
+  );
+  const [loading, setLoading] = useState(
+    rejoinData ? false : true
+  );
+  const [activePlayersCount, setActivePlayersCount] = useState(
+    rejoinData?.gameState?.activePlayersCount ?? 0
+  );
 
   // Betting state
-  const [bettingPhase, setBettingPhase] = useState(false);
-  const [bettingCategory, setBettingCategory] = useState('');
+  const [bettingPhase, setBettingPhase] = useState(
+    rejoinData?.gameState?.bettingPhase ?? false
+  );
+  const [bettingCategory, setBettingCategory] = useState(
+    rejoinData?.gameState?.bettingCategory ?? ''
+  );
   const [, setBettingDuration] = useState(8);
-  const [currentBet, setCurrentBet] = useState<number | null>(null);
-  const [betCount, setBetCount] = useState(0);
-  const [betTotal, setBetTotal] = useState(0);
-  const [pot, setPot] = useState(0);
-
-
+  const [currentBet, setCurrentBet] = useState<number | null>(
+    rejoinData?.gameState?.currentBet ?? null
+  );
+  const [betCount, setBetCount] = useState(
+    rejoinData?.gameState?.betCount ?? 0
+  );
+  const [betTotal, setBetTotal] = useState(
+    rejoinData?.gameState?.activePlayersCount ?? 0
+  );
+  const [pot, setPot] = useState(
+    rejoinData?.gameState?.pot ?? 0
+  );
 
   const handleRoundEnd = useCallback(() => {
     // Таймер клиента истёк — сервер тоже завершит раунд
@@ -76,13 +110,77 @@ export function useGameState() {
     autoStart: false,
   });
 
-  // Проверка входа
+  // Проверка входа и автореконнект при F5
   useEffect(() => {
-    if (!code || !playerId) {
+    const pId = localStorage.getItem('playerId') || sessionStorage.getItem('playerId');
+    if (!code || !pId) {
       navigate('/');
       return;
     }
-  }, [code, playerId, navigate]);
+
+    if (!question && !rejoinData) {
+      setLoading(true);
+      socket.emit('rejoin_lobby', { code, playerId: pId }, (response: any) => {
+        if (response && response.ok && response.lobby) {
+          localStorage.setItem('playerId', pId);
+          localStorage.setItem('lastLobbyCode', code);
+          sessionStorage.setItem('playerId', pId);
+          
+          setPlayers(response.players);
+          setTotalQuestions(response.lobby.totalQuestions || 10);
+          setQuestionIndex(response.lobby.currentQuestionIndex || 0);
+
+          if (response.gameState) {
+            const gs = response.gameState;
+            if (gs.question) setQuestion(gs.question);
+            setQuestionIndex(response.lobby.currentQuestionIndex);
+            
+            // Восстанавливаем фазу ставок
+            setBettingPhase(gs.bettingPhase);
+            setBettingCategory(gs.bettingCategory);
+            setPot(gs.pot || 0);
+            setBetCount(gs.betCount || 0);
+            
+            // Восстанавливаем ответы
+            setSelectedAnswer(gs.selectedAnswer);
+            setCurrentBet(gs.currentBet);
+            setAnswerCount(gs.answerCount || 0);
+            setActivePlayersCount(gs.activePlayersCount || 0);
+            
+            // Восстанавливаем время
+            if (gs.bettingPhase) {
+              resetBettingTimer(gs.bettingTimeLeft || 8);
+            } else {
+              resetTimer(gs.timeLeft || 20);
+            }
+
+            // Восстанавливаем результаты раунда, если сейчас фаза показа результатов
+            if (gs.showResults) {
+              setCorrectAnswer(gs.correctAnswer);
+              setRoundAnswers(gs.roundAnswers);
+              setShowResults(true);
+              stopTimer();
+            }
+          }
+          setLoading(false);
+        } else {
+          showToast(response?.error || 'Игра не найдена', 'error');
+          localStorage.removeItem('lastLobbyCode');
+          navigate('/');
+        }
+      });
+    } else if (rejoinData) {
+      // Инициализируем таймеры из rejoinData при первом рендере
+      const gs = rejoinData.gameState;
+      if (gs) {
+        if (gs.bettingPhase) {
+          resetBettingTimer(gs.bettingTimeLeft || 8);
+        } else if (!gs.showResults) {
+          resetTimer(gs.timeLeft || 20);
+        }
+      }
+    }
+  }, [code, navigate, question, rejoinData, resetTimer, resetBettingTimer, stopTimer]);
 
   // Socket.IO подписки
   useEffect(() => {

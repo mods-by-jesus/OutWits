@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { socket } from '../lib/socket';
 import { showToast } from '../lib/toast';
@@ -13,6 +13,39 @@ export function Home() {
   const [joining, setJoining] = useState(false);
   const [error, setError] = useState('');
   const navigate = useNavigate();
+
+  // Авто-подключение к незавершенной игре при входе на главную
+  useEffect(() => {
+    const pId = localStorage.getItem('playerId') || sessionStorage.getItem('playerId');
+    const lastLobbyCode = localStorage.getItem('lastLobbyCode');
+
+    if (pId && lastLobbyCode) {
+      socket.emit('rejoin_lobby', { code: lastLobbyCode, playerId: pId }, (response: any) => {
+        if (response && response.ok && response.lobby) {
+          localStorage.setItem('playerId', pId);
+          localStorage.setItem('lastLobbyCode', lastLobbyCode);
+          sessionStorage.setItem('playerId', pId);
+          
+          if (response.lobby.status === 'playing') {
+            navigate(`/game/${lastLobbyCode}`, {
+              state: {
+                rejoinData: response
+              }
+            });
+          } else {
+            navigate(`/lobby/${lastLobbyCode}`, {
+              state: {
+                rejoinData: response
+              }
+            });
+          }
+        } else {
+          // Если лобби больше не существует, чистим сессию
+          localStorage.removeItem('lastLobbyCode');
+        }
+      });
+    }
+  }, [navigate]);
 
   const validate = (requireCode = false): boolean => {
     if (!nickname.trim()) {
@@ -51,7 +84,10 @@ export function Home() {
       }
 
       if (response.lobby && response.player) {
+        localStorage.setItem('playerId', response.player.id);
+        localStorage.setItem('lastLobbyCode', response.lobby.code);
         sessionStorage.setItem('playerId', response.player.id);
+        
         navigate(`/lobby/${response.lobby.code}`, {
           state: { 
             lobby: response.lobby, 
@@ -86,7 +122,10 @@ export function Home() {
       }
 
       if (response.lobby && response.player) {
+        localStorage.setItem('playerId', response.player.id);
+        localStorage.setItem('lastLobbyCode', response.lobby.code);
         sessionStorage.setItem('playerId', response.player.id);
+        
         navigate(`/lobby/${response.lobby.code}`, {
           state: { 
             lobby: response.lobby, 
