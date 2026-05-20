@@ -516,29 +516,41 @@ io.on('connection', (socket) => {
       const lobby = lobbies.get(info.lobbyCode);
       if (lobby) {
         const player = lobby.players.find(p => p.id === info.playerId);
-        if (player) {
-          player.online = false;
-          
-          io.to(info.lobbyCode).emit('players_updated', {
-            players: lobby.players.map(p => ({
-              id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
-            })),
-          });
-          
-          if (lobby.status === 'playing') {
-            const activePlayers = getActivePlayerCount(lobby);
-            const qi = lobby.currentQuestionIndex;
-            const roundAnswers = lobby.answers.get(qi) || new Map();
-            
-            io.to(info.lobbyCode).emit('answer_count', {
-              count: roundAnswers.size,
-              total: activePlayers,
-            });
-            
-            if (activePlayers > 0 && roundAnswers.size >= activePlayers && !lobby._endingRound) {
-              endRound(lobby);
+        if (player && player.socketId === socket.id) {
+          // Даем игроку 3 секунды на переподключение (rejoin) перед тем как объявить его офлайн
+          setTimeout(() => {
+            const currentLobby = lobbies.get(info.lobbyCode);
+            if (!currentLobby) return;
+            const currentPlayer = currentLobby.players.find(p => p.id === info.playerId);
+            if (!currentPlayer) return;
+
+            // Если за 3 секунды сокет не обновился, значит игрок действительно отключился
+            if (currentPlayer.socketId === socket.id) {
+              currentPlayer.online = false;
+              console.log(`[DISCONNECT] ${currentPlayer.nickname} is confirmed offline in ${info.lobbyCode}`);
+              
+              io.to(info.lobbyCode).emit('players_updated', {
+                players: currentLobby.players.map(p => ({
+                  id: p.id, nickname: p.nickname, is_host: p.is_host, score: p.score, streak: p.streak || 0, correctCount: p.correctCount || 0, online: p.online !== false,
+                })),
+              });
+              
+              if (currentLobby.status === 'playing') {
+                const activePlayers = getActivePlayerCount(currentLobby);
+                const qi = currentLobby.currentQuestionIndex;
+                const roundAnswers = currentLobby.answers.get(qi) || new Map();
+                
+                io.to(info.lobbyCode).emit('answer_count', {
+                  count: roundAnswers.size,
+                  total: activePlayers,
+                });
+                
+                if (activePlayers > 0 && roundAnswers.size >= activePlayers && !currentLobby._endingRound) {
+                  endRound(currentLobby);
+                }
+              }
             }
-          }
+          }, 3000);
         }
       }
     }
